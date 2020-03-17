@@ -1,7 +1,7 @@
 {
   "name": "animaUI",
   "version": "1.0.0",
-  "description": "",
+  "description": "anima(灵动，animation简写，(灵动UI)主要包含各种动画效果，小程序插件解决方案)",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
@@ -39,14 +39,16 @@
     "babel-loader": "^7.1.5",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-preset-env": "^1.7.0",
-    "colors": "^1.3.1",
-    "eslint": "^5.14.1",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.16.0",
+    "colors": "^1.4.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-if": "^2.0.2",
     "gulp-install": "^1.1.0",
@@ -55,10 +57,16 @@
     "gulp-sourcemaps": "^2.6.5",
     "jest": "^23.5.0",
     "miniprogram-simulate": "^1.0.0",
+    "module-resolver": "^1.0.0",
     "through2": "^2.0.3",
     "vinyl": "^2.2.0",
-    "webpack": "^4.29.5",
+    "webpack": "^4.42.0",
     "webpack-node-externals": "^1.7.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

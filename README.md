@@ -1,4 +1,4 @@
-# miniprogram-custom-component
+# animaUI(灵动UI)
 
 小程序自定义组件开发模板：
 
