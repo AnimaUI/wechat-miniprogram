@@ -1,5 +1,1 @@
-module.exports = {
-    getFlag() {
-        return true;
-    }
-};
+module.exports = {};

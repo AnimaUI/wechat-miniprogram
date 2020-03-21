@@ -15,6 +15,7 @@ module.exports = {
     plugins: ['import', 'node', 'promise'],
     rules: {
         indent: ['error', 4],
+        'no-console': 'off',
         'arrow-parens': 'off',
         'comma-dangle': ['error', 'only-multiline'],
         complexity: ['error', 10],
@@ -63,7 +64,7 @@ module.exports = {
                 unnecessary: true
             }
         ],
-        'semi': ['error', 'always'],
+        semi: ['error', 'always'],
         'no-await-in-loop': 'off',
         'no-restricted-syntax': 'off',
         'promise/always-return': 'off'
@@ -76,6 +77,7 @@ module.exports = {
         Component: true,
         Behavior: true,
         wx: true,
-        getCurrentPages: true
+        getCurrentPages: true,
+        getApp: true
     }
 };

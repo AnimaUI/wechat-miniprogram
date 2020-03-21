@@ -4,4 +4,4 @@
  * @version:   V1.0.0
  * @date:      2020-03-21 11:35:40
  */
-module.exports = [];
+module.exports = ['custom-bar/index'];

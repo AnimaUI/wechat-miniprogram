@@ -1,5 +1,5 @@
 {
-  "usingComponents": {
-    "comp": "../../components/index/index"
-  }
+    "usingComponents": {
+        "CustomBar": "../../components/custom-bar/index"
+    }
 }

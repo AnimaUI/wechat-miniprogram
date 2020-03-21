@@ -1,1 +1,6 @@
-<comp></comp>
+<scroll-view scroll-y class="scrollPage index">
+    <CustomBar bgColor="bg-gradual-transparent" isBack="{{true}}">
+        <view slot="backText">返回</view>
+        <view slot="content">导航栏</view>
+    </CustomBar>
+</scroll-view>

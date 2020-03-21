@@ -2,6 +2,7 @@ const path = require('path')
 
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
+const entry = require('./entry');
 
 const isDev = process.argv.indexOf('--develop') >= 0
 const isWatch = process.argv.indexOf('--watch') >= 0
@@ -12,7 +13,7 @@ const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-    entry: ['index', 'index/index'],
+    entry,
     isDev,
     isWatch,
     srcPath: src, // 源目录
