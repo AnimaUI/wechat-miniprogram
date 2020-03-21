@@ -12,60 +12,58 @@ const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-  entry: ['index'],
+    entry: ['index', 'index/index'],
+    isDev,
+    isWatch,
+    srcPath: src, // 源目录
+    distPath: isDev ? dev : dist, // 目标目录
 
-  isDev,
-  isWatch,
-  srcPath: src, // 源目录
-  distPath: isDev ? dev : dist, // 目标目录
+    demoSrc, // demo 源目录
+    demoDist, // demo 目标目录
 
-  demoSrc, // demo 源目录
-  demoDist, // demo 目标目录
-
-  wxss: {
-    less: false, // 使用 less 来编写 wxss
-    sourcemap: false, // 生成 less sourcemap
-  },
-
-  js: {
-    webpack: true, // 使用 webpack 来构建 js
-  },
-
-  webpack: {
-    mode: 'production',
-    output: {
-      filename: '[name].js',
-      libraryTarget: 'commonjs2',
+    wxss: {
+        less: false, // 使用 less 来编写 wxss
+        sourcemap: false // 生成 less sourcemap
     },
-    target: 'node',
-    externals: [nodeExternals()], // 忽略 node_modules
-    module: {
-      rules: [{
-        test: /\.js$/i,
-        use: [
-          'babel-loader',
-          'eslint-loader'
+
+    js: {
+        webpack: true // 使用 webpack 来构建 js
+    },
+
+    webpack: {
+        mode: 'production',
+        output: {
+            filename: '[name].js',
+            libraryTarget: 'commonjs2'
+        },
+        target: 'node',
+        externals: [nodeExternals()], // 忽略 node_modules
+        module: {
+            rules: [
+                {
+                    test: /\.js$/i,
+                    use: ['babel-loader', 'eslint-loader'],
+                    exclude: /node_modules/
+                }
+            ]
+        },
+        resolve: {
+            modules: [src, 'node_modules'],
+            extensions: ['.js', '.json']
+        },
+        plugins: [
+            new webpack.DefinePlugin({}),
+            new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
         ],
-        exclude: /node_modules/
-      }],
+        optimization: {
+            minimize: false
+        },
+        // devtool: 'nosources-source-map', // 生成 js sourcemap
+        performance: {
+            hints: 'warning',
+            assetFilter: assetFilename => assetFilename.endsWith('.js')
+        }
     },
-    resolve: {
-      modules: [src, 'node_modules'],
-      extensions: ['.js', '.json'],
-    },
-    plugins: [
-      new webpack.DefinePlugin({}),
-      new webpack.optimize.LimitChunkCountPlugin({maxChunks: 1}),
-    ],
-    optimization: {
-      minimize: false,
-    },
-    // devtool: 'nosources-source-map', // 生成 js sourcemap
-    performance: {
-      hints: 'warning',
-      assetFilter: assetFilename => assetFilename.endsWith('.js')
-    }
-  },
 
-  copy: ['./assets', './utils.js'], // 将会复制到目标目录
-}
+    copy: ['./assets', './utils.js'] // 将会复制到目标目录
+};
