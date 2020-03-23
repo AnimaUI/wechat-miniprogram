@@ -96,7 +96,7 @@
 
 .an-bar .action > text[class*="an-icon-"],
 .an-bar .action > view[class*="an-icon-"] {
-    font-size: 36rpx;
+    font-size: 50rpx;
 }
 
 .an-bar .action > text[class*="an-icon-"]+text[class*="an-icon-"] {
