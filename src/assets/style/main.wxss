@@ -1,0 +1,98 @@
+/*
+    code is far away from bug with the animal protecting
+                      _                    _    _  _____ 
+        /\           (_)                  | |  | ||_   _|
+       /  \    _ __   _  _ __ ___    __ _ | |  | |  | |  
+      / /\ \  | '_ \ | || '_ ` _ \  / _` || |  | |  | |  
+     / ____ \ | | | || || | | | | || (_| || |__| | _| |_ 
+    /_/    \_\|_| |_||_||_| |_| |_| \__,_| \____/ |_____|
+
+    AnimaUI for wechat-miniprogram  v1.0.0 | by 花夏(huaxia@animaui.com) 2020-03-25 18:10:37
+    仅供学习交流，如作它用所承受的法律责任一概与作者无关
+    代码不易，使用AnimaUI开发微信小程序时，请注明基于
+    AnimaUI开发，谢谢~~ QQ交流群：183167955
+*/
+
+/*
+ _________
+|  初始化  |\
+| ~~~~~~~ |_\
+| 基础变量 |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+page {
+    /* 
+     _________
+    |  基础色  |
+    |_________|
+    */
+    /* 不正经红色 */
+    --red: #f35352;
+    /* 橙色 */
+    --orange: #ff8800;
+    /* 不正经黄色 */
+    --yellow: #f7cb4a;
+    /* 橄榄绿 */
+    --olive: #9bcc66;
+    /* 绿色 */
+    --green: #3fb27e;
+    /* 青色 */
+    --cyan: #69d4db;
+    /* 天蓝色 */
+    --skyBlue: #51b4f1;
+    /* 蓝色 */
+    --blue: #5182e4;
+    /* 紫色 */
+    --purple: #8954d4;
+    /* 紫红色 */
+    --mauve: #ce62d6;
+    /* 粉色 */
+    --pink: #ff69b4;
+    /* 棕色 */
+    --brown: #a52a2a;
+    /* 不正经黑色 */
+    --black: #333;
+    /* 灰色 */
+    --gray: #aaa;
+    /* 暗灰色 */
+    --darkGray: #666;
+    /* 烟灰色 */
+    --grey: #bebebe;
+    /* 魂白 */
+    --ghostWhite: #f8f8f8;
+    /* 白色 */
+    --white: #fff;
+    /* 
+     _________
+    |   浅色  |
+    |_________|
+    */
+    /* 浅红 */
+    --lightRed: #ffcccb;
+    /* 浅橙 */
+    --lightOrange: #ffdab1;
+    /* 浅黄 */
+    --lightYellow: #fdf1cd;
+    /* 浅橄榄绿 */
+    --lightOlive: #e8f3dc;
+    /* 浅绿 */
+    --lightGreen: #d8f1e6;
+    /* 浅青 */
+    --lightCyan: #d8f4f6;
+    /* 浅蓝 */
+    --lightBlue: #c8d7f6;
+    /* 浅紫 */
+    --lightPurple: #e0d1f4;
+    /* 浅紫红 */
+    --lightMauve: #f0cff2;
+    /* 浅粉 */
+    --lightPink: #ffcbe5;
+    /* 浅棕 */
+    --lightBrown: #f5d9d9;
+    /* 浅灰 */
+    --lightGray: #e5e5e5;
+    /* 浅烟灰 */
+    --lightGrey: #efefef;
+}
