@@ -116,7 +116,7 @@ page {
     --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
     /* 渐变粉 */
     --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
-     /* 
+    /* 
      _________
     |阴影透明色|
     |________|
@@ -150,4 +150,113 @@ page {
     --grayShadow: rgba(190, 190, 190, .2);
     /* 黑 */
     --blackShadow: rgba(51, 51, 51, .2);
+    /* 
+     ______________
+    | 初始化页面样式 |
+    |_____________|
+    */
+    background-color: var(--ghostWhite);
+    font-size: 28rpx;
+    color: var(--black);
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+/*
+ _________
+|  背景色  |\
+| ~~~~~~~ |_\
+|  纯色    |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+
+/* 红色背景 */
+.bg-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+/* 橙色背景 */
+.bg-orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+/* 黄色背景 */
+.bg-yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+/*橄榄绿背景 */
+.bg-olive {
+    background-color: var(--olive);
+    color: var(--white);
+}
+/* 绿色背景 */
+.bg-green {
+    background-color: var(--green);
+    color: var(--white);
+}
+/* 天青色背景 */
+.bg-cyan {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+/* 天蓝色背景 */
+.bg-skyBlue {
+    background-color: var(--skyBlue);
+    color: var(--white);
+}
+/* 蓝色背景 */
+.bg-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+/* 紫色背景 */
+.bg-purple {
+    background-color: var(--purple);
+    color: var(--white);
+}
+/* 紫红色背景 */
+.bg-mauve {
+    background-color: var(--mauve);
+    color: var(--white);
+}
+/* 粉色背景 */
+.bg-pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+/* 棕色背景 */
+.bg-brown {
+    background-color: var(--brown);
+    color: var(--white);
+}
+/* 不正经黑色背景 */
+.bg-black {
+    background-color: var(--black);
+    color: var(--white);
+}
+/* 暗灰色背景 */
+.bg-darkGray {
+    background-color: var(--darkGray);
+    color: var(--white);
+}
+/* 灰色蹩脚 */
+.bg-gray {
+    background-color: #f0f0f0;
+    color: var(--black);
+}
+/* 烟灰色背景 */
+.bg-grey {
+    background-color: var(--grey);
+    color: var(--white);
+}
+/* 灰白色背景 */
+.bg-ghostWhite {
+    background-color: var(--ghostWhite);
+    color: var(--darkGray);
+}
+/* 白色背景 */
+.bg-white {
+    background-color: var(--white);
+    color: var(--darkGray);
 }
