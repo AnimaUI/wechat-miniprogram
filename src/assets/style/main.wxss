@@ -81,6 +81,8 @@ page {
     --lightGreen: #d8f1e6;
     /* 浅青 */
     --lightCyan: #d8f4f6;
+    /* 浅天蓝 */
+    --skyBlue: #d0ebfb;
     /* 浅蓝 */
     --lightBlue: #c8d7f6;
     /* 浅紫 */
@@ -100,11 +102,52 @@ page {
     |  渐变色  |
     |_________|
     */
+    /* 渐变红 */
     --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
+    /* 渐变橙 */
     --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
+    /* 渐变绿 */
     --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
-    --gradualCyane: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    /* 渐变浅青 */
+    --gradualCyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    /* 渐变蓝 */
     --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3 #00bbd4);
+    /* 渐变紫 */
     --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
-	--gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
+    /* 渐变粉 */
+    --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
+     /* 
+     _________
+    |阴影透明色|
+    |________|
+    */
+    --shadowSize: 6rpx 6rpx 8rpx;
+    /* 红 */
+    --redShadow: rgba(243, 83, 82, .2);
+    /* 橙 */
+    --orangeShadow: rgba(255, 136, 0, .2);
+    /* 黄 */
+    --yellowShadow: rgba(247, 203, 74, .2);
+    /* 橄榄绿 */
+    --oliveShadow: rgba(155, 204, 102, .2);
+    /* 绿 */
+    --greenShadow: rgba(63, 178, 126, .2);
+    /* 天青 */
+    --cyanShadow: rgba(105, 212, 219, .2);
+    /* 蓝 */
+    --blueShadow: rgba(81, 130, 228, .2);
+    /* 紫 */
+    --purpleShadow: rgba(137, 84, 212, .2);
+    /* 紫红 */
+    --mauveShadow: rgba(206, 98, 214, .2);
+    /* 粉 */
+    --pinkShadow: rgba(255, 105, 180, .2);
+    /* 棕 */
+    --brownShadow: rgba(165, 42, 42, .2);
+    /* 烟灰 */
+    --greyShadow: rgba(170, 170, 170, .2);
+    /* 浅灰 */
+    --grayShadow: rgba(190, 190, 190, .2);
+    /* 黑 */
+    --blackShadow: rgba(51, 51, 51, .2);
 }
