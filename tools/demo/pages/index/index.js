@@ -3,7 +3,12 @@
 const app = getApp();
 Page({
     data: {},
-    onLoad() {},
+    onLoad() {
+        wx.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: '#ffffff'
+        });
+    },
     onShareAppMessage() {},
     onShow() {}
 });

@@ -103,19 +103,19 @@ page {
     |_________|
     */
     /* 渐变红 */
-    --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
+    --gradualRed: linear-gradient(-45deg, #e92758, #e92758, #f06c8e);
     /* 渐变橙 */
-    --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
+    --gradualOrange: linear-gradient(-45deg, #ff0000, #fb6525, #f7cb4a);
     /* 渐变绿 */
-    --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
+    --gradualGreen: linear-gradient(-45deg, #3edb80, #a0e35e, #ffea3c);
     /* 渐变浅青 */
-    --gradualCyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    --gradualCyan: linear-gradient(-45deg, #00bbd4, #45dcca, #8dffc0);
     /* 渐变蓝 */
-    --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3 #00bbd4);
+    --gradualBlue: linear-gradient(-45deg, #1976d2, #0c9ad3, #00bbd4);
     /* 渐变紫 */
-    --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
+    --gradualPurple: linear-gradient(-45deg, #a700a7, #ce00ce, #f600f6);
     /* 渐变粉 */
-    --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
+    --gradualPink: linear-gradient(-45deg, #ff69b4, #ff7dbe, #ffcbe5);
     /* 
      _________
     |阴影透明色|

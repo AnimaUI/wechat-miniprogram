@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="scrollPage index">
-    <CustomBar bgColor="bg-gradual-transparent" isBack="{{true}}">
+    <CustomBar bgColor="bg-gradual-green" isBack="{{true}}">
         <view slot="backText">返回</view>
         <view slot="content">首页</view>
     </CustomBar>

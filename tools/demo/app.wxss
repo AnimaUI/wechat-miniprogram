@@ -1,1 +1,2 @@
-@import './assets/style/icon.wxss';
+@import './components/assets/style/icon.wxss';
+@import './components/assets/style/main.wxss';
