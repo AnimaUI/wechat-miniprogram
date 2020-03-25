@@ -82,7 +82,7 @@ page {
     /* 浅青 */
     --lightCyan: #d8f4f6;
     /* 浅天蓝 */
-    --skyBlue: #d0ebfb;
+    --lightSkyBlue: #d0ebfb;
     /* 浅蓝 */
     --lightBlue: #c8d7f6;
     /* 浅紫 */
@@ -134,6 +134,8 @@ page {
     --greenShadow: rgba(63, 178, 126, .2);
     /* 天青 */
     --cyanShadow: rgba(105, 212, 219, .2);
+     /* 天蓝 */
+    --skyBlueShadow: rgba(208, 235, 251, .2);
     /* 蓝 */
     --blueShadow: rgba(81, 130, 228, .2);
     /* 紫 */
@@ -240,7 +242,7 @@ page {
     background-color: var(--darkGray);
     color: var(--white);
 }
-/* 灰色蹩脚 */
+/* 灰色背景 */
 .bg-gray {
     background-color: #f0f0f0;
     color: var(--black);
@@ -259,4 +261,83 @@ page {
 .bg-white {
     background-color: var(--white);
     color: var(--darkGray);
+}
+/*
+ _________
+|  背景色  |\
+| ~~~~~~~ |_\
+|  浅色    |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+/* 浅红色背景 */
+.bg-red.light {
+    background-color: var(--lightRed);
+    color: var(--white);
+}
+/* 浅橙色背景 */
+.bg-orange.light {
+    background-color: var(--lightOrange);
+    color: var(--white);
+}
+/* 浅黄色背景 */
+.bg-yellow.light {
+    background-color: var(--lightYellow);
+    color: var(--black);
+}
+/* 浅橄榄绿背景 */
+.bg-olive.light {
+    background-color: var(--lightOlive);
+    color: var(--white);
+}
+/* 浅绿色背景 */
+.bg-green.light {
+    background-color: var(--lightGreen);
+    color: var(--white);
+}
+/* 浅天青色背景 */
+.bg-cyan.light {
+    background-color: var(--lightCyan);
+    color: var(--white);
+}
+/* 浅天蓝色背景 */
+.bg-skyBlue.light {
+    background-color: var(--lightSkyBlue);
+    color: var(--white);
+}
+/* 浅蓝色背景 */
+.bg-blue.light {
+    background-color: var(--lightBlue);
+    color: var(--white);
+}
+/* 浅紫色背景 */
+.bg-purple.light {
+    background-color: var(--lightPurple);
+    color: var(--white);
+}
+/* 浅紫红色背景 */
+.bg-mauve.light {
+    background-color: var(--lightMauve);
+    color: var(--white);
+}
+/* 浅粉色背景 */
+.bg-pink.light {
+    background-color: var(--lightPink);
+    color: var(--white);
+}
+/* 浅棕色背景 */
+.bg-brown.light {
+    background-color: var(--lightBrown);
+    color: var(--white);
+}
+/* 浅灰色背景 */
+.bg-gray.light {
+    background-color: var(--lightGray);
+    color: var(--black);
+}
+/* 浅烟灰色背景 */
+.bg-grey.light {
+    background-color: var(--grey);
+    color: var(--white);
 }
