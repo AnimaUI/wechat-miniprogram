@@ -95,4 +95,16 @@ page {
     --lightGray: #e5e5e5;
     /* 浅烟灰 */
     --lightGrey: #efefef;
+    /* 
+     _________
+    |  渐变色  |
+    |_________|
+    */
+    --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
+    --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
+    --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
+    --gradualCyane: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3 #00bbd4);
+    --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
+	--gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
 }
