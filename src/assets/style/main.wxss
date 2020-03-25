@@ -341,3 +341,46 @@ page {
     background-color: var(--grey);
     color: var(--white);
 }
+/*
+ __________
+| ~~~~~~~~~|\
+| 渐变背景色 |_\
+| ~~~~~~~~ |
+| ~~~~~~~~ |
+|__________|
+*/
+/* 渐变红 */
+.bg-gradual-red {
+    background-image: var(--gradualRed);
+    color: var(--white);
+}
+/* 渐变橙 */
+.bg-gradual-orange {
+    background-image: var(--gradualOrange);
+    color: var(--white);
+}
+/* 渐变绿 */
+.bg-gradual-green {
+    background-image: var(--gradualGreen);
+    color: var(--white);
+}
+/* 渐变天青 */
+.bg-gradual-cyan {
+    background-image: var(--gradualCyan);
+    color: var(--white);
+}
+/* 渐变蓝 */
+.bg-gradual-blue {
+    background-image: var(--gradualBlue);
+    color: var(--white);
+}
+/* 渐变紫 */
+.bg-gradual-purple {
+    background-image: var(--gradualPurple);
+    color: var(--white);
+}
+/* 渐变粉 */
+.bg-gradual-pink {
+    background-image: var(--gradualPink);
+    color: var(--white);
+}
