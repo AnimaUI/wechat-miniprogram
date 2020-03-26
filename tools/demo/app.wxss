@@ -1,2 +1,3 @@
 @import './components/assets/style/icon.wxss';
+@import './components/assets/style/common.wxss';
 @import './components/assets/style/main.wxss';

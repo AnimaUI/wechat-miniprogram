@@ -1,6 +1,7 @@
-<scroll-view scroll-y class="scrollPage index">
-    <CustomBar bgColor="bg-gradual-green" isBack="{{true}}">
+<scroll-view scroll-y class="scrollPage" id="index">
+    <!-- <CustomBar bgColor="bg-gradual-orange" isBack="{{true}}">
         <view slot="backText">返回</view>
         <view slot="content">首页</view>
-    </CustomBar>
+    </CustomBar> -->
+    <image src='http://oos.animaui.com/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
 </scroll-view>

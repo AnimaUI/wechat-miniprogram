@@ -18,19 +18,15 @@ module.exports = {
     isWatch,
     srcPath: src, // 源目录
     distPath: isDev ? dev : dist, // 目标目录
-
     demoSrc, // demo 源目录
     demoDist, // demo 目标目录
-
     wxss: {
         less: false, // 使用 less 来编写 wxss
         sourcemap: false // 生成 less sourcemap
     },
-
     js: {
         webpack: true // 使用 webpack 来构建 js
     },
-
     webpack: {
         mode: 'production',
         output: {
@@ -65,6 +61,5 @@ module.exports = {
             assetFilter: assetFilename => assetFilename.endsWith('.js')
         }
     },
-
     copy: ['./assets', './utils.js'] // 将会复制到目标目录
 };

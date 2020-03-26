@@ -1,386 +1,445 @@
-/*
-    code is far away from bug with the animal protecting
-                      _                    _    _  _____ 
-        /\           (_)                  | |  | ||_   _|
-       /  \    _ __   _  _ __ ___    __ _ | |  | |  | |  
-      / /\ \  | '_ \ | || '_ ` _ \  / _` || |  | |  | |  
-     / ____ \ | | | || || | | | | || (_| || |__| | _| |_ 
-    /_/    \_\|_| |_||_||_| |_| |_| \__,_| \____/ |_____|
+@import './reset.wxss';
+/** 顶部自定义导航 **/
+.an-bar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 100rpx;
+    justify-content: space-between;
+}
 
-    AnimaUI for wechat-miniprogram  v1.0.0 | by 花夏(huaxia@animaui.com) 2020-03-25 18:10:37
-    仅供学习交流，如作它用所承受的法律责任一概与作者无关
-    代码不易，使用AnimaUI开发微信小程序时，请注明基于
-    AnimaUI开发，谢谢~~ QQ交流群：183167955
-*/
+.an-bar .action {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 100%;
+}
 
-/*
- _________
-|  初始化  |\
-| ~~~~~~~ |_\
-| 基础变量 |
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-page {
-    /* 
-     _________
-    |  基础色  |
-    |_________|
-    */
-    /* 不正经红色 */
-    --red: #f35352;
-    /* 橙色 */
-    --orange: #ff8800;
-    /* 不正经黄色 */
-    --yellow: #f7cb4a;
-    /* 橄榄绿 */
-    --olive: #9bcc66;
-    /* 绿色 */
-    --green: #3fb27e;
-    /* 青色 */
-    --cyan: #69d4db;
-    /* 天蓝色 */
-    --skyBlue: #51b4f1;
-    /* 蓝色 */
-    --blue: #5182e4;
-    /* 紫色 */
-    --purple: #8954d4;
-    /* 紫红色 */
-    --mauve: #ce62d6;
-    /* 粉色 */
-    --pink: #ff69b4;
-    /* 棕色 */
-    --brown: #a52a2a;
-    /* 不正经黑色 */
-    --black: #333;
-    /* 灰色 */
-    --gray: #aaa;
-    /* 暗灰色 */
-    --darkGray: #666;
-    /* 烟灰色 */
-    --grey: #bebebe;
-    /* 魂白 */
-    --ghostWhite: #f8f8f8;
-    /* 白色 */
-    --white: #fff;
-    /* 
-     _________
-    |   浅色  |
-    |_________|
-    */
-    /* 浅红 */
-    --lightRed: #ffcccb;
-    /* 浅橙 */
-    --lightOrange: #ffdab1;
-    /* 浅黄 */
-    --lightYellow: #fdf1cd;
-    /* 浅橄榄绿 */
-    --lightOlive: #e8f3dc;
-    /* 浅绿 */
-    --lightGreen: #d8f1e6;
-    /* 浅青 */
-    --lightCyan: #d8f4f6;
-    /* 浅天蓝 */
-    --lightSkyBlue: #d0ebfb;
-    /* 浅蓝 */
-    --lightBlue: #c8d7f6;
-    /* 浅紫 */
-    --lightPurple: #e0d1f4;
-    /* 浅紫红 */
-    --lightMauve: #f0cff2;
-    /* 浅粉 */
-    --lightPink: #ffcbe5;
-    /* 浅棕 */
-    --lightBrown: #f5d9d9;
-    /* 浅灰 */
-    --lightGray: #e5e5e5;
-    /* 浅烟灰 */
-    --lightGrey: #efefef;
-    /* 
-     _________
-    |  渐变色  |
-    |_________|
-    */
-    /* 渐变红 */
-    --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
-    /* 渐变橙 */
-    --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
-    /* 渐变绿 */
-    --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
-    /* 渐变浅青 */
-    --gradualCyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
-    /* 渐变蓝 */
-    --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3, #00bbd4);
-    /* 渐变紫 */
-    --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
-    /* 渐变粉 */
-    --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
-    /* 
-     _________
-    |阴影透明色|
-    |________|
-    */
-    --shadowSize: 6rpx 6rpx 8rpx;
-    /* 红 */
-    --redShadow: rgba(243, 83, 82, .2);
-    /* 橙 */
-    --orangeShadow: rgba(255, 136, 0, .2);
-    /* 黄 */
-    --yellowShadow: rgba(247, 203, 74, .2);
-    /* 橄榄绿 */
-    --oliveShadow: rgba(155, 204, 102, .2);
-    /* 绿 */
-    --greenShadow: rgba(63, 178, 126, .2);
-    /* 天青 */
-    --cyanShadow: rgba(105, 212, 219, .2);
-     /* 天蓝 */
-    --skyBlueShadow: rgba(208, 235, 251, .2);
-    /* 蓝 */
-    --blueShadow: rgba(81, 130, 228, .2);
-    /* 紫 */
-    --purpleShadow: rgba(137, 84, 212, .2);
-    /* 紫红 */
-    --mauveShadow: rgba(206, 98, 214, .2);
-    /* 粉 */
-    --pinkShadow: rgba(255, 105, 180, .2);
-    /* 棕 */
-    --brownShadow: rgba(165, 42, 42, .2);
-    /* 烟灰 */
-    --greyShadow: rgba(170, 170, 170, .2);
-    /* 浅灰 */
-    --grayShadow: rgba(190, 190, 190, .2);
-    /* 黑 */
-    --blackShadow: rgba(51, 51, 51, .2);
-    /* 
-     ______________
-    | 初始化页面样式 |
-    |_____________|
-    */
-    background-color: var(--ghostWhite);
-    font-size: 28rpx;
-    color: var(--black);
-    font-family: Helvetica Neue, Helvetica, sans-serif;
+.an-bar .action.border-title {
+    position: relative;
+    top: -10rpx;
 }
-/*
- _________
-|  背景色  |\
-| ~~~~~~~ |_\
-|  纯色    |
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
 
-/* 红色背景 */
-.bg-red {
-    background-color: var(--red);
-    color: var(--white);
+.an-bar .action.border-title text[class*="bg-"]:last-child {
+    position: absolute;
+    bottom: -0.5rem;
+    min-width: 2rem;
+    height: 6rpx;
+    left: 0;
 }
-/* 橙色背景 */
-.bg-orange {
-    background-color: var(--orange);
-    color: var(--white);
+
+.an-bar .action.sub-title {
+    position: relative;
+    top: -0.2rem;
 }
-/* 黄色背景 */
-.bg-yellow {
-    background-color: var(--yellow);
+
+.an-bar .action.sub-title text {
+    position: relative;
+    z-index: 1;
+}
+
+.an-bar .action.sub-title text[class*="bg-"]:last-child {
+    position: absolute;
+    display: inline-block;
+    bottom: -0.2rem;
+    border-radius: 6rpx;
+    width: 100%;
+    height: 0.6rem;
+    left: 0.6rem;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.an-bar .action.sub-title text[class*="text-"]:last-child {
+    position: absolute;
+    display: inline-block;
+    bottom: -0.7rem;
+    left: 0.5rem;
+    opacity: 0.2;
+    z-index: 0;
+    text-align: right;
+    font-weight: 900;
+    font-size: 36rpx;
+}
+
+.an-bar.justify-center .action.border-title text:last-child,
+.an-bar.justify-center .action.sub-title text:last-child {
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.an-bar .action:first-child {
+    margin-left: 30rpx;
+    font-size: 30rpx;
+}
+
+.an-bar .action text.text-cut {
+    text-align: left;
+    width: 100%;
+}
+
+.an-bar .cu-avatar:first-child {
+    margin-left: 20rpx;
+}
+
+.an-bar .action:first-child > text[class*="ani-"] {
+    margin-left: -0.3em;
+    margin-right: 0.3em;
+}
+
+.an-bar .action:last-child {
+    margin-right: 30rpx;
+}
+
+.an-bar .action > text[class*="ani-"],
+.an-bar .action > view[class*="ani-"] {
+    font-size: 50rpx;
+}
+
+.an-bar .action > text[class*="ani-"]+text[class*="ani-"] {
+    margin-left: 0.5em;
+}
+
+.an-bar .content {
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 340rpx);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    cursor: none;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.an-bar.ios .content {
+    bottom: 7px;
+    height: 30px;
+    font-size: 32rpx;
+    line-height: 30px;
+}
+
+.an-bar.btn-group {
+    justify-content: space-around;
+}
+
+.an-bar.btn-group button {
+    padding: 20rpx 32rpx;
+}
+
+.an-bar.btn-group button {
+    flex: 1;
+    margin: 0 20rpx;
+    max-width: 50%;
+}
+
+.an-bar .search-form {
+    background-color: #f5f5f5;
+    line-height: 64rpx;
+    height: 64rpx;
+    font-size: 24rpx;
     color: var(--black);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 30rpx;
 }
-/*橄榄绿背景 */
-.bg-olive {
-    background-color: var(--olive);
-    color: var(--white);
+
+.an-bar .search-form+.action {
+    margin-right: 30rpx;
 }
-/* 绿色背景 */
-.bg-green {
-    background-color: var(--green);
-    color: var(--white);
+
+.an-bar .search-form input {
+    flex: 1;
+    padding-right: 30rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    font-size: 26rpx;
+    background-color: transparent;
 }
-/* 天青色背景 */
-.bg-cyan {
-    background-color: var(--cyan);
-    color: var(--white);
+
+.an-bar .search-form [class*="ani-"] {
+    margin: 0 0.5em 0 0.8em;
 }
-/* 天蓝色背景 */
-.bg-skyBlue {
-    background-color: var(--skyBlue);
-    color: var(--white);
+
+.an-bar .search-form [class*="ani-"]::before {
+    top: 0;
 }
-/* 蓝色背景 */
-.bg-blue {
-    background-color: var(--blue);
-    color: var(--white);
+
+.an-bar.fixed,
+.nav.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1024;
+    box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
-/* 紫色背景 */
-.bg-purple {
-    background-color: var(--purple);
-    color: var(--white);
+
+.an-bar.foot {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1024;
+    box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
-/* 紫红色背景 */
-.bg-mauve {
-    background-color: var(--mauve);
-    color: var(--white);
+
+.an-bar.tabbar {
+    padding: 0;
+    height: calc(100rpx + env(safe-area-inset-bottom) / 2);
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2);
 }
-/* 粉色背景 */
-.bg-pink {
-    background-color: var(--pink);
-    color: var(--white);
+
+.cu-tabbar-height {
+    min-height: 100rpx;
+    height: calc(100rpx + env(safe-area-inset-bottom) / 2);
 }
-/* 棕色背景 */
-.bg-brown {
-    background-color: var(--brown);
-    color: var(--white);
+
+.an-bar.tabbar.shadow {
+    box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
-/* 不正经黑色背景 */
-.bg-black {
-    background-color: var(--black);
-    color: var(--white);
+
+.an-bar.tabbar .action {
+    font-size: 22rpx;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 0;
+    display: block;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    overflow: initial;
 }
-/* 暗灰色背景 */
-.bg-darkGray {
-    background-color: var(--darkGray);
-    color: var(--white);
+
+.an-bar.tabbar.shop .action {
+    width: 140rpx;
+    flex: initial;
 }
-/* 灰色背景 */
-.bg-gray {
-    background-color: #f0f0f0;
-    color: var(--black);
+
+.an-bar.tabbar .action.add-action {
+    position: relative;
+    z-index: 2;
+    padding-top: 50rpx;
+    background-color: inherit;
 }
-/* 烟灰色背景 */
-.bg-grey {
-    background-color: var(--grey);
-    color: var(--white);
+
+.an-bar.tabbar .action.add-action [class*="ani-"] {
+    position: absolute;
+    width: 70rpx;
+    z-index: 2;
+    height: 70rpx;
+    border-radius: 50%;
+    line-height: 70rpx;
+    font-size: 50rpx;
+    top: -35rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
 }
-/* 灰白色背景 */
-.bg-ghostWhite {
-    background-color: var(--ghostWhite);
-    color: var(--darkGray);
+
+.an-bar.tabbar .action.add-action::after {
+    content: "";
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    top: -50rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 -3rpx 8rpx rgba(0, 0, 0, 0.08);
+    border-radius: 50rpx;
+    background-color: inherit;
+    z-index: 0;
 }
-/* 白色背景 */
-.bg-white {
+
+.an-bar.tabbar .action.add-action::before {
+    content: "";
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    bottom: 30rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: inherit;
+    z-index: 1;
+}
+
+.an-bar.tabbar .btn-group {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10rpx;
+}
+
+.an-bar.tabbar button.action::after {
+    border: 0;
+}
+
+.an-bar.tabbar .action [class*="ani-"] {
+    width: 100rpx;
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0 auto 10rpx;
+    text-align: center;
+    font-size: 40rpx;
+}
+
+.an-bar.tabbar .action .ani-an-image {
+    margin: 0 auto;
+}
+
+.an-bar.tabbar .action .ani-an-image image {
+    width: 50rpx;
+    height: 50rpx;
+    display: inline-block;
+}
+
+.an-bar.tabbar .submit {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex: 2;
+    align-self: stretch;
+}
+
+.an-bar.tabbar .submit:last-child {
+    flex: 2.6;
+}
+
+.an-bar.tabbar .submit+.submit {
+    flex: 2;
+}
+
+.an-bar.tabbar.border .action::before {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    border-right: 1rpx solid rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+.an-bar.tabbar.border .action:last-child:before {
+    display: none;
+}
+
+.an-bar.input {
+    padding-right: 20rpx;
     background-color: var(--white);
-    color: var(--darkGray);
 }
-/*
- _________
-|  背景色  |\
-| ~~~~~~~ |_\
-|  浅色    |
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-/* 浅红色背景 */
-.bg-red.light {
-    background-color: var(--lightRed);
-    color: var(--white);
+
+.an-bar.input input {
+    overflow: initial;
+    line-height: 64rpx;
+    height: 64rpx;
+    min-height: 64rpx;
+    flex: 1;
+    font-size: 30rpx;
+    margin: 0 20rpx;
 }
-/* 浅橙色背景 */
-.bg-orange.light {
-    background-color: var(--lightOrange);
-    color: var(--white);
+
+.an-bar.input .action {
+    margin-left: 20rpx;
 }
-/* 浅黄色背景 */
-.bg-yellow.light {
-    background-color: var(--lightYellow);
-    color: var(--black);
+
+.an-bar.input .action [class*="ani-"] {
+    font-size: 48rpx;
 }
-/* 浅橄榄绿背景 */
-.bg-olive.light {
-    background-color: var(--lightOlive);
-    color: var(--white);
+
+.an-bar.input input+.action {
+    margin-right: 20rpx;
+    margin-left: 0;
 }
-/* 浅绿色背景 */
-.bg-green.light {
-    background-color: var(--lightGreen);
-    color: var(--white);
+
+.an-bar.input .action:first-child [class*="ani-"] {
+    margin-left: 0;
 }
-/* 浅天青色背景 */
-.bg-cyan.light {
-    background-color: var(--lightCyan);
-    color: var(--white);
+
+.an-custom {
+    display: block;
+    position: relative;
 }
-/* 浅天蓝色背景 */
-.bg-skyBlue.light {
-    background-color: var(--lightSkyBlue);
-    color: var(--white);
+
+.an-custom .an-bar .content {
+    width: calc(100% - 440rpx);
 }
-/* 浅蓝色背景 */
-.bg-blue.light {
-    background-color: var(--lightBlue);
-    color: var(--white);
+
+.an-custom .an-bar .content image {
+    height: 60rpx;
+    width: 240rpx;
 }
-/* 浅紫色背景 */
-.bg-purple.light {
-    background-color: var(--lightPurple);
-    color: var(--white);
+
+.an-custom .an-bar {
+    min-height: 0;
+    padding-right: 220rpx;
+    box-shadow: 0 0 0;
+    z-index: 9999;
 }
-/* 浅紫红色背景 */
-.bg-mauve.light {
-    background-color: var(--lightMauve);
-    color: var(--white);
+
+.an-custom .an-bar .border-custom {
+    position: relative;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 1000rpx;
+    height: 30px;
 }
-/* 浅粉色背景 */
-.bg-pink.light {
-    background-color: var(--lightPink);
-    color: var(--white);
+
+.an-custom .an-bar .border-custom::after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 1rpx solid var(--white);
+    opacity: 0.5;
 }
-/* 浅棕色背景 */
-.bg-brown.light {
-    background-color: var(--lightBrown);
-    color: var(--white);
+
+.an-custom .an-bar .border-custom::before {
+    content: " ";
+    width: 1rpx;
+    height: 110%;
+    position: absolute;
+    top: 22.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    opacity: 0.6;
+    background-color: var(--white);
 }
-/* 浅灰色背景 */
-.bg-gray.light {
-    background-color: var(--lightGray);
-    color: var(--black);
-}
-/* 浅烟灰色背景 */
-.bg-grey.light {
-    background-color: var(--grey);
-    color: var(--white);
-}
-/*
- __________
-| ~~~~~~~~~|\
-| 渐变背景色 |_\
-| ~~~~~~~~ |
-| ~~~~~~~~ |
-|__________|
-*/
-/* 渐变红 */
-.bg-gradual-red {
-    background-image: var(--gradualRed);
-    color: var(--white);
-}
-/* 渐变橙 */
-.bg-gradual-orange {
-    background-image: var(--gradualOrange);
-    color: var(--white);
-}
-/* 渐变绿 */
-.bg-gradual-green {
-    background-image: var(--gradualGreen);
-    color: var(--white);
-}
-/* 渐变天青 */
-.bg-gradual-cyan {
-    background-image: var(--gradualCyan);
-    color: var(--white);
-}
-/* 渐变蓝 */
-.bg-gradual-blue {
-    background-image: var(--gradualBlue);
-    color: var(--white);
-}
-/* 渐变紫 */
-.bg-gradual-purple {
-    background-image: var(--gradualPurple);
-    color: var(--white);
-}
-/* 渐变粉 */
-.bg-gradual-pink {
-    background-image: var(--gradualPink);
-    color: var(--white);
+
+.an-custom .an-bar .border-custom text {
+    display: block;
+    flex: 1;
+    margin: auto !important;
+    text-align: center;
+    font-size: 34rpx;
 }
