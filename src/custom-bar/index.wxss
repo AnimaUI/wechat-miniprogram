@@ -165,7 +165,7 @@
 
 .ani-bar .action > text[class*="ani-icon-"],
 .ani-bar .action > view[class*="ani-icon-"] {
-    font-size: 50rpx;
+    font-size: 28rpx;
 }
 
 .ani-bar .action > text[class*="ani-icon-"]+text[class*="ani-icon-"] {
