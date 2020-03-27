@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
 .ani-tabbar-fixed {
     position: fixed;
@@ -17,7 +18,7 @@
 .ani-tabbar::before {
     content: '';
     width: 100%;
-    border-top: 1rpx solid #B2B2B2;
+    border-top: 1rpx solid #ccc;
     position: absolute;
     top: 0;
     left: 0;
