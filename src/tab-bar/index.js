@@ -1,5 +1,4 @@
 const app = getApp();
-
 Component({
     /**
      * 组件的一些选项
@@ -12,21 +11,55 @@ Component({
      * 组件的对外属性
      */
     properties: {
-        bgColor: {
+        // 当前索引
+        current: {
+            type: Number,
+            value: 0
+        },
+        // 字体颜色
+        color: {
             type: String,
-            default: ''
+            value: '#888'
         },
-        isCustom: {
-            type: [Boolean, String],
-            default: false
-        },
-        isBack: {
-            type: [Boolean, String],
-            default: false
-        },
-        bgImage: {
+        // 字体选中颜色
+        selectedColor: {
             type: String,
-            default: ''
+            value: '#f35352'
+        },
+        // 背景颜色
+        backgroundColor: {
+            type: String,
+            value: '#fff'
+        },
+        // 是否需要中间凸起按钮
+        hump: {
+            type: Boolean,
+            value: false
+        },
+        // 固定在底部
+        isFixed: {
+            type: Boolean,
+            value: true
+        },
+        // tabbar列表
+        list: {
+            type: Array,
+            value: []
+        },
+        // 角标字体颜色
+        badgeColor: {
+            type: String,
+            value: '#fff'
+        },
+        // 角标背景颜色
+        badgeBgColor: {
+            type: String,
+            value: '#f35352'
+        },
+        // 去掉顶部细线
+        unlined: {
+            type: Boolean,
+            value: false
         }
     },
     /**

@@ -3,12 +3,12 @@
         class="ani-bar fixed {{bgImage !== '' ? 'none-bg text-white bg-img' : ''}} {{bgColor}}"
         style="height: {{customBar}}px; padding-top: {{statusBar}}px; {{bgImage?'background-image:url(' + bgImage+')':''}}">
         <view class="action" bindtap="backPage" wx:if="{{isBack}}">
-            <text class="ani-icon ani-back"></text>
+            <text class="ani-icon-back"></text>
             <slot name="backText"></slot>
         </view>
         <view class="action border-custom" wx:if="{{isCustom}}" style="width:{{custom.width}}px;height:{{custom.height}}px;margin-left:calc(750rpx - {{custom.right}}px)">
-            <text class="ani-icon ani-back" bindtap="backPage"></text>
-            <text class="ani-icon ani-home" bindtap="toHome"></text>
+            <text class="ani-icon-back" bindtap="backPage"></text>
+            <text class="ani-icon-home" bindtap="toHome"></text>
         </view>
         <view class="content" style="top:{{statusBar}}px">
             <slot name="content"></slot>

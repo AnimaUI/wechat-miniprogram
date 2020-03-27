@@ -13,3 +13,6 @@ navigator,
 image {
     box-sizing: border-box;
 }
+[class*="ani-icon-"] {
+    font-size: 36rpx;
+}

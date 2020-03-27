@@ -1,0 +1,32 @@
+<view
+    class="ani-tabbar {{ isFixed ? 'ani-tabbar-fixed' : '' }} {{ unlined ? 'ani-unlined' : '' }}"
+    style="background: {{backgroundColor}}">
+    <block
+        wx:for="{{list}}"
+        wx:key="key">
+        <view
+            class="ani-tabbar-item {{item.className}} {{item.hump ? 'ani-item-hump' : ''}}"
+            style="background: {{item.hump ? backgroundColor : 'none'}}"
+            bindtap="tabbarSwitch" data-index="{{index}}">
+            <view class="ani-icon-box {{ item.hump ? 'ani-tabbar-hump' : '' }}">
+                <text
+                    style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
+                    class="{{item.icon}}"></text>
+                <view
+                    class="{{item.isDot?'ani-badge-dot':'ani-badge'}}"
+                    style="color: {{badgeColor}}; background: {{badgeBgColor}}"
+                    wx:if="{{item.num > 0}}">
+                    {{item.isDot?"":item.num}}
+                </view>
+            </view>
+            <view
+                class="ani-text-scale {{item.hump ? 'ani-text-hump' : ''}}"
+                style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}">
+                {{item.text}}
+            </view>
+        </view>
+    </block>
+    <view
+        class="{{ hump ? 'ani-hump-box' : '' }}"
+        wx:if="{{ hump && !unlined }}"></view>
+</view>

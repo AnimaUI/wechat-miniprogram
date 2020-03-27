@@ -154,7 +154,7 @@
     margin-left: 20rpx;
 }
 
-.ani-bar .action:first-child > text[class*="ani-"] {
+.ani-bar .action:first-child > text[class*="ani-icon-"] {
     margin-left: -0.3em;
     margin-right: 0.3em;
 }
@@ -163,12 +163,12 @@
     margin-right: 30rpx;
 }
 
-.ani-bar .action > text[class*="ani-"],
-.ani-bar .action > view[class*="ani-"] {
+.ani-bar .action > text[class*="ani-icon-"],
+.ani-bar .action > view[class*="ani-icon-"] {
     font-size: 50rpx;
 }
 
-.ani-bar .action > text[class*="ani-"]+text[class*="ani-"] {
+.ani-bar .action > text[class*="ani-icon-"]+text[class*="ani-icon-"] {
     margin-left: 0.5em;
 }
 
@@ -237,11 +237,11 @@
     background-color: transparent;
 }
 
-.ani-bar .search-form [class*="ani-"] {
+.ani-bar .search-form [class*="ani-icon-"] {
     margin: 0 0.5em 0 0.8em;
 }
 
-.ani-bar .search-form [class*="ani-"]::before {
+.ani-bar .search-form [class*="ani-icon-"]::before {
     top: 0;
 }
 
@@ -302,7 +302,7 @@
     background-color: inherit;
 }
 
-.ani-bar.tabbar .action.add-action [class*="ani-"] {
+.ani-bar.tabbar .action.add-action [class*="ani-icon-"] {
     position: absolute;
     width: 70rpx;
     z-index: 2;
@@ -357,7 +357,7 @@
     border: 0;
 }
 
-.ani-bar.tabbar .action [class*="ani-"] {
+.ani-bar.tabbar .action [class*="ani-icon-"] {
     width: 100rpx;
     position: relative;
     display: block;
@@ -431,7 +431,7 @@
     margin-left: 20rpx;
 }
 
-.ani-bar.input .action [class*="ani-"] {
+.ani-bar.input .action [class*="ani-icon-"] {
     font-size: 48rpx;
 }
 
@@ -440,6 +440,6 @@
     margin-left: 0;
 }
 
-.ani-bar.input .action:first-child [class*="ani-"] {
+.ani-bar.input .action:first-child [class*="ani-icon-"] {
     margin-left: 0;
 }

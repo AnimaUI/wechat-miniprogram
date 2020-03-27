@@ -2,7 +2,9 @@
 // 获取应用实例
 const app = getApp();
 Page({
-    data: {},
+    data: {
+        tabBar: app.globalData.tabBar
+    },
     onLoad() {
         wx.setNavigationBarColor({
             frontColor: '#ffffff',
