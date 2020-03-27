@@ -64,6 +64,8 @@ page {
     --ghostWhite: #f8f8f8;
     /* 白色 */
     --white: #fff;
+    /* 透明 */
+    --transparent: rgba(0, 0, 0, 0);
     /* 
      _________
     |   浅色  |
@@ -263,6 +265,11 @@ page {
 .bg-white {
     background-color: var(--white);
     color: var(--darkGray);
+}
+/* 透明 */
+.bg-transparent {
+    background-image: var(--transparent);
+    color: var(--white);
 }
 /*
  _________

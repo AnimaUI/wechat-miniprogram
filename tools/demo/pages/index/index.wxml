@@ -1,8 +1,13 @@
-<CustomBar bgColor="bg-gradual-orange" isBack="{{true}}">
+<!-- <CustomBar bgColor="bg-transparent" isBack="{{true}}">
     <view slot="backText">返回</view>
     <view slot="content">首页</view>
-</CustomBar>
-<image src='http://oos.animaui.com/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+</CustomBar> -->
+<image src='http://oos.animaui.com/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
 <scroll-view scroll-y class="scrollPage" id="index">
 </scroll-view>
-<TabBar current="{{tabBar.current}}" list="{{tabBar.list}}" backgroundColor="{{tabBar.backgroundColor}}" />
+<TabBar
+    color="{{tabBar.color}}"
+    selectedColor="{{tabBar.selectedColor}}"
+    current="{{tabBar.current}}"
+    backgroundColor="{{tabBar.backgroundColor}}"
+    list="{{tabBar.list}}" />

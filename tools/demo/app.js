@@ -20,9 +20,9 @@ App({
             // 当前索引
             current: 0,
             // 字体颜色
-            color: '#333',
+            color: '#b4bbc8',
             // 字体选中颜色
-            selectedColor: '#f35352',
+            selectedColor: '#ff8800',
             // 背景颜色
             backgroundColor: '#fff',
             // 是否需要中间凸起按钮
@@ -42,27 +42,27 @@ App({
                     text: '基础',
                     icon: 'ani-icon-basic',
                     className: 'menu-item',
-                    selectedColor: '#f35352'
+                    selectedColor: '#ff8800'
                 },
                 {
                     pagePath: '/pages/index/index',
                     text: '组件',
                     icon: 'ani-icon-component',
-                    selectedColor: '#f35352',
+                    selectedColor: '#ff8800',
                     className: 'menu-item'
                 },
                 {
                     pagePath: '/pages/index/index',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
-                    selectedColor: '#f35352',
+                    selectedColor: '#ff8800',
                     className: 'menu-item'
                 },
                 {
                     pagePath: '/pages/index/index',
                     text: '关于',
                     icon: 'ani-icon-person',
-                    selectedColor: '#f35352',
+                    selectedColor: '#ff8800',
                     className: 'menu-item'
                 }
             ]
