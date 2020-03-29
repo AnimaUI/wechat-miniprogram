@@ -164,8 +164,36 @@ page {
     background-color: var(--ghostWhite);
     font-size: 28rpx;
     color: var(--black);
-    font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+.fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.text-bold,
+.fw-500 {
+    font-weight: 500;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fs-48 {
+    font-size: 48rpx!important;
+}
+.fs-60 {
+    font-size: 60rpx!important;
+}
+.fs-80 {
+    font-size: 80rpx!important;
+}
+.block {
+    display: block;
+}
+.capitalize {
+    text-transform: Capitalize;
+}
+
 /*
  _________
 |  背景色  |\
@@ -397,4 +425,223 @@ page {
 .bg-gradual-pink {
     background-image: var(--gradualPink);
     color: var(--white);
+}
+/*
+ _________
+| 文字颜色 |\
+| ~~~~~~~ |_\
+|~~正经色~~|
+| ~~~~~~~ |
+|_________|
+*/
+/* 不正经红色 */
+.text-red {
+    color: var(--red);
+}
+/* 橙色 */
+.text-orange {
+    color: var(--orange);
+}
+/* 不正经黄色 */
+.text-yellow {
+    color: var(--yellow);
+}
+/* 橄榄绿 */
+.text-olive {
+    color: var(--olive);
+}
+/* 绿色 */
+.text-green {
+    color: var(--green);
+}
+/* 青色 */
+.text-cyan {
+    color: var(--cyan);
+}
+ /* 蓝色 */
+.text-blue {
+    color: var(--blue);
+}
+/* 紫色 */
+.text-purple {
+    color: var(--purple);
+}
+/* 紫红色 */
+.text-mauve {
+    color: var(--mauve);
+}
+/* 粉色 */
+.text-pink {
+    color: var(--pink);
+}
+/* 棕色 */
+.text-brown {
+    color: var(--brown);
+}
+/* 不正经黑色 */
+.text-black {
+    color: var(--black);
+}
+/* 暗灰色 */
+.text-darkGray {
+    color: var(--darkGray);
+}
+/* 灰色 */
+.text-gray {
+    color: var(--gray);
+}
+/* 烟灰色 */
+.text-grey {
+    color: var(--grey);
+}
+/* 魂白 */
+.text-ghostWhite {
+    color: var(--ghostWhite);
+}
+/* 白色 */
+.text-white {
+    color: var(--white);
+}
+/*
+ _________
+|背景shadow|\
+| ~~~~~~~ |_\
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+/* 红 */
+.shadow[class*="-red"] {
+    box-shadow: var(--shadowSize) var(--redShadow);
+}
+/* 橙 */
+.shadow[class*="-orange"] {
+    box-shadow: var(--shadowSize) var(--orangeShadow);
+}
+/* 黄 */
+.shadow[class*="-yellow"] {
+    box-shadow: var(--shadowSize) var(--yellowShadow);
+}
+/* 橄榄绿 */
+.shadow[class*="-olive"] {
+    box-shadow: var(--shadowSize) var(--oliveShadow);
+}
+/* 绿 */
+.shadow[class*="-green"] {
+    box-shadow: var(--shadowSize) var(--greenShadow);
+}
+/* 青 */
+.shadow[class*="-cyan"] {
+    box-shadow: var(--shadowSize) var(--cyanShadow);
+}
+/* 天蓝 */
+.shadow[class*="-skyBlue"] {
+    box-shadow: var(--shadowSize) var(--skyBlueShadow);
+}
+.shadow[class*="-blue"] {
+    box-shadow: var(--shadowSize) var(--blueShadow);
+}
+/* 紫 */
+.shadow[class*="-purple"] {
+    box-shadow: var(--shadowSize) var(--purpleShadow);
+}
+/* 紫红 */
+.shadow[class*="-mauve"] {
+    box-shadow: var(--shadowSize) var(--mauveShadow);
+}
+/* 粉 */
+.shadow[class*="-pink"] {
+    box-shadow: var(--shadowSize) var(--pinkShadow);
+}
+/* 棕 */
+.shadow[class*="-brown"] {
+    box-shadow: var(--shadowSize) var(--brownShadow);
+}
+/* 烟灰 */
+.shadow[class*="-grey"] {
+    box-shadow: var(--shadowSize) var(--greyShadow);
+}
+/* 浅灰 */
+.shadow[class*="-gray"] {
+    box-shadow: var(--shadowSize) var(--grayShadow);
+}
+/* 不正经黑色 */
+.shadow[class*="-black"] {
+    box-shadow: var(--shadowSize) var(--blackShadow);
+}
+/* 不正经黑色 */
+.shadow[class*="-white"] {
+    box-shadow: var(--shadowSize) var(--blackShadow);
+}
+
+/*
+ _________
+|文字shadow|\
+| ~~~~~~~ |_\
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+/* 红 */
+.text-shadow[class*="-red"] {
+    text-shadow: var(--shadowSize) var(--redShadow);
+}
+/* 橙 */
+.text-shadow[class*="-orange"] {
+    text-shadow: var(--shadowSize) var(--orangeShadow);
+}
+/* 黄 */
+.text-shadow[class*="-yellow"] {
+    text-shadow: var(--shadowSize) var(--yellowShadow);
+}
+/* 橄榄绿 */
+.text-shadow[class*="-olive"] {
+    text-shadow: var(--shadowSize) var(--oliveShadow);
+}
+/* 绿 */
+.text-shadow[class*="-green"] {
+    text-shadow: var(--shadowSize) var(--greenShadow);
+}
+/* 青 */
+.text-shadow[class*="-cyan"] {
+    text-shadow: var(--shadowSize) var(--cyanShadow);
+}
+/* 天蓝 */
+.text-shadow[class*="-skyBlue"] {
+    text-shadow: var(--shadowSize) var(--skyBlueShadow);
+}
+.text-shadow[class*="-blue"] {
+    text-shadow: var(--shadowSize) var(--blueShadow);
+}
+/* 紫 */
+.text-shadow[class*="-purple"] {
+    text-shadow: var(--shadowSize) var(--purpleShadow);
+}
+/* 紫红 */
+.text-shadow[class*="-mauve"] {
+    text-shadow: var(--shadowSize) var(--mauveShadow);
+}
+/* 粉 */
+.text-shadow[class*="-pink"] {
+    text-shadow: var(--shadowSize) var(--pinkShadow);
+}
+/* 棕 */
+.text-shadow[class*="-brown"] {
+    text-shadow: var(--shadowSize) var(--brownShadow);
+}
+/* 烟灰 */
+.text-shadow[class*="-grey"] {
+    text-shadow: var(--shadowSize) var(--greyShadow);
+}
+/* 浅灰 */
+.text-shadow[class*="-gray"] {
+    text-shadow: var(--shadowSize) var(--grayShadow);
+}
+/* 不正经黑色 */
+.text-shadow[class*="-black"] {
+    text-shadow: var(--shadowSize) var(--blackShadow);
+}
+/* 不正经黑色 */
+.text-shadow[class*="-white"] {
+    text-shadow: var(--shadowSize) var(--blackShadow);
 }

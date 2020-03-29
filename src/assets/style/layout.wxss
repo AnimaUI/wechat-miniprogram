@@ -1,0 +1,55 @@
+/*
+    code is far away from bug with the animal protecting
+                      _                    _    _  _____ 
+        /\           (_)                  | |  | ||_   _|
+       /  \    _ __   _  _ __ ___    __ _ | |  | |  | |  
+      / /\ \  | '_ \ | || '_ ` _ \  / _` || |  | |  | |  
+     / ____ \ | | | || || | | | | || (_| || |__| | _| |_ 
+    /_/    \_\|_| |_||_||_| |_| |_| \__,_| \____/ |_____|
+
+    AnimaUI for wechat-miniprogram  v1.0.0 | by 花夏(huaxia@animaui.com) 2020-03-25 18:10:37
+    仅供学习交流，如作它用所承受的法律责任一概与作者无关
+    代码不易，使用AnimaUI开发微信小程序时，请注明基于
+    AnimaUI开发，谢谢~~ QQ交流群：183167955
+*/
+
+/*
+ _________
+|   布局   |\
+| ~~~~~~~ |_\
+|  flex   |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+.flex {
+    display: flex;
+}
+/* 项目位于容器的开头 */
+.justify-start {
+    justify-content: flex-start;
+}
+/* 项目位于容器的结尾 */
+.justify-end {
+    justify-content: flex-end;
+}
+/* 项目位于容器的中心 */
+.justify-center {
+    justify-content: center;
+}
+/* 项目位于各行之间留有空白的容器内 */
+.justify-between {
+    justify-content: space-between;
+}
+/* 项目位于各行之前、之间、之后都留有空白的容器内 */
+.justify-around {
+    justify-content: space-around;
+}
+.flex-direction {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+

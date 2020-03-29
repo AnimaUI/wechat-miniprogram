@@ -4,6 +4,33 @@
 </CustomBar> -->
 <image src='http://oos.animaui.com/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
 <scroll-view scroll-y class="scrollPage" id="index">
+    <view class="main">
+        <view class="top flex justify-between">
+            <view class="left text-black text-bold">
+                <text class="block yin">basic</text>
+                <text class="block han">基础元素</text>
+            </view>
+            <view class="right">
+                <view class="basic">
+                    <image
+                        style="width:64rpx;height:64rpx;border-radius:50%"
+                        src="../../assets/images/basic.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="box flex justify-around flex-wrap">
+            <view class="item" wx:for="{{list}}" wx:key="key">
+                <view class="top" style="background-image: {{item.linear}}">
+                    <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
+                    <text class="text-shadow text-white fs-48 block capitalize">{{item.en}}</text>
+                    <image class="mask" src="../../assets/images/Mask.png"></image>
+                </view>
+                <view class="bottom">
+                    <button class="color fw-400 text-white" style="background-image: {{item.linear}}" role="button" aria-disabled="false">{{item.cn}}</button>
+                </view>
+            </view>
+        </view>
+    </view>
 </scroll-view>
 <TabBar
     color="{{tabBar.color}}"
