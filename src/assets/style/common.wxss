@@ -178,6 +178,9 @@ page {
 .fw-400 {
     font-weight: 400;
 }
+.fs-36 {
+    font-size: 36rpx!important;
+}
 .fs-48 {
     font-size: 48rpx!important;
 }

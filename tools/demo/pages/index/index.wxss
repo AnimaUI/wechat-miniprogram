@@ -31,6 +31,9 @@ page {
     border-radius: 50%;
     background: #f7f8fb;
     padding: 4rpx;
+    width: 72rpx;
+    height: 72rpx;
+    box-shadow: 5rpx 5rpx 16rpx 0 rgb(0, 0, 0, .1);
 }
 .box > .item {
     width: 300rpx;
@@ -65,8 +68,8 @@ page {
     padding: 20rpx 0;
     background: #fff;
 }
-.box > .item > .bottom > .color {
-    width: 50%;
+.box > .item > .bottom > .btn {
+    width: 56%;
     font-size: 26rpx;
     line-height: 2;
 }

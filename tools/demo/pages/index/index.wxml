@@ -8,13 +8,13 @@
         <view class="top flex justify-between">
             <view class="left text-black text-bold">
                 <text class="block yin">basic</text>
-                <text class="block han">基础元素</text>
+                <text class="block han">基础元素 (20个)</text>
             </view>
             <view class="right">
                 <view class="basic">
                     <image
                         style="width:64rpx;height:64rpx;border-radius:50%"
-                        src="../../assets/images/basic.png"></image>
+                        src="../../assets/images/logo.png"></image>
                 </view>
             </view>
         </view>
@@ -22,11 +22,11 @@
             <view class="item" wx:for="{{list}}" wx:key="key">
                 <view class="top" style="background-image: {{item.linear}}">
                     <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
-                    <text class="text-shadow text-white fs-48 block capitalize">{{item.en}}</text>
+                    <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
                     <image class="mask" src="../../assets/images/Mask.png"></image>
                 </view>
                 <view class="bottom">
-                    <button class="color fw-400 text-white" style="background-image: {{item.linear}}" role="button" aria-disabled="false">{{item.cn}}</button>
+                    <button class="btn fw-400 text-white" style="background-image: {{item.linear}}" role="button" aria-disabled="false">{{item.cn}}</button>
                 </view>
             </view>
         </view>
