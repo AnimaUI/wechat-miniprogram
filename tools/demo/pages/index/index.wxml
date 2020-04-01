@@ -8,7 +8,7 @@
         <view class="top flex justify-between">
             <view class="left text-black text-bold">
                 <text class="block yin">basic</text>
-                <text class="block han">基础元素 (20个)</text>
+                <text class="block han">基础元素 ({{list.length}}个)</text>
             </view>
             <view class="right">
                 <view class="basic">
