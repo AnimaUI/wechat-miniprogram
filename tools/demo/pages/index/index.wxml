@@ -19,14 +19,14 @@
             </view>
         </view>
         <view class="box flex justify-around flex-wrap">
-            <view class="item" wx:for="{{list}}" wx:key="key">
-                <view class="top" style="background-image: {{item.linear}}">
+            <view class="item swatch" wx:for="{{list}}" wx:key="key">
+                <view class="top swatch-color color-{{item.color}}">
                     <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
                     <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
-                    <image class="mask" src="../../assets/images/Mask.png"></image>
+                    <!-- <image class="mask" src="../../assets/images/Mask.png"></image> -->
                 </view>
                 <view class="bottom">
-                    <button class="btn fw-400 text-white" style="background-image: {{item.linear}}" role="button" aria-disabled="false">{{item.cn}}</button>
+                    <button class="btn fw-400 text-white swatch-color color-{{item.color}}" role="button" aria-disabled="false">{{item.cn}}</button>
                 </view>
             </view>
         </view>

@@ -9,74 +9,73 @@ Page({
                 icon: 'ani-icon-color',
                 en: 'color',
                 cn: '颜色',
-                linear: 'linear-gradient(120deg, #f093fb 0%, #f5576c 100%);'
+                color: 'ruby'
             },
             {
                 icon: 'ani-icon-layout-fill',
                 en: 'layout',
                 cn: '布局',
-                linear: 'linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);'
+                color: 'grapefruit'
             },
             {
                 icon: 'ani-icon-icon',
                 en: 'icon',
                 cn: '图标',
-                linear: 'linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);'
+                color: 'bittersweet'
             },
             {
                 icon: 'ani-icon-btn',
                 en: 'button',
                 cn: '按钮',
-                linear: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);'
+                color: 'sunflower'
             },
             {
                 icon: 'ani-icon-text',
                 en: 'text',
                 cn: '文本',
-                linear: 'linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);'
+                color: 'straw'
             },
             {
                 icon: 'ani-icon-text-shadow',
                 en: 'textShadow',
                 cn: '文本阴影',
-                linear:
-                    'linear-gradient(120deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);'
+                color: 'grass'
             },
             {
                 icon: 'ani-icon-tag',
                 en: 'tag',
                 cn: '标签',
-                linear: 'linear-gradient(120deg, #9ee6fe 0%, #6cd9fd 100%);'
+                color: 'mint'
             },
             {
                 icon: 'ani-icon-portrait',
                 en: 'avatar',
                 cn: '头像',
-                linear: 'linear-gradient(120deg, #f794a4 0%, #fdd6bd 100%);'
+                color: 'teal'
             },
             {
                 icon: 'ani-icon-progress',
                 en: 'progress',
                 cn: '进度条',
-                linear: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);'
+                color: 'aqua'
             },
             {
                 icon: 'ani-icon-box-shadow',
                 en: 'boxShadow',
                 cn: '边框阴影',
-                linear: 'linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);'
+                color: 'blue-jeans'
             },
             {
                 icon: 'ani-icon-loading3',
                 en: 'loading',
                 cn: '加载',
-                linear: 'linear-gradient(120deg, #f3ebe5 0%, #e2d1c3 100%);'
+                color: 'plum'
             },
             {
                 icon: 'ani-icon-badge',
                 en: 'badge',
                 cn: '徽标',
-                linear: 'linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);'
+                color: 'lavender'
             }
         ]
     },

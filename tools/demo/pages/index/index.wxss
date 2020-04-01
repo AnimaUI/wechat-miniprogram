@@ -53,6 +53,7 @@ page {
     text-align: center;
     line-height: 66rpx;
     overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
 }
 .box > .item > .top > .en {
     margin-top: 12rpx;
@@ -72,4 +73,94 @@ page {
     width: 56%;
     font-size: 26rpx;
     line-height: 2;
+}
+.swatch {
+  width: 18.57%;
+  background-color: #3c3b3d;
+  border-radius: 10rpx;
+  float: left;
+  overflow: hidden;
+}
+.swatch .swatch-color {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.swatch .swatch-color:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.swatch .swatch-color.color-ruby {
+    background-color: #D8334A;
+}
+.swatch .swatch-color.color-grapefruit {
+    background-color: #ED5565;
+}
+.swatch .swatch-color.color-bittersweet {
+    background-color: #FC6E51;
+}
+.swatch .swatch-color.color-sunflower {
+    background-color: #FFCE54;
+}
+.swatch .swatch-color.color-straw {
+    background-color: #E8CE4D;
+}
+.swatch .swatch-color.color-grass {
+    background-color: #A0D468;
+}
+.swatch .swatch-color.color-mint {
+    background-color: #48CFAD;
+}
+.swatch .swatch-color.color-teal {
+    background-color: #A0CECB;
+}
+.swatch .swatch-color.color-aqua {
+    background-color: #4FC1E9;
+}
+.swatch .swatch-color.color-blue-jeans {
+    background-color: #5D9CEC;
+}
+.swatch .swatch-color.color-plum {
+    background-color: #8067B7;
+}
+.swatch .swatch-color.color-lavender {
+    background-color: #AC92EC;
+}
+.swatch .swatch-color.color-pink-rose {
+    background-color: #EC87C0;
+}
+.swatch .swatch-color.color-light-gray {
+    background-color: #F5F7FA;
+}
+.swatch .swatch-color.color-medium-gray {
+    background-color: #CCD1D9;
+}
+.swatch .swatch-color.color-dark-gray {
+    background-color: #656D78;
+}
+.swatch .swatch-color.color-charcoal {
+    background-color: #3C3B3D;
+}
+.swatch .swatch-info {
+    padding: 1em;
+    color: #808080;
+    text-align: center;
+}
+.swatch .swatch-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75em;
+}
+.swatch .swatch-info p:first-child {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.swatch .swatch-info p:last-child {
+    margin-bottom: 0;
 }
