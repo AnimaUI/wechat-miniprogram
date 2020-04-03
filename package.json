@@ -1,5 +1,5 @@
 {
-  "name": "animaUI",
+  "name": "wechat-miniprogram",
   "version": "1.0.0",
   "description": "anima(灵动，animation简写，(灵动UI)主要包含各种动画效果，小程序插件解决方案)",
   "main": "miniprogram_dist/index.js",

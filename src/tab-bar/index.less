@@ -6,24 +6,24 @@
     justify-content: space-between;
     position: relative;
     box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
-}
-.ani-tabbar-fixed {
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    bottom: 0;
-    padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
-}
-.ani-tabbar::before {
-    content: '';
-    width: 100%;
-    border-top: 1rpx solid #ccc;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleY(0.5);
-    transform-origin: 0 100%;
+    &.ani-tabbar-fixed {
+        position: fixed;
+        z-index: 99999;
+        left: 0;
+        bottom: 0;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        border-top: 1rpx solid #ccc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleY(0.5);
+        transform-origin: 0 100%;
+    }
 }
 
 .ani-tabbar-item {
