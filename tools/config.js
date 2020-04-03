@@ -9,11 +9,11 @@ const isWatch = process.argv.indexOf('--watch') >= 0
 const demoSrc = path.resolve(__dirname, './demo')
 const demoDist = path.resolve(__dirname, '../miniprogram_dev')
 const src = path.resolve(__dirname, '../src')
-const dev = path.join(demoDist, 'components')
+const dev = path.join(demoDist, '')
 const dist = path.resolve(__dirname, '../miniprogram_dist')
 
 module.exports = {
-    entry,
+    entry: entry,
     isDev,
     isWatch,
     srcPath: src, // 源目录
@@ -36,13 +36,11 @@ module.exports = {
         target: 'node',
         externals: [nodeExternals()], // 忽略 node_modules
         module: {
-            rules: [
-                {
-                    test: /\.js$/i,
-                    use: ['babel-loader', 'eslint-loader'],
-                    exclude: /node_modules/
-                }
-            ]
+            rules: [{
+                test: /\.js$/i,
+                use: ['babel-loader', 'eslint-loader'],
+                exclude: /node_modules/
+            }]
         },
         resolve: {
             modules: [src, 'node_modules'],
