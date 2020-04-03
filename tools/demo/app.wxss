@@ -1,4 +1,5 @@
-@import './components/assets/style/icon.wxss';
-@import './components/assets/style/common.wxss';
-@import './components/assets/style/layout.wxss';
-@import './components/assets/style/main.wxss';
+@import './assets/style/reset.wxss';
+@import './assets/style/icon.wxss';
+@import './assets/style/common.wxss';
+@import './assets/style/layout.wxss';
+@import './assets/style/main.wxss';
