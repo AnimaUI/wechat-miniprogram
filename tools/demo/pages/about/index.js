@@ -44,7 +44,7 @@ Page({
             this.updateSeasons();
         }
         // requestAnimationFrame(this.animate);
-        weatherInterval = setTimeout(this.animate, 60);
+        weatherInterval = setTimeout(this.animate, 1000 / 12);
     },
     updateSeasons() {
         this.season = this.seasons[this.c];
