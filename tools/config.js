@@ -1,16 +1,16 @@
-const path = require('path')
+const path = require('path');
 
-const webpack = require('webpack')
-const nodeExternals = require('webpack-node-externals')
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 const entry = require('./entry');
 
-const isDev = process.argv.indexOf('--develop') >= 0
-const isWatch = process.argv.indexOf('--watch') >= 0
-const demoSrc = path.resolve(__dirname, './demo')
-const demoDist = path.resolve(__dirname, '../miniprogram_dev')
-const src = path.resolve(__dirname, '../src')
-const dev = path.join(demoDist, '')
-const dist = path.resolve(__dirname, '../miniprogram_dist')
+const isDev = process.argv.indexOf('--develop') >= 0;
+const isWatch = process.argv.indexOf('--watch') >= 0;
+const demoSrc = path.resolve(__dirname, './demo');
+const demoDist = path.resolve(__dirname, '../miniprogram_dev');
+const src = path.resolve(__dirname, '../src');
+const dev = path.join(demoDist, '');
+const dist = path.resolve(__dirname, '../miniprogram_dist');
 
 module.exports = {
     entry: entry,

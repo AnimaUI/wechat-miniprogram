@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 const less = require('gulp-less');
@@ -9,12 +8,10 @@ const gulpif = require('gulp-if');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 const gulpInstall = require('gulp-install');
-
 const config = require('./config');
 const checkComponents = require('./checkcomponents');
 const checkWxss = require('./checkwxss');
 const _ = require('./utils');
-
 const jsConfig = config.js || {};
 const wxssConfig = config.wxss || {};
 const srcPath = config.srcPath;
@@ -442,7 +439,6 @@ class BuildTask {
                 .on('add', watchCallback)
                 .on('unlink', watchCallback);
         });
-
         /**
          * 监听 demo 变化
          */
@@ -460,7 +456,26 @@ class BuildTask {
                 .on('add', watchCallback)
                 .on('unlink', watchCallback);
         });
-
+        /**
+         * 生成 demo less -> wxss 
+         */
+        gulp.task(`${id}-demo-less`, done => {
+            gulp.src('tools/demo/pages/**/*.less', { allowEmpty: true })
+                .pipe(less())
+                .pipe(rename({ extname: '.wxss' }))
+                .pipe(gulp.dest('tools/demo/pages/'));
+            return done();
+        });
+        /**
+         * 监听 demo less 变化
+         */
+        gulp.task(`${id}-watch-demo-less`, () => {
+            // const demoSrc = config.demoSrc;
+            return gulp.watch(
+                'tools/demo/pages/**/*.less', { allowEmpty: true },
+                gulp.series(`${id}-demo-less`)
+            );
+        });
         /**
          * 监听安装包列表变化
          */
@@ -490,6 +505,7 @@ class BuildTask {
             `${id}-watch`,
             gulp.series(
                 `${id}-build`,
+                `${id}-demo-less`,
                 `${id}-demo`,
                 `${id}-install`,
                 gulp.parallel(
@@ -499,6 +515,7 @@ class BuildTask {
                     `${id}-watch-json`,
                     `${id}-watch-copy`,
                     `${id}-watch-install`,
+                    `${id}-watch-demo-less`,
                     `${id}-watch-demo`
                 )
             )

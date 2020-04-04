@@ -3,3 +3,94 @@
 @import './assets/style/common.wxss';
 @import './assets/style/layout.wxss';
 @import './assets/style/main.wxss';
+.swatch {
+    width: 18.57%;
+    background-color: #3c3b3d;
+    border-radius: 10rpx;
+    float: left;
+    overflow: hidden;
+}
+
+.swatch .swatch-color {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.swatch .swatch-color:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swatch .swatch-color.color-ruby {
+    background-color: #d8334a;
+}
+
+.swatch .swatch-color.color-grapefruit {
+    background-color: #ed5565;
+}
+
+.swatch .swatch-color.color-bittersweet {
+    background-color: #fc6e51;
+}
+
+.swatch .swatch-color.color-sunflower {
+    background-color: #ffce54;
+}
+
+.swatch .swatch-color.color-straw {
+    background-color: #e8ce4d;
+}
+
+.swatch .swatch-color.color-grass {
+    background-color: #a0d468;
+}
+
+.swatch .swatch-color.color-mint {
+    background-color: #48cfad;
+}
+
+.swatch .swatch-color.color-teal {
+    background-color: #a0cecb;
+}
+
+.swatch .swatch-color.color-aqua {
+    background-color: #4fc1e9;
+}
+
+.swatch .swatch-color.color-blue-jeans {
+    background-color: #5d9cec;
+}
+
+.swatch .swatch-color.color-plum {
+    background-color: #8067b7;
+}
+
+.swatch .swatch-color.color-lavender {
+    background-color: #ac92ec;
+}
+
+.swatch .swatch-color.color-pink-rose {
+    background-color: #ec87c0;
+}
+
+.swatch .swatch-color.color-light-gray {
+    background-color: #f5f7fa;
+}
+
+.swatch .swatch-color.color-medium-gray {
+    background-color: #ccd1d9;
+}
+
+.swatch .swatch-color.color-dark-gray {
+    background-color: #656d78;
+}
+
+.swatch .swatch-color.color-charcoal {
+    background-color: #3c3b3d;
+}

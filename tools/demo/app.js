@@ -18,7 +18,7 @@ App({
     globalData: {
         tabBar: {
             // 当前索引
-            current: 0,
+            current: 3,
             // 字体颜色
             color: '#b4bbc8',
             // 字体选中颜色
@@ -36,8 +36,7 @@ App({
             // 去掉顶部细线
             unlined: false,
             // tabbar列表
-            list: [
-                {
+            list: [{
                     pagePath: '/pages/index/index',
                     text: '基础',
                     icon: 'ani-icon-basic',

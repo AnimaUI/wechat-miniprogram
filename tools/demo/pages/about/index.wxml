@@ -1,0 +1,40 @@
+<!-- <CustomBar bgColor="bg-gradual-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">首页</view>
+</CustomBar> -->
+<image src='http://oos.animaui.com/mini/wechat/images/head-green-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
+<scroll-view scroll-y class="scrollPage" id="index">
+    <view class="main">
+        <view class="top flex justify-between">
+            <view class="left text-black text-bold">
+                <text class="block yin">basic</text>
+                <text class="block han">基础元素 ({{list.length}}个)</text>
+            </view>
+            <view class="right">
+                <view class="basic">
+                    <image
+                        style="width:64rpx;height:64rpx;border-radius:50%"
+                        src="../../assets/images/logo.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="box flex justify-around flex-wrap">
+            <view class="item swatch" wx:for="{{list}}" wx:key="key">
+                <view class="top swatch-color color-{{item.color}}">
+                    <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
+                    <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
+                    <!-- <image class="mask" src="../../assets/images/Mask.png"></image> -->
+                </view>
+                <view class="bottom">
+                    <button class="btn fw-400 text-white swatch-color color-{{item.color}}" role="button" aria-disabled="false">{{item.cn}}</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<TabBar
+    color="{{tabBar.color}}"
+    selectedColor="{{tabBar.selectedColor}}"
+    current="{{tabBar.current}}"
+    backgroundColor="{{tabBar.backgroundColor}}"
+    list="{{tabBar.list}}" />

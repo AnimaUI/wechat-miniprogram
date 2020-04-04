@@ -1,0 +1,166 @@
+page {
+  background: #fff9f6;
+}
+.main {
+  width: 100%;
+  min-height: calc(100vh - 430rpx);
+  background-color: var(--white);
+  border-radius: 100rpx;
+  padding: 50rpx 0 100rpx;
+}
+.main > .top {
+  padding: 0 50rpx 25rpx 50rpx;
+}
+.main > .box {
+  background: #f7f8fb;
+  border-radius: 60rpx 60rpx 0 0;
+  padding: 36rpx 24rpx;
+}
+.main > .top > .left {
+  text-transform: Capitalize;
+}
+.yin {
+  font-size: 30rpx;
+  transform: scale(1, 1.2);
+}
+.han {
+  font-size: 26rpx;
+  line-height: 56rpx;
+}
+.main .right > .basic {
+  border-radius: 50%;
+  background: #f7f8fb;
+  padding: 4rpx;
+  width: 72rpx;
+  height: 72rpx;
+  box-shadow: 5rpx 5rpx 16rpx 0 #000000;
+}
+.box > .item {
+  width: 300rpx;
+  background: #fff;
+  margin-top: 40rpx;
+  border-radius: 28rpx;
+  overflow: hidden;
+  box-shadow: 5rpx 5rpx 16rpx 0 #000000;
+}
+.box > .item:nth-child(1),
+.box > .item:nth-child(2) {
+  margin-top: 0;
+}
+.box > .item > .top {
+  height: 160rpx;
+  position: relative;
+  text-align: center;
+  line-height: 66rpx;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.box > .item > .top > .en {
+  margin-top: 12rpx;
+}
+.box > .item > .top > .mask {
+  width: 100%;
+  height: 50rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.box > .item > .bottom {
+  padding: 20rpx 0;
+  background: #fff;
+}
+.box > .item > .bottom > .btn {
+  width: 56%;
+  font-size: 26rpx;
+  line-height: 2;
+}
+.swatch {
+  width: 18.57%;
+  background-color: #3c3b3d;
+  border-radius: 10rpx;
+  float: left;
+  overflow: hidden;
+}
+.swatch .swatch-color {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.swatch .swatch-color:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.swatch .swatch-color.color-ruby {
+  background-color: #D8334A;
+}
+.swatch .swatch-color.color-grapefruit {
+  background-color: #ED5565;
+}
+.swatch .swatch-color.color-bittersweet {
+  background-color: #FC6E51;
+}
+.swatch .swatch-color.color-sunflower {
+  background-color: #FFCE54;
+}
+.swatch .swatch-color.color-straw {
+  background-color: #E8CE4D;
+}
+.swatch .swatch-color.color-grass {
+  background-color: #A0D468;
+}
+.swatch .swatch-color.color-mint {
+  background-color: #48CFAD;
+}
+.swatch .swatch-color.color-teal {
+  background-color: #A0CECB;
+}
+.swatch .swatch-color.color-aqua {
+  background-color: #4FC1E9;
+}
+.swatch .swatch-color.color-blue-jeans {
+  background-color: #5D9CEC;
+}
+.swatch .swatch-color.color-plum {
+  background-color: #8067B7;
+}
+.swatch .swatch-color.color-lavender {
+  background-color: #AC92EC;
+}
+.swatch .swatch-color.color-pink-rose {
+  background-color: #EC87C0;
+}
+.swatch .swatch-color.color-light-gray {
+  background-color: #F5F7FA;
+}
+.swatch .swatch-color.color-medium-gray {
+  background-color: #CCD1D9;
+}
+.swatch .swatch-color.color-dark-gray {
+  background-color: #656D78;
+}
+.swatch .swatch-color.color-charcoal {
+  background-color: #3C3B3D;
+}
+.swatch .swatch-info {
+  padding: 1em;
+  color: #808080;
+  text-align: center;
+}
+.swatch .swatch-info p {
+  font-size: 0.85rem;
+  margin-bottom: 0.75em;
+}
+.swatch .swatch-info p:first-child {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.swatch .swatch-info p:last-child {
+  margin-bottom: 0;
+}
