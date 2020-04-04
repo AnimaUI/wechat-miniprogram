@@ -2,39 +2,912 @@
     <view slot="backText">返回</view>
     <view slot="content">首页</view>
 </CustomBar> -->
-<image src='http://oos.animaui.com/mini/wechat/images/head-green-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
-<scroll-view scroll-y class="scrollPage" id="index">
-    <view class="main">
-        <view class="top flex justify-between">
-            <view class="left text-black text-bold">
-                <text class="block yin">basic</text>
-                <text class="block han">基础元素 ({{list.length}}个)</text>
+<!-- <image src='http://oos.animaui.com/mini/wechat/images/head-green-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image> -->
+<view class="weather" style="{{weatherStyle}}">
+        <view class="container">
+        <view class="season"></view>
+        <view class="sun"></view>
+        <view class="rainbow {{rainbowAnimated}}">
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+            <view class="rainbow-colour"></view>
+        </view>
+        <view class="cloud-group">
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
             </view>
-            <view class="right">
-                <view class="basic">
-                    <image
-                        style="width:64rpx;height:64rpx;border-radius:50%"
-                        src="../../assets/images/logo.png"></image>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                </view>
+            </view>
+            <view class="cloud">
+                <view class="weather-container">
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="snow" hidden="{{!snowShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
+                    <view class="rain" hidden="{{!rainShow}}"></view>
                 </view>
             </view>
         </view>
-        <view class="box flex justify-around flex-wrap">
-            <view class="item swatch" wx:for="{{list}}" wx:key="key">
-                <view class="top swatch-color color-{{item.color}}">
-                    <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
-                    <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
-                    <!-- <image class="mask" src="../../assets/images/Mask.png"></image> -->
+        <view class="base">
+            <view class="bush-group">
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+                <view class="bush"></view>
+            </view>
+            <view class="rabbit {{rabbitAnimated}}">
+                <view class="head">
+                    <view class="ear"></view>
+                    <view class="ear"></view>
                 </view>
-                <view class="bottom">
-                    <button class="btn fw-400 text-white swatch-color color-{{item.color}}" role="button" aria-disabled="false">{{item.cn}}</button>
+            </view>
+            <view class="tree-group">
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                    <view class="branch"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="branch-two">
+                        <view class="tree-top"></view>
+                    </view>
+                    <view class="branch-two">
+                        <view class="tree-top"></view>
+                    </view>
+                    <view class="branch-two">
+                        <view class="tree-top"></view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="flower {{flowerAnimated}}">
+                        <view class="flower-in"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                    </view>
+                    <view class="flower {{flowerAnimated}}">
+                        <view class="flower-in"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                    <view class="branch">
+                        <view class="branch-in"></view>
+                        <view class="pine-cone-row">
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                            <view class="pine-cone"></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="flower {{flowerAnimated}}">
+                        <view class="flower-in"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                    </view>
+                    <view class="flower {{flowerAnimated}}">
+                        <view class="flower-in"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                        <view class="petal"></view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="tree-top"></view>
+                    <view class="branch-two">
+                        <view class="tree-top"></view>
+                    </view>
+                    <view class="branch-two">
+                        <view class="tree-top"></view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                </view>
+                <view class="tree">
+                    <view class="trunk"></view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
+                    <view class="tree-top">
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                        <view class="cone"></view>
+                    </view>
                 </view>
             </view>
         </view>
     </view>
+</view>
+<scroll-view scroll-y class="scrollPage" id="index">
+    <view class="main">
+        <svg width="300" height="150">
+            <rect bindtap="tapHandler" height="100" width="100" style="stroke:#ff0000; fill: #0000ff"></rect>
+        </svg>
+    </view>
 </scroll-view>
-<TabBar
-    color="{{tabBar.color}}"
-    selectedColor="{{tabBar.selectedColor}}"
-    current="{{tabBar.current}}"
-    backgroundColor="{{tabBar.backgroundColor}}"
-    list="{{tabBar.list}}" />
+<TabBar color="{{tabBar.color}}" selectedColor="{{tabBar.selectedColor}}" current="{{tabBar.current}}" backgroundColor="{{tabBar.backgroundColor}}" list="{{tabBar.list}}" />
