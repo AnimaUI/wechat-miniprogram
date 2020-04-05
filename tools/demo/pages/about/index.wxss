@@ -3,16 +3,19 @@ page {
 }
 .github-box {
   --bgd-color: #cbe9f4;
-  width: 85%;
+  width: 88%;
   padding: 20rpx;
   border-radius: 100rpx;
-  box-shadow: 0px 18rpx 18rpx -18rpx var(--bgd-color);
+  box-shadow: 0 18rpx 18rpx -14rpx var(--bgd-color);
   position: fixed;
   top: 455rpx;
   left: 50%;
   z-index: 1000;
   background: #fff;
   transform: translate(-50%, 0);
+}
+.github-box .item .describe {
+  margin-top: 12rpx;
 }
 .github-box .item .describe text:first-child {
   margin-right: 12rpx;
@@ -25,6 +28,7 @@ page {
   position: relative;
   top: 500rpx;
   z-index: 999;
+  box-shadow: 0 20rpx 40rpx 10rpx var(--blackShadow);
 }
 .weather {
   --bgd-color: #cbe9f4;

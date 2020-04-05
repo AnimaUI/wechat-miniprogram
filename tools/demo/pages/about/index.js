@@ -8,7 +8,10 @@ Page({
         snowShow: true,
         rainShow: false,
         rabbitAnimated: '',
-        flowerAnimated: ''
+        flowerAnimated: '',
+        watch: 1,
+        star: 1,
+        fork: 0
     },
     onLoad() {
         wx.setNavigationBarColor({
@@ -19,6 +22,7 @@ Page({
     onShareAppMessage() {},
     onShow() {
         this.weatherAnmation();
+        this.getGithubInfo();
     },
     onHide() {
         this.weatherInterval = null;
@@ -81,8 +85,7 @@ Page({
             // add rabbit if season = winter
             rabbitAnimated: this.season === this.seasons[0] ||
                 this.season === this.seasons[2] ?
-                'animated' :
-                '',
+                'animated' : '',
             // add rainbow if season = spring
             rainbowAnimated: this.season === this.seasons[1] ? 'animated' : '',
             // add flowers if season = spring
@@ -99,5 +102,13 @@ Page({
             e = (e / 10000).toFixed(1) + 'W';
         }
         return e;
+    },
+    getGithubInfo() {
+        const state = this.data;
+        this.setData({
+            watch: this.coutNum(state.watch),
+            star: this.coutNum(state.star),
+            fork: this.coutNum(state.fork)
+        });
     }
 });

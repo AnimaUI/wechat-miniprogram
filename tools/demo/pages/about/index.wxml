@@ -905,28 +905,28 @@
 </view>
 <view class="github-box flex justify-between" style="{{weatherStyle}}">
     <view class="item flex-sub align-center">
-        <view class="num text-blue fs-48 fw-500">1</view>
+        <view class="num text-orange fs-48 fw-500">{{watch}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-scan-eye"></text>
             <text class="capitalize">watch</text>
         </view>
     </view>
     <view class="item flex-sub align-center">
-        <view class="num text-red fs-48 fw-500">1</view>
+        <view class="num text-red fs-48 fw-500">{{star}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-star"></text>
             <text class="capitalize">star</text>
         </view>
     </view>
     <view class="item flex-sub align-center">
-        <view class="num text-green fs-48 fw-500">1</view>
+        <view class="num text-green fs-48 fw-500">{{fork}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-fork"></text>
             <text class="capitalize">fork</text>
         </view>
     </view>
 </view>
-<scroll-view scroll-y class="scrollPage shadow shadow-black" id="about">
+<view class="about" id="about">
     
-</scroll-view>
+</view>
 <TabBar color="{{tabBar.color}}" selectedColor="{{tabBar.selectedColor}}" current="{{tabBar.current}}" backgroundColor="{{tabBar.backgroundColor}}" list="{{tabBar.list}}" />
