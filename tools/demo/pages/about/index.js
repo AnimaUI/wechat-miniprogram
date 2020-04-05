@@ -35,16 +35,16 @@ Page({
         this.animate();
     },
     animate() {
-        let weatherInterval;
-        clearTimeout(weatherInterval);
+        this.weatherInterval = null;
+        clearTimeout(this.weatherInterval);
         if (this.nF === 2400) {
             this.nF = 0;
         }
-        if (++this.nF % 600 === 0) {
+        if (this.nF++ % 600 === 0) {
             this.updateSeasons();
         }
         // requestAnimationFrame(this.animate);
-        weatherInterval = setTimeout(this.animate, 1000 / 12);
+        this.weatherInterval = setTimeout(this.animate, 1000 / 12);
     },
     updateSeasons() {
         this.season = this.seasons[this.c];
