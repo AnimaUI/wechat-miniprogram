@@ -20,6 +20,11 @@ Page({
     onShow() {
         this.weatherAnmation();
     },
+    onHide() {
+        this.weatherInterval = null;
+        this.nF = 0;
+        clearTimeout(this.weatherInterval);
+    },
     weatherAnmation() {
         this.lightColours = ['#93d5eb', '#add63a', '#c5d63a', '#febe42'];
         this.mediumColours = ['#66bbd8', '#92c938', '#acc52b', '#ff9d25'];
@@ -62,7 +67,13 @@ Page({
             var_sun = '--sun: #transparent';
         }
         this.setData({
-            weatherStyle: `--bgd-color: ${this.backgroundColours[this.c]};--light: ${this.lightColours[this.c]};--medium: ${this.mediumColours[this.c]};--dark: ${this.darkColours[this.c]};--bush: ${this.bushColours[this.c]};--cloud: ${this.cloudColours[this.c]};${var_rabbit};${var_sun}`,
+            weatherStyle: `--bgd-color: ${
+                this.backgroundColours[this.c]
+            };--light: ${this.lightColours[this.c]};--medium: ${
+                this.mediumColours[this.c]
+            };--dark: ${this.darkColours[this.c]};--bush: ${
+                this.bushColours[this.c]
+            };--cloud: ${this.cloudColours[this.c]};${var_rabbit};${var_sun}`,
             // add snow if season = winter
             snowShow: this.season === this.seasons[0],
             // add rain if season = autumn
@@ -70,7 +81,8 @@ Page({
             // add rabbit if season = winter
             rabbitAnimated: this.season === this.seasons[0] ||
                 this.season === this.seasons[2] ?
-                'animated' : '',
+                'animated' :
+                '',
             // add rainbow if season = spring
             rainbowAnimated: this.season === this.seasons[1] ? 'animated' : '',
             // add flowers if season = spring
@@ -78,5 +90,14 @@ Page({
         });
         // increment array index
         this.c = (this.c + 1) % this.seasons.length;
+    },
+    coutNum(e) {
+        if (e > 1000 && e < 10000) {
+            e = (e / 1000).toFixed(1) + 'k';
+        }
+        if (e > 10000) {
+            e = (e / 10000).toFixed(1) + 'W';
+        }
+        return e;
     }
 });
