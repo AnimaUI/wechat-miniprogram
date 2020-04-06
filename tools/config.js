@@ -59,5 +59,5 @@ module.exports = {
             assetFilter: assetFilename => assetFilename.endsWith('.js')
         }
     },
-    copy: ['./assets', './utils.js'] // 将会复制到目标目录
+    copy: ['./assets', './cloud_function/', './utils.js'] // 将会复制到目标目录
 };

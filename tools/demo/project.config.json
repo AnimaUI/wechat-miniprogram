@@ -13,9 +13,10 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.10.2",
-    "appid": "wx254fb16d9a83d357",
+    "appid": "wxabc4a51d4df2d002",
     "projectname": "AnimaUI",
     "isGameTourist": false,
+    "cloudfunctionRoot": "./cloud_function/",
     "condition": {
         "search": {
             "current": -1,

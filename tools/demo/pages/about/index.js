@@ -18,6 +18,20 @@ Page({
             frontColor: '#ffffff',
             backgroundColor: '#ffffff'
         });
+        wx.cloud
+            .callFunction({
+                // 云函数名称
+                name: 'sum',
+                // 传给云函数的参数
+                data: {
+                    a: 1,
+                    b: 2
+                }
+            })
+            .then(res => {
+                console.log(res.result); // 3
+            })
+            .catch(console.error);
     },
     onShareAppMessage() {},
     onShow() {
@@ -105,6 +119,9 @@ Page({
     },
     getGithubInfo() {
         const state = this.data;
+        // http.get('/users/huarxia/starred?per_page=1').then(res => {
+        //     console.log(res);
+        // });
         this.setData({
             watch: this.coutNum(state.watch),
             star: this.coutNum(state.star),
