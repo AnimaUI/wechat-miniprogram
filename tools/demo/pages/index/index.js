@@ -3,9 +3,9 @@
 const app = getApp();
 Page({
     data: {
+        imgBaseUrl: app.imgBaseUrl,
         tabBar: app.globalData.tabBar,
-        list: [
-            {
+        list: [{
                 icon: 'ani-icon-color',
                 en: 'color',
                 cn: '颜色',

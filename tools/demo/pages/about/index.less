@@ -1,5 +1,6 @@
 page {
     background-color: #fff;
+    overflow: hidden;
 }
 .github-box {
     --bgd-color: #cbe9f4;
@@ -25,12 +26,46 @@ page {
 #about {
     background: #fff;
     border-radius: 80rpx 80rpx 0 0;
-    padding: 40rpx 18rpx;
+    padding: 120rpx 40rpx 40rpx;
     height: calc(~'100vh - 600rpx');
     position: relative;
     top: 500rpx;
     z-index: 999;
     box-shadow: 0 20rpx 40rpx 10rpx var(--blackShadow);
+    overflow: hidden;
+    .list {
+        box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, .1);
+        border-radius: 120rpx;
+        .item {
+            position: relative;
+            display: flex;
+            padding: 0 30rpx;
+            min-height: 100rpx;
+            background-color: var(--white);
+            justify-content: space-between;
+            align-items: center;
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                width: 200%;
+                height: 200%;
+                border-bottom: 2rpx solid rgba(0, 0, 0, .1);
+                border-radius: inherit;
+                content: '';
+                transform: scale(.5);
+                transform-origin: 0 0;
+                pointer-events: none;
+            }
+            .left {
+                font-size: 30rpx;
+                text:last-child {
+                    margin-left: 12rpx;
+                }
+            }
+        }
+    }
 }
 .weather {
     --bgd-color: #cbe9f4;

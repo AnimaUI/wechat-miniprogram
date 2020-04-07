@@ -2,7 +2,7 @@
     <view slot="backText">返回</view>
     <view slot="content">首页</view>
 </CustomBar> -->
-<image src='http://oos.animaui.com/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
+<image src='{{imgBaseUrl}}/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
 <scroll-view scroll-y class="scrollPage" id="index">
     <view class="main">
         <view class="top flex justify-between">

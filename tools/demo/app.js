@@ -1,11 +1,13 @@
 //app.js
+const config = require('./utils/config');
 App({
+    imgBaseUrl: config.imgBaseUrl,
     onLaunch: function() {
         wx.cloud.init({
             traceUser: true
         });
         wx.getSystemInfo({
-            success: e => {
+            success: (e) => {
                 this.globalData.statusBar = e.statusBarHeight;
                 let capsule = wx.getMenuButtonBoundingClientRect();
                 if (capsule) {

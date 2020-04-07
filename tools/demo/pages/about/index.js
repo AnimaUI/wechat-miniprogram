@@ -4,6 +4,7 @@ const app = getApp();
 const Storage = require('../../utils/storage');
 Page({
     data: {
+        imgBaseUrl: app.imgBaseUrl,
         tabBar: app.globalData.tabBar,
         weatherStyle: '',
         snowShow: true,
@@ -43,7 +44,7 @@ Page({
                 this.setData({
                     watch: this.coutNum(githubInfo.watchers_count),
                     star: this.coutNum(githubInfo.stargazers_count),
-                    fork: this.coutNum(githubInfo.forks_count),
+                    fork: this.coutNum(githubInfo.forks_count)
                 });
             } else {
                 // console.log("缓存时间已过期")
@@ -129,7 +130,7 @@ Page({
         const state = this.data;
         wx.cloud
             .callFunction({
-                name: 'getGithubInfo',
+                name: 'getGithubInfo'
             })
             .then((res) => {
                 console.log(res);
@@ -144,10 +145,29 @@ Page({
                     this.setData({
                         watch: this.coutNum(githubInfo.watchers_count),
                         star: this.coutNum(githubInfo.stargazers_count),
-                        fork: this.coutNum(githubInfo.forks_count),
+                        fork: this.coutNum(githubInfo.forks_count)
                     });
                 }
             })
             .catch(console.error);
+    },
+    copyLink(e) {
+        wx.setClipboardData({
+            data: e.currentTarget.dataset.link,
+            success: (res) => {
+                wx.showToast({
+                    title: '已复制',
+                    duration: 1000
+                });
+            }
+        });
+    },
+    previewImage() {
+        let url = `${this.data.imgBaseUrl}/mini/wechat/images/appreciate.jpg`;
+        console.log(url);
+        wx.previewImage({
+            urls: [url],
+            current: url
+        });
     }
 });
