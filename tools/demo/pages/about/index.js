@@ -1,6 +1,7 @@
 //index.js
 // 获取应用实例
 const app = getApp();
+const Storage = require('../../utils/storage');
 Page({
     data: {
         tabBar: app.globalData.tabBar,
@@ -9,8 +10,8 @@ Page({
         rainShow: false,
         rabbitAnimated: '',
         flowerAnimated: '',
-        watch: 1,
-        star: 1,
+        watch: 0,
+        star: 0,
         fork: 0
     },
     onLoad() {
@@ -18,30 +19,37 @@ Page({
             frontColor: '#ffffff',
             backgroundColor: '#ffffff'
         });
-        wx.cloud
-            .callFunction({
-                // 云函数名称
-                name: 'sum',
-                // 传给云函数的参数
-                data: {
-                    a: 1,
-                    b: 2
-                }
-            })
-            .then(res => {
-                console.log(res.result); // 3
-            })
-            .catch(console.error);
     },
     onShareAppMessage() {},
     onShow() {
         this.weatherAnmation();
-        this.getGithubInfo();
+        this.checkGithubInfo();
     },
     onHide() {
         this.weatherInterval = null;
         this.nF = 0;
         clearTimeout(this.weatherInterval);
+    },
+    checkGithubInfo() {
+        var currentTime = Date.parse(new Date()); //当前时间戳
+        // 是否有github信息
+        let githubInfo = wx.getStorageSync('githubInfo') || '';
+        if (!githubInfo) {
+            this.getGithubInfo();
+        } else {
+            if (currentTime < wx.getStorageSync('oldStorTime')) {
+                // console.log("缓存时间有效")
+                githubInfo = JSON.parse(githubInfo);
+                this.setData({
+                    watch: this.coutNum(githubInfo.watchers_count),
+                    star: this.coutNum(githubInfo.stargazers_count),
+                    fork: this.coutNum(githubInfo.forks_count),
+                });
+            } else {
+                // console.log("缓存时间已过期")
+                this.getGithubInfo();
+            }
+        }
     },
     weatherAnmation() {
         this.lightColours = ['#93d5eb', '#add63a', '#c5d63a', '#febe42'];
@@ -119,13 +127,27 @@ Page({
     },
     getGithubInfo() {
         const state = this.data;
-        // http.get('/users/huarxia/starred?per_page=1').then(res => {
-        //     console.log(res);
-        // });
-        this.setData({
-            watch: this.coutNum(state.watch),
-            star: this.coutNum(state.star),
-            fork: this.coutNum(state.fork)
-        });
+        wx.cloud
+            .callFunction({
+                name: 'getGithubInfo',
+            })
+            .then((res) => {
+                console.log(res);
+                if (res.errMsg === 'cloud.callFunction:ok') {
+                    let githubInfo = res.result.getGithubInfo;
+                    Storage.setStorageSync(
+                        'githubInfo',
+                        JSON.stringify(githubInfo),
+                        7
+                    );
+                    Storage.openNotice();
+                    this.setData({
+                        watch: this.coutNum(githubInfo.watchers_count),
+                        star: this.coutNum(githubInfo.stargazers_count),
+                        fork: this.coutNum(githubInfo.forks_count),
+                    });
+                }
+            })
+            .catch(console.error);
     }
 });
