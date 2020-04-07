@@ -20,6 +20,24 @@ App({
             }
         });
     },
+    editTabBar() {
+        var curPageArr = getCurrentPages();
+        var curPage = curPageArr[curPageArr.length - 1];
+        var pagePath = curPage.route;
+        if (pagePath.indexOf('/') != 0) {
+            pagePath = '/' + pagePath;
+        }
+        var tabBar = this.globalData.tabBar;
+        for (var i = 0; i < tabBar.list.length; i++) {
+            if (tabBar.list[i].pagePath == pagePath) {
+                tabBar.current = i;
+                this.globalData.tabBar.current = i;
+            }
+        }
+        // curPage.setData({
+        //     tabBar: tabBar
+        // });
+    },
     globalData: {
         tabBar: {
             // 当前索引
@@ -63,7 +81,7 @@ App({
                     className: 'menu-item'
                 },
                 {
-                    pagePath: '/pages/index/index',
+                    pagePath: '/pages/about/index',
                     text: '关于',
                     icon: 'ani-icon-person',
                     selectedColor: '#ff8800',

@@ -22,6 +22,7 @@
             <view
                 class="ani-text-scale {{item.hump ? 'ani-text-hump' : ''}}"
                 style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}">
+                {{index}}
                 {{item.text}}
             </view>
         </view>

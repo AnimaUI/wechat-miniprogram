@@ -70,19 +70,30 @@ Component({
         customBar: app.globalData.customBar,
         custom: app.globalData.custom
     },
+    lifetimes: {
+        attached() {
+            // 在组件实例进入页面节点树时执行
+            app.editTabBar();
+        },
+        detached() {
+            // 在组件实例被从页面节点树移除时执行
+        }
+    },
     /**
      * 组件的方法列表
      */
     methods: {
-        BackPage() {
-            wx.navigateBack({
-                delta: 1
+        tabbarSwitch(e) {
+            console.log(e);
+            const DATASET = e.target.dataset;
+            const INDEX = DATASET.index;
+            console.log(INDEX, this.data.list[INDEX]);
+            wx.redirectTo({
+                url: this.data.list[INDEX].pagePath
             });
-        },
-        toHome() {
-            wx.reLaunch({
-                url: '/pages/index/index'
-            });
+            // this.triggerEvent('tabbarSwitch', {
+            //     index: INDEX
+            // });
         }
     }
 });
