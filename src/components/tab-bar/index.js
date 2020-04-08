@@ -73,7 +73,7 @@ Component({
     lifetimes: {
         attached() {
             // 在组件实例进入页面节点树时执行
-            app.editTabBar();
+            this.editTabBar();
         },
         detached() {
             // 在组件实例被从页面节点树移除时执行
@@ -93,8 +93,27 @@ Component({
             wx.redirectTo({
                 url: this.data.list[INDEX].pagePath
             });
-            this.triggerEvent('tabbarSwitch', {
-                index: INDEX
+            // this.triggerEvent('tabbarSwitch', {
+            //     index: INDEX
+            // });
+        },
+        editTabBar() {
+            const curPageArr = getCurrentPages();
+            const curPage = curPageArr[curPageArr.length - 1];
+            let pagePath = curPage.route;
+            if (pagePath.indexOf('/') !== 0) {
+                pagePath = '/' + pagePath;
+            }
+            const tabBar = app.globalData.tabBar;
+            for (let i = 0; i < tabBar.list.length; i++) {
+                if (tabBar.list[i].pagePath === pagePath) {
+                    tabBar.current = i;
+                    app.globalData.tabBar.current = i;
+                    break;
+                }
+            }
+            curPage.setData({
+                tabBar
             });
         }
     }
