@@ -32,11 +32,12 @@ App({
             if (tabBar.list[i].pagePath == pagePath) {
                 tabBar.current = i;
                 this.globalData.tabBar.current = i;
+                break;
             }
         }
-        // curPage.setData({
-        //     tabBar: tabBar
-        // });
+        curPage.setData({
+            tabBar: tabBar
+        });
     },
     globalData: {
         tabBar: {
