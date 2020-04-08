@@ -33,9 +33,26 @@ page {
   overflow: hidden;
 }
 #about .list {
-  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
   border-radius: 120rpx;
   margin-top: 36rpx;
+  position: relative;
+}
+#about .list:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  border-top: 2rpx solid rgba(0, 0, 0, 0.1);
+  border-radius: inherit;
+  content: '';
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  z-index: 999;
+  border-radius: 0;
 }
 #about .list .item {
   position: relative;
