@@ -1,5 +1,6 @@
 page {
-  background: #fff9f6;
+  --c-bg: hsl(262, 39%, 20%);
+  background: var(--c-bg);
 }
 .main {
   width: 100%;
@@ -53,7 +54,7 @@ page {
   text-align: center;
   line-height: 66rpx;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.3), 0 0 40rpx rgba(0, 0, 0, 0.1) inset;
 }
 .main .box .item .top .en {
   margin-top: 12rpx;
@@ -73,4 +74,339 @@ page {
   width: 56%;
   font-size: 26rpx;
   line-height: 2;
+}
+.stage {
+  --c-bg: hsl(262, 39%, 20%);
+  align-items: center;
+  background-color: var(--c-bg);
+  display: flex;
+  width: 100vw;
+  height: 500rpx;
+  justify-content: center;
+  overflow-y: hidden;
+}
+.stage .scene {
+  width: 400rpx;
+  height: 500rpx;
+  position: relative;
+}
+.stage .scene .halo {
+  --c-1: hsl(257, 39%, 27%);
+  --c-2: hsl(259, 38%, 33%);
+  --c-3: hsl(322, 41%, 43%);
+  --c-4: hsl(346, 86%, 65%);
+  --s-core: 100rpx;
+  --s-1: 120rpx;
+  --s-2: 90rpx;
+  --s-3: 60rpx;
+  --s-4: 30rpx;
+}
+.stage .scene .halo .halo-circul {
+  --c: var(--c-1);
+  --s: var(--s-1);
+  animation: 4s halo-anim 0.4s ease-in-out infinite;
+  background-color: var(--c);
+  box-shadow: 0 0 0 var(--s) var(--c);
+  border-radius: 50%;
+  display: block;
+  left: calc(50% - (var(--s-core) / 2));
+  height: var(--s-core);
+  position: absolute;
+  top: 50%;
+  transform-origin: center center;
+  width: var(--s-core);
+}
+.stage .scene .halo .halo-circul:nth-of-type(2) {
+  animation-delay: 0.3s;
+  --c: var(--c-2);
+  --s: var(--s-2);
+}
+.stage .scene .halo .halo-circul:nth-of-type(3) {
+  animation-delay: 0.2s;
+  --c: var(--c-3);
+  --s: var(--s-3);
+}
+.stage .scene .halo .halo-circul:nth-of-type(4) {
+  animation-delay: 0.1s;
+  --c: var(--c-4);
+  --s: var(--s-4);
+}
+.stage .scene .halo .halo-star {
+  --size: calc(var(--s-core) + (var(--s-1) * 2) - 15rpx);
+  animation: halo-star-anim linear 5s forwards infinite;
+  background: radial-gradient(circle at center, var(--c-1) 69.5%, transparent 69.5%), linear-gradient(to right, transparent 50%, var(--c-3) 50%, var(--c-3) 52%, rgba(255, 255, 255, 0.1) 52%, transparent 70%);
+  border-radius: 50%;
+  clip: rect(0 var(--size) calc(var(--size) / 2) 0);
+  display: block;
+  height: var(--size);
+  left: calc(50% - (var(--size) / 2));
+  position: absolute;
+  transform-origin: center center;
+  top: calc(50% - var(--s-1) + 8rpx);
+  width: var(--size);
+}
+.stage .scene .halo .halo-star:nth-child(2) {
+  animation-delay: calc(5s / 3);
+}
+.stage .scene .halo .halo-star:nth-child(3) {
+  animation-delay: calc((5s / 3) * 2);
+}
+.stage .scene::before {
+  --c-bg: hsl(262, 39%, 22%);
+  --c-glow: hsl(262, 39%, 20%);
+  --size: 500rpx;
+  animation: scene-anim 0.6s infinite steps(6);
+  background: var(--c-bg);
+  border-radius: var(--size);
+  box-shadow: inset 0 0 0 3rpx var(--c-glow);
+  content: '';
+  height: var(--size);
+  left: calc(50% - (var(--size) / 2));
+  position: absolute;
+  top: -3rpx;
+  width: var(--size);
+}
+.stage .scene .lantern {
+  --c-lantern-body: hsl(262, 38%, 20%);
+  --c-lantern-light: hsl(23, 98%, 75%);
+  --c-lantern-glow: hsl(343, 83%, 63%);
+  display: flex;
+  flex-direction: column;
+  left: calc(50%);
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.stage .scene .lantern .lantern-handle {
+  border: 6rpx solid hsl(257, 41%, 27%);
+  border-radius: 50rpx;
+  height: 105rpx;
+  width: 200rpx;
+}
+.stage .scene .lantern .lantern-inner {
+  animation: lantern-anim 1.2s ease-in-out alternate infinite;
+  margin-top: -5rpx;
+  transform-origin: top center;
+}
+.stage .scene .lantern .lantern-inner .lantern-head::before,
+.stage .scene .lantern .lantern-inner .lantern-head::after {
+  background: var(--c-lantern-body);
+  border-radius: 5rpx;
+  content: '';
+  display: block;
+  height: 15rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-head::before {
+  margin: 0 auto;
+  width: 100rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-head::after {
+  border-radius: 3rpx;
+  height: 30rpx;
+  margin: 3rpx auto;
+  width: 60rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-chain {
+  height: 60rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-chain::before {
+  --c: hsl(260, 38%, 34%);
+  background-color: var(--c);
+  box-shadow: 0 0 0 5rpx var(--c), 0 20rpx 0 var(--c), 0 35rpx 0 var(--c), 0 50rpx 0 var(--c);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 10rpx;
+  margin: 0 auto;
+  width: 10rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-body {
+  perspective: 350rpx;
+  position: relative;
+}
+.stage .scene .lantern .lantern-inner .lantern-body::before {
+  background-color: var(--c-lantern-light);
+  border: 8rpx solid var(--c-lantern-body);
+  border-radius: 50rpx;
+  box-shadow: inset 0 0 0 5rpx var(--c-lantern-light), inset 0 0 0 20rpx var(--c-lantern-glow);
+  content: '';
+  display: block;
+  height: 195rpx;
+  margin: 0 auto;
+  perspective: 100rpx;
+  transform: rotateX(20deg) translateY(-20rpx);
+  transform-origin: center center;
+  width: 120rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-body::after {
+  --c: hsl(321, 41%, 42%);
+  background-color: var(--c);
+  border-radius: 4rpx;
+  box-shadow: -5rpx 161rpx 0 1rpx var(--c), 5rpx 161rpx 0 1rpx var(--c);
+  content: '';
+  display: block;
+  height: 7rpx;
+  margin: -7rpx auto 0;
+  transform: translateY(-195rpx);
+  width: 40rpx;
+}
+.stage .scene .lantern .lantern-inner .lantern-body .lantern-flame {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: calc(50% - 15rpx);
+  top: calc(45% - 20rpx);
+}
+.stage .scene .lantern .lantern-inner .lantern-base {
+  background: var(--c-lantern-body);
+  border-radius: 5rpx;
+  display: block;
+  height: 15rpx;
+  margin: -15rpx auto 0;
+  width: 70rpx;
+}
+.stage .scene .planets .planet {
+  --bg: hsl(257, 39%, 27%);
+  --light: hsl(348, 88%, 65%);
+  --orbit: 150rpx;
+  animation: planet-anim 5s forwards infinite;
+  background: var(--bg);
+  border: 2rpx solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.25);
+  height: 30rpx;
+  left: calc(50% - 15rpx);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform-origin: center center;
+  width: 30rpx;
+}
+.stage .scene .planets .planet::before {
+  animation: planet-light-anim 2.5s forwards linear infinite;
+  background-color: var(--light);
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  bottom: -20rpx;
+  left: -20rpx;
+}
+.stage .scene .planets .planet:nth-child(1) {
+  --orbit: 70rpx;
+  animation-delay: -0.3s;
+  transform: scale(0.9) translateY(-80rpx);
+}
+.stage .scene .planets .planet:nth-child(2) {
+  --bg: hsl(344, 83%, 63%);
+  --light: hsl(19, 98%, 75%);
+  --orbit: 100rpx;
+  animation-delay: -2s;
+  animation-duration: 5.5s;
+  transform: scale(0.8) translateY(-20rpx);
+}
+.stage .scene .planets .planet:nth-child(3) {
+  --bg: hsl(344, 83%, 63%);
+  --light: hsl(19, 98%, 75%);
+  --orbit: 100rpx;
+  animation-delay: -4s;
+  animation-duration: 4.5s;
+  transform: scale(0.4) translateY(100rpx);
+}
+.stage .scene .planets .planet:nth-child(4) {
+  --bg: hsl(322, 41%, 43%);
+  --light: hsl(348, 88%, 65%);
+  --orbit: 120rpx;
+  animation-delay: -3.7s;
+  animation-duration: 4.2s;
+  transform: scale(0.8) translateY(75rpx);
+}
+.stage .scene .planets .planet:nth-child(5) {
+  --bg: hsl(322, 41%, 43%);
+  --light: hsl(348, 88%, 65%);
+  --orbit: 100rpx;
+  animation-delay: -1.3s;
+  animation-duration: 5.8s;
+  transform: scale(0.4) translateY(40rpx);
+}
+.stage .scene .planets .planet:nth-child(6) {
+  --orbit: 90rpx;
+  animation-delay: 0.5s;
+  animation-duration: 4.2s;
+  transform: scale(0.9) translateY(150rpx);
+}
+@keyframes scene-anim {
+  0% {
+    box-shadow: inset 0 0 0 3rpx var(--c-glow);
+  }
+  20% {
+    box-shadow: inset 0 0 0 8rpx var(--c-glow);
+  }
+  40% {
+    box-shadow: inset 0 0 0 2rpx var(--c-glow);
+  }
+  60% {
+    box-shadow: inset 0 0 0 6rpx var(--c-glow);
+  }
+  80% {
+    box-shadow: inset 0 0 0 3rpx var(--c-glow);
+  }
+  100% {
+    box-shadow: inset 0 0 0 5rpx var(--c-glow);
+  }
+}
+@keyframes halo-anim {
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes halo-star-anim {
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes lantern-anim {
+  0% {
+    transform: rotateZ(1deg);
+  }
+  100% {
+    transform: rotateZ(-1deg);
+  }
+}
+@keyframes lantern-spark-anim {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes planet-anim {
+  0% {
+    margin-left: calc(var(--orbit) * -1);
+    z-index: 1;
+  }
+  50% {
+    margin-left: var(--orbit);
+    z-index: 1;
+  }
+  50.1% {
+    margin-left: var(--orbit);
+    z-index: 0;
+  }
+  100% {
+    margin-left: calc(var(--orbit) * -1);
+    z-index: 0;
+  }
+}
+@keyframes planet-light-anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

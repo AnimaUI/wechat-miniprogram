@@ -2,7 +2,39 @@
     <view slot="backText">返回</view>
     <view slot="content">首页</view>
 </CustomBar> -->
-<image src='{{imgBaseUrl}}/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image>
+<!-- <image src='{{imgBaseUrl}}/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image> -->
+<view class="stage">
+    <view class="scene">
+        <view class="halo">
+            <text class="halo-circul"></text>
+            <view class="halo-star"></view>
+            <view class="halo-star"></view>
+            <view class="halo-star"></view>
+            <text class="halo-circul"></text>
+            <text class="halo-circul"></text>
+            <text class="halo-circul"></text>
+        </view>
+        <view class="lantern">
+            <view class="lantern-handle"></view>
+            <view class="lantern-inner">
+                <view class="lantern-chain"></view>
+                <view class="lantern-head"></view>
+                <view class="lantern-body">
+                    <view class="lantern-flame"></view>
+                </view>
+                <view class="lantern-base"></view>
+            </view>
+        </view>
+        <view class="planets">
+            <view class="planet"></view>
+            <view class="planet"></view>
+            <view class="planet"></view>
+            <view class="planet"></view>
+            <view class="planet"></view>
+            <view class="planet"></view>
+        </view>
+    </view>
+</view>
 <scroll-view scroll-y class="scrollPage" id="index">
     <view class="main">
         <view class="top flex justify-between">
