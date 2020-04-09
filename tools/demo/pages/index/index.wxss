@@ -1,11 +1,11 @@
 page {
-  --c-bg: hsl(262, 39%, 20%);
+  --c-bg: #2e1f47;
   background: var(--c-bg);
 }
 .main {
   width: 100%;
   min-height: calc(100vh - 430rpx);
-  background-color: var(--white);
+  background-color: rgba(46, 31, 71, 0.1);
   border-radius: 100rpx;
   padding: 50rpx 0 100rpx;
 }
@@ -33,6 +33,7 @@ page {
 }
 .main .box {
   background: #f7f8fb;
+  background-color: rgba(46, 31, 71, 0.1);
   border-radius: 60rpx 60rpx 0 0;
   padding: 36rpx 24rpx;
 }
@@ -76,7 +77,7 @@ page {
   line-height: 2;
 }
 .stage {
-  --c-bg: hsl(262, 39%, 20%);
+  --c-bg: #2e1f47;
   align-items: center;
   background-color: var(--c-bg);
   display: flex;
@@ -91,10 +92,10 @@ page {
   position: relative;
 }
 .stage .scene .halo {
-  --c-1: hsl(257, 39%, 27%);
-  --c-2: hsl(259, 38%, 33%);
-  --c-3: hsl(322, 41%, 43%);
-  --c-4: hsl(346, 86%, 65%);
+  --c-1: #392a60;
+  --c-2: #483474;
+  --c-3: #9b417a;
+  --c-4: #f3597d;
   --s-core: 100rpx;
   --s-1: 120rpx;
   --s-2: 90rpx;
@@ -152,8 +153,8 @@ page {
   animation-delay: calc((5s / 3) * 2);
 }
 .stage .scene::before {
-  --c-bg: hsl(262, 39%, 22%);
-  --c-glow: hsl(262, 39%, 20%);
+  --c-bg: #32224e;
+  --c-glow: #2e1f47;
   --size: 500rpx;
   animation: scene-anim 0.6s infinite steps(6);
   background: var(--c-bg);
@@ -167,9 +168,9 @@ page {
   width: var(--size);
 }
 .stage .scene .lantern {
-  --c-lantern-body: hsl(262, 38%, 20%);
-  --c-lantern-light: hsl(23, 98%, 75%);
-  --c-lantern-glow: hsl(343, 83%, 63%);
+  --c-lantern-body: #2e2046;
+  --c-lantern-light: #feb181;
+  --c-lantern-glow: #ef527f;
   display: flex;
   flex-direction: column;
   left: calc(50%);
@@ -178,7 +179,7 @@ page {
   z-index: 1;
 }
 .stage .scene .lantern .lantern-handle {
-  border: 6rpx solid hsl(257, 41%, 27%);
+  border: 6rpx solid #392961;
   border-radius: 50rpx;
   height: 105rpx;
   width: 200rpx;

@@ -1,11 +1,11 @@
 page {
-    --c-bg: hsl(262, 39%, 20%);
+    --c-bg: rgb(46, 31, 71);
     background: var(--c-bg);
 }
 .main {
     width: 100%;
     min-height: calc(~'100vh - 430rpx');
-    background-color: var(--white);
+    background-color: rgba(46, 31, 71, .1);
     border-radius: 100rpx;
     padding: 50rpx 0 100rpx;
     & > .top {
@@ -34,6 +34,7 @@ page {
     }
     .box {
         background: #f7f8fb;
+        background-color: rgba(46, 31, 71, .1);
         border-radius: 60rpx 60rpx 0 0;
         padding: 36rpx 24rpx;
         .item {
@@ -79,7 +80,7 @@ page {
     }
 }
 .stage {
-    --c-bg: hsl(262, 39%, 20%);
+    --c-bg: rgb(46, 31, 71);
     align-items: center;
     background-color: var(--c-bg);
     display: flex;
@@ -92,10 +93,10 @@ page {
         height: 500rpx;
         position: relative;
         .halo {
-            --c-1: hsl(257, 39%, 27%);
-            --c-2: hsl(259, 38%, 33%);
-            --c-3: hsl(322, 41%, 43%);
-            --c-4: hsl(346, 86%, 65%);
+            --c-1: rgb(57, 42, 96);
+            --c-2: rgb(72, 52, 116);
+            --c-3: rgb(155, 65, 122);
+            --c-4: rgb(243, 89, 125);
             --s-core: 100rpx;
             --s-1: 120rpx;
             --s-2: 90rpx;
@@ -165,8 +166,8 @@ page {
             }
         }
         &::before {
-            --c-bg: hsl(262, 39%, 22%);
-            --c-glow: hsl(262, 39%, 20%);
+            --c-bg: rgb(50, 34, 78);
+            --c-glow: rgb(46, 31, 71);
             --size: 500rpx;
             animation: scene-anim 0.6s infinite steps(6);
             background: var(--c-bg);
@@ -180,9 +181,9 @@ page {
             width: var(--size);
         }
         .lantern {
-            --c-lantern-body: hsl(262, 38%, 20%);
-            --c-lantern-light: hsl(23, 98%, 75%);
-            --c-lantern-glow: hsl(343, 83%, 63%);
+            --c-lantern-body: rgb(46, 32, 70);
+            --c-lantern-light: rgb(254, 177, 129);
+            --c-lantern-glow: rgb(239, 82, 127);
             display: flex;
             flex-direction: column;
             left: calc(50%);
@@ -190,7 +191,7 @@ page {
             transform: translateX(-50%);
             z-index: 1;
             .lantern-handle {
-                border: 6rpx solid hsl(257, 41%, 27%);
+                border: 6rpx solid rgb(57, 41, 97);
                 border-radius: 50rpx;
                 height: 105rpx;
                 width: 200rpx;
