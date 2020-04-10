@@ -5,7 +5,7 @@ page {
 .main {
   width: 100%;
   min-height: calc(100vh - 430rpx);
-  background-color: rgba(46, 31, 71, 0.1);
+  background-color: var(--white);
   border-radius: 100rpx;
   padding: 50rpx 0 100rpx;
 }
@@ -33,7 +33,6 @@ page {
 }
 .main .box {
   background: #f7f8fb;
-  background-color: rgba(46, 31, 71, 0.1);
   border-radius: 60rpx 60rpx 0 0;
   padding: 36rpx 24rpx;
 }
