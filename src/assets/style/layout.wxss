@@ -86,3 +86,11 @@
 .flex-treble {
     flex: 3;
 }
+
+.fixed {
+    position: fixed;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
