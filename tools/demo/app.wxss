@@ -1,7 +1,3 @@
-@import './animaUi/assets/style/reset.wxss';
-@import './animaUi/assets/style/icon.wxss';
-@import './animaUi/assets/style/common.wxss';
-@import './animaUi/assets/style/layout.wxss';
 @import './animaUi/assets/style/main.wxss';
 .swatch {
     width: 18.57%;

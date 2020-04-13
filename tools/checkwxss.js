@@ -8,9 +8,9 @@ const _ = require('./utils');
  * 获取 import 列表
  */
 function getImportList(wxss, filePath) {
-    // 加上 .less;$ 结尾原生.wxss也需要 const reg =
-    // /^@import\s+(?:(?:"([^"]+)")|(?:'([^']+)')).less;$/ig
-    const reg = /@import\s+(?:(?:"([^"]+)")|(?:'([^']+)'));/gi;
+    // 加上 .less;$ 结尾原生.wxss也需要
+    const reg = /^@import\s+(?:(?:"([^"]+)")|(?:'([^']+)')).less;$/ig;
+    // const reg = /@import\s+(?:(?:"([^"]+)")|(?:'([^']+)'));/gi;
     const importList = [];
     let execRes = reg.exec(wxss);
 

@@ -10,7 +10,7 @@ const demoSrc = path.resolve(__dirname, './demo');
 const demoDist = path.resolve(__dirname, '../miniprogram_dev');
 const src = path.resolve(__dirname, '../src');
 const dev = path.join(demoDist, '/animaUi');
-const dist = path.resolve(__dirname, '../miniprogram_dist');
+const dist = path.resolve(__dirname, '../animaUi');
 
 module.exports = {
     entry: entry,

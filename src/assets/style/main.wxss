@@ -1,1 +1,4 @@
 @import './reset.wxss';
+@import './icon.wxss';
+@import './common.wxss';
+@import './layout.wxss';

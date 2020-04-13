@@ -22,7 +22,6 @@ const distPath = config.distPath;
  */
 function wxss(wxssFileList) {
     if (!wxssFileList.length) return false;
-
     return gulp
         .src(wxssFileList, { cwd: srcPath, base: srcPath, allowEmpty: true })
         .pipe(checkWxss.start()) // 开始处理 import
@@ -93,7 +92,6 @@ function js(jsFileMap, scope) {
  */
 function copy(copyFileList) {
     if (!copyFileList.length) return false;
-
     return gulp
         .src(copyFileList, { cwd: srcPath, base: srcPath })
         .pipe(_.logger())
@@ -210,7 +208,6 @@ class BuildTask {
          */
         gulp.task(`${id}-component-json`, done => {
             const jsonFileList = this.componentListMap.jsonFileList;
-
             if (jsonFileList && jsonFileList.length) {
                 return copy(this.componentListMap.jsonFileList);
             }
@@ -223,7 +220,6 @@ class BuildTask {
          */
         gulp.task(`${id}-component-wxml`, done => {
             const wxmlFileList = this.componentListMap.wxmlFileList;
-
             if (
                 wxmlFileList &&
                 wxmlFileList.length &&
@@ -263,7 +259,6 @@ class BuildTask {
          */
         gulp.task(`${id}-component-js`, done => {
             const jsFileList = this.componentListMap.jsFileList;
-
             if (
                 jsFileList &&
                 jsFileList.length &&
@@ -344,7 +339,6 @@ class BuildTask {
                             }
                         })
                         .filter(copyFilePath => !!copyFilePath);
-
                     if (copyFileList.length)
                         return wxss(copyFileList, srcPath, distPath);
 
@@ -431,7 +425,14 @@ class BuildTask {
                     }
                 })
                 .filter(copyFilePath => !!copyFilePath);
-            const watchCallback = filePath => copy([filePath]);
+
+            const watchCallback = filePath => {
+                // 添加 .wxss文件处理
+                if (/.wxss$/.test(filePath)) {
+                    return wxss([filePath]);
+                }
+                return copy([filePath]);
+            };
 
             return gulp
                 .watch(copyFileList, { cwd: srcPath, base: srcPath })
