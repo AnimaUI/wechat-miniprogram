@@ -5,8 +5,6 @@ Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         tabBar: app.globalData.tabBar,
-        isFixed: false,
-        navbarInitTop: 190,
         list: [{
                 icon: 'ani-icon-color',
                 en: 'color',
@@ -88,37 +86,5 @@ Page({
         });
     },
     onShareAppMessage() {},
-    /**
-     * 监听页面滑动事件
-     */
-    onPageScroll: function(e) {
-        console.log(1);
-        let that = this;
-        // 滚动条距离顶部高度
-        let scrollTop = parseInt(e.scrollTop);
-        // 判断'滚动条'滚动的距离 和 '元素在初始时'距顶部的距离进行判断
-        let isSatisfy = scrollTop >= that.data.navbarInitTop;
-        // 为了防止不停的setData, 这儿做了一个等式判断。 只有处于吸顶的临界值才会不相等
-        if (that.data.isFixed === isSatisfy) {
-            return false;
-        }
-        console.log(2);
-        that.setData({
-            isFixed: isSatisfy
-        });
-    },
-    onShow() {
-        let that = this;
-        if (that.data.navbarInitTop == 0) {
-            //获取节点距离顶部的距离
-            wx.createSelectorQuery().select('#navbar').boundingClientRect(function(rect) {
-                if (rect && rect.top > 0) {
-                    let navbarInitTop = parseInt(rect.top);
-                    that.setData({
-                        navbarInitTop: navbarInitTop
-                    });
-                }
-            }).exec();
-        }
-    }
+    onShow() {}
 });

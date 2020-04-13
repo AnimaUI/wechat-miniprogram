@@ -1,12 +1,12 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/about/index"
-    ],
+    "pages": ["pages/index/index", "pages/about/index"],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationStyle": "custom",
         "navigationBarTextStyle": "black"
+    },
+    "usingComponents": {
+        "CustomBar": "./animaUi/components/custom-bar/index"
     }
 }

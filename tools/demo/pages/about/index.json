@@ -1,6 +1,5 @@
 {
     "usingComponents": {
-        "CustomBar": "../../components/custom-bar/index",
-        "TabBar": "../../components/tab-bar/index"
+        "TabBar": "../../animaUi/components/tab-bar/index"
     }
 }

@@ -1,8 +1,8 @@
-@import './assets/style/reset.wxss';
-@import './assets/style/icon.wxss';
-@import './assets/style/common.wxss';
-@import './assets/style/layout.wxss';
-@import './assets/style/main.wxss';
+@import './animaUi/assets/style/reset.wxss';
+@import './animaUi/assets/style/icon.wxss';
+@import './animaUi/assets/style/common.wxss';
+@import './animaUi/assets/style/layout.wxss';
+@import './animaUi/assets/style/main.wxss';
 .swatch {
     width: 18.57%;
     background-color: #3c3b3d;

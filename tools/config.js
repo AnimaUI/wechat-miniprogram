@@ -9,7 +9,7 @@ const isWatch = process.argv.indexOf('--watch') >= 0;
 const demoSrc = path.resolve(__dirname, './demo');
 const demoDist = path.resolve(__dirname, '../miniprogram_dev');
 const src = path.resolve(__dirname, '../src');
-const dev = path.join(demoDist, '');
+const dev = path.join(demoDist, '/animaUi');
 const dist = path.resolve(__dirname, '../miniprogram_dist');
 
 module.exports = {
