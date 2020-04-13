@@ -140,7 +140,78 @@
         </view>
     </view>
 </view>
-<scroll-view scroll-y class="scrollPage" id="index">
+<view class="top-menu">
+    <view class="pupper">
+        <view class="torso">
+            <view class="fur">
+                <view class="spot"></view>
+            </view>
+            <view class="neck">
+                <view class="fur"></view>
+                <view class="head">
+                    <view class="fur">
+                        <view class="snout"></view>
+                    </view>
+                    <view class="ears">
+                        <view class="ear">
+                            <view class="fur"></view>
+                        </view>
+                        <view class="ear">
+                            <view class="fur"></view>
+                        </view>
+                    </view>
+                    <view class="eye"></view>
+                </view>
+                <view class="collar"></view>
+            </view>
+            <view class="legs">
+                <view class="leg">
+                    <view class="fur"></view>
+                    <view class="leg-inner">
+                        <view class="fur"></view>
+                    </view>
+                </view>
+                <view class="leg">
+                    <view class="fur"></view>
+                    <view class="leg-inner">
+                        <view class="fur"></view>
+                    </view>
+                </view>
+                <view class="leg">
+                    <view class="fur"></view>
+                    <view class="leg-inner">
+                        <view class="fur"></view>
+                    </view>
+                </view>
+                <view class="leg">
+                    <view class="fur"></view>
+                    <view class="leg-inner">
+                        <view class="fur"></view>
+                    </view>
+                </view>
+            </view>
+            <view class="tail">
+                <view class="tail">
+                    <view class="tail">
+                        <view class="tail -end">
+                            <view class="tail">
+                                <view class="tail">
+                                    <view class="tail">
+                                        <view class="tail"></view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu-perspective">
+        <view class="menu-board metal-gradient"></view>
+    </view>
+</view>
+<scroll-view scroll-y class="scrollPage">
     <view class="main">
         <view class="box flex justify-around flex-wrap">
             
