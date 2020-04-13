@@ -9,8 +9,7 @@ const _ = require('./utils');
  */
 function getImportList(wxss, filePath) {
     // 加上 .less;$ 结尾原生.wxss也需要
-    const reg = /^@import\s+(?:(?:"([^"]+)")|(?:'([^']+)')).less;$/ig;
-    // const reg = /@import\s+(?:(?:"([^"]+)")|(?:'([^']+)'));/gi;
+    const reg = /@import\s+(?:(?:"([^"]+)")|(?:'([^']+)'));/gi;
     const importList = [];
     let execRes = reg.exec(wxss);
 
@@ -36,11 +35,13 @@ async function getContent(wxss, filePath, cwd) {
 
         for (const item of currentImportList) {
             // 替换掉 import 语句，不让 less 编译
-            wxss = wxss.replace(
-                item.code,
-                `/* -updated for miniprogram-custom-component- ${item.code} */`
-            );
-
+            const reg = /^@import\s+(?:(?:"([^"]+)")|(?:'([^']+)')).less;$/ig;
+            if (reg.exec(item)) {
+                wxss = wxss.replace(
+                    item.code,
+                    `/* -updated for miniprogram-custom-component- ${item.code} */`
+                );
+            }
             // 处理依赖的 wxss
             const importWxss = await _.readFile(item.path);
             const importInfo = await getContent(importWxss, item.path, cwd);
