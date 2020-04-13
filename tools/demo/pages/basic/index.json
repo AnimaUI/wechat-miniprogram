@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "TabBar": "../../animaUi/components/tab-bar/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}

@@ -42,21 +42,21 @@ App({
             unlined: false,
             // tabbar列表
             list: [{
-                    pagePath: '/pages/index/index',
+                    pagePath: '/pages/basic/index',
                     text: '基础',
                     icon: 'ani-icon-basic',
                     className: 'menu-item',
                     selectedColor: '#ff8800'
                 },
                 {
-                    pagePath: '/pages/index/index',
+                    pagePath: '/pages/component/index',
                     text: '组件',
                     icon: 'ani-icon-component',
                     selectedColor: '#ff8800',
                     className: 'menu-item'
                 },
                 {
-                    pagePath: '/pages/index/index',
+                    pagePath: '/pages/component/index',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
                     selectedColor: '#ff8800',

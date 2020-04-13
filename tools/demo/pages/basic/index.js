@@ -79,12 +79,7 @@ Page({
             }
         ]
     },
-    onLoad() {
-        wx.setNavigationBarColor({
-            frontColor: '#ffffff',
-            backgroundColor: '#ffffff'
-        });
-    },
+    onLoad() {},
     onShareAppMessage() {},
     onShow() {}
 });
