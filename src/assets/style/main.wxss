@@ -1,4 +1,5 @@
 @import './reset.wxss';
 @import './icon.wxss';
+@import './color.wxss';
 @import './common.wxss';
 @import './layout.wxss';

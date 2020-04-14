@@ -1,9 +1,11 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
 page {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+
 view,
 scroll-view,
 swiper,
@@ -15,9 +17,7 @@ navigator,
 image {
     box-sizing: border-box;
 }
+
 button::after {
     display: none;
-}
-[class*="ani-icon-"] {
-    font-size: 36rpx;
 }

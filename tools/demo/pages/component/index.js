@@ -19,63 +19,77 @@ Page({
             },
             {
                 icon: 'ani-icon-icon',
-                en: 'icon',
-                cn: '图标',
+                en: 'nav',
+                cn: 'tab导航',
                 color: 'bittersweet'
             },
             {
                 icon: 'ani-icon-btn',
-                en: 'button',
-                cn: '按钮',
+                en: 'form',
+                cn: '表单',
                 color: 'sunflower'
             },
             {
                 icon: 'ani-icon-text',
-                en: 'text',
-                cn: '文本',
+                en: 'swiper',
+                cn: '轮播',
                 color: 'straw'
             },
             {
                 icon: 'ani-icon-text-shadow',
-                en: 'textShadow',
-                cn: '文本阴影',
+                en: 'steps',
+                cn: '步骤条',
                 color: 'grass'
             },
             {
                 icon: 'ani-icon-tag',
-                en: 'tag',
-                cn: '标签',
+                en: 'card',
+                cn: '卡片',
                 color: 'mint'
             },
             {
                 icon: 'ani-icon-portrait',
-                en: 'avatar',
-                cn: '头像',
+                en: 'timeLine',
+                cn: '时间轴',
                 color: 'teal'
             },
             {
                 icon: 'ani-icon-progress',
-                en: 'progress',
-                cn: '进度条',
+                en: 'modal',
+                cn: '模态框',
                 color: 'aqua'
             },
             {
                 icon: 'ani-icon-box-shadow',
-                en: 'boxShadow',
-                cn: '边框阴影',
+                en: 'list',
+                cn: '列表',
                 color: 'blue-jeans'
             },
             {
-                icon: 'ani-icon-loading3',
-                en: 'loading',
-                cn: '加载',
-                color: 'plum'
-            },
-            {
                 icon: 'ani-icon-badge',
-                en: 'badge',
-                cn: '徽标',
+                en: 'date',
+                cn: '日期',
+                color: 'plum'
+            }, {
+                icon: 'ani-icon-badge',
+                en: 'time',
+                cn: '时间',
                 color: 'lavender'
+            }, {
+                icon: 'ani-icon-badge',
+                en: 'time',
+                cn: '时间',
+                color: 'pink-rose'
+            }, {
+                icon: 'ani-icon-badge',
+                en: 'slider',
+                cn: '滑块',
+                color: 'pink-rose'
+            }, {
+                icon: 'ani-icon-badge',
+                en: 'rate',
+                cn: '评分',
+                color: 'pink-rose'
             }
         ]
     },

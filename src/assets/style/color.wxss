@@ -1,0 +1,145 @@
+/*
+ _________
+|  初始化  |\
+| ~~~~~~~ |_\
+| 基础变量 |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+
+page {
+    /* 
+     _________
+    |  基础色  |
+    |_________|
+    */
+    /* 不正经红色 */
+    --red: #f35352;
+    /* 橙色 */
+    --orange: #ff8800;
+    /* 不正经黄色 */
+    --yellow: #f7cb4a;
+    /* 橄榄绿 */
+    --olive: #9bcc66;
+    /* 绿色 */
+    --green: #3fb27e;
+    /* 青色 */
+    --cyan: #69d4db;
+    /* 天蓝色 */
+    --skyBlue: #51b4f1;
+    /* 蓝色 */
+    --blue: #5182e4;
+    /* 紫色 */
+    --purple: #8954d4;
+    /* 紫红色 */
+    --mauve: #ce62d6;
+    /* 粉色 */
+    --pink: #ff69b4;
+    /* 棕色 */
+    --brown: #a52a2a;
+    /* 不正经黑色 */
+    --black: #333;
+    /* 灰色 */
+    --gray: #aaa;
+    /* 暗灰色 */
+    --darkGray: #666;
+    /* 烟灰色 */
+    --grey: #bebebe;
+    /* 魂白 */
+    --ghostWhite: #f8f8f8;
+    /* 白色 */
+    --white: #fff;
+    /* 透明 */
+    --transparent: rgba(0, 0, 0, 0);
+    /* 
+     _________
+    |   浅色  |
+    |_________|
+    */
+    /* 浅红 */
+    --lightRed: #ffcccb;
+    /* 浅橙 */
+    --lightOrange: #ffdab1;
+    /* 浅黄 */
+    --lightYellow: #fdf1cd;
+    /* 浅橄榄绿 */
+    --lightOlive: #e8f3dc;
+    /* 浅绿 */
+    --lightGreen: #d8f1e6;
+    /* 浅青 */
+    --lightCyan: #d8f4f6;
+    /* 浅天蓝 */
+    --lightSkyBlue: #d0ebfb;
+    /* 浅蓝 */
+    --lightBlue: #c8d7f6;
+    /* 浅紫 */
+    --lightPurple: #e0d1f4;
+    /* 浅紫红 */
+    --lightMauve: #f0cff2;
+    /* 浅粉 */
+    --lightPink: #ffcbe5;
+    /* 浅棕 */
+    --lightBrown: #f5d9d9;
+    /* 浅灰 */
+    --lightGray: #e5e5e5;
+    /* 浅烟灰 */
+    --lightGrey: #efefef;
+    /* 
+     _________
+    |  渐变色  |
+    |_________|
+    */
+    /* 渐变红 */
+    --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
+    /* 渐变橙 */
+    --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
+    /* 渐变绿 */
+    --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
+    /* 渐变浅青 */
+    --gradualCyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    /* 渐变蓝 */
+    --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3, #00bbd4);
+    /* 渐变浅紫*/
+    --gradualLightPurple: linear-gradient(45deg, #a18cd1, #bfb0e0, #fbc2eb);
+    /* 渐变紫 */
+    --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
+    /* 渐变粉 */
+    --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
+    /* 
+     _________
+    |阴影透明色|
+    |________|
+    */
+    --shadowSize: 6rpx 6rpx 8rpx;
+    /* 红 */
+    --redShadow: rgba(243, 83, 82, .2);
+    /* 橙 */
+    --orangeShadow: rgba(255, 136, 0, .2);
+    /* 黄 */
+    --yellowShadow: rgba(247, 203, 74, .2);
+    /* 橄榄绿 */
+    --oliveShadow: rgba(155, 204, 102, .2);
+    /* 绿 */
+    --greenShadow: rgba(63, 178, 126, .2);
+    /* 天青 */
+    --cyanShadow: rgba(105, 212, 219, .2);
+    /* 天蓝 */
+    --skyBlueShadow: rgba(208, 235, 251, .2);
+    /* 蓝 */
+    --blueShadow: rgba(81, 130, 228, .2);
+    /* 紫 */
+    --purpleShadow: rgba(137, 84, 212, .2);
+    /* 紫红 */
+    --mauveShadow: rgba(206, 98, 214, .2);
+    /* 粉 */
+    --pinkShadow: rgba(255, 105, 180, .2);
+    /* 棕 */
+    --brownShadow: rgba(165, 42, 42, .2);
+    /* 烟灰 */
+    --greyShadow: rgba(170, 170, 170, .2);
+    /* 浅灰 */
+    --grayShadow: rgba(190, 190, 190, .2);
+    /* 黑 */
+    --blackShadow: rgba(51, 51, 51, .2);
+}
