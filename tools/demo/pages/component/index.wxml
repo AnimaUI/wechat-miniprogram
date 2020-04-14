@@ -206,16 +206,22 @@
         </view>
     </view>
 </view> -->
-<scroll-view scroll-y class="scrollPage">
+<scroll-view scroll-y class="scroll-page">
     <view class="main">
-        <view class="box flex justify-around flex-wrap">
-            
+        <view class="box flex swatch justify-around flex-wrap">
+            <view class="item swatch" wx:for="{{list}}" wx:key="key">
+                <view class="swatch-color color-{{item.color}}">
+                    {{item.en}}
+                    {{item.cn}}
+                    <text class="{{item.icon}}"></text>
+                </view>
+            </view>
         </view>
     </view>
 </scroll-view>
-<TabBar
-    color="{{tabBar.color}}"
-    selectedColor="{{tabBar.selectedColor}}"
-    current="{{tabBar.current}}"
-    backgroundColor="{{tabBar.backgroundColor}}"
-    list="{{tabBar.list}}" />
+<MenuBar
+    color="{{menuBar.color}}"
+    selectedColor="{{menuBar.selectedColor}}"
+    current="{{menuBar.current}}"
+    backgroundColor="{{menuBar.backgroundColor}}"
+    list="{{menuBar.list}}" />

@@ -21,7 +21,7 @@ App({
         });
     },
     globalData: {
-        tabBar: {
+        menuBar: {
             // 当前索引
             current: 3,
             // 字体颜色

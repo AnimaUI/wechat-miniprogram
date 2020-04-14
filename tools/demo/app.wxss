@@ -1,7 +1,6 @@
 @import './animaUi/assets/style/main.wxss';
 .swatch {
     width: 18.57%;
-    background-color: #3c3b3d;
     border-radius: 10rpx;
     float: left;
     overflow: hidden;

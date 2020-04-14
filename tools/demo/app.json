@@ -11,6 +11,6 @@
         "navigationBarTextStyle": "black"
     },
     "usingComponents": {
-        "CustomBar": "./animaUi/components/custom-bar/index"
+        "MenuBar": "./animaUi/components/menu-bar/index"
     }
 }

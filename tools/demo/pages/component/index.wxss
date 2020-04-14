@@ -426,3 +426,8 @@ page {
   bottom: 100rpx;
   animation: fire 2s 0.32s ease-in-out infinite alternate;
 }
+.main .box .item {
+  width: 300rpx;
+  margin-top: 40rpx;
+  border-radius: 28rpx;
+}
