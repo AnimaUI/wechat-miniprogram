@@ -7,7 +7,7 @@
         <view
             class="ani-tabbar-item {{item.className}} {{item.hump ? 'ani-item-hump' : ''}}"
             style="background: {{item.hump ? backgroundColor : 'none'}}"
-            bindtap="tabbarSwitch" data-index="{{index}}">
+            bindtap="menuBarSwitch" data-index="{{index}}">
             <view class="ani-icon-box {{ item.hump ? 'ani-tabbar-hump' : '' }}">
                 <text
                     style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
