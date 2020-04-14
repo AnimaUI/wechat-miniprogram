@@ -459,5 +459,6 @@ page {
   font-size: 24rpx;
 }
 .main .box .item .right text:last-child {
-  font-size: 30rpx;
+  font-size: 32rpx;
+  margin-top: 8rpx;
 }

@@ -11,7 +11,7 @@ module.exports = [
     'fusion-green',
     'blue-green',
     'fusion-blue-green',
-    'bg-cyan',
+    'cyan',
     'fusion-cyan',
     'sky-blue',
     'fusion-sky-blue',

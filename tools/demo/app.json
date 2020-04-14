@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/component/index",
         "pages/basic/index",
+        "pages/component/index",
         "pages/about/index"
     ],
     "window": {

@@ -209,7 +209,7 @@
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
         <view class="box flex swatch justify-around flex-wrap">
-            <view class="item flex justify-between swatch-color bg-{{colour[index]}}" wx:for="{{list}}" wx:key="key">
+            <view class="item flex justify-between align-center swatch-color bg-{{colour[index]}}" wx:for="{{list}}" wx:key="key">
                 <text class="left text-shadow text-white {{item.icon}}"></text>
                 <view class="right">
                     <text class="en capitalize text-shadow text-white">{{item.en}}</text>
