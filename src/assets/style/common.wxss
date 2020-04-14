@@ -101,11 +101,21 @@ page {
     color: var(--white);
 }
 
+.bg-fusion-red {
+    background-color: var(--fusion-red);
+    color: var(--white);
+}
+
 
 /* 橙色背景 */
 
 .bg-orange {
     background-color: var(--orange);
+    color: var(--white);
+}
+
+.bg-fusion-orange {
+    background-color: var(--fusion-orange);
     color: var(--white);
 }
 
@@ -117,11 +127,21 @@ page {
     color: var(--black);
 }
 
+.bg-fusion-yellow {
+    background-color: var(--fusion-yellow);
+    color: var(--white);
+}
+
 
 /*橄榄绿背景 */
 
 .bg-olive {
     background-color: var(--olive);
+    color: var(--white);
+}
+
+.bg-fusion-olive {
+    background-color: var(--fusion-olive);
     color: var(--white);
 }
 
@@ -133,19 +153,47 @@ page {
     color: var(--white);
 }
 
+.bg-fusion-green {
+    background-color: var(--fusion-green);
+    color: var(--white);
+}
 
-/* 天青色背景 */
+
+/* 蓝绿色背景 */
+
+.bg-blue-green {
+    background-color: var(--blue-green);
+    color: var(--white);
+}
+
+.bg-fusion-blue-green {
+    background-color: var(--fusion-blue-green);
+    color: var(--white);
+}
+
+
+/* 青色背景 */
 
 .bg-cyan {
     background-color: var(--cyan);
     color: var(--white);
 }
 
+.bg-fusion-cyan {
+    background-color: var(--fusion-cyan);
+    color: var(--white);
+}
+
 
 /* 天蓝色背景 */
 
-.bg-skyBlue {
-    background-color: var(--skyBlue);
+.bg-sky-blue {
+    background-color: var(--sky-blue);
+    color: var(--white);
+}
+
+.bg-fusion-sky-blue {
+    background-color: var(--fusion-sky-blue);
     color: var(--white);
 }
 
@@ -157,11 +205,21 @@ page {
     color: var(--white);
 }
 
+.bg-fusion-blue {
+    background-color: var(--fusion-blue);
+    color: var(--white);
+}
+
 
 /* 紫色背景 */
 
 .bg-purple {
     background-color: var(--purple);
+    color: var(--white);
+}
+
+.bg-fusion-purple {
+    background-color: var(--fusion-purple);
     color: var(--white);
 }
 
@@ -173,6 +231,11 @@ page {
     color: var(--white);
 }
 
+.bg-fusion-mauve {
+    background-color: var(--fusion-mauve);
+    color: var(--white);
+}
+
 
 /* 粉色背景 */
 
@@ -181,11 +244,34 @@ page {
     color: var(--white);
 }
 
+.bg-fusion-pink {
+    background-color: var(--fusion-pink);
+    color: var(--white);
+}
+
 
 /* 棕色背景 */
 
 .bg-brown {
     background-color: var(--brown);
+    color: var(--white);
+}
+
+.bg-fusion-brown {
+    background-color: var(--fusion-brown);
+    color: var(--white);
+}
+
+
+/* 蓝灰色 */
+
+.bg-blue-grey {
+    background-color: var(--blue-grey);
+    color: var(--white);
+}
+
+.bg-fusion-blue-grey {
+    background-color: var(--fusion-blue-grey);
     color: var(--white);
 }
 
@@ -200,8 +286,8 @@ page {
 
 /* 暗灰色背景 */
 
-.bg-darkGray {
-    background-color: var(--darkGray);
+.bg-dark-gray {
+    background-color: var(--dark-gray);
     color: var(--white);
 }
 
@@ -222,10 +308,10 @@ page {
 }
 
 
-/* 灰白色背景 */
+/* 魂白背景 */
 
-.bg-ghostWhite {
-    background-color: var(--ghostWhite);
+.bg-ghost-white {
+    background-color: var(--ghost-white);
     color: var(--darkGray);
 }
 

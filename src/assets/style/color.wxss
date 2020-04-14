@@ -29,12 +29,12 @@ page {
     /* 绿色 */
     --green: #20bf6b;
     --fusion-green: #26de81;
-    /* 绿色 */
+    /* 蓝绿色 */
     --blue-green: #0fb9b1;
     --fusion-blue-green: #2bcbba;
     /* 青色 */
     --cyan: #69d4db;
-    --fusion-green: #97e9ed;
+    --fusion-cyan: #97e9ed;
     /* 天蓝色 */
     --sky-blue: #2d98da;
     --fusion-sky-blue: #45aaf2;
@@ -53,7 +53,7 @@ page {
     /* 棕色 */
     --brown: #a52a2a;
     --fusion-brown: #c54b4b;
-    /* blue-grey */
+    /* 蓝灰色 */
     --blue-grey: #4b6584;
     --fusion-blue-grey: #778ca3;
     /* 不正经黑色 */

@@ -9,85 +9,85 @@ Page({
                 icon: 'ani-icon-bar',
                 en: 'customBar',
                 cn: '顶部操作条',
-                color: 'ruby'
+                color: 'red'
             },
             {
                 icon: 'ani-icon-menu',
                 en: 'menuBar',
                 cn: '底部操作条',
-                color: 'grapefruit'
+                color: 'fusion-red'
             },
             {
                 icon: 'ani-icon-tab',
                 en: 'nav',
                 cn: 'tab导航',
-                color: 'bittersweet'
+                color: 'orange'
             },
             {
                 icon: 'ani-icon-form',
                 en: 'form',
                 cn: '表单',
-                color: 'sunflower'
+                color: 'fusion-orange'
             },
             {
                 icon: 'ani-icon-carousel',
                 en: 'swiper',
                 cn: '轮播',
-                color: 'straw'
+                color: 'yellow'
             },
             {
                 icon: 'ani-icon-steps',
                 en: 'steps',
                 cn: '步骤条',
-                color: 'grass'
+                color: 'fusion-yellow'
             },
             {
                 icon: 'ani-icon-card',
                 en: 'card',
                 cn: '卡片',
-                color: 'mint'
+                color: 'olive'
             },
             {
                 icon: 'ani-icon-time-line',
                 en: 'timeLine',
                 cn: '时间轴',
-                color: 'teal'
+                color: 'fusion-olive'
             },
             {
                 icon: 'ani-icon-modal',
                 en: 'modal',
                 cn: '模态框',
-                color: 'aqua'
+                color: 'green'
             },
             {
                 icon: 'ani-icon-list',
                 en: 'list',
                 cn: '列表',
-                color: 'blue-jeans'
+                color: 'fusion-green'
             },
             {
                 icon: 'ani-icon-date',
                 en: 'date',
                 cn: '日期',
-                color: 'plum'
+                color: 'blue-green'
             },
             {
                 icon: 'ani-icon-time2',
                 en: 'time',
                 cn: '时间',
-                color: 'lavender'
+                color: 'fusion-blue-green'
             },
             {
                 icon: 'ani-icon-slider',
                 en: 'slider',
                 cn: '滑块',
-                color: 'pink-rose'
+                color: 'cyan'
             },
             {
                 icon: 'ani-icon-rate',
                 en: 'rate',
                 cn: '评分',
-                color: 'pink-rose'
+                color: 'fusion-cyan'
             }
         ]
     },
