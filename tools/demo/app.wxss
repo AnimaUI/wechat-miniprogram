@@ -1,6 +1,5 @@
 @import './animaUi/assets/style/main.wxss';
 .swatch {
-    width: 18.57%;
     border-radius: 10rpx;
     float: left;
     overflow: hidden;
@@ -9,7 +8,6 @@
 .swatch .swatch-color {
     position: relative;
     width: 100%;
-    display: block;
 }
 
 .swatch .swatch-color:after {

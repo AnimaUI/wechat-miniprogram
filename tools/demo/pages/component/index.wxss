@@ -4,7 +4,6 @@ page {
 }
 .stage {
   width: 100%;
-  height: 500rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,8 +425,32 @@ page {
   bottom: 100rpx;
   animation: fire 2s 0.32s ease-in-out infinite alternate;
 }
+.main {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 500rpx);
+  padding-bottom: 140rpx;
+}
 .main .box .item {
   width: 300rpx;
   margin-top: 40rpx;
   border-radius: 28rpx;
+  padding: 52rpx 20rpx;
+}
+.main .box .item:nth-of-type(1),
+.main .box .item:nth-of-type(2) {
+  margin-top: 0;
+}
+.main .box .item.swatch-color:after {
+  border-radius: 0 28rpx 28rpx 0;
+}
+.main .box .item .left {
+  font-size: 66rpx;
+  margin-left: 12px;
+}
+.main .box .item .right {
+  color: #fff;
+}
+.main .box .item .right text {
+  display: block;
 }

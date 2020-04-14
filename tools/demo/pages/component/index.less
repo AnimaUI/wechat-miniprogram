@@ -5,7 +5,6 @@ page {
 // 篝火动画
 .stage {
     width: 100%;
-    height: 500rpx;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -447,11 +446,33 @@ page {
 }
 
 .main {
+    display: flex;
+    width: 100%;
+    min-height: calc(~'100vh - 500rpx');
+    padding-bottom: 140rpx;
     .box {
         .item {
             width: 300rpx;
             margin-top: 40rpx;
             border-radius: 28rpx;
+            padding: 52rpx 20rpx;
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                margin-top: 0;
+            }
+            &.swatch-color:after {
+                border-radius: 0 28rpx 28rpx 0;
+            }
+            .left {
+                font-size: 66rpx;
+                margin-left: 12px;
+            }
+            .right {
+                color: #fff;
+                text {
+                    display: block;
+                }
+            }
         }
     }
 }

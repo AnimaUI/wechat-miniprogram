@@ -15,39 +15,57 @@ page {
     |_________|
     */
     /* 不正经红色 */
-    --red: #f35352;
+    --red: #eb3b5a;
+    --fusion-red: #fc5c65;
     /* 橙色 */
-    --orange: #ff8800;
+    --orange: #fa8231;
+    --fusion-orange: #fd9644;
     /* 不正经黄色 */
-    --yellow: #f7cb4a;
+    --yellow: #f7b731;
+    --fusion-yellow: #fed330;
     /* 橄榄绿 */
     --olive: #9bcc66;
+    --fusion-olive: #c3e999;
     /* 绿色 */
-    --green: #3fb27e;
+    --green: #20bf6b;
+    --fusion-green: #26de81;
+    /* 绿色 */
+    --blue-green: #0fb9b1;
+    --fusion-blue-green: #2bcbba;
     /* 青色 */
     --cyan: #69d4db;
+    --fusion-green: #97e9ed;
     /* 天蓝色 */
-    --skyBlue: #51b4f1;
+    --sky-blue: #2d98da;
+    --fusion-sky-blue: #45aaf2;
     /* 蓝色 */
-    --blue: #5182e4;
+    --blue: #3867d6;
+    --fusion-blue: #4b7bec;
     /* 紫色 */
-    --purple: #8954d4;
+    --purple: #8854d0;
+    --fusion-purple: #a55eea;
     /* 紫红色 */
     --mauve: #ce62d6;
+    --fusion-mauve: #e38ee9;
     /* 粉色 */
     --pink: #ff69b4;
+    --fusion-pink: #ff97cc;
     /* 棕色 */
     --brown: #a52a2a;
+    --fusion-brown: #c54b4b;
+    /* blue-grey */
+    --blue-grey: #4b6584;
+    --fusion-blue-grey: #778ca3;
     /* 不正经黑色 */
     --black: #333;
     /* 灰色 */
     --gray: #aaa;
     /* 暗灰色 */
-    --darkGray: #666;
+    --dark-gray: #666;
     /* 烟灰色 */
     --grey: #bebebe;
     /* 魂白 */
-    --ghostWhite: #f8f8f8;
+    --ghost-white: #f8f8f8;
     /* 白色 */
     --white: #fff;
     /* 透明 */
