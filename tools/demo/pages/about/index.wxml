@@ -965,4 +965,9 @@
         </view>
     </view>
 </view>
-<TabBar color="{{tabBar.color}}" selectedColor="{{tabBar.selectedColor}}" current="{{tabBar.current}}" backgroundColor="{{tabBar.backgroundColor}}" list="{{tabBar.list}}" />
+<MenuBar
+    color="{{menuBar.color}}"
+    selectedColor="{{menuBar.selectedColor}}"
+    current="{{menuBar.current}}"
+    backgroundColor="{{menuBar.backgroundColor}}"
+    list="{{menuBar.list}}" />
