@@ -445,20 +445,68 @@ page {
   border-radius: 0 28rpx 28rpx 0;
 }
 .main .box .item .left {
+  margin-left: 12prx;
+}
+.main .box .item .left text {
+  display: block;
+}
+.main .box .item .left text:first-child {
   font-size: 66rpx;
-  margin-left: 12px;
+}
+.main .box .item .left text:last-child {
+  font-size: 28rpx;
 }
 .main .box .item .right {
   color: #fff;
   text-align: right;
 }
-.main .box .item .right text {
+.main .box .item .right > text {
   display: block;
+  font-size: 30rpx;
 }
-.main .box .item .right text:first-child {
-  font-size: 24rpx;
+.main .box .item .right .lines {
+  margin-top: 14rpx;
 }
-.main .box .item .right text:last-child {
-  font-size: 32rpx;
-  margin-top: 8rpx;
+.main .box .item .right .lines .line {
+  width: 2rpx;
+  height: 20rpx;
+  background: #fff;
+  margin: 0 2rpx;
+  display: inline-block;
+  animation: opacity 1000ms infinite ease-in-out;
+}
+.main .box .item .right .lines .line.line-1 {
+  animation-delay: 800ms;
+}
+.main .box .item .right .lines .line.line-2 {
+  animation-delay: 600ms;
+}
+.main .box .item .right .lines .line.line-3 {
+  animation-delay: 400ms;
+}
+.main .box .item .right .lines .line.line-4 {
+  animation-delay: 200ms;
+}
+.main .box .item .right .lines .line.line-6 {
+  animation-delay: 200ms;
+}
+.main .box .item .right .lines .line.line-7 {
+  animation-delay: 400ms;
+}
+.main .box .item .right .lines .line.line-8 {
+  animation-delay: 600ms;
+}
+.main .box .item .right .lines .line.line-9 {
+  animation-delay: 800ms;
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

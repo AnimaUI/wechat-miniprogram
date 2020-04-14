@@ -464,28 +464,74 @@ page {
                 border-radius: 0 28rpx 28rpx 0;
             }
             .left {
-                font-size: 66rpx;
-                margin-left: 12px;
+                margin-left: 12prx;
+                text {
+                    display: block;
+                    &:first-child {
+                        font-size: 66rpx;
+                    }
+                    &:last-child {
+                        font-size: 28rpx;
+                    }
+                }
             }
             .right {
                 color: #fff;
                 text-align: right;
-                text {
+                > text {
                     display: block;
-                    &:first-child {
-                        font-size: 24rpx;
-                    }
-                    &:last-child {
-                        font-size: 32rpx;
-                        margin-top: 8rpx;
+                    font-size: 30rpx;
+                }
+                .lines {
+                    margin-top: 14rpx;
+                    .line {
+                        width: 2rpx;
+                        height: 20rpx;
+                        background: #fff;
+                        margin: 0 2rpx;
+                        display: inline-block;
+                        animation: opacity 1000ms infinite ease-in-out;
+                        &.line-1 {
+                            animation-delay: 800ms;
+                        }
+                        &.line-2 {
+                            animation-delay: 600ms;
+                        }
+                        &.line-3 {
+                            animation-delay: 400ms;
+                        }
+                        &.line-4 {
+                            animation-delay: 200ms;
+                        }
+                        &.line-6 {
+                            animation-delay: 200ms;
+                        }
+                        &.line-7 {
+                            animation-delay: 400ms;
+                        }
+                        &.line-8 {
+                            animation-delay: 600ms;
+                        }
+                        &.line-9 {
+                            animation-delay: 800ms;
+                        }
+                        @keyframes opacity {
+                            0% {
+                                opacity: 1;
+                            }
+                            50% {
+                                opacity: 0;
+                            }
+                            100% {
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
-
-
 
 // 小狗动画
 // .pupper {
