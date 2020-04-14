@@ -90,6 +90,10 @@ Component({
         menuBarSwitch(e) {
             const DATASET = e.currentTarget.dataset;
             const INDEX = DATASET.index;
+            const menuBar = app.globalData.menuBar;
+            if (INDEX === menuBar.current) {
+                return;
+            }
             wx.redirectTo({
                 url: this.data.list[INDEX].pagePath
             });
