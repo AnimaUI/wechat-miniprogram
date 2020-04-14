@@ -450,7 +450,14 @@ page {
 }
 .main .box .item .right {
   color: #fff;
+  text-align: right;
 }
 .main .box .item .right text {
   display: block;
+}
+.main .box .item .right text:first-child {
+  font-size: 24rpx;
+}
+.main .box .item .right text:last-child {
+  font-size: 30rpx;
 }
