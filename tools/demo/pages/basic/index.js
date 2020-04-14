@@ -4,7 +4,7 @@ const app = getApp();
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        tabBar: app.globalData.tabBar,
+        menuBar: app.globalData.menuBar,
         list: [{
                 icon: 'ani-icon-color',
                 en: 'color',

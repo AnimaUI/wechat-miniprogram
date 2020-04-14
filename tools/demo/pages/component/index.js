@@ -4,17 +4,17 @@ const app = getApp();
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        tabBar: app.globalData.tabBar,
+        menuBar: app.globalData.menuBar,
         list: [{
                 icon: 'ani-icon-color',
-                en: 'color',
-                cn: '颜色',
+                en: 'customBar',
+                cn: '顶部操作条',
                 color: 'ruby'
             },
             {
                 icon: 'ani-icon-layout-fill',
-                en: 'layout',
-                cn: '布局',
+                en: 'menuBar',
+                cn: '底部操作条',
                 color: 'grapefruit'
             },
             {
