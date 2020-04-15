@@ -7,6 +7,9 @@ page {
   min-height: calc(100vh - 500rpx);
   padding: 0 40rpx 140rpx;
 }
+.main .box {
+  width: 100%;
+}
 .main .box .item {
   margin-top: 40rpx;
   border-radius: 28rpx;
