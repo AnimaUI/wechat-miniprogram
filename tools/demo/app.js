@@ -23,7 +23,7 @@ App({
     globalData: {
         menuBar: {
             // 当前索引
-            current: 3,
+            current: 0,
             // 字体颜色
             color: '#b4bbc8',
             // 字体选中颜色
@@ -56,7 +56,7 @@ App({
                     className: 'menu-item'
                 },
                 {
-                    pagePath: '/pages/component/index',
+                    pagePath: '/pages/solution/index',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
                     selectedColor: '#ff8800',

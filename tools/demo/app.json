@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/solution/index",
         "pages/component/index",
         "pages/basic/index",
         "pages/about/index"

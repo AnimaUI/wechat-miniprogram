@@ -1,0 +1,65 @@
+<view class="stage">
+    <view class="human">
+        <view class="human__legs">
+            <view class="human__b"></view>
+            <view class="human__leg human__leg--left"></view>
+            <view class="human__leg human__leg--right"></view>
+        </view>
+        <view class="human__arms">
+            <view class="human__t"></view>
+            <view class="human__arm human__arm--left"></view>
+            <view class="human__forearm human__forearm--left"></view>
+            <view class="human__arm human__arm--right"></view>
+            <view class="human__forearm human__forearm--right"></view>
+        </view>
+        <view class="human__head">
+            <view class="human__helmet"></view>
+            <view class="human__face">
+                <view class="human__ear human__ear--left"></view>
+                <view class="human__ear human__ear--right"></view>
+            </view>
+        </view>
+    </view>
+    <view class="bike">
+        <view class="bike__handle"></view>
+        <view class="bike__seat"></view>
+        <view class="bike__wheel"></view>
+    </view>
+    <view class="city">
+        <view class="city__b1"></view>
+        <view class="city__b2"></view>
+        <view class="city__b3"></view>
+    </view>
+    <view class="trees">
+        <view class="tree tree--l1"></view>
+        <view class="tree tree--l2"></view>
+        <view class="tree tree--l3"></view>
+        <view class="tree tree--r1"></view>
+        <view class="tree tree--r2"></view>
+        <view class="tree tree--r3"></view>
+    </view>
+    <view class="clouds">
+        <view class="cloud"></view>
+        <view class="cloud"></view>
+    </view>
+</view>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="box flex swatch justify-around flex-wrap">
+            <view class="item flex justify-between align-center swatch-color bg-{{colour[index]}}" wx:for="{{list}}" wx:key="key">
+                <view class="left">
+                    <text class="text-shadow text-white {{item.icon}}"></text>
+                    <text class="en capitalize text-shadow text-white">{{item.en}}</text>
+                </view>
+                <view class="right">
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<MenuBar
+    color="{{menuBar.color}}"
+    selectedColor="{{menuBar.selectedColor}}"
+    current="{{menuBar.current}}"
+    backgroundColor="{{menuBar.backgroundColor}}"
+    list="{{menuBar.list}}" />
