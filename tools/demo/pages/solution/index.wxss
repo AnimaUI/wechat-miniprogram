@@ -1,6 +1,23 @@
 page {
   background-color: #6a4a8d;
 }
+.main {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 500rpx);
+  padding: 0 40rpx 140rpx;
+}
+.main .box .item {
+  margin-top: 40rpx;
+  border-radius: 28rpx;
+  padding: 52rpx 20rpx;
+}
+.main .box .item:nth-of-type(1) {
+  margin-top: 0;
+}
+.main .box .item.swatch-color:after {
+  border-radius: 0 28rpx 28rpx 0;
+}
 .stage {
   width: 100%;
   height: 500rpx;
@@ -394,8 +411,12 @@ page {
   z-index: -1;
 }
 .stage .cloud:nth-of-type(2) {
-  left: 80%;
-  top: 100rpx;
+  left: 70%;
+  top: 10rpx;
+}
+.stage .cloud:nth-of-type(3) {
+  left: 30%;
+  top: 10rpx;
 }
 .stage .cloud::before,
 .stage .cloud::after {

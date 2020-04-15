@@ -41,6 +41,7 @@
     <view class="clouds">
         <view class="cloud"></view>
         <view class="cloud"></view>
+        <view class="cloud"></view>
     </view>
 </view>
 <scroll-view scroll-y class="scroll-page">
