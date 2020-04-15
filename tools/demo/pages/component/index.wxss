@@ -449,12 +449,14 @@ page {
 }
 .main .box .item .left text {
   display: block;
+  width: 115rpx;
 }
 .main .box .item .left text:first-child {
   font-size: 66rpx;
 }
 .main .box .item .left text:last-child {
   font-size: 28rpx;
+  margin-top: 12rpx;
 }
 .main .box .item .right {
   color: #fff;
@@ -463,9 +465,6 @@ page {
 .main .box .item .right > text {
   display: block;
   font-size: 30rpx;
-}
-.main .box .item .right .lines {
-  margin-top: 14rpx;
 }
 .main .box .item .right .lines .line {
   width: 2rpx;

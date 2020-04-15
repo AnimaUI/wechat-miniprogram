@@ -19,7 +19,7 @@ Page({
             },
             {
                 icon: 'ani-icon-tab',
-                en: 'nav',
+                en: 'tab',
                 cn: 'tab导航'
             },
             {
