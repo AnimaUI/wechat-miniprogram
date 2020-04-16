@@ -1,3 +1,7 @@
+<!-- <CustomBar className="bg-fusion-red text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">首页</view>
+</CustomBar> -->
 <view class="stage">
     <view class="human">
         <view class="human__legs">

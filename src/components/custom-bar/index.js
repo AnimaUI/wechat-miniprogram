@@ -12,6 +12,10 @@ Component({
      * 组件的对外属性
      */
     properties: {
+        className: {
+            type: String,
+            default: ''
+        },
         bgColor: {
             type: String,
             default: ''
