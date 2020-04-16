@@ -53,11 +53,11 @@
         <view class="box">
             <view class="item flex justify-between align-center bg-gradual-yellow" wx:for="{{list}}" wx:key="key">
                 <view class="left">
-                    <text class="text-shadow text-white {{item.icon}}"></text>
+                    <text class="text-shadow-white text-white {{item.icon}}"></text>
                     <text class="en capitalize text-shadow text-white">{{item.en}}</text>
                 </view>
                 <view class="right">
-                    <text class="cn text-shadow text-white">{{item.cn}}</text>
+                    <text class="cn text-shadow-white text-white">{{item.cn}}</text>
                 </view>
             </view>
         </view>

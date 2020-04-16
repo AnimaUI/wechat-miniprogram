@@ -105,16 +105,16 @@ page {
     blue-green, fusion-blue-green, cyan, fusion-cyan, sky-blue,
     fusion-sky-blue, blue, fusion-blue, purple, fusion-purple,
     mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
-    blue-grey, fusion-blue-grey, black, gray, dark-gray, grey;
+    blue-grey, fusion-blue-grey, black, gray, dark-gray, grey, white;
 
 .shadowColor(@shadowColors);
 .shadowColor(@shadowColors, @i: 1) when (length(@shadowColors) >= @i) {
     @name: extract(@shadowColors, @i);
     .shadow-@{name} {
-        box-shadow: var(--shadow-size) var(~'--@{name}');
+        box-shadow: var(--shadow-size) var(~'--shadow-@{name}');
     }
     .text-shadow-@{name} {
-        text-shadow: var(--shadow-size) var(~'--@{name}');
+        text-shadow: var(--shadow-size) var(~'--shadow-@{name}');
     }
     .shadowColor(@shadowColors, (@i + 1));
 }
