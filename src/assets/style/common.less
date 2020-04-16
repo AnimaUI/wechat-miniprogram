@@ -70,322 +70,53 @@ page {
 |_________|
 */
 
-/* 红色背景 */
-.bg-red {
-    background-color: var(--red);
-    color: var(--white);
-}
-.bg-fusion-red {
-    background-color: var(--fusion-red);
-    color: var(--white);
-}
+// 变量抽取
+@colorType: null, dark, disabled, light;
+@colors: red, fusion-red, orange, fusion-orange, yellow,
+    fusion-yellow, olive, fusion-olive, green, fusion-green,
+    blue-green, fusion-blue-green, cyan, fusion-cyan, sky-blue,
+    fusion-sky-blue, blue, fusion-blue, purple, fusion-purple,
+    mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
+    blue-grey, fusion-blue-grey;
 
-/* 橙色背景 */
-.bg-orange {
-    background-color: var(--orange);
-    color: var(--white);
-}
-.bg-fusion-orange {
-    background-color: var(--fusion-orange);
-    color: var(--white);
-}
-
-/* 黄色背景 */
-.bg-yellow {
-    background-color: var(--yellow);
-    color: var(--black);
-}
-.bg-fusion-yellow {
-    background-color: var(--fusion-yellow);
-    color: var(--white);
-}
-
-/*橄榄绿背景 */
-
-.bg-olive {
-    background-color: var(--olive);
-    color: var(--white);
-}
-
-.bg-fusion-olive {
-    background-color: var(--fusion-olive);
-    color: var(--white);
-}
-
-/* 绿色背景 */
-
-.bg-green {
-    background-color: var(--green);
-    color: var(--white);
-}
-
-.bg-fusion-green {
-    background-color: var(--fusion-green);
-    color: var(--white);
-}
-
-/* 蓝绿色背景 */
-
-.bg-blue-green {
-    background-color: var(--blue-green);
-    color: var(--white);
-}
-
-.bg-fusion-blue-green {
-    background-color: var(--fusion-blue-green);
-    color: var(--white);
-}
-
-/* 青色背景 */
-
-.bg-cyan {
-    background-color: var(--cyan);
-    color: var(--white);
-}
-
-.bg-fusion-cyan {
-    background-color: var(--fusion-cyan);
-    color: var(--white);
-}
-
-/* 天蓝色背景 */
-
-.bg-sky-blue {
-    background-color: var(--sky-blue);
-    color: var(--white);
-}
-
-.bg-fusion-sky-blue {
-    background-color: var(--fusion-sky-blue);
-    color: var(--white);
-}
-
-/* 蓝色背景 */
-
-.bg-blue {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.bg-fusion-blue {
-    background-color: var(--fusion-blue);
-    color: var(--white);
-}
-
-/* 紫色背景 */
-
-.bg-purple {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.bg-fusion-purple {
-    background-color: var(--fusion-purple);
-    color: var(--white);
-}
-
-/* 紫红色背景 */
-
-.bg-mauve {
-    background-color: var(--mauve);
-    color: var(--white);
-}
-
-.bg-fusion-mauve {
-    background-color: var(--fusion-mauve);
-    color: var(--white);
-}
-
-/* 粉色背景 */
-
-.bg-pink {
-    background-color: var(--pink);
-    color: var(--white);
-}
-
-.bg-fusion-pink {
-    background-color: var(--fusion-pink);
-    color: var(--white);
-}
-
-/* 棕色背景 */
-
-.bg-brown {
-    background-color: var(--brown);
-    color: var(--white);
-}
-
-.bg-fusion-brown {
-    background-color: var(--fusion-brown);
-    color: var(--white);
-}
-
-/* 蓝灰色 */
-
-.bg-blue-grey {
-    background-color: var(--blue-grey);
-    color: var(--white);
-}
-
-.bg-fusion-blue-grey {
-    background-color: var(--fusion-blue-grey);
-    color: var(--white);
-}
-
-/* 不正经黑色背景 */
-
-.bg-black {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-/* 暗灰色背景 */
-
-.bg-dark-gray {
-    background-color: var(--dark-gray);
-    color: var(--white);
-}
-
-/* 灰色背景 */
-
-.bg-gray {
-    background-color: #f0f0f0;
-    color: var(--black);
-}
-
-/* 烟灰色背景 */
-
-.bg-grey {
-    background-color: var(--grey);
-    color: var(--white);
+.colorType(@colorType);
+.colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+    @typeName: extract(@colorType, @i);
+    .bg(@colors);
+    .bg(@colors, @j: 1) when (length(@colors) >= @j) {
+        @name: extract(@colors, @j);
+        .bgType(@typeName);
+        // 判断是否是占位符
+        .bgType(@typeName) when not( @typeName = null) {
+            .bg-@{typeName}-@{name} {
+                background-color: var(~'--@{typeName}-@{name}');
+            }
+        }
+        .bgType(@typeName) when ( @typeName = null) {
+            .bg-@{name} {
+                background-color: var(~'--@{name}');
+            }
+        }
+        .bg(@colors, (@j + 1));
+    }
+    .colorType(@colorType, (@i + 1));
 }
 
 /* 魂白背景 */
-
 .bg-ghost-white {
     background-color: var(--ghost-white);
     color: var(--darkGray);
 }
 
 /* 白色背景 */
-
 .bg-white {
     background-color: var(--white);
     color: var(--darkGray);
 }
 
 /* 透明 */
-
 .bg-transparent {
     background-image: var(--transparent);
-    color: var(--white);
-}
-
-/*
- _________
-|  背景色  |\
-| ~~~~~~~ |_\
-|  浅色    |
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-
-/* 浅红色背景 */
-
-.bg-red.light {
-    background-color: var(--lightRed);
-    color: var(--white);
-}
-
-/* 浅橙色背景 */
-
-.bg-orange.light {
-    background-color: var(--lightOrange);
-    color: var(--white);
-}
-
-/* 浅黄色背景 */
-
-.bg-yellow.light {
-    background-color: var(--lightYellow);
-    color: var(--black);
-}
-
-/* 浅橄榄绿背景 */
-
-.bg-olive.light {
-    background-color: var(--lightOlive);
-    color: var(--white);
-}
-
-/* 浅绿色背景 */
-
-.bg-green.light {
-    background-color: var(--lightGreen);
-    color: var(--white);
-}
-
-/* 浅天青色背景 */
-
-.bg-cyan.light {
-    background-color: var(--lightCyan);
-    color: var(--white);
-}
-
-/* 浅天蓝色背景 */
-
-.bg-skyBlue.light {
-    background-color: var(--lightSkyBlue);
-    color: var(--white);
-}
-
-/* 浅蓝色背景 */
-
-.bg-blue.light {
-    background-color: var(--lightBlue);
-    color: var(--white);
-}
-
-/* 浅紫色背景 */
-
-.bg-purple.light {
-    background-color: var(--lightPurple);
-    color: var(--white);
-}
-
-/* 浅紫红色背景 */
-
-.bg-mauve.light {
-    background-color: var(--lightMauve);
-    color: var(--white);
-}
-
-/* 浅粉色背景 */
-
-.bg-pink.light {
-    background-color: var(--lightPink);
-    color: var(--white);
-}
-
-/* 浅棕色背景 */
-
-.bg-brown.light {
-    background-color: var(--lightBrown);
-    color: var(--white);
-}
-
-/* 浅灰色背景 */
-
-.bg-gray.light {
-    background-color: var(--lightGray);
-    color: var(--black);
-}
-
-/* 浅烟灰色背景 */
-
-.bg-grey.light {
-    background-color: var(--grey);
     color: var(--white);
 }
 
