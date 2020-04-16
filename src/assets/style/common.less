@@ -9,53 +9,7 @@ page {
     color: var(--black);
 }
 
-/* 字体粗细 */
-.fontWeight(700);
-.fontWeight(@fw, @i: 400) when (@i =< @fw) {
-    .fw-@{i} {
-        font-weight: 0 + @i;
-    }
-    .fontWeight(@fw, (@i + 100));
-}
-
-/* 字体大小 */
-.fontSize(80);
-.fontSize(@fs, @i: 24) when (@i =< @fs) {
-    .fs-@{i} {
-        font-size: 0rpx + @i;
-    }
-    .fontSize(@fs, (@i + 2));
-}
-
-.block {
-    display: block;
-}
-
-/* 首字母大写 */
-.capitalize {
-    text-transform: Capitalize;
-}
-
-/* 全大写 */
-.uppercase {
-    text-transform: uppercase;
-}
-
-/* 全小写 */
-.lowercase {
-    text-transform: lowercase;
-}
-
-/*
- _________
-|  colors  |\
-| ~~~~~~~ |_\
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-
-// 变量抽取
+/* bgColor && text-color */
 @colorType: null, dark, disabled, light;
 @colors: red, fusion-red, orange, fusion-orange, yellow,
     fusion-yellow, olive, fusion-olive, green, fusion-green,
@@ -115,6 +69,55 @@ page {
 .bg-transparent {
     background-image: var(--transparent);
     color: var(--white);
+}
+
+/* 不正经黑色 */
+.text-black {
+    color: var(--black);
+}
+/* 暗灰色 */
+.text-dark-gray {
+    color: var(--dark-gray);
+}
+/* 灰色 */
+.text-gray {
+    color: var(--gray);
+}
+/* 烟灰色 */
+.text-grey {
+    color: var(--grey);
+}
+/* 魂白 */
+.text-ghost-white {
+    color: var(--ghost-white);
+}
+/* 白色 */
+.text-white {
+    color: var(--white);
+}
+// 透明色
+.text-transparent {
+    color: var(--transparent);
+}
+
+/* box-shadow && text-shadow */
+@shadowColors: red, fusion-red, orange, fusion-orange, yellow,
+    fusion-yellow, olive, fusion-olive, green, fusion-green,
+    blue-green, fusion-blue-green, cyan, fusion-cyan, sky-blue,
+    fusion-sky-blue, blue, fusion-blue, purple, fusion-purple,
+    mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
+    blue-grey, fusion-blue-grey, black, gray, dark-gray, grey;
+
+.shadowColor(@shadowColors);
+.shadowColor(@shadowColors, @i: 1) when (length(@shadowColors) >= @i) {
+    @name: extract(@shadowColors, @i);
+    .shadow-@{name} {
+        box-shadow: var(--shadow-size) var(~'--@{name}');
+    }
+    .text-shadow-@{name} {
+        text-shadow: var(--shadow-size) var(~'--@{name}');
+    }
+    .shadowColor(@shadowColors, (@i + 1));
 }
 
 /*
@@ -182,50 +185,3 @@ page {
     color: var(--white);
 }
 
-/* 不正经黑色 */
-.text-black {
-    color: var(--black);
-}
-/* 暗灰色 */
-.text-dark-gray {
-    color: var(--dark-gray);
-}
-/* 灰色 */
-.text-gray {
-    color: var(--gray);
-}
-/* 烟灰色 */
-.text-grey {
-    color: var(--grey);
-}
-/* 魂白 */
-.text-ghost-white {
-    color: var(--ghost-white);
-}
-/* 白色 */
-.text-white {
-    color: var(--white);
-}
-// 透明色
-.text-transparent {
-    color: var(--transparent);
-}
-
-@shadowColors: red, fusion-red, orange, fusion-orange, yellow,
-    fusion-yellow, olive, fusion-olive, green, fusion-green,
-    blue-green, fusion-blue-green, cyan, fusion-cyan, sky-blue,
-    fusion-sky-blue, blue, fusion-blue, purple, fusion-purple,
-    mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
-    blue-grey, fusion-blue-grey, black, gray, dark-gray, grey;
-
-.shadowColor(@shadowColors);
-.shadowColor(@shadowColors, @i: 1) when (length(@shadowColors) >= @i) {
-    @name: extract(@shadowColors, @i);
-    .shadow-@{name} {
-        box-shadow: var(--shadow-size) var(~'--@{name}');
-    }
-    .text-shadow-@{name} {
-        text-shadow: var(--shadow-size) var(~'--@{name}');
-    }
-    .shadowColor(@shadowColors, (@i + 1));
-}

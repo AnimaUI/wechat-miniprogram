@@ -1,0 +1,32 @@
+/* 字体粗细 */
+.fontWeight(700);
+.fontWeight(@fw, @i: 400) when (@i =< @fw) {
+    .fw-@{i} {
+        font-weight: 0 + @i;
+    }
+    .fontWeight(@fw, (@i + 100));
+}
+
+/* 字体大小 */
+.fontSize(80);
+.fontSize(@fs, @i: 24) when (@i =< @fs) {
+    .fs-@{i} {
+        font-size: 0rpx + @i;
+    }
+    .fontSize(@fs, (@i + 2));
+}
+
+/* 首字母大写 */
+.capitalize {
+    text-transform: Capitalize;
+}
+
+/* 全大写 */
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* 全小写 */
+.lowercase {
+    text-transform: lowercase;
+}
