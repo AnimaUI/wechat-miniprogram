@@ -12,76 +12,53 @@
     代码不易，使用AnimaUI开发微信小程序时，请注明基于
     AnimaUI开发，谢谢~~ QQ交流群：183167955
 */
-
 page {
     /* 
      ______________
     | 初始化页面样式 |
     |_____________|
     */
-    background-color: var(--ghostWhite);
+    background-color: var(--ghost-white);
     font-size: 28rpx;
     color: var(--black);
 }
 
-.fw-700 {
-    font-weight: 700;
+/* 字体粗细 */
+.fontWeight(700);
+.fontWeight(@fw, @i: 400) when (@i =< @fw) {
+    .fw-@{i} {
+        font-weight: 0 + @i;
+    }
+    .fontWeight(@fw, (@i + 100));
 }
 
-.fw-600 {
-    font-weight: 600;
-}
-
-.text-bold,
-.fw-500 {
-    font-weight: 500;
-}
-
-.fw-400 {
-    font-weight: 400;
-}
-
-.fs-36 {
-    font-size: 36rpx!important;
-}
-
-.fs-48 {
-    font-size: 48rpx!important;
-}
-
-.fs-60 {
-    font-size: 60rpx!important;
-}
-
-.fs-80 {
-    font-size: 80rpx!important;
+/* 字体大小 */
+.fontSize(80);
+.fontSize(@fs, @i: 24) when (@i =< @fs) {
+    .fs-@{i} {
+        font-size: 0rpx + @i;
+    }
+    .fontSize(@fs, (@i + 2));
 }
 
 .block {
     display: block;
 }
 
-
 /* 首字母大写 */
-
 .capitalize {
     text-transform: Capitalize;
 }
 
-
 /* 全大写 */
-
 .uppercase {
     text-transform: uppercase;
 }
 
-
 /* 全小写 */
-
 .lowercase {
     text-transform: lowercase;
 }
-
 
 /*
  _________
@@ -93,45 +70,35 @@ page {
 |_________|
 */
 
-
 /* 红色背景 */
-
 .bg-red {
     background-color: var(--red);
     color: var(--white);
 }
-
 .bg-fusion-red {
     background-color: var(--fusion-red);
     color: var(--white);
 }
 
-
 /* 橙色背景 */
-
 .bg-orange {
     background-color: var(--orange);
     color: var(--white);
 }
-
 .bg-fusion-orange {
     background-color: var(--fusion-orange);
     color: var(--white);
 }
 
-
 /* 黄色背景 */
-
 .bg-yellow {
     background-color: var(--yellow);
     color: var(--black);
 }
-
 .bg-fusion-yellow {
     background-color: var(--fusion-yellow);
     color: var(--white);
 }
-
 
 /*橄榄绿背景 */
 
@@ -145,7 +112,6 @@ page {
     color: var(--white);
 }
 
-
 /* 绿色背景 */
 
 .bg-green {
@@ -157,7 +123,6 @@ page {
     background-color: var(--fusion-green);
     color: var(--white);
 }
-
 
 /* 蓝绿色背景 */
 
@@ -171,7 +136,6 @@ page {
     color: var(--white);
 }
 
-
 /* 青色背景 */
 
 .bg-cyan {
@@ -183,7 +147,6 @@ page {
     background-color: var(--fusion-cyan);
     color: var(--white);
 }
-
 
 /* 天蓝色背景 */
 
@@ -197,7 +160,6 @@ page {
     color: var(--white);
 }
 
-
 /* 蓝色背景 */
 
 .bg-blue {
@@ -209,7 +171,6 @@ page {
     background-color: var(--fusion-blue);
     color: var(--white);
 }
-
 
 /* 紫色背景 */
 
@@ -223,7 +184,6 @@ page {
     color: var(--white);
 }
 
-
 /* 紫红色背景 */
 
 .bg-mauve {
@@ -235,7 +195,6 @@ page {
     background-color: var(--fusion-mauve);
     color: var(--white);
 }
-
 
 /* 粉色背景 */
 
@@ -249,7 +208,6 @@ page {
     color: var(--white);
 }
 
-
 /* 棕色背景 */
 
 .bg-brown {
@@ -261,7 +219,6 @@ page {
     background-color: var(--fusion-brown);
     color: var(--white);
 }
-
 
 /* 蓝灰色 */
 
@@ -275,14 +232,12 @@ page {
     color: var(--white);
 }
 
-
 /* 不正经黑色背景 */
 
 .bg-black {
     background-color: var(--black);
     color: var(--white);
 }
-
 
 /* 暗灰色背景 */
 
@@ -291,14 +246,12 @@ page {
     color: var(--white);
 }
 
-
 /* 灰色背景 */
 
 .bg-gray {
     background-color: #f0f0f0;
     color: var(--black);
 }
-
 
 /* 烟灰色背景 */
 
@@ -307,14 +260,12 @@ page {
     color: var(--white);
 }
 
-
 /* 魂白背景 */
 
 .bg-ghost-white {
     background-color: var(--ghost-white);
     color: var(--darkGray);
 }
-
 
 /* 白色背景 */
 
@@ -323,14 +274,12 @@ page {
     color: var(--darkGray);
 }
 
-
 /* 透明 */
 
 .bg-transparent {
     background-image: var(--transparent);
     color: var(--white);
 }
-
 
 /*
  _________
@@ -342,14 +291,12 @@ page {
 |_________|
 */
 
-
 /* 浅红色背景 */
 
 .bg-red.light {
     background-color: var(--lightRed);
     color: var(--white);
 }
-
 
 /* 浅橙色背景 */
 
@@ -358,14 +305,12 @@ page {
     color: var(--white);
 }
 
-
 /* 浅黄色背景 */
 
 .bg-yellow.light {
     background-color: var(--lightYellow);
     color: var(--black);
 }
-
 
 /* 浅橄榄绿背景 */
 
@@ -374,14 +319,12 @@ page {
     color: var(--white);
 }
 
-
 /* 浅绿色背景 */
 
 .bg-green.light {
     background-color: var(--lightGreen);
     color: var(--white);
 }
-
 
 /* 浅天青色背景 */
 
@@ -390,14 +333,12 @@ page {
     color: var(--white);
 }
 
-
 /* 浅天蓝色背景 */
 
 .bg-skyBlue.light {
     background-color: var(--lightSkyBlue);
     color: var(--white);
 }
-
 
 /* 浅蓝色背景 */
 
@@ -406,14 +347,12 @@ page {
     color: var(--white);
 }
 
-
 /* 浅紫色背景 */
 
 .bg-purple.light {
     background-color: var(--lightPurple);
     color: var(--white);
 }
-
 
 /* 浅紫红色背景 */
 
@@ -422,14 +361,12 @@ page {
     color: var(--white);
 }
 
-
 /* 浅粉色背景 */
 
 .bg-pink.light {
     background-color: var(--lightPink);
     color: var(--white);
 }
-
 
 /* 浅棕色背景 */
 
@@ -438,7 +375,6 @@ page {
     color: var(--white);
 }
 
-
 /* 浅灰色背景 */
 
 .bg-gray.light {
@@ -446,14 +382,12 @@ page {
     color: var(--black);
 }
 
-
 /* 浅烟灰色背景 */
 
 .bg-grey.light {
     background-color: var(--grey);
     color: var(--white);
 }
-
 
 /*
  __________
@@ -464,14 +398,12 @@ page {
 |__________|
 */
 
-
 /* 渐变红 */
 
 .bg-gradual-red {
     background-image: var(--gradualRed);
     color: var(--white);
 }
-
 
 /* 渐变橙 */
 
@@ -480,14 +412,12 @@ page {
     color: var(--white);
 }
 
-
 /* 渐变绿 */
 
 .bg-gradual-green {
     background-image: var(--gradualGreen);
     color: var(--white);
 }
-
 
 /* 渐变天青 */
 
@@ -496,14 +426,12 @@ page {
     color: var(--white);
 }
 
-
 /* 渐变蓝 */
 
 .bg-gradual-blue {
     background-image: var(--gradualBlue);
     color: var(--white);
 }
-
 
 /* 渐变紫 */
 
@@ -512,7 +440,6 @@ page {
     color: var(--white);
 }
 
-
 /* 渐变浅紫 */
 
 .bg-gradual-lightPurple {
@@ -520,14 +447,12 @@ page {
     color: var(--white);
 }
 
-
 /* 渐变粉 */
 
 .bg-gradual-pink {
     background-image: var(--gradualPink);
     color: var(--white);
 }
-
 
 /*
  _________
@@ -538,13 +463,11 @@ page {
 |_________|
 */
 
-
 /* 不正经红色 */
 
 .text-red {
     color: var(--red);
 }
-
 
 /* 橙色 */
 
@@ -552,13 +475,11 @@ page {
     color: var(--orange);
 }
 
-
 /* 不正经黄色 */
 
 .text-yellow {
     color: var(--yellow);
 }
-
 
 /* 橄榄绿 */
 
@@ -566,13 +487,11 @@ page {
     color: var(--olive);
 }
 
-
 /* 绿色 */
 
 .text-green {
     color: var(--green);
 }
-
 
 /* 青色 */
 
@@ -584,13 +503,11 @@ page {
     color: var(--skyBlue);
 }
 
-
 /* 蓝色 */
 
 .text-blue {
     color: var(--blue);
 }
-
 
 /* 紫色 */
 
@@ -598,13 +515,11 @@ page {
     color: var(--purple);
 }
 
-
 /* 紫红色 */
 
 .text-mauve {
     color: var(--mauve);
 }
-
 
 /* 粉色 */
 
@@ -612,13 +527,11 @@ page {
     color: var(--pink);
 }
 
-
 /* 棕色 */
 
 .text-brown {
     color: var(--brown);
 }
-
 
 /* 不正经黑色 */
 
@@ -626,13 +539,11 @@ page {
     color: var(--black);
 }
 
-
 /* 暗灰色 */
 
 .text-darkGray {
     color: var(--darkGray);
 }
-
 
 /* 灰色 */
 
@@ -640,13 +551,11 @@ page {
     color: var(--gray);
 }
 
-
 /* 烟灰色 */
 
 .text-grey {
     color: var(--grey);
 }
-
 
 /* 魂白 */
 
@@ -654,13 +563,11 @@ page {
     color: var(--ghostWhite);
 }
 
-
 /* 白色 */
 
 .text-white {
     color: var(--white);
 }
-
 
 /*
  _________
@@ -671,115 +578,99 @@ page {
 |_________|
 */
 
-
 /* 红 */
 
-.shadow[class*="-red"] {
+.shadow[class*='-red'] {
     box-shadow: var(--shadowSize) var(--redShadow);
 }
 
-
 /* 橙 */
 
-.shadow[class*="-orange"] {
+.shadow[class*='-orange'] {
     box-shadow: var(--shadowSize) var(--orangeShadow);
 }
 
-
 /* 黄 */
 
-.shadow[class*="-yellow"] {
+.shadow[class*='-yellow'] {
     box-shadow: var(--shadowSize) var(--yellowShadow);
 }
 
-
 /* 橄榄绿 */
 
-.shadow[class*="-olive"] {
+.shadow[class*='-olive'] {
     box-shadow: var(--shadowSize) var(--oliveShadow);
 }
 
-
 /* 绿 */
 
-.shadow[class*="-green"] {
+.shadow[class*='-green'] {
     box-shadow: var(--shadowSize) var(--greenShadow);
 }
 
-
 /* 青 */
 
-.shadow[class*="-cyan"] {
+.shadow[class*='-cyan'] {
     box-shadow: var(--shadowSize) var(--cyanShadow);
 }
 
-
 /* 天蓝 */
 
-.shadow[class*="-skyBlue"] {
+.shadow[class*='-skyBlue'] {
     box-shadow: var(--shadowSize) var(--skyBlueShadow);
 }
 
-.shadow[class*="-blue"] {
+.shadow[class*='-blue'] {
     box-shadow: var(--shadowSize) var(--blueShadow);
 }
 
-
 /* 紫 */
 
-.shadow[class*="-purple"] {
+.shadow[class*='-purple'] {
     box-shadow: var(--shadowSize) var(--purpleShadow);
 }
 
-
 /* 紫红 */
 
-.shadow[class*="-mauve"] {
+.shadow[class*='-mauve'] {
     box-shadow: var(--shadowSize) var(--mauveShadow);
 }
 
-
 /* 粉 */
 
-.shadow[class*="-pink"] {
+.shadow[class*='-pink'] {
     box-shadow: var(--shadowSize) var(--pinkShadow);
 }
 
-
 /* 棕 */
 
-.shadow[class*="-brown"] {
+.shadow[class*='-brown'] {
     box-shadow: var(--shadowSize) var(--brownShadow);
 }
 
-
 /* 烟灰 */
 
-.shadow[class*="-grey"] {
+.shadow[class*='-grey'] {
     box-shadow: var(--shadowSize) var(--greyShadow);
 }
 
-
 /* 浅灰 */
 
-.shadow[class*="-gray"] {
+.shadow[class*='-gray'] {
     box-shadow: var(--shadowSize) var(--grayShadow);
 }
 
-
 /* 不正经黑色 */
 
-.shadow[class*="-black"] {
+.shadow[class*='-black'] {
     box-shadow: var(--shadowSize) var(--blackShadow);
 }
 
-
 /* 不正经黑色 */
 
-.shadow[class*="-white"] {
+.shadow[class*='-white'] {
     box-shadow: var(--shadowSize) var(--blackShadow);
 }
-
 
 /*
  _________
@@ -790,111 +681,96 @@ page {
 |_________|
 */
 
-
 /* 红 */
 
-.text-shadow[class*="-red"] {
+.text-shadow[class*='-red'] {
     text-shadow: var(--shadowSize) var(--redShadow);
 }
 
-
 /* 橙 */
 
-.text-shadow[class*="-orange"] {
+.text-shadow[class*='-orange'] {
     text-shadow: var(--shadowSize) var(--orangeShadow);
 }
 
-
 /* 黄 */
 
-.text-shadow[class*="-yellow"] {
+.text-shadow[class*='-yellow'] {
     text-shadow: var(--shadowSize) var(--yellowShadow);
 }
 
-
 /* 橄榄绿 */
 
-.text-shadow[class*="-olive"] {
+.text-shadow[class*='-olive'] {
     text-shadow: var(--shadowSize) var(--oliveShadow);
 }
 
-
 /* 绿 */
 
-.text-shadow[class*="-green"] {
+.text-shadow[class*='-green'] {
     text-shadow: var(--shadowSize) var(--greenShadow);
 }
 
-
 /* 青 */
 
-.text-shadow[class*="-cyan"] {
+.text-shadow[class*='-cyan'] {
     text-shadow: var(--shadowSize) var(--cyanShadow);
 }
 
-
 /* 天蓝 */
 
-.text-shadow[class*="-skyBlue"] {
+.text-shadow[class*='-skyBlue'] {
     text-shadow: var(--shadowSize) var(--skyBlueShadow);
 }
 
-.text-shadow[class*="-blue"] {
+.text-shadow[class*='-blue'] {
     text-shadow: var(--shadowSize) var(--blueShadow);
 }
 
-
 /* 紫 */
 
-.text-shadow[class*="-purple"] {
+.text-shadow[class*='-purple'] {
     text-shadow: var(--shadowSize) var(--purpleShadow);
 }
 
-
 /* 紫红 */
 
-.text-shadow[class*="-mauve"] {
+.text-shadow[class*='-mauve'] {
     text-shadow: var(--shadowSize) var(--mauveShadow);
 }
 
-
 /* 粉 */
 
-.text-shadow[class*="-pink"] {
+.text-shadow[class*='-pink'] {
     text-shadow: var(--shadowSize) var(--pinkShadow);
 }
 
-
 /* 棕 */
 
-.text-shadow[class*="-brown"] {
+.text-shadow[class*='-brown'] {
     text-shadow: var(--shadowSize) var(--brownShadow);
 }
 
-
 /* 烟灰 */
 
-.text-shadow[class*="-grey"] {
+.text-shadow[class*='-grey'] {
     text-shadow: var(--shadowSize) var(--greyShadow);
 }
 
-
 /* 浅灰 */
 
-.text-shadow[class*="-gray"] {
+.text-shadow[class*='-gray'] {
     text-shadow: var(--shadowSize) var(--grayShadow);
 }
 
-
 /* 不正经黑色 */
 
-.text-shadow[class*="-black"] {
+.text-shadow[class*='-black'] {
     text-shadow: var(--shadowSize) var(--blackShadow);
 }
 
-
 /* 不正经黑色 */
 
-.text-shadow[class*="-white"] {
+.text-shadow[class*='-white'] {
     text-shadow: var(--shadowSize) var(--blackShadow);
 }

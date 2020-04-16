@@ -148,7 +148,9 @@ class BuildTask {
          * 清空目标目录
          */
         gulp.task(`${id}-clean-dist`, () =>
-            gulp.src(distPath, { read: false, allowEmpty: true }).pipe(clean())
+            gulp
+            .src(distPath, { read: false, allowEmpty: true })
+            .pipe(clean())
         );
 
         /**
@@ -165,7 +167,7 @@ class BuildTask {
                         path.join(demoDist, 'project.config.json')
                     );
                 },
-                done => {
+                (done) => {
                     if (!isDemoExists) {
                         const demoSrc = config.demoSrc;
                         const demoDist = config.demoDist;
@@ -206,7 +208,7 @@ class BuildTask {
         /**
          * 写 json 文件到目标目录
          */
-        gulp.task(`${id}-component-json`, done => {
+        gulp.task(`${id}-component-json`, (done) => {
             const jsonFileList = this.componentListMap.jsonFileList;
             if (jsonFileList && jsonFileList.length) {
                 return copy(this.componentListMap.jsonFileList);
@@ -218,7 +220,7 @@ class BuildTask {
         /**
          * 拷贝 wxml 文件到目标目录
          */
-        gulp.task(`${id}-component-wxml`, done => {
+        gulp.task(`${id}-component-wxml`, (done) => {
             const wxmlFileList = this.componentListMap.wxmlFileList;
             if (
                 wxmlFileList &&
@@ -237,7 +239,7 @@ class BuildTask {
         /**
          * 生成 wxss 文件到目标目录
          */
-        gulp.task(`${id}-component-wxss`, done => {
+        gulp.task(`${id}-component-wxss`, (done) => {
             const wxssFileList = this.componentListMap.wxssFileList;
 
             if (
@@ -257,7 +259,7 @@ class BuildTask {
         /**
          * 生成 js 文件到目标目录
          */
-        gulp.task(`${id}-component-js`, done => {
+        gulp.task(`${id}-component-js`, (done) => {
             const jsFileList = this.componentListMap.jsFileList;
             if (
                 jsFileList &&
@@ -276,22 +278,24 @@ class BuildTask {
 
             return done();
         });
-
         /**
          * 拷贝相关资源到目标目录
          */
         gulp.task(
             `${id}-copy`,
             gulp.parallel(
-                done => {
+                (done) => {
                     const copyList = this.copyList;
                     const copyFileList = copyList
-                        .map(copyFilePath => {
+                        .map((copyFilePath) => {
                             try {
                                 if (
                                     fs
                                     .statSync(
-                                        path.join(srcPath, copyFilePath)
+                                        path.join(
+                                            srcPath,
+                                            copyFilePath
+                                        )
                                     )
                                     .isDirectory()
                                 ) {
@@ -308,26 +312,34 @@ class BuildTask {
                                 return null;
                             }
                         })
-                        .filter(copyFilePath => !!copyFilePath);
+                        .filter((copyFilePath) => !!copyFilePath);
 
                     if (copyFileList.length) return copy(copyFileList);
 
                     return done();
                 },
-                done => {
+                (done) => {
                     const copyList = this.copyList;
                     const copyFileList = copyList
-                        .map(copyFilePath => {
+                        .map((copyFilePath) => {
                             try {
                                 if (
                                     fs
                                     .statSync(
-                                        path.join(srcPath, copyFilePath)
+                                        path.join(
+                                            srcPath,
+                                            copyFilePath
+                                        )
                                     )
                                     .isDirectory()
                                 ) {
-                                    return path.join(copyFilePath, '**/*.wxss');
-                                } else if (copyFilePath.slice(-5) === '.wxss') {
+                                    return path.join(
+                                        copyFilePath,
+                                        '**/*.wxss'
+                                    );
+                                } else if (
+                                    copyFilePath.slice(-5) === '.wxss'
+                                ) {
                                     return copyFilePath;
                                 } else {
                                     return null;
@@ -338,7 +350,7 @@ class BuildTask {
                                 return null;
                             }
                         })
-                        .filter(copyFilePath => !!copyFilePath);
+                        .filter((copyFilePath) => !!copyFilePath);
                     if (copyFileList.length)
                         return wxss(copyFileList, srcPath, distPath);
 
@@ -350,7 +362,7 @@ class BuildTask {
         /**
          * 监听 js 变化
          */
-        gulp.task(`${id}-watch-js`, done => {
+        gulp.task(`${id}-watch-js`, (done) => {
             if (!jsConfig.webpack) {
                 return gulp.watch(
                     this.componentListMap.jsFileList, { cwd: srcPath, base: srcPath },
@@ -396,22 +408,43 @@ class BuildTask {
         gulp.task(`${id}-watch-wxss`, () => {
             this.cachedComponentListMap.wxssFileList = null;
             return gulp.watch(
-                '**/*.less', { cwd: srcPath, base: srcPath },
+                '**/*.less', { cwd: srcPath + '/components/', base: srcPath },
                 gulp.series(`${id}-component-wxss`)
             );
         });
-
+        /**
+         * 生成 assets less 文件到目标目录
+         */
+        gulp.task(`${id}-assets-less`, (done) => {
+            const assetsLessFileList = config.assetsLessEntry;
+            if (assetsLessFileList && assetsLessFileList.length) {
+                return wxss(assetsLessFileList, srcPath, distPath);
+            }
+            return done();
+        });
+        /**
+         * 监听 wxss 变化
+         */
+        gulp.task(`${id}-watch-assets-less`, () => {
+            this.cachedComponentListMap.wxssFileList = null;
+            return gulp.watch(
+                '**/*.less', { cwd: srcPath + '/assets/style/', base: srcPath },
+                gulp.series(`${id}-assets-less`)
+            );
+        });
         /**
          * 监听相关资源变化
          */
         gulp.task(`${id}-watch-copy`, () => {
             const copyList = this.copyList;
             const copyFileList = copyList
-                .map(copyFilePath => {
+                .map((copyFilePath) => {
                     try {
                         if (
                             fs
-                            .statSync(path.join(srcPath, copyFilePath))
+                            .statSync(
+                                path.join(srcPath, copyFilePath)
+                            )
                             .isDirectory()
                         ) {
                             return path.join(copyFilePath, '**/*');
@@ -424,9 +457,9 @@ class BuildTask {
                         return null;
                     }
                 })
-                .filter(copyFilePath => !!copyFilePath);
+                .filter((copyFilePath) => !!copyFilePath);
 
-            const watchCallback = filePath => {
+            const watchCallback = (filePath) => {
                 // 添加 .wxss文件处理
                 if (/.wxss$/.test(filePath)) {
                     return wxss([filePath]);
@@ -446,7 +479,7 @@ class BuildTask {
         gulp.task(`${id}-watch-demo`, () => {
             const demoSrc = config.demoSrc;
             const demoDist = config.demoDist;
-            const watchCallback = filePath =>
+            const watchCallback = (filePath) =>
                 gulp
                 .src(filePath, { cwd: demoSrc, base: demoSrc })
                 .pipe(gulp.dest(demoDist));
@@ -458,9 +491,9 @@ class BuildTask {
                 .on('unlink', watchCallback);
         });
         /**
-         * 生成 demo less -> wxss 
+         * 生成 demo less -> wxss
          */
-        gulp.task(`${id}-demo-less`, done => {
+        gulp.task(`${id}-demo-less`, (done) => {
             gulp.src('tools/demo/pages/**/*.less', { allowEmpty: true })
                 .pipe(less())
                 .pipe(rename({ extname: '.wxss' }))
@@ -481,7 +514,10 @@ class BuildTask {
          * 监听安装包列表变化
          */
         gulp.task(`${id}-watch-install`, () =>
-            gulp.watch(path.resolve(__dirname, '../package.json'), install())
+            gulp.watch(
+                path.resolve(__dirname, '../package.json'),
+                install()
+            )
         );
 
         /**
@@ -497,6 +533,9 @@ class BuildTask {
                     `${id}-component-wxss`,
                     `${id}-component-js`,
                     `${id}-component-json`,
+                    `${id}-assets-less`,
+                    `${id}-demo-less`,
+                    `${id}-demo`,
                     `${id}-copy`
                 )
             )
@@ -506,8 +545,6 @@ class BuildTask {
             `${id}-watch`,
             gulp.series(
                 `${id}-build`,
-                `${id}-demo-less`,
-                `${id}-demo`,
                 `${id}-install`,
                 gulp.parallel(
                     `${id}-watch-wxml`,
@@ -517,7 +554,8 @@ class BuildTask {
                     `${id}-watch-copy`,
                     `${id}-watch-install`,
                     `${id}-watch-demo-less`,
-                    `${id}-watch-demo`
+                    `${id}-watch-demo`,
+                    `${id}-watch-assets-less`
                 )
             )
         );

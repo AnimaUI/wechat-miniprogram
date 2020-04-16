@@ -1,9 +1,8 @@
 const path = require('path');
-
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const entry = require('./entry');
-
+const assetsLessEntry = require('./assetsLessEntry');
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
 const demoSrc = path.resolve(__dirname, './demo');
@@ -20,6 +19,7 @@ module.exports = {
     distPath: isDev ? dev : dist, // 目标目录
     demoSrc, // demo 源目录
     demoDist, // demo 目标目录
+    assetsLessEntry,
     wxss: {
         less: true, // 使用 less 来编写 wxss
         sourcemap: false // 生成 less sourcemap
@@ -59,5 +59,5 @@ module.exports = {
             assetFilter: assetFilename => assetFilename.endsWith('.js')
         }
     },
-    copy: ['./assets', './utils.js'] // 将会复制到目标目录
+    copy: ['./assets/images', './utils.js'] // 将会复制到目标目录
 };
