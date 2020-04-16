@@ -70,94 +70,205 @@ page {
     --white: #fff;
     /* 透明 */
     --transparent: rgba(0, 0, 0, 0);
+
     /* 
      _________
-    |   浅色  |
+    |   暗色   |
     |_________|
     */
-    /* 浅红 */
-    --lightRed: #ffcccb;
-    /* 浅橙 */
-    --lightOrange: #ffdab1;
-    /* 浅黄 */
-    --lightYellow: #fdf1cd;
-    /* 浅橄榄绿 */
-    --lightOlive: #e8f3dc;
-    /* 浅绿 */
-    --lightGreen: #d8f1e6;
-    /* 浅青 */
-    --lightCyan: #d8f4f6;
-    /* 浅天蓝 */
-    --lightSkyBlue: #d0ebfb;
-    /* 浅蓝 */
-    --lightBlue: #c8d7f6;
-    /* 浅紫 */
-    --lightPurple: #e0d1f4;
-    /* 浅紫红 */
-    --lightMauve: #f0cff2;
-    /* 浅粉 */
-    --lightPink: #ffcbe5;
-    /* 浅棕 */
-    --lightBrown: #f5d9d9;
-    /* 浅灰 */
-    --lightGray: #e5e5e5;
-    /* 浅烟灰 */
-    --lightGrey: #efefef;
+    /* 不正经红色 */
+    --dark-red: #da4c65;
+    --dark-fusion-red: #e2767c;
+    /* 橙色 */
+    --dark-orange: #da8851;
+    --dark-fusion-orange: #e09961;
+    /* 不正经黄色 */
+    --dark-yellow: #d6ab52;
+    --dark-fusion-yellow: #dec050;
+    /* 橄榄绿 */
+    --dark-olive: #9cdc56;
+    --dark-fusion-olive: #c3e49e;
+    /* 绿色 */
+    --dark-green: #29b66b;
+    --dark-fusion-green: #30d481;
+    /* 蓝绿色 */
+    --dark-blue-green: #26a29c;
+    --dark-fusion-blue-green: #34c2b3;
+    /* 青色 */
+    --dark-cyan: #62dae2;
+    --dark-fusion-cyan: #9ce5e8;
+    /* 天蓝色 */
+    --dark-sky-blue: #3796d1;
+    --dark-fusion-sky-blue: #5ca6db;
+    /* 蓝色 */
+    --dark-blue: #3867d6;
+    --dark-fusion-blue: #5a81dd;
+    /* 紫色 */
+    --dark-purple: #874cd8;
+    --dark-fusion-purple: #a565e3;
+    /* 紫红色 */
+    --dark-mauve: #d55ade;
+    --dark-fusion-mauve: #e38ee9;
+    /* 粉色 */
+    --dark-pink: #e880b4;
+    --dark-fusion-pink: #efa7cc;
+    /* 棕色 */
+    --dark-brown: #ad2222;
+    --dark-fusion-brown: #d73939;
+    /* 蓝灰色 */
+    --dark-blue-grey: #2b62a4;
+    --dark-fusion-blue-grey: #428ad8;
+
+    /* 
+     _________
+    | disabled|
+    |_________|
+    */
+    /* 不正经红色 */
+    --disabled-red: #f8b8c3;
+    --disabled-fusion-red: #fda9ae;
+    /* 橙色 */
+    --disabled-orange: #fdc8a4;
+    --disabled-fusion-orange: #fecca5;
+    /* 不正经黄色 */
+    --disabled-yellow: #fbdfa2;
+    --disabled-fusion-yellow: #ffeca5;
+    /* 橄榄绿 */
+    --disabled-olive: #d5e9be;
+    --disabled-fusion-olive: #d6f0b9;
+    /* 绿色 */
+    --disabled-green: #b1f2d0;
+    --disabled-fusion-green: #aef3d0;
+    /* 蓝绿色 */
+    --disabled-blue-green: #a8f8f4;
+    --disabled-fusion-blue-green: #b7f0ea;
+    /* 青色 */
+    --disabled-cyan: #b8ebee;
+    --disabled-fusion-cyan: #b8f0f3;
+    /* 天蓝色 */
+    --disabled-sky-blue: #b2d9f2;
+    --disabled-fusion-sky-blue: #b3dcfa;
+    /* 蓝色 */
+    --disabled-blue: #bacaf1;
+    --disabled-fusion-blue: #b5c9f7;
+    /* 紫色 */
+    --disabled-purple: #d3c0ee;
+    --disabled-fusion-purple: #d5b5f5;
+    /* 紫红色 */
+    --disabled-mauve: #ebbfee;
+    --disabled-fusion-mauve: #ebafef;
+    /* 粉色 */
+    --disabled-pink: #ffa4d1;
+    --disabled-fusion-pink: #ffabd6;
+    /* 棕色 */
+    --disabled-brown: #edb9b9;
+    --disabled-fusion-brown: #ebc2c2;
+    /* 蓝灰色 */
+    --disabled-blue-grey: #c7d2df;
+    --disabled-fusion-blue-grey: #c9d1da;
+
+    /* 
+     _________
+    |   浅色   |
+    |_________|
+    */
+    /* 不正经红色 */
+    --light-red: #fdedf0;
+    --light-fusion-red: #fff6f7;
+    /* 橙色 */
+    --light-orange: #fff6f1;
+    --light-fusion-orange: #fff8f3;
+    /* 不正经黄色 */
+    --light-yellow: #fef9ee;
+    --light-fusion-yellow: #fffcf3;
+    /* 橄榄绿 */
+    --light-olive: #fbfdf9;
+    --light-fusion-olive: #fcfefa;
+    /* 绿色 */
+    --light-green: #f4fdf9;
+    --light-fusion-green: #f2fdf8;
+    /* 蓝绿色 */
+    --light-blue-green: #f0fefd;
+    --light-fusion-blue-green: #f8fdfd;
+    /* 青色 */
+    --light-cyan: #f7fdfd;
+    --light-fusion-cyan: #fbfefe;
+    /* 天蓝色 */
+    --light-sky-blue: #f5fafd;
+    --light-fusion-sky-blue: #fcfeff;
+    /* 蓝色 */
+    --light-blue: #fbfcfe;
+    --light-fusion-blue: #fcfdff;
+    /* 紫色 */
+    --light-purple: #fefdff;
+    --light-fusion-purple: #fcfafe;
+    /* 紫红色 */
+    --light-mauve: #fffeff;
+    --light-fusion-mauve: #fbf1fc;
+    /* 粉色 */
+    --light-pink: #fff2f9;
+    --light-fusion-pink: #fff9fc;
+    /* 棕色 */
+    --light-brown: #fdf8f8;
+    --light-fusion-brown: #fefdfd;
+    /* 蓝灰色 */
+    --light-blue-grey: #f9fbfc;
+    --light-fusion-blue-grey: #f8f9fa;
     /* 
      _________
     |  渐变色  |
     |_________|
     */
     /* 渐变红 */
-    --gradualRed: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
+    --gradual-red: linear-gradient(45deg, #e92758, #e92758, #f06c8e);
     /* 渐变橙 */
-    --gradualOrange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
+    --gradual-orange: linear-gradient(45deg, #ff0000, #fb6525, #f7cb4a);
     /* 渐变绿 */
-    --gradualGreen: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
+    --gradual-green: linear-gradient(45deg, #3edb80, #a0e35e, #ffea3c);
     /* 渐变浅青 */
-    --gradualCyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
+    --gradual-cyan: linear-gradient(45deg, #00bbd4, #45dcca, #8dffc0);
     /* 渐变蓝 */
-    --gradualBlue: linear-gradient(45deg, #1976d2, #0c9ad3, #00bbd4);
+    --gradual-blue: linear-gradient(45deg, #1976d2, #0c9ad3, #00bbd4);
     /* 渐变浅紫*/
-    --gradualLightPurple: linear-gradient(45deg, #a18cd1, #bfb0e0, #fbc2eb);
+    --gradual-light-purple: linear-gradient(45deg, #a18cd1, #bfb0e0, #fbc2eb);
     /* 渐变紫 */
-    --gradualPurple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
+    --gradual-purple: linear-gradient(45deg, #a700a7, #ce00ce, #f600f6);
     /* 渐变粉 */
-    --gradualPink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
+    --gradual-pink: linear-gradient(45deg, #ff69b4, #ff7dbe, #ffcbe5);
     /* 
      _________
     |阴影透明色|
     |________|
     */
-    --shadowSize: 6rpx 6rpx 8rpx;
+    --shadow-size: 6rpx 6rpx 8rpx;
     /* 红 */
-    --redShadow: rgba(243, 83, 82, .2);
+    --red-shadow: rgba(243, 83, 82, .2);
     /* 橙 */
-    --orangeShadow: rgba(255, 136, 0, .2);
+    --orange-shadow: rgba(255, 136, 0, .2);
     /* 黄 */
-    --yellowShadow: rgba(247, 203, 74, .2);
+    --yellow-shadow: rgba(247, 203, 74, .2);
     /* 橄榄绿 */
-    --oliveShadow: rgba(155, 204, 102, .2);
+    --olive-shadow: rgba(155, 204, 102, .2);
     /* 绿 */
-    --greenShadow: rgba(63, 178, 126, .2);
+    --green-shadow: rgba(63, 178, 126, .2);
     /* 天青 */
-    --cyanShadow: rgba(105, 212, 219, .2);
+    --cyan-shadow: rgba(105, 212, 219, .2);
     /* 天蓝 */
-    --skyBlueShadow: rgba(208, 235, 251, .2);
+    --skyBlue-shadow: rgba(208, 235, 251, .2);
     /* 蓝 */
-    --blueShadow: rgba(81, 130, 228, .2);
+    --blue-shadow: rgba(81, 130, 228, .2);
     /* 紫 */
-    --purpleShadow: rgba(137, 84, 212, .2);
+    --purple-shadow: rgba(137, 84, 212, .2);
     /* 紫红 */
-    --mauveShadow: rgba(206, 98, 214, .2);
+    --mauve-shadow: rgba(206, 98, 214, .2);
     /* 粉 */
-    --pinkShadow: rgba(255, 105, 180, .2);
+    --pink-shadow: rgba(255, 105, 180, .2);
     /* 棕 */
-    --brownShadow: rgba(165, 42, 42, .2);
+    --brown-shadow: rgba(165, 42, 42, .2);
     /* 烟灰 */
-    --greyShadow: rgba(170, 170, 170, .2);
+    --grey-shadow: rgba(170, 170, 170, .2);
     /* 浅灰 */
-    --grayShadow: rgba(190, 190, 190, .2);
+    --gray-shadow: rgba(190, 190, 190, .2);
     /* 黑 */
-    --blackShadow: rgba(51, 51, 51, .2);
+    --black-shadow: rgba(51, 51, 51, .2);
 }
