@@ -17,4 +17,11 @@ navigator,
 image {
     box-sizing: border-box;
 }
-
+.ani-btn {
+    &.button-hover {
+        transform: translate(1rpx, 1rpx);
+    }
+    &::after {
+        display: none;
+    }
+}

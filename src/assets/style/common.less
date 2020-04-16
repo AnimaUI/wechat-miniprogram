@@ -8,14 +8,6 @@ page {
     font-size: 28rpx;
     color: var(--black);
 }
-.ani-btn {
-    &.button-hover {
-        transform: translate(1rpx, 1rpx);
-    }
-    &::after {
-        display: none;
-    }
-}
 /* bgColor && text-color */
 @colorType: null, dark, disabled, light;
 @colors: red, fusion-red, orange, fusion-orange, yellow,
@@ -136,59 +128,13 @@ page {
 |__________|
 */
 
-/* 渐变红 */
+@gradualColors: red, orange, yellow, green, cyan, blue, purple, light-purple, pink;
 
-.bg-gradual-red {
-    background-image: var(--gradual-red);
-    color: var(--white);
+.gradualColor(@gradualColors);
+.gradualColor(@gradualColors, @i: 1) when (length(@gradualColors) >= @i) {
+    @name: extract(@gradualColors, @i);
+    .bg-gradual-@{name} {
+        background-image: var(~'--gradual-@{name}');
+    }
+    .gradualColor(@gradualColors, (@i + 1));
 }
-
-/* 渐变橙 */
-
-.bg-gradual-orange {
-    background-image: var(--gradual-orange);
-    color: var(--white);
-}
-
-/* 渐变绿 */
-
-.bg-gradual-green {
-    background-image: var(--gradual-green);
-    color: var(--white);
-}
-
-/* 渐变天青 */
-
-.bg-gradual-cyan {
-    background-image: var(--gradual-cyan);
-    color: var(--white);
-}
-
-/* 渐变蓝 */
-
-.bg-gradual-blue {
-    background-image: var(--gradual-blue);
-    color: var(--white);
-}
-
-/* 渐变紫 */
-
-.bg-gradual-purple {
-    background-image: var(--gradual-purple);
-    color: var(--white);
-}
-
-/* 渐变浅紫 */
-
-.bg-gradual-lightPurple {
-    background-image: var(--gradual-light-purple);
-    color: var(--white);
-}
-
-/* 渐变粉 */
-
-.bg-gradual-pink {
-    background-image: var(--gradual-pink);
-    color: var(--white);
-}
-
