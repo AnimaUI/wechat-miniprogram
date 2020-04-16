@@ -98,7 +98,7 @@
                     <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
                 </view>
                 <view class="bottom">
-                    <button class="btn fw-400 text-white swatch-color bg-{{colour[index]}}" role="button" aria-disabled="false">{{item.cn}}</button>
+                    <button class="ani-btn fw-400 text-white swatch-color bg-{{colour[index]}}" role="button" aria-disabled="false">{{item.cn}}</button>
                 </view>
             </view>
         </view>

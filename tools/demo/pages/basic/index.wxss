@@ -53,7 +53,7 @@ page {
   padding: 20rpx 0;
   background: #fff;
 }
-.main .box .item .bottom .btn {
+.main .box .item .bottom .ani-btn {
   width: 56%;
   font-size: 26rpx;
   line-height: 2;

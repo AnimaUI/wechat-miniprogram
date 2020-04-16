@@ -8,7 +8,14 @@ page {
     font-size: 28rpx;
     color: var(--black);
 }
-
+.ani-btn {
+    &.button-hover {
+        transform: translate(1rpx, 1rpx);
+    }
+    &::after {
+        display: none;
+    }
+}
 /* bgColor && text-color */
 @colorType: null, dark, disabled, light;
 @colors: red, fusion-red, orange, fusion-orange, yellow,
@@ -56,13 +63,13 @@ page {
 /* 魂白背景 */
 .bg-ghost-white {
     background-color: var(--ghost-white);
-    color: var(--darkGray);
+    color: var(--dark-gray);
 }
 
 /* 白色背景 */
 .bg-white {
     background-color: var(--white);
-    color: var(--darkGray);
+    color: var(--dark-gray);
 }
 
 /* 透明 */
