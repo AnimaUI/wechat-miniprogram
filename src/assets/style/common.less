@@ -62,9 +62,8 @@ page {
 
 /*
  _________
-|  背景色  |\
+|  colors  |\
 | ~~~~~~~ |_\
-|  纯色    |
 | ~~~~~~~ |
 | ~~~~~~~ |
 |_________|
@@ -79,11 +78,11 @@ page {
     mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
     blue-grey, fusion-blue-grey;
 
-.bgColorType(@colorType);
-.bgColorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+.colorType(@colorType);
+.colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
     @typeName: extract(@colorType, @i);
-    .bg(@colors);
-    .bg(@colors, @j: 1) when (length(@colors) >= @j) {
+    .color(@colors);
+    .color(@colors, @j: 1) when (length(@colors) >= @j) {
         @name: extract(@colors, @j);
         .bgType(@typeName);
         // 判断是否是占位符
@@ -97,9 +96,21 @@ page {
                 background-color: var(~'--@{name}');
             }
         }
-        .bg(@colors, (@j + 1));
+        .textType(@typeName);
+        // 判断是否是占位符
+        .textType(@typeName) when not( @typeName = null) {
+            .text-@{typeName}-@{name} {
+                color: var(~'--@{typeName}-@{name}');
+            }
+        }
+        .textType(@typeName) when ( @typeName = null) {
+            .text-@{name} {
+                color: var(~'--@{name}');
+            }
+        }
+        .color(@colors, (@j + 1));
     }
-    .bgColorType(@colorType, (@i + 1));
+    .colorType(@colorType, (@i + 1));
 }
 
 /* 魂白背景 */
@@ -185,38 +196,6 @@ page {
     color: var(--white);
 }
 
-/*
- _________
-| 文字颜色 |\
-| ~~~~~~~ |_\
-|~~正经色~~|
-| ~~~~~~~ |
-|_________|
-*/
-
-.textColorType(@colorType);
-.textColorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
-    @typeName: extract(@colorType, @i);
-    .text(@colors);
-    .text(@colors, @j: 1) when (length(@colors) >= @j) {
-        @name: extract(@colors, @j);
-        .type(@typeName);
-        // 判断是否是占位符
-        .type(@typeName) when not( @typeName = null) {
-            .text-@{typeName}-@{name} {
-                color: var(~'--@{typeName}-@{name}');
-            }
-        }
-        .type(@typeName) when ( @typeName = null) {
-            .text-@{name} {
-                color: var(~'--@{name}');
-            }
-        }
-        .text(@colors, (@j + 1));
-    }
-    .textColorType(@colorType, (@i + 1));
-}
-
 /* 不正经黑色 */
 .text-black {
     color: var(--black);
@@ -256,11 +235,9 @@ page {
 .shadowColor(@shadowColors);
 .shadowColor(@shadowColors, @i: 1) when (length(@shadowColors) >= @i) {
     @name: extract(@shadowColors, @i);
-    /* 背景shadow */
     .shadow-@{name} {
         box-shadow: var(--shadow-size) var(~'--@{name}');
     }
-    /* 文字shadow */
     .text-shadow-@{name} {
         text-shadow: var(--shadow-size) var(~'--@{name}');
     }

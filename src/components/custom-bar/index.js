@@ -16,10 +16,6 @@ Component({
             type: String,
             default: ''
         },
-        bgColor: {
-            type: String,
-            default: ''
-        },
         isCustom: {
             type: [Boolean, String],
             default: false
