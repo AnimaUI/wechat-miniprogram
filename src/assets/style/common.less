@@ -194,314 +194,75 @@ page {
 |_________|
 */
 
-/* 不正经红色 */
-
-.text-red {
-    color: var(--red);
-}
-
-/* 橙色 */
-
-.text-orange {
-    color: var(--orange);
-}
-
-/* 不正经黄色 */
-
-.text-yellow {
-    color: var(--yellow);
-}
-
-/* 橄榄绿 */
-
-.text-olive {
-    color: var(--olive);
-}
-
-/* 绿色 */
-
-.text-green {
-    color: var(--green);
-}
-
-/* 青色 */
-
-.text-cyan {
-    color: var(--cyan);
-}
-
-.text-skyBlue {
-    color: var(--skyBlue);
-}
-
-/* 蓝色 */
-
-.text-blue {
-    color: var(--blue);
-}
-
-/* 紫色 */
-
-.text-purple {
-    color: var(--purple);
-}
-
-/* 紫红色 */
-
-.text-mauve {
-    color: var(--mauve);
-}
-
-/* 粉色 */
-
-.text-pink {
-    color: var(--pink);
-}
-
-/* 棕色 */
-
-.text-brown {
-    color: var(--brown);
+.colorType(@colorType);
+.colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+    @typeName: extract(@colorType, @i);
+    .text(@colors);
+    .text(@colors, @j: 1) when (length(@colors) >= @j) {
+        @name: extract(@colors, @j);
+        .type(@typeName);
+        // 判断是否是占位符
+        .type(@typeName) when not( @typeName = null) {
+            .text-@{typeName}-@{name} {
+                color: var(~'--@{typeName}-@{name}');
+            }
+        }
+        .type(@typeName) when ( @typeName = null) {
+            .text-@{name} {
+                color: var(~'--@{name}');
+            }
+        }
+        .text(@colors, (@j + 1));
+    }
+    .colorType(@colorType, (@i + 1));
 }
 
 /* 不正经黑色 */
-
 .text-black {
     color: var(--black);
 }
-
 /* 暗灰色 */
-
-.text-darkGray {
-    color: var(--darkGray);
+.text-dark-gray {
+    color: var(--dark-gray);
 }
-
 /* 灰色 */
-
 .text-gray {
     color: var(--gray);
 }
-
 /* 烟灰色 */
-
 .text-grey {
     color: var(--grey);
 }
-
 /* 魂白 */
-
-.text-ghostWhite {
-    color: var(--ghostWhite);
+.text-ghost-white {
+    color: var(--ghost-white);
 }
-
 /* 白色 */
-
 .text-white {
     color: var(--white);
 }
-
-/*
- _________
-|背景shadow|\
-| ~~~~~~~ |_\
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-
-/* 红 */
-
-.shadow[class*='-red'] {
-    box-shadow: var(--shadowSize) var(--redShadow);
+// 透明色
+.text-transparent {
+    color: var(--transparent);
 }
 
-/* 橙 */
+@shadowColors: red, fusion-red, orange, fusion-orange, yellow,
+    fusion-yellow, olive, fusion-olive, green, fusion-green,
+    blue-green, fusion-blue-green, cyan, fusion-cyan, sky-blue,
+    fusion-sky-blue, blue, fusion-blue, purple, fusion-purple,
+    mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
+    blue-grey, fusion-blue-grey, black, gray, dark-gray, grey;
 
-.shadow[class*='-orange'] {
-    box-shadow: var(--shadowSize) var(--orangeShadow);
-}
-
-/* 黄 */
-
-.shadow[class*='-yellow'] {
-    box-shadow: var(--shadowSize) var(--yellowShadow);
-}
-
-/* 橄榄绿 */
-
-.shadow[class*='-olive'] {
-    box-shadow: var(--shadowSize) var(--oliveShadow);
-}
-
-/* 绿 */
-
-.shadow[class*='-green'] {
-    box-shadow: var(--shadowSize) var(--greenShadow);
-}
-
-/* 青 */
-
-.shadow[class*='-cyan'] {
-    box-shadow: var(--shadowSize) var(--cyanShadow);
-}
-
-/* 天蓝 */
-
-.shadow[class*='-skyBlue'] {
-    box-shadow: var(--shadowSize) var(--skyBlueShadow);
-}
-
-.shadow[class*='-blue'] {
-    box-shadow: var(--shadowSize) var(--blueShadow);
-}
-
-/* 紫 */
-
-.shadow[class*='-purple'] {
-    box-shadow: var(--shadowSize) var(--purpleShadow);
-}
-
-/* 紫红 */
-
-.shadow[class*='-mauve'] {
-    box-shadow: var(--shadowSize) var(--mauveShadow);
-}
-
-/* 粉 */
-
-.shadow[class*='-pink'] {
-    box-shadow: var(--shadowSize) var(--pinkShadow);
-}
-
-/* 棕 */
-
-.shadow[class*='-brown'] {
-    box-shadow: var(--shadowSize) var(--brownShadow);
-}
-
-/* 烟灰 */
-
-.shadow[class*='-grey'] {
-    box-shadow: var(--shadowSize) var(--greyShadow);
-}
-
-/* 浅灰 */
-
-.shadow[class*='-gray'] {
-    box-shadow: var(--shadowSize) var(--grayShadow);
-}
-
-/* 不正经黑色 */
-
-.shadow[class*='-black'] {
-    box-shadow: var(--shadowSize) var(--blackShadow);
-}
-
-/* 不正经黑色 */
-
-.shadow[class*='-white'] {
-    box-shadow: var(--shadowSize) var(--blackShadow);
-}
-
-/*
- _________
-|文字shadow|\
-| ~~~~~~~ |_\
-| ~~~~~~~ |
-| ~~~~~~~ |
-|_________|
-*/
-
-/* 红 */
-
-.text-shadow[class*='-red'] {
-    text-shadow: var(--shadowSize) var(--redShadow);
-}
-
-/* 橙 */
-
-.text-shadow[class*='-orange'] {
-    text-shadow: var(--shadowSize) var(--orangeShadow);
-}
-
-/* 黄 */
-
-.text-shadow[class*='-yellow'] {
-    text-shadow: var(--shadowSize) var(--yellowShadow);
-}
-
-/* 橄榄绿 */
-
-.text-shadow[class*='-olive'] {
-    text-shadow: var(--shadowSize) var(--oliveShadow);
-}
-
-/* 绿 */
-
-.text-shadow[class*='-green'] {
-    text-shadow: var(--shadowSize) var(--greenShadow);
-}
-
-/* 青 */
-
-.text-shadow[class*='-cyan'] {
-    text-shadow: var(--shadowSize) var(--cyanShadow);
-}
-
-/* 天蓝 */
-
-.text-shadow[class*='-skyBlue'] {
-    text-shadow: var(--shadowSize) var(--skyBlueShadow);
-}
-
-.text-shadow[class*='-blue'] {
-    text-shadow: var(--shadowSize) var(--blueShadow);
-}
-
-/* 紫 */
-
-.text-shadow[class*='-purple'] {
-    text-shadow: var(--shadowSize) var(--purpleShadow);
-}
-
-/* 紫红 */
-
-.text-shadow[class*='-mauve'] {
-    text-shadow: var(--shadowSize) var(--mauveShadow);
-}
-
-/* 粉 */
-
-.text-shadow[class*='-pink'] {
-    text-shadow: var(--shadowSize) var(--pinkShadow);
-}
-
-/* 棕 */
-
-.text-shadow[class*='-brown'] {
-    text-shadow: var(--shadowSize) var(--brownShadow);
-}
-
-/* 烟灰 */
-
-.text-shadow[class*='-grey'] {
-    text-shadow: var(--shadowSize) var(--greyShadow);
-}
-
-/* 浅灰 */
-
-.text-shadow[class*='-gray'] {
-    text-shadow: var(--shadowSize) var(--grayShadow);
-}
-
-/* 不正经黑色 */
-
-.text-shadow[class*='-black'] {
-    text-shadow: var(--shadowSize) var(--blackShadow);
-}
-
-/* 不正经黑色 */
-
-.text-shadow[class*='-white'] {
-    text-shadow: var(--shadowSize) var(--blackShadow);
+.shadowColor(@shadowColors);
+.shadowColor(@shadowColors, @i: 1) when (length(@shadowColors) >= @i) {
+    @name: extract(@shadowColors, @i);
+    /* 背景shadow */
+    .shadow-@{name} {
+        box-shadow: var(--shadow-size) var(~'--@{name}');
+    }
+    /* 文字shadow */
+    .text-shadow-@{name} {
+        text-shadow: var(--shadow-size) var(~'--@{name}');
+    }
+    .shadowColor(@shadowColors, (@i + 1));
 }
