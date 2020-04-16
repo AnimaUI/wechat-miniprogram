@@ -79,8 +79,8 @@ page {
     mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
     blue-grey, fusion-blue-grey;
 
-.colorType(@colorType);
-.colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+.bgColorType(@colorType);
+.bgColorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
     @typeName: extract(@colorType, @i);
     .bg(@colors);
     .bg(@colors, @j: 1) when (length(@colors) >= @j) {
@@ -99,7 +99,7 @@ page {
         }
         .bg(@colors, (@j + 1));
     }
-    .colorType(@colorType, (@i + 1));
+    .bgColorType(@colorType, (@i + 1));
 }
 
 /* 魂白背景 */
@@ -194,8 +194,8 @@ page {
 |_________|
 */
 
-.colorType(@colorType);
-.colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+.textColorType(@colorType);
+.textColorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
     @typeName: extract(@colorType, @i);
     .text(@colors);
     .text(@colors, @j: 1) when (length(@colors) >= @j) {
@@ -214,7 +214,7 @@ page {
         }
         .text(@colors, (@j + 1));
     }
-    .colorType(@colorType, (@i + 1));
+    .textColorType(@colorType, (@i + 1));
 }
 
 /* 不正经黑色 */
