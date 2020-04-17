@@ -85,3 +85,36 @@
 .overflow-hidden {
     overflow: hidden;
 }
+
+/* margin-left */
+.marginLeft(48);
+.marginLeft(@ml, @i: 2) when (@i =< @ml) {
+    .ml-@{i} {
+        margin-left: 0rpx + @i;
+    }
+    .marginLeft(@ml, (@i + 2));
+}
+/* margin-right */
+.marginRight(48);
+.marginRight(@mr, @i: 2) when (@i =< @mr) {
+    .mr-@{i} {
+        margin-right: 0rpx + @i;
+    }
+    .marginRight(@mr, (@i + 2));
+}
+/* margin-top */
+.marginTop(48);
+.marginTop(@mt, @i: 2) when (@i =< @mt) {
+    .mt-@{i} {
+        margin-top: 0rpx + @i;
+    }
+    .marginTop(@mt, (@i + 2));
+}
+/* margin-botoom */
+.marginBotoom(48);
+.marginBotoom(@mb, @i: 2) when (@i =< @mb) {
+    .mb-@{i} {
+        margin-bottom: 0rpx + @i;
+    }
+    .marginBotoom(@mb, (@i + 2));
+}

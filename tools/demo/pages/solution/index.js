@@ -8,17 +8,17 @@ Page({
         menuBar: app.globalData.menuBar,
         gradualColour,
         list: [{
-                icon: 'ani-icon-bar',
+                icon: 'ani-icon-drawer',
                 en: 'drawer',
                 cn: '抽屉'
             },
             {
-                icon: 'ani-icon-bar',
+                icon: 'ani-icon-animation',
                 en: 'animation',
                 cn: '动画'
             },
             {
-                icon: 'ani-icon-bar',
+                icon: 'ani-icon-comic',
                 en: 'comic',
                 cn: '动漫'
             }

@@ -14,12 +14,27 @@ page {
   margin-top: 40rpx;
   border-radius: 28rpx;
   padding: 52rpx 20rpx;
+  overflow: hidden;
+  position: relative;
 }
 .main .box .item:nth-of-type(1) {
   margin-top: 0;
 }
 .main .box .item.swatch-color:after {
   border-radius: 0 28rpx 28rpx 0;
+}
+.main .box .item .left {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  -webkit-box-reflect: below -30rpx -webkit-linear-gradient(transparent, transparent 30%, rgba(0, 0, 0, 0.8));
+  box-reflect: below -30rpx linear-gradient(transparent, transparent 30%, rgba(0, 0, 0, 0.8));
+}
+.main .box .item .left .icon {
+  opacity: 0.8;
+}
+.main .box .item .left .en {
+  opacity: 0.2;
 }
 .stage {
   width: 100%;

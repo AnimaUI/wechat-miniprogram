@@ -51,13 +51,13 @@
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
         <view class="box">
-            <view class="item flex justify-between align-center bg-gradual-{{gradualColour[index]}}" wx:for="{{list}}" wx:key="key">
-                <view class="left">
-                    <text class="text-shadow-black text-white {{item.icon}}"></text>
-                    <text class="en capitalize text-shadow text-white">{{item.en}}</text>
-                </view>
-                <view class="right">
-                    <text class="cn text-shadow-black text-white">{{item.cn}}</text>
+            <view class="item flex justify-end align-center bg-gradual-{{gradualColour[index]}}" wx:for="{{list}}" wx:key="key">
+                <text class="left text-white fs-80">
+                    <text class="icon text-shadow-black text-white {{item.icon}} fs-66"></text>
+                    <text class="en capitalize text-shadow ml-12">{{item.en}}</text>
+                </text>
+                <view class="right mr-36 mt-12">
+                    <text class="block cn text-shadow-black text-white fs-40">{{item.cn}}</text>
                 </view>
             </view>
         </view>
