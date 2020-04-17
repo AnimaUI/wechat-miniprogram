@@ -211,11 +211,11 @@
         <view class="box flex swatch justify-around flex-wrap">
             <view class="item flex justify-between align-center swatch-color bg-{{colour[index]}}" wx:for="{{list}}" wx:key="key">
                 <view class="left">
-                    <text class="text-shadow text-white {{item.icon}}"></text>
-                    <text class="en capitalize text-shadow text-white">{{item.en}}</text>
+                    <text class="text-shadow-black text-white {{item.icon}}"></text>
+                    <text class="en capitalize text-shadow-black text-white">{{item.en}}</text>
                 </view>
                 <view class="right">
-                    <text class="cn text-shadow text-white">{{item.cn}}</text>
+                    <text class="cn text-shadow-black text-white">{{item.cn}}</text>
                     <view class="lines">
                         <text class="line line-1"></text>
                         <text class="line line-2"></text>

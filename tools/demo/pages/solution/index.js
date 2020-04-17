@@ -1,12 +1,12 @@
 //index.js
 // 获取应用实例
 const app = getApp();
-const colour = require('../../utils/colour');
+const gradualColour = require('../../utils/gradual-colour');
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         menuBar: app.globalData.menuBar,
-        colour,
+        gradualColour,
         list: [{
                 icon: 'ani-icon-bar',
                 en: 'drawer',
