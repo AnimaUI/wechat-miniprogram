@@ -59,6 +59,32 @@
                 <view class="right mr-36 mt-12">
                     <text class="block cn text-shadow-black text-white fs-40">{{item.cn}}</text>
                 </view>
+                <view class="ani-rain">
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                    <view class="ani-rain-li">
+                        <text class="raindrop"></text>
+                        <text class="ripple"></text>
+                    </view>
+                </view>
             </view>
         </view>
     </view>
