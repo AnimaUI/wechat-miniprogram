@@ -94,8 +94,8 @@
         <view class="box flex justify-around flex-wrap">
             <view class="item swatch" wx:for="{{list}}" wx:key="key">
                 <view class="top swatch-color bg-{{colour[index]}}">
-                    <text class="block text-shadow text-white fs-60 en {{item.icon}}"></text>
-                    <text class="text-shadow text-white fs-36 block capitalize">{{item.en}}</text>
+                    <text class="block text-shadow-black text-white fs-60 en {{item.icon}}"></text>
+                    <text class="text-shadow-black text-white fs-36 block capitalize">{{item.en}}</text>
                 </view>
                 <view class="bottom">
                     <button class="ani-btn fw-400 text-white swatch-color bg-{{colour[index]}}" role="button" aria-disabled="false">{{item.cn}}</button>
