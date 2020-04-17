@@ -61,27 +61,21 @@
                 </view>
                 <view class="ani-rain">
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                     <view class="ani-rain-li">
-                        <text class="raindrop"></text>
                         <text class="ripple"></text>
                     </view>
                 </view>

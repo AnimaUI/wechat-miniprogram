@@ -53,7 +53,6 @@ page {
     transform: rotateX(65deg);
     transform-style: preserve-3d;
     z-index: 1;
-    opacity: 1;
     .ani-rain-li {
         position: absolute;
         width: 100%;
@@ -62,6 +61,7 @@ page {
         left: 50%;
         border-radius: 50%;
         transform-style: preserve-3d;
+        opacity: .6;
         text {
             position: absolute;
             top: 50%;
@@ -71,7 +71,6 @@ page {
         &:nth-child(1) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(45deg);
-            .raindrop,
             .ripple {
                 animation-delay: 0s;
             }
@@ -79,7 +78,6 @@ page {
         &:nth-child(2) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(90deg);
-            .raindrop,
             .ripple {
                 animation-delay: 1s;
             }
@@ -87,7 +85,6 @@ page {
         &:nth-child(3) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(135deg);
-            .raindrop,
             .ripple {
                 animation-delay: 2s;
             }
@@ -95,7 +92,6 @@ page {
         &:nth-child(4) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(180deg);
-            .raindrop,
             .ripple {
                 animation-delay: 3s;
             }
@@ -103,7 +99,6 @@ page {
         &:nth-child(5) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(225deg);
-            .raindrop,
             .ripple {
                 animation-delay: 4s;
             }
@@ -111,17 +106,9 @@ page {
         &:nth-child(6) {
             transform-origin: 50% 100%;
             transform: translate(-50%, -50%) rotate(270deg);
-            .raindrop,
             .ripple {
                 animation-delay: 5s;
             }
-        }
-        .raindrop {
-            width: 8rpx;
-            height: 8rpx;
-            background: #fff;
-            animation: raindrop 8s ease-in infinite;
-            animation-fill-mode: backwards;
         }
         .ripple {
             width: 100%;
@@ -130,21 +117,6 @@ page {
             animation: ripple 8s ease-out infinite;
             animation-fill-mode: backwards;
         }
-    }
-}
-@keyframes raindrop {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) translateZ(200rpx);
-    }
-    1%,
-    9% {
-        opacity: 1;
-    }
-    10%,
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) translateZ(0);
     }
 }
 @keyframes ripple {
