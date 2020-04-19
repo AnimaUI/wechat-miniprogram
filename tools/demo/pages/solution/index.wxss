@@ -67,7 +67,7 @@ page {
 }
 .ani-rain .ani-rain-li:nth-child(1) {
   transform-origin: 50% 100%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 .ani-rain .ani-rain-li:nth-child(1) .ripple {
   animation-delay: 0s;
@@ -102,7 +102,7 @@ page {
 }
 .ani-rain .ani-rain-li:nth-child(6) {
   transform-origin: 50% 100%;
-  transform: translate(-50%, -50%) rotate(270deg);
+  transform: translate(-50%, -50%) rotate(225deg);
 }
 .ani-rain .ani-rain-li:nth-child(6) .ripple {
   animation-delay: 5s;
