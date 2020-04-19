@@ -56,8 +56,8 @@ module.exports = {
         // devtool: 'nosources-source-map', // 生成 js sourcemap
         performance: {
             hints: 'warning',
-            assetFilter: assetFilename => assetFilename.endsWith('.js')
+            assetFilter: (assetFilename) => assetFilename.endsWith('.js')
         }
     },
-    copy: ['./assets/images', './utils.js'] // 将会复制到目标目录
+    copy: ['./assets/images', './utils.js', 'LICENSE'] // 将会复制到目标目录
 };
