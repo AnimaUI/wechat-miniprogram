@@ -1,0 +1,17 @@
+.bgColor .item .box-bar {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.bgColor .item .color-box .bg-item {
+  width: 46%;
+  text-align: center;
+  line-height: 2;
+}
+.bgColor .item .color-box .bg-item:nth-of-type(1),
+.bgColor .item .color-box .bg-item:nth-of-type(2) {
+  margin-top: 0;
+}
+.bgColor .item .color-box .bg-item text {
+  display: block;
+  width: 100%;
+}

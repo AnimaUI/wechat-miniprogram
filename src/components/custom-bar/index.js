@@ -23,10 +23,6 @@ Component({
         isBack: {
             type: [Boolean, String],
             default: false
-        },
-        bgImage: {
-            type: String,
-            default: ''
         }
     },
     /**

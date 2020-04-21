@@ -1,7 +1,35 @@
 {
     "description": "项目配置文件",
     "packOptions": {
-        "ignore": []
+        "ignore": [{
+                "tyep": "file",
+                "value": "pages/**/*.less"
+            },
+            {
+                "tyep": "file",
+                "value": "compenents/**/*.less"
+            },
+            {
+                "tyep": "file",
+                "value": ".gitignore"
+            },
+            {
+                "tyep": "file",
+                "value": "package.json"
+            },
+            {
+                "tyep": "file",
+                "value": "package-lock.json"
+            },
+            {
+                "tyep": "file",
+                "value": "README.json"
+            },
+            {
+                "tyep": "folder",
+                "value": "node_modules"
+            }
+        ]
     },
     "setting": {
         "urlCheck": true,
