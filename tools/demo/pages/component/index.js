@@ -1,7 +1,7 @@
 //index.js
 // 获取应用实例
 const app = getApp();
-const colour = require('../../utils/colour');
+const { colour } = require('../../utils/colour');
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,

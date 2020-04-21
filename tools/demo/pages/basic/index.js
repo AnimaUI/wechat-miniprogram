@@ -1,7 +1,7 @@
 //index.js
 // 获取应用实例
 const app = getApp();
-const colour = require('../../utils/colour');
+const { colour } = require('../../utils/colour');
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
@@ -9,8 +9,8 @@ Page({
         colour,
         list: [{
                 icon: 'ani-icon-color',
-                en: 'color',
-                cn: '颜色'
+                en: 'background',
+                cn: '背景'
             },
             {
                 icon: 'ani-icon-layout-fill',

@@ -1,0 +1,62 @@
+<CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">首页</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="paw">
+        <view class="paw_left">
+            <view class="paw_left__part"></view>
+            <view class="paw_left__part"></view>
+            <view class="paw_left__part"></view>
+        </view>
+        <view class="paw_right">
+            <view class="paw_left__part"></view>
+            <view class="paw_left__part"></view>
+            <view class="paw_left__part"></view>
+        </view>
+    </view>
+    <view class="puppy">
+        <view class="wrap">
+            <view class="body"></view>
+            <view class="tail"></view>
+            <view class="head">
+                <view class="head_eyebrow">
+                    <view class="head_eyebrow__left"></view>
+                    <view class="head_eyebrow__right"></view>
+                </view>
+                <view class="head_ear">
+                    <view class="head_ear__left"></view>
+                    <view class="head_ear__right"></view>
+                </view>
+                <view class="head_earfold">
+                    <view class="head_earfold__left"></view>
+                    <view class="head_earfold__right"></view>
+                </view>
+                <view class="head_eye">
+                    <view class="head_eye__left">
+                        <view class="iris"></view>
+                        <view class="pupil"></view>
+                    </view>
+                    <view class="head_eye__right">
+                        <view class="iris"></view>
+                        <view class="pupil"></view>
+                    </view>
+                </view>
+                <view class="head_tongue"></view>
+                <view class="head_nose"></view>
+                <view class="head_top"></view>
+                <view class="head_bottom">
+                    <view class="head_bottom__left"></view>
+                    <view class="head_bottom__right"></view>
+                </view>
+                <view class="head_mouth">
+                    <view class="head_mouth__left"></view>
+                    <view class="head_mouth__right"></view>
+                    <view class="head_mouth__top"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+    </view>
+</scroll-view>

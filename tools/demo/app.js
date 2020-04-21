@@ -13,9 +13,9 @@ App({
                 if (capsule) {
                     this.globalData.custom = capsule;
                     this.globalData.customBar =
-                        capsule.bottom + capsule.top - e.statusBarHeight;
+                        capsule.bottom + capsule.top - e.statusBarHeight + 4;
                 } else {
-                    this.globalData.customBar = e.statusBarHeight + 50;
+                    this.globalData.customBar = e.statusBarHeight + 54;
                 }
             }
         });
