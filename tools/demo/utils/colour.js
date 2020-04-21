@@ -30,8 +30,8 @@ module.exports = {
         'fusion-blue-grey'
     ],
     colourText: [
-        '不正经红色',
-        '融合不正经红色',
+        '胭脂红',
+        '融合胭脂红',
         '橙色',
         '融合橙色',
         '黄色',

@@ -10,8 +10,8 @@
 }
 .bgColor .item .color-box .bg-item {
   width: 46%;
-  text-align: center;
   line-height: 2;
+  border-radius: 6rpx;
 }
 .bgColor .item .color-box .bg-item:nth-of-type(1),
 .bgColor .item .color-box .bg-item:nth-of-type(2) {

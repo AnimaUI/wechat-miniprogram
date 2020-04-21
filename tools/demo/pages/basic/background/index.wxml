@@ -2,7 +2,10 @@
     var getColor = function(str) {
         return str.split('bg-')[1];
     }
-    module.exports.getColor = getColor;
+    var getLightColor = function(str) {
+        return  str.indexOf('light-') === 0 ? str.split('light-')[1] : 'white';
+    }
+    module.exports = { getColor: getColor, getLightColor: getLightColor};
 </wxs>
 <CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
@@ -27,16 +30,30 @@
                 <text class="dot inline-block bg-mauve"></text>
                 light
             </view>
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 4}}">
-                <text class="dot inline-block bg-mauve"></text>
-                basic
-            </view>
-            <view class="color-box swatch flex flex-wrap justify-around padding-sm bg-white">
+            <view class="color-box flex flex-wrap justify-around padding-sm">
                 <view
                     wx:for="{{item}}"
                     wx:for-item="bgColor"
                     wx:for-index="bgIndex"
-                    class="bg-item swatch-color flex align-center flex-wrap text-white padding-sm mt-20 shadow-black {{bgColor}}">
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
+                    <text>{{module.getColor(bgColor)}}</text>
+                    <text>{{colourText[bgIndex]}}</text>
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="bg-item"></view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot inline-block bg-mauve"></text>
+                basic
+            </view>
+            <view class="color-box flex flex-wrap justify-around padding-sm">
+                <view
+                    wx:for="{{basicColor}}"
+                    wx:for-item="bgColor"
+                    wx:for-index="bgIndex"
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
                     <text>{{module.getColor(bgColor)}}</text>
                     <text>{{colourText[bgIndex]}}</text>
                 </view>
