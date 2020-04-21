@@ -1,8 +1,3 @@
-<!-- <CustomBar bgColor="bg-gradual-green" isBack="{{true}}">
-    <view slot="backText">返回</view>
-    <view slot="content">首页</view>
-</CustomBar> -->
-<!-- <image src='http://oos.animaui.com/mini/wechat/images/head-green-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image> -->
 <view class="weather" style="{{weatherStyle}}">
         <view class="container">
         <view class="season"></view>

@@ -16,7 +16,6 @@ let bgColors = ['', 'dark', 'disabled', 'light'].map((item) => {
 let prefix = 'bg';
 basicColor = basicColor.map((item) => `${prefix}-${item}`);
 bgColors = bgColors.concat([basicColor]);
-console.log(bgColors);
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,

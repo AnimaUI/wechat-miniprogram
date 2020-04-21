@@ -1,8 +1,3 @@
-<!-- <CustomBar bgColor="bg-gradual-green" isBack="{{true}}">
-    <view slot="backText">返回</view>
-    <view slot="content">首页</view>
-</CustomBar> -->
-<!-- <image src='{{imgBaseUrl}}/mini/wechat/images/head-orange-bg.png' mode='widthFix' class='png' style='width:100%;height:430rpx'></image> -->
 <view class="stage">
     <view class="scene">
         <view class="halo">
