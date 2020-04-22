@@ -12,7 +12,7 @@
 </wxs>
 <CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content capitalize">color</view>
+    <view slot="content" class="capitalize">color</view>
 </CustomBar>
 <Notice
     class="notice"

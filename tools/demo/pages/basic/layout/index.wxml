@@ -1,0 +1,9 @@
+<CustomBar className="bg-gradual-orange text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">layout</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page bgColor">
+    <view class="main">
+        
+    </view>
+</scroll-view>

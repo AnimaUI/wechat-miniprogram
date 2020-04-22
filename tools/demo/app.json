@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/basic/layout/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/component/index",
