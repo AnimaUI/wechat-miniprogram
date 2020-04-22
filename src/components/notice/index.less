@@ -1,3 +1,4 @@
+@import '../common.less';
 @keyframes notice {
     0% {
         transform: translateX(0);
@@ -6,46 +7,45 @@
         transform: translateX(-50%);
     }
 }
-
-.notice {
+.@{prefix}-notice {
     display: flex;
     position: relative;
     height: 70rpx;
     padding: 0 30rpx;
     align-items: center;
-    .notice-icon {
+    .@{prefix}-notice-icon {
         display: block;
         width: 36rpx;
         height: 30rpx;
         line-height: 30rpx;
         margin-right: 12rpx;
     }
-    .notice-text-wrap {
+    .@{prefix}-notice-text-wrap {
         flex: 1;
         overflow: hidden;
-        .notice-text {
+        .@{prefix}-notice-text {
             display: inline-block;
             margin-right: 30rpx;
             white-space: nowrap;
             font-size: 24rpx;
             line-height: 70rpx;
-            .notice-text-span {
+            .@{prefix}-notice-text-span {
                 display: inline-block;
                 margin-right: 18rpx;
             }
         }
-        .notice-text-animate {
+        .@{prefix}-notice-text-animate {
             animation: notice 16s linear infinite;
         }
     }
-    .notice-text-overlay {
+    .@{prefix}-notice-text-overlay {
         position: absolute;
         width: 44rpx;
         top: 20rpx;
         right: 10rpx;
         z-index: 1;
     }
-    .notice-close {
+    .@{prefix}-notice-close {
         margin-left: 20rpx;
         color: #fff;
         font-size: 30rpx;

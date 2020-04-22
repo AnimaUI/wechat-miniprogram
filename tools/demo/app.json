@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/basic/layout/index",
         "pages/basic/index",
+        "pages/basic/layout/index",
         "pages/basic/color/index",
         "pages/component/index",
         "pages/solution/index",

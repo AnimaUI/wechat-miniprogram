@@ -1,9 +1,10 @@
 /* AnimaUI for wechat-miniprogram  v1.0.0 | by 花夏(huaxia@animaui.com) 2020-03-25 18:10:37 */
+@import '../common.less';
 /** 顶部自定义导航 **/
-.ani-custom {
+.@{prefix}-custom {
     display: block;
     position: relative;
-    .ani-bar {
+    .@{prefix}-bar {
         min-height: 0;
         padding-right: 220rpx;
         box-shadow: 0 0 0;
@@ -63,7 +64,7 @@
             &:first-child {
                 margin-left: 30rpx;
                 font-size: 30rpx;
-                & > text[class*="ani-icon-"] {
+                & > text[class*="@{prefix}-icon-"] {
                     margin-left: -0.3em;
                     margin-right: 0.3em;
                 }
@@ -77,13 +78,13 @@
             &:last-child {
                 margin-right: 30rpx;
             }
-            & > text[class*="ani-icon-"] {
-                & + text[class*="ani-icon-"] {
+            & > text[class*="@{prefix}-icon-"] {
+                & + text[class*="@{prefix}-icon-"] {
                     margin-left: 0.5em;
                 }
             }
         }
-        .ani-avatar {
+        .@{prefix}-avatar {
             &:first-child {
                 margin-left: 20rpx;
             }
@@ -148,10 +149,10 @@
                 font-size: 26rpx;
                 background-color: transparent;
             }
-            [class*="ani-icon-"] {
+            [class*="@{prefix}-icon-"] {
                 margin: 0 0.5em 0 0.8em;
             }
-            [class*="ani-icon-"]::before {
+            [class*="@{prefix}-icon-"]::before {
                 top: 0;
             }
         }
@@ -185,7 +186,7 @@
                     z-index: 2;
                     padding-top: 50rpx;
                     background-color: inherit;
-                    [class*="ani-icon-"] {
+                    [class*="@{prefix}-icon-"] {
                         position: absolute;
                         width: 70rpx;
                         z-index: 2;
@@ -226,7 +227,7 @@
                         z-index: 1;
                     }
                 }
-                [class*="ani-icon-"] {
+                [class*="@{prefix}-icon-"] {
                     width: 100rpx;
                     position: relative;
                     display: block;
@@ -235,7 +236,7 @@
                     text-align: center;
                     font-size: 40rpx;
                 }
-                .ani-ani-image {
+                .@{prefix}-image {
                     margin: 0 auto;
                     image {
                         width: 50rpx;
@@ -319,11 +320,11 @@
             }
             .action {
                 margin-left: 20rpx;
-                [class*="ani-icon-"] {
+                [class*="@{prefix}-icon-"] {
                     font-size: 48rpx;
                 }
                 &:first-child {
-                    [class*="ani-icon-"] {
+                    [class*="@{prefix}-icon-"] {
                         margin-left: 0;
                     }
                 }
@@ -385,8 +386,8 @@
                     }
                 }
                 & > {
-                    text[class*="ani-icon-"],
-                    view[class*="ani-icon-"] {
+                    text[class*="@{prefix}-icon-"],
+                    view[class*="@{prefix}-icon-"] {
                         font-size: 28rpx;
                     }
                 }
@@ -394,7 +395,7 @@
         }
     }
 }
-.ani-bar.fixed,
+.@{prefix}-bar.fixed,
 .nav.fixed {
     position: fixed;
     width: 100%;
@@ -402,7 +403,7 @@
     z-index: 1024;
     box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
-.ani-tabbar-height {
+.@{prefix}-tabbar-height {
     min-height: 100rpx;
     height: calc(100rpx + env(safe-area-inset-bottom) / 2);
 }

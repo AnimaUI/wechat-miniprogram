@@ -1,4 +1,5 @@
-.ani-tabbar {
+@import '../common.less';
+.@{prefix}-tabbar {
     width: 100%;
     min-height: 100rpx;
     display: flex;
@@ -6,7 +7,7 @@
     justify-content: space-between;
     position: relative;
     box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
-    &.ani-tabbar-fixed {
+    &.@{prefix}-tabbar-fixed {
         position: fixed;
         z-index: 99999;
         left: 0;
@@ -24,7 +25,7 @@
         transform: scaleY(0.5);
         transform-origin: 0 100%;
     }
-    .ani-tabbar-item {
+    .@{prefix}-tabbar-item {
         height: 100%;
         flex: 1;
         display: flex;
@@ -35,10 +36,10 @@
         position: relative;
         padding: 10rpx 0;
         box-sizing: border-box;
-        .ani-icon-box {
+        .@{prefix}-icon-box {
             position: relative;
         }
-        .ani-text-scale {
+        .@{prefix}-text-scale {
             font-weight: bold;
             transform: scale(0.8);
             line-height: 28rpx;
