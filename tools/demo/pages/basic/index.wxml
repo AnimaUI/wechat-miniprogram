@@ -31,7 +31,7 @@
     </view>
 </view>
 <scroll-view scroll-y class="scroll-page">
-        <view class="paw">
+    <view class="paw">
         <view class="paw_left">
             <view class="paw_left__part"></view>
             <view class="paw_left__part"></view>
@@ -87,7 +87,7 @@
     </view>
     <view class="main">
         <view class="box flex justify-around flex-wrap">
-            <view class="item swatch" wx:for="{{list}}" wx:key="key">
+            <view class="item swatch" wx:for="{{list}}" wx:key="key" bindtap="link" data-url="{{item.url}}">
                 <view class="top swatch-color bg-{{colour[index]}}">
                     <text class="block text-shadow-black text-white fs-60 en {{item.icon}}"></text>
                     <text class="text-shadow-black text-white fs-36 block capitalize">{{item.en}}</text>
