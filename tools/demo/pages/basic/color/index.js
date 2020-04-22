@@ -1,11 +1,12 @@
-//index.js
 // 获取应用实例
 const app = getApp();
 let {
     colour,
     basicColor,
     colourText,
-    basicColorText
+    basicColorText,
+    gradualColor,
+    gradualColorText
 } = require('../../../utils/colour');
 let bgColors = ['', 'dark', 'disabled', 'light'].map((item) => {
     let prefix = 'bg';
@@ -20,6 +21,7 @@ let bgColors = ['', 'dark', 'disabled', 'light'].map((item) => {
 });
 let prefix = 'bg';
 basicColor = basicColor.map((item) => `${prefix}-${item}`);
+gradualColor = gradualColor.map((item) => `${prefix}-gradual-${item}`);
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
@@ -27,7 +29,9 @@ Page({
         basicColor,
         colourText,
         basicColorText,
-        notice: '支持 bg- 和 text- 前缀'
+        gradualColor,
+        gradualColorText,
+        notice: '仅支持 bg- 和 text- 前缀'
     },
     onLoad() {},
     onShareAppMessage() {},

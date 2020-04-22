@@ -76,5 +76,37 @@ module.exports = {
         '雪白',
         '魂白',
         '透明'
+    ],
+    gradualColor: [
+        'red',
+        'orange',
+        'yellow',
+        'olive',
+        'green',
+        'cyan',
+        'sky-blue',
+        'blue',
+        'purple',
+        'light-purple',
+        'pink',
+        'mauve',
+        'brown',
+        'blue-grey'
+    ],
+    gradualColorText: [
+        '渐变红',
+        '渐变橙',
+        '渐变黄',
+        '渐变橄榄绿',
+        '渐变绿',
+        '渐变蓝绿',
+        '渐变天青',
+        '渐变天蓝',
+        '渐变紫',
+        '渐变浅紫',
+        '渐变粉',
+        '渐变紫红',
+        '渐变砖红',
+        '渐变岩灰'
     ]
 };

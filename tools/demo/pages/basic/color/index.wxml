@@ -79,5 +79,25 @@
                 <view class="bg-item"></view>
             </view>
         </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot inline-block bg-mauve"></text>
+                gradual
+            </view>
+            <view class="color-box flex flex-wrap justify-around padding-sm">
+                <view
+                    wx:for="{{gradualColor}}"
+                    wx:for-item="bgColor"
+                    wx:for-index="bgIndex"
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 text-white {{bgColor}}"
+                    data-text="{{module.getColor(bgColor)}}"
+                    bindtap="copyText">
+                    <text>{{module.getColor(bgColor)}}</text>
+                    <text>{{gradualColorText[bgIndex]}}</text>
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="bg-item"></view>
+            </view>
+        </view>
     </view>
 </scroll-view>
