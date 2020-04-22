@@ -9,8 +9,8 @@ Page({
         colour,
         list: [{
                 icon: 'ani-icon-color',
-                en: 'background',
-                cn: '背景'
+                en: 'color',
+                cn: '色彩'
             },
             {
                 icon: 'ani-icon-layout-fill',

@@ -3,7 +3,10 @@
         return str.split('bg-')[1];
     }
     var getLightColor = function(str) {
-        return  str.indexOf('light-') === 0 ? str.split('light-')[1] : 'white';
+        return  str.indexOf('light-') === 0
+                ? str.split('light-')[1]
+                : str.indexOf('disabled-') === 0
+                    ? 'fusion-blue-grey' : 'white';
     }
     module.exports = { getColor: getColor, getLightColor: getLightColor};
 </wxs>
@@ -53,9 +56,9 @@
                     wx:for="{{basicColor}}"
                     wx:for-item="bgColor"
                     wx:for-index="bgIndex"
-                    class="bg-item flex align-center flex-wrap padding-sm mt-20 {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
-                    <text>{{module.getColor(bgColor)}}</text>
-                    <text>{{colourText[bgIndex]}}</text>
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 solid {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
+                    <text class="{{module.getColor(bgColor) === 'white' || module.getColor(bgColor) === 'ghost-white' || module.getColor(bgColor) === 'transparent' ? 'text-dark-gray' : ''}}">{{module.getColor(bgColor)}}</text>
+                    <text class="{{module.getColor(bgColor) === 'white' || module.getColor(bgColor) === 'ghost-white' || module.getColor(bgColor) === 'transparent' ? 'text-dark-gray' : ''}}">{{basicColorText[bgIndex]}}</text>
                 </view>
                 <!-- 留一个占位避免少一个 -->
                 <view class="bg-item"></view>

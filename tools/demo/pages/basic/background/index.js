@@ -1,7 +1,12 @@
 //index.js
 // 获取应用实例
 const app = getApp();
-let { colour, basicColor, colourText } = require('../../../utils/colour');
+let {
+    colour,
+    basicColor,
+    colourText,
+    basicColorText
+} = require('../../../utils/colour');
 let bgColors = ['', 'dark', 'disabled', 'light'].map((item) => {
     let prefix = 'bg';
     let prefix2 = '';
@@ -20,7 +25,8 @@ Page({
         imgBaseUrl: app.imgBaseUrl,
         bgColors,
         basicColor,
-        colourText
+        colourText,
+        basicColorText
     },
     onLoad() {},
     onShareAppMessage() {},
