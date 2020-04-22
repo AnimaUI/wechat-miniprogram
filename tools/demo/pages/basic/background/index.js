@@ -26,7 +26,8 @@ Page({
         bgColors,
         basicColor,
         colourText,
-        basicColorText
+        basicColorText,
+        notice: '支持 bg- 和 text- 前缀'
     },
     onLoad() {},
     onShareAppMessage() {},

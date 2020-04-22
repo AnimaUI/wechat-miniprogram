@@ -21,3 +21,8 @@
   display: block;
   width: 100%;
 }
+.notice {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}

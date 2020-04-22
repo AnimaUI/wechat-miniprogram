@@ -1,5 +1,7 @@
 {
-    "usingComponents": {},
+    "usingComponents": {
+        "Notice": "../../../animaUi/components/notice/index"
+    },
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "white"
 }

@@ -14,7 +14,18 @@
     <view slot="backText">返回</view>
     <view slot="content">首页</view>
 </CustomBar>
-<scroll-view scroll-y class="scroll-page bgColor">
+<Notice
+    class="notice"
+    scroll="{{true}}"
+    close="{{true}}"
+    closeColor="#F24849"
+    bgColor="#ffecbd"
+    bgRgba="rgba(255, 236, 219, 1)"
+    color="#f24849"
+    show-icon="{{true}}"
+    iconColor="#f24849"
+    notice="{{notice}}"/>
+<scroll-view scroll-y class="scroll-page bgColor pt-72">
     <view class="main">
         <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="index">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom" wx:if="{{index === 0}}">
