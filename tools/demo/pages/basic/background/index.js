@@ -30,5 +30,20 @@ Page({
     },
     onLoad() {},
     onShareAppMessage() {},
-    onShow() {}
+    onShow() {},
+    copyText(e) {
+        const COLOR = e.currentTarget.dataset.text;
+        wx.setClipboardData({
+            data: COLOR,
+            success(res) {
+                wx.getClipboardData({
+                    success(res) {
+                        wx.showToast({
+                            title: '复制成功'
+                        });
+                    }
+                });
+            }
+        });
+    }
 });

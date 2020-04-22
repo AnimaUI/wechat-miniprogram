@@ -38,7 +38,9 @@
                     wx:for="{{item}}"
                     wx:for-item="bgColor"
                     wx:for-index="bgIndex"
-                    class="bg-item flex align-center flex-wrap padding-sm mt-20 {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}"
+                    data-text="{{module.getColor(bgColor)}}"
+                    bindtap="copyText">
                     <text>{{module.getColor(bgColor)}}</text>
                     <text>{{colourText[bgIndex]}}</text>
                 </view>
@@ -56,7 +58,9 @@
                     wx:for="{{basicColor}}"
                     wx:for-item="bgColor"
                     wx:for-index="bgIndex"
-                    class="bg-item flex align-center flex-wrap padding-sm mt-20 solid {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}">
+                    class="bg-item flex align-center flex-wrap padding-sm mt-20 solid {{bgColor}} text-{{module.getLightColor(module.getColor(bgColor))}}"
+                    data-text="{{module.getColor(bgColor)}}"
+                    bindtap="copyText">
                     <text class="{{module.getColor(bgColor) === 'white' || module.getColor(bgColor) === 'ghost-white' || module.getColor(bgColor) === 'transparent' ? 'text-dark-gray' : ''}}">{{module.getColor(bgColor)}}</text>
                     <text class="{{module.getColor(bgColor) === 'white' || module.getColor(bgColor) === 'ghost-white' || module.getColor(bgColor) === 'transparent' ? 'text-dark-gray' : ''}}">{{basicColorText[bgIndex]}}</text>
                 </view>
