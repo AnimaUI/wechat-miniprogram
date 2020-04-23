@@ -4,83 +4,81 @@ Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         swiperHeight: 0,
-        tabConfig: {
-            currentTab: 0,
-            activeColorClass: 'olive',
-            tabData: [
-                {
-                    name: '未使用',
-                    icon: 'notUsed'
-                },
-                {
-                    name: '已使用',
-                    icon: 'alreadyUsed'
-                },
-                {
-                    name: '已过期',
-                    icon: 'expired'
-                },
-                {
-                    name: '未使用',
-                    icon: 'notUsed'
-                },
-                {
-                    name: '已使用',
-                    icon: 'alreadyUsed'
-                },
-                {
-                    name: '已过期',
-                    icon: 'expired'
-                },
-                {
-                    name: '未使用',
-                    icon: 'notUsed'
-                },
-                {
-                    name: '已使用',
-                    icon: 'alreadyUsed'
-                },
-                {
-                    name: '已过期',
-                    icon: 'expired'
-                },
-                {
-                    name: '未使用',
-                    icon: 'notUsed'
-                },
-                {
-                    name: '已使用',
-                    icon: 'alreadyUsed'
-                },
-                {
-                    name: '已过期',
-                    icon: 'expired'
-                },
-                {
-                    name: '未使用',
-                    icon: 'notUsed'
-                },
-                {
-                    name: '已使用',
-                    icon: 'alreadyUsed'
-                },
-                {
-                    name: '已过期',
-                    icon: 'expired'
-                }
-            ]
-        }
+        currentTab: 0,
+        activeColorClass: 'olive',
+        tabData: [
+            {
+                name: '未使用',
+                icon: 'notUsed'
+            },
+            {
+                name: '已使用',
+                icon: 'alreadyUsed'
+            },
+            {
+                name: '已过期',
+                icon: 'expired'
+            },
+            {
+                name: '未使用',
+                icon: 'notUsed'
+            },
+            {
+                name: '已使用',
+                icon: 'alreadyUsed'
+            },
+            {
+                name: '已过期',
+                icon: 'expired'
+            },
+            {
+                name: '未使用',
+                icon: 'notUsed'
+            },
+            {
+                name: '已使用',
+                icon: 'alreadyUsed'
+            },
+            {
+                name: '已过期',
+                icon: 'expired'
+            },
+            {
+                name: '未使用',
+                icon: 'notUsed'
+            },
+            {
+                name: '已使用',
+                icon: 'alreadyUsed'
+            },
+            {
+                name: '已过期',
+                icon: 'expired'
+            },
+            {
+                name: '未使用',
+                icon: 'notUsed'
+            },
+            {
+                name: '已使用',
+                icon: 'alreadyUsed'
+            },
+            {
+                name: '已过期',
+                icon: 'expired'
+            }
+        ]
     },
     onLoad() {},
     onShareAppMessage() {},
     onShow() {
-        this.setSwiperHeight(this.data.tabConfig.currentTab);
+        this.setSwiperHeight(this.data.currentTab);
     },
     // 滑动swiper切换，让swiper当前滑块的current的index与tab头部index一一对应
     switchTabContent(e) {
         const index = e.detail.current;
         this.setData({
-            'tabConfig.currentTab': e.detail.current
+            currentTab: e.detail.current
         });
         this.setSwiperHeight(index);
     },
@@ -93,7 +91,7 @@ Page({
         const select = '.ani-swiper-item';
         const that = this;
         this.setData({
-            'tabConfig.currentTab': index
+            currentTab: index
         });
         query
             .selectAll(select)

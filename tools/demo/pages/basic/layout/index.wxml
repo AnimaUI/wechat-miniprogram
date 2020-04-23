@@ -6,11 +6,13 @@
     <view class="main">
         <Tab
             class="align-center"
-            tabConfig="{{tabConfig}}"
+            currentTab="{{currentTab}}"
+            activeColorClass="{{activeColorClass}}"
+            tabData="{{tabData}}"
             bind:changeEvent="changeEvent"></Tab>
         <swiper
             class="ani-swiper"
-            current="{{tabConfig.currentTab}}"
+            current="{{currentTab}}"
             style="height: {{swiperHeight ? swiperHeight + 'px' : 'auto'}}"
             bindchange="switchTabContent">
             <swiper-item class="ani-swiper-item">

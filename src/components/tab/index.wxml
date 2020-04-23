@@ -3,10 +3,10 @@
         scroll-x="true"
         scroll-with-animation="{{true}}"
         class="ani-bar"
-        scroll-left="{{tabScrollLeft}}">
+        scroll-left="{{(currentTab - 2) * singleNavWidth}}">
         <view
-            class="item {{tabConfig.currentTab == index ? 'selected  text-{{activeColorClass}}' : ''}}"
-            wx:for="{{tabConfig.tabData}}"
+            class="item {{currentTab == index ? 'selected  text-{{activeColorClass}}' : ''}}"
+            wx:for="{{tabData}}"
             wx:key="name"
             data-current="{{index}}"
             catchtap="switchNav">

@@ -1,4 +1,3 @@
-const { watch } = require('../../assets/js/vuefy');
 
 Component({
     options: {
@@ -7,28 +6,25 @@ Component({
     },
     behaviors: [],
     properties: {
-        tabConfig: {
-            type: Object,
-            value: {
-                currentTab: {
-                    type: Number,
-                    value: 0
-                },
-                activeColorClass: {
-                    type: String,
-                    value: 0
-                },
-                tabData: {
-                    type: Array,
-                    value: []
-                }
-            }
+        currentTab: {
+            type: Number,
+            value: 0
+        },
+        activeColorClass: {
+            type: String,
+            value: 0
+        },
+        tabData: {
+            type: Array,
+            value: []
         }
     },
     data: {
-        windowHeight: 0,
         swiperHeight: 0,
-        tabScrollLeft: 0
+        pixelRatio: 1,
+        windowWidth: 0,
+        windowHeight: 0,
+        singleNavWidth: 0
     },
     /**
      * 声明周期函数
@@ -44,13 +40,9 @@ Component({
                     that.setData({
                         pixelRatio: res.pixelRatio,
                         windowHeight: res.windowHeight,
-                        windowWidth: res.windowWidth
+                        windowWidth: res.windowWidth,
+                        singleNavWidth: res.windowWidth / 5
                     });
-                }
-            });
-            watch(this, {
-                ['tabConfig'['currentTab']]: function (newVal) {
-                    console.log(newVal);
                 }
             });
         },
@@ -68,14 +60,12 @@ Component({
         switchNav(e) {
             const index = e.target.dataset.current;
             // 设置data属性中的navbarActiveIndex为当前点击的navbar
-            const singleNavWidth = this.data.windowWidth / 5;
             if (+this.data.currentTab === index) {
                 return false;
             } else {
                 // 设置data属性中的currentTab为当前点击的navbar
                 this.setData({
-                    currentTab: index,
-                    tabScrollLeft: (index - 2) * singleNavWidth
+                    currentTab: index
                 });
                 this.triggerEvent('changeEvent', index);
             }
