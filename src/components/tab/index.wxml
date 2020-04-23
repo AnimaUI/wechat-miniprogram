@@ -1,0 +1,16 @@
+<view class="ani-tab">
+    <scroll-view
+        scroll-x="true"
+        scroll-with-animation="{{true}}"
+        class="ani-bar"
+        scroll-left="{{tabScrollLeft}}">
+        <view
+            class="item {{tabConfig.currentTab == index ? 'selected  text-{{activeColorClass}}' : ''}}"
+            wx:for="{{tabConfig.tabData}}"
+            wx:key="name"
+            data-current="{{index}}"
+            catchtap="switchNav">
+            {{item.name}}
+        </view>
+    </scroll-view>
+</view>

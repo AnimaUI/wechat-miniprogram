@@ -72,7 +72,8 @@ module.exports = {
         'object-curly-spacing': ['error', 'always'],
         'object-shorthand': ['error', 'always'],
         'no-lonely-if': 'off',
-        'consistent-return': 'off'
+        'consistent-return': 'off',
+        'no-unused-expressions': ['error', { allowShortCircuit: true }]
     },
     globals: {
         window: true,

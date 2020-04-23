@@ -1,0 +1,37 @@
+@import '../common.less';
+.@{prefix}-tab {
+    white-space: nowrap;
+    background: #fff;
+    margin-bottom: 10rpx;
+    .item,
+    .selected {
+        display: inline-block;
+        margin: 0 10rpx;
+        padding: 0 20rpx;
+    }
+    .selected {
+        height: 88rpx;
+        line-height: 88rpx;
+        font-size: 28rpx;
+        color: #434343;
+        position: relative;
+        &::after {
+           content: '';
+            width: 100%;
+            height: 4rpx;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-color: #3795ff;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+.@{prefix}-swiper {
+    padding: 20rpx 0;
+    background: #fff;
+    .@{prefix}-swiper-item {
+        height: auto!important;
+        overflow-y: scroll;
+    }
+}
