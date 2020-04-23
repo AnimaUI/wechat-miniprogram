@@ -18,54 +18,6 @@ Page({
             {
                 name: '已过期',
                 icon: 'expired'
-            },
-            {
-                name: '未使用',
-                icon: 'notUsed'
-            },
-            {
-                name: '已使用',
-                icon: 'alreadyUsed'
-            },
-            {
-                name: '已过期',
-                icon: 'expired'
-            },
-            {
-                name: '未使用',
-                icon: 'notUsed'
-            },
-            {
-                name: '已使用',
-                icon: 'alreadyUsed'
-            },
-            {
-                name: '已过期',
-                icon: 'expired'
-            },
-            {
-                name: '未使用',
-                icon: 'notUsed'
-            },
-            {
-                name: '已使用',
-                icon: 'alreadyUsed'
-            },
-            {
-                name: '已过期',
-                icon: 'expired'
-            },
-            {
-                name: '未使用',
-                icon: 'notUsed'
-            },
-            {
-                name: '已使用',
-                icon: 'alreadyUsed'
-            },
-            {
-                name: '已过期',
-                icon: 'expired'
             }
         ]
     },
