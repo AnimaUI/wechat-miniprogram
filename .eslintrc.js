@@ -18,8 +18,8 @@ module.exports = {
         'no-console': 'off',
         'arrow-parens': 'off',
         'comma-dangle': ['error', 'only-multiline'],
-        'eol-last': ['error', 'never'],
-        'complexity': ['error', 10],
+        'eol-last': ['error', 'always'],
+        complexity: ['error', 10],
         'func-names': 'off',
         'global-require': 'off',
         'handle-callback-err': ['error', '^(err|error)$'],
@@ -68,7 +68,11 @@ module.exports = {
         semi: ['error', 'always'],
         'no-await-in-loop': 'off',
         'no-restricted-syntax': 'off',
-        'promise/always-return': 'off'
+        'promise/always-return': 'off',
+        'object-curly-spacing': ['error', 'always'],
+        'object-shorthand': ['error', 'always'],
+        'no-lonely-if': 'off',
+        'consistent-return': 'off'
     },
     globals: {
         window: true,
