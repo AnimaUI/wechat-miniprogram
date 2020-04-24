@@ -230,7 +230,7 @@
                     </view>
                     <Notice
                         class="notice"
-                        scroll="{{true}}"
+                        scroll="{{false}}"
                         close="{{false}}"
                         closeColor="#F24849"
                         bgColor="#ffecbd"
@@ -251,7 +251,7 @@
                     </view>
                     <Notice
                         class="notice"
-                        scroll="{{true}}"
+                        scroll="{{flase}}"
                         close="{{false}}"
                         closeColor="#F24849"
                         bgColor="#ffecbd"
@@ -259,15 +259,15 @@
                         color="#f24849"
                         show-icon="{{true}}"
                         iconColor="#f24849"
-                        notice="{direction}的值有: t/r/b/l | {size}的值从0~100增加，步长为2rpx"/>
+                        notice="{d}的值有: t/r/b/l | {size}的值0~100，步长为2rpx"/>
                     <view class="flex justify-around padding-sub solid-bottom">
                         <view class="fs-26">
                             外边距
-                            <view>.m{direction}-{size}</view>
+                            <view>.m{d}-{size}</view>
                         </view>
                         <view class="fs-26">
                             内边距
-                            <view>.p{direction}-{size}</view>
+                            <view>.p{d}-{size}</view>
                         </view>
                     </view>
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
@@ -330,7 +330,7 @@
                     </view>
                     <Notice
                         class="notice"
-                        scroll="{{true}}"
+                        scroll="{{false}}"
                         close="{{false}}"
                         closeColor="#F24849"
                         bgColor="#ffecbd"
