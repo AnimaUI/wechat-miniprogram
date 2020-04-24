@@ -5,7 +5,7 @@ Page({
         imgBaseUrl: app.imgBaseUrl,
         swiperHeight: 0,
         currentTab: 0,
-        activeColorClass: 'olive',
+        activeColorClass: 'green',
         tabData: [
             {
                 name: '未使用',

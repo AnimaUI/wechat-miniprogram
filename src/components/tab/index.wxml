@@ -1,3 +1,12 @@
+<wxs module="module">
+    var getSelectedClass = function(index, currentTab, activeColorClass) {
+        if (+currentTab ===  +index) {
+            return activeColorClass;
+        }
+        return '';
+    }
+    module.exports = { getSelectedClass: getSelectedClass };
+</wxs>
 <view class="ani-tab">
     <scroll-view
         scroll-x="true"
@@ -5,7 +14,8 @@
         class="ani-bar"
         scroll-left="{{(currentTab - 2) * singleNavWidth}}">
         <view
-            class="item {{currentTab == index ? 'selected  text-{{activeColorClass}}' : ''}}"
+            class="item {{currentTab == index ? 'selected' : ''}} text-{{module.getSelectedClass(index, currentTab, activeColorClass)}}"
+            style="--active-line: var(--{{module.getSelectedClass(index, currentTab, activeColorClass)}})"
             wx:for="{{tabData}}"
             wx:key="name"
             data-current="{{index}}"

@@ -12,7 +12,7 @@ Component({
         },
         activeColorClass: {
             type: String,
-            value: 0
+            value: 'sky-blue'
         },
         tabData: {
             type: Array,
@@ -69,6 +69,9 @@ Component({
                 });
                 this.triggerEvent('changeEvent', index);
             }
+        },
+        getSelectedBg() {
+            return 'red';
         }
     }
 });
