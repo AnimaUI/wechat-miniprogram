@@ -19,9 +19,9 @@
 .flex {
     display: flex;
 }
-.align-center {
+
+.text-center {
     text-align: center;
-    align-items: center;
 }
 
 /* 项目位于容器的开头 */
@@ -162,6 +162,14 @@
     &.col-5 {
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: auto;
+    }
+    --grid-row-gap: 10rpx;
+    --grid-column-gap: 10rpx;
+    &.grid-row-gap {
+        grid-row-gap: var(--grid-row-gap);
+    }
+    &.grid-column-gap {
+        grid-column-gap: var(--grid-column-gap);
     }
 }
 

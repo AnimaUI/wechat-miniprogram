@@ -1,3 +1,7 @@
+.main {
+  --grid-row-gap: 30rpx;
+  --grid-column-gap: 30rpx;
+}
 .main .item .box-bar {
   height: 100rpx;
   line-height: 100rpx;
