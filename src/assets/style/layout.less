@@ -171,6 +171,14 @@
     &.grid-column-gap {
         grid-column-gap: var(--grid-column-gap);
     }
+    /* 先行后列 */
+    &.grid-af-rd {
+        grid-auto-flow: row dense;
+    }
+    /* 先列后行 */
+    &.grid-af-cd {
+        grid-auto-flow: column dense;
+    }
 }
 
 .relative {

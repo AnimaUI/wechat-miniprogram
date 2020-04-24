@@ -103,7 +103,7 @@
                         <text class="dot inline-block bg-green"></text>
                         垂直方向对齐
                     </view>
-                    <view class="flex align-start  pl-30 pt-10 bg-white">
+                    <view class="flex align-start pl-30 pt-10 bg-white">
                         <view class="bg-fusion-blue-grey text-white padding-lg margin-xs fs-26 radius-8">AnimaUI</view>
                         <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">align-start</view>
                     </view>
@@ -188,6 +188,37 @@
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-5</view>
                         <view class="bg-blue-green text-white padding-sm fs-26">col-5</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-5</view>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        展示顺序
+                    </view>
+                    <view
+                        class="grid col-3 grid-af-rd pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap text-center fs-30">
+                        <view class="bg-red text-white padding-sm fs-26">row dense: 1</view>
+                        <view class="bg-fusion-red text-white padding-sm fs-26">row dense: 2</view>
+                        <view class="bg-orange text-white padding-sm fs-26">row dense: 3</view>
+                        <view class="bg-fusion-orange text-white padding-sm fs-26">row dense: 4</view>
+                        <view class="bg-yellow text-white padding-sm fs-26">row dense: 5</view>
+                        <view class="bg-fusion-yellow text-white padding-sm fs-26">row dense: 6</view>
+                        <view class="bg-olive text-white padding-sm fs-26">row dense: 7</view>
+                        <view class="bg-fusion-olive text-white padding-sm fs-26">row dense: 8</view>
+                        <view class="bg-green text-white padding-sm fs-26">row dense: 9</view>
+                    </view>
+                    <view
+                        class="grid col-3 grid-af-cd pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap text-center fs-30"
+                        style="grid-template-rows: 70rpx 70rpx 70rpx;">
+                        <view class="bg-red text-white padding-sm fs-26">column dense: 1</view>
+                        <view class="bg-fusion-red text-white padding-sm fs-26">column dense: 2</view>
+                        <view class="bg-orange text-white padding-sm fs-26">column dense: 3</view>
+                        <view class="bg-fusion-orange text-white padding-sm fs-26">column dense: 4</view>
+                        <view class="bg-yellow text-white padding-sm fs-26">column dense: 5</view>
+                        <view class="bg-fusion-yellow text-white padding-sm fs-26">column dense: 6</view>
+                        <view class="bg-olive text-white padding-sm fs-26">column dense: 7</view>
+                        <view class="bg-fusion-olive text-white padding-sm fs-26">column dense: 8</view>
+                        <view class="bg-green text-white padding-sm fs-26">column dense: 9</view>
                     </view>
                 </view>
             </swiper-item>
