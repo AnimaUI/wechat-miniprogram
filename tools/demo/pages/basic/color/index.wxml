@@ -16,8 +16,8 @@
 </CustomBar>
 <Notice
     class="notice"
-    scroll="{{true}}"
-    close="{{true}}"
+    scroll="{{false}}"
+    close="{{false}}"
     closeColor="#F24849"
     bgColor="#ffecbd"
     bgRgba="rgba(255, 236, 219, 1)"
