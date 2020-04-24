@@ -339,7 +339,7 @@
                         show-icon="{{true}}"
                         iconColor="#f24849"
                         notice="{size}的值从0~100增加，步长为2rpx"/>
-                    <view class="padding-sub solid-bottom grid-row-gap grid-column-gap">
+                    <view class="grid col-2 padding-sub solid-bottom grid-row-gap grid-column-gap">
                         <view class="fs-26">
                             .round (radius: 50%)
                         </view>
