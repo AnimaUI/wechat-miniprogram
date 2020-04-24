@@ -16,20 +16,61 @@
             style="height: {{swiperHeight ? swiperHeight + 'px' : 'auto'}}"
             bindchange="switchTabContent">
             <swiper-item class="ani-swiper-item">
-                <view class="left">
-                    <view class="left-top">
-                        <text class="rmb">¥</text>
-                        <text class="price">11111</text>
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-green"></text>
+                        固定布局
                     </view>
-                    <view class="left-bottom">
-                        <text class="label">222222</text>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-xs text-white padding-sm margin-xs fs-26">xs (20%)</view>
+                        <view class="flex-hf"></view>
+                        <view class="bg-fusion-blue-grey flex-sm text-white padding-sm margin-xs fs-26">sm (40%)</view>
+                        <view class="flex-hf"></view>
+                        <view class="bg-fusion-blue-grey flex-hf text-white padding-sm margin-xs fs-26">hf (50%)</view>
+                        <view class="bg-fusion-blue-grey flex-lg text-white padding-sm margin-xs fs-26">lg (60%)</view>
+                        <view class="bg-fusion-blue-grey flex-xl text-white padding-sm margin-xs fs-26">xl (80%)</view>
+                        <view class="bg-fusion-blue-grey flex-xxl text-white padding-sm margin-xs fs-26">xxl (100%)</view>
                     </view>
                 </view>
-                <view class="right">
-                    <text class="item-1">22222</text>
-                    <text class="item-2">优惠券描述</text>
-                    <text class="item-3">dsafds</text>
-                    <text class="item-4">fsafsdf</text>
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-green"></text>
+                        比例布局
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    </view>
+                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
+                    </view>
                 </view>
             </swiper-item>
             <swiper-item class="ani-swiper-item">

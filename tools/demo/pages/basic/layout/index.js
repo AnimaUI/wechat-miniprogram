@@ -8,16 +8,16 @@ Page({
         activeColorClass: 'green',
         tabData: [
             {
-                name: '未使用',
-                icon: 'notUsed'
+                name: 'Flex布局',
+                icon: 'flex'
             },
             {
-                name: '已使用',
-                icon: 'alreadyUsed'
+                name: 'Grid布局',
+                icon: 'grid'
             },
             {
-                name: '已过期',
-                icon: 'expired'
+                name: '辅助布局',
+                icon: 'auxiliary'
             }
         ]
     },

@@ -25,31 +25,26 @@
 }
 
 /* 项目位于容器的开头 */
-
 .justify-start {
     justify-content: flex-start;
 }
 
 /* 项目位于容器的结尾 */
-
 .justify-end {
     justify-content: flex-end;
 }
 
 /* 项目位于容器的中心 */
-
 .justify-center {
     justify-content: center;
 }
 
 /* 项目位于各行之间留有空白的容器内 */
-
 .justify-between {
     justify-content: space-between;
 }
 
 /* 项目位于各行之前、之间、之后都留有空白的容器内 */
-
 .justify-around {
     justify-content: space-around;
 }
@@ -60,6 +55,30 @@
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-xs {
+    flex-basis: 20%;
+}
+
+.flex-sm {
+	flex-basis: 40%;
+}
+
+.flex-hf {
+	flex-basis: 50%;
+}
+
+.flex-lg {
+	flex-basis: 60%;
+}
+
+.flex-xl {
+	flex-basis: 80%;
+}
+
+.flex-xxl {
+	flex-basis: 100%;
 }
 
 .flex-once {
@@ -74,6 +93,10 @@
     flex: 3;
 }
 
+.flex-four {
+    flex: 4;
+}
+
 .fixed {
     position: fixed;
 }
@@ -84,7 +107,7 @@
 
 /* margin-left */
 .marginLeft(100);
-.marginLeft(@ml, @i: 2) when (@i =< @ml) {
+.marginLeft(@ml, @i: 0) when (@i =< @ml) {
     .ml-@{i} {
         margin-left: 0rpx + @i;
     }
@@ -92,7 +115,7 @@
 }
 /* margin-right */
 .marginRight(100);
-.marginRight(@mr, @i: 2) when (@i =< @mr) {
+.marginRight(@mr, @i: 0) when (@i =< @mr) {
     .mr-@{i} {
         margin-right: 0rpx + @i;
     }
@@ -100,7 +123,7 @@
 }
 /* margin-top */
 .marginTop(100);
-.marginTop(@mt, @i: 2) when (@i =< @mt) {
+.marginTop(@mt, @i: 0) when (@i =< @mt) {
     .mt-@{i} {
         margin-top: 0rpx + @i;
     }
@@ -108,15 +131,39 @@
 }
 /* margin-botoom */
 .marginBotoom(100);
-.marginBotoom(@mb, @i: 2) when (@i =< @mb) {
+.marginBotoom(@mb, @i: 0) when (@i =< @mb) {
     .mb-@{i} {
         margin-bottom: 0rpx + @i;
     }
     .marginBotoom(@mb, (@i + 2));
 }
+
+.margin-0 {
+    margin: 0;
+}
+.margin-xs {
+    margin: 10rpx;
+}
+
+.margin-sm {
+    margin: 20rpx;
+}
+
+.margin-sub {
+    margin: 30rpx;
+}
+
+.margin-lg {
+    margin: 40rpx;
+}
+
+.margin-xl {
+    margin: 50rpx;
+}
+
 /* padding-left */
 .paddingLeft(100);
-.paddingLeft(@ml, @i: 2) when (@i =< @ml) {
+.paddingLeft(@ml, @i: 0) when (@i =< @ml) {
     .pl-@{i} {
         padding-left: 0rpx + @i;
     }
@@ -124,7 +171,7 @@
 }
 /* padding-right */
 .paddingRight(100);
-.paddingRight(@mr, @i: 2) when (@i =< @mr) {
+.paddingRight(@mr, @i: 0) when (@i =< @mr) {
     .pr-@{i} {
         padding-right: 0rpx + @i;
     }
@@ -132,7 +179,7 @@
 }
 /* padding-top */
 .paddingTop(100);
-.paddingTop(@mt, @i: 2) when (@i =< @mt) {
+.paddingTop(@mt, @i: 0) when (@i =< @mt) {
     .pt-@{i} {
         padding-top: 0rpx + @i;
     }
@@ -140,7 +187,7 @@
 }
 /* padding-botoom */
 .paddingBotoom(100);
-.paddingBotoom(@mb, @i: 2) when (@i =< @mb) {
+.paddingBotoom(@mb, @i: 0) when (@i =< @mb) {
     .pb-@{i} {
         padding-bottom: 0rpx + @i;
     }
@@ -158,7 +205,7 @@
     padding: 20rpx;
 }
 
-.padding {
+.padding-sub {
     padding: 30rpx;
 }
 
@@ -169,6 +216,7 @@
 .padding-xl {
     padding: 50rpx;
 }
+
 .solid,
 .solid-top,
 .solid-right,
