@@ -141,8 +141,44 @@
     flex: 4;
 }
 
+.grid {
+    display: grid;
+    &.col-1 {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    &.col-2 {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+    &.col-3 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: auto;
+    }
+    &.col-4 {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+    }
+    &.col-5 {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
 .fixed {
     position: fixed;
+}
+
+.static {
+    position: static;
 }
 
 .overflow-hidden {
@@ -297,23 +333,23 @@
 }
 /* 实线 */
 .solid::after {
-    border: 1rpx solid rgba(0, 0, 0, 0.1);
+    border: 1rpx solid rgba(0, 0, 0, .3);
 }
 
 .solid-top::after {
-    border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-top: 1rpx solid rgba(0, 0, 0, .3);
 }
 
 .solid-right::after {
-    border-right: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-right: 1rpx solid rgba(0, 0, 0, .3);
 }
 
 .solid-bottom::after {
-    border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1rpx solid rgba(0, 0, 0, .3);
 }
 
 .solid-left::after {
-    border-left: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-left: 1rpx solid rgba(0, 0, 0, .3);
 }
 
 /* 虚线 */
