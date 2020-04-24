@@ -49,8 +49,52 @@
     justify-content: space-around;
 }
 
-.flex-direction {
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.self-center {
+    align-self: flex-center;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.self-stretch {
+    align-self: stretch;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
     flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -62,23 +106,23 @@
 }
 
 .flex-sm {
-	flex-basis: 40%;
+    flex-basis: 40%;
 }
 
 .flex-hf {
-	flex-basis: 50%;
+    flex-basis: 50%;
 }
 
 .flex-lg {
-	flex-basis: 60%;
+    flex-basis: 60%;
 }
 
 .flex-xl {
-	flex-basis: 80%;
+    flex-basis: 80%;
 }
 
 .flex-xxl {
-	flex-basis: 100%;
+    flex-basis: 100%;
 }
 
 .flex-once {
@@ -293,4 +337,17 @@
 
 .dashed-left::after {
     border-left: 1rpx dashed #ddd;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+/* padding-top */
+.radius(100);
+.radius(@rd, @i: 2) when (@i =< @rd) {
+    .radius-@{i} {
+        border-radius: 0rpx + @i;
+    }
+    .radius(@rd, (@i + 2));
 }

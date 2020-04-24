@@ -22,14 +22,14 @@
                         固定布局
                     </view>
                     <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-xs text-white padding-sm margin-xs fs-26">xs (20%)</view>
+                        <view class="bg-fusion-blue-grey flex-xs text-white padding-sm margin-xs fs-26 radius-8">xs (20%)</view>
                         <view class="flex-hf"></view>
-                        <view class="bg-fusion-blue-grey flex-sm text-white padding-sm margin-xs fs-26">sm (40%)</view>
+                        <view class="bg-fusion-blue-grey flex-sm text-white padding-sm margin-xs fs-26 radius-8">sm (40%)</view>
                         <view class="flex-hf"></view>
-                        <view class="bg-fusion-blue-grey flex-hf text-white padding-sm margin-xs fs-26">hf (50%)</view>
-                        <view class="bg-fusion-blue-grey flex-lg text-white padding-sm margin-xs fs-26">lg (60%)</view>
-                        <view class="bg-fusion-blue-grey flex-xl text-white padding-sm margin-xs fs-26">xl (80%)</view>
-                        <view class="bg-fusion-blue-grey flex-xxl text-white padding-sm margin-xs fs-26">xxl (100%)</view>
+                        <view class="bg-fusion-blue-grey flex-hf text-white padding-sm margin-xs fs-26 radius-8">hf (50%)</view>
+                        <view class="bg-fusion-blue-grey flex-lg text-white padding-sm margin-xs fs-26 radius-8">lg (60%)</view>
+                        <view class="bg-fusion-blue-grey flex-xl text-white padding-sm margin-xs fs-26 radius-8">xl (80%)</view>
+                        <view class="bg-fusion-blue-grey flex-xxl text-white padding-sm margin-xs fs-26 radius-8">xxl (100%)</view>
                     </view>
                 </view>
                 <view class="item">
@@ -37,39 +37,109 @@
                         <text class="dot inline-block bg-green"></text>
                         比例布局
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
-                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26 radius-8">2</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
-                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26 radius-8">3</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
-                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26 radius-8">4</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26 radius-8">3</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26">3</view>
-                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-treble text-white padding-sm margin-xs fs-26 radius-8">3</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26 radius-8">2</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
-                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
-                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26">1</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26 radius-8">2</view>
+                        <view class="bg-fusion-blue-grey flex-once text-white padding-sm margin-xs fs-26 radius-8">1</view>
                     </view>
-                    <view class="flex flex-wrap pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
-                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26">2</view>
-                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26">4</view>
+                    <view class="flex pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26 radius-8">4</view>
+                        <view class="bg-fusion-blue-grey flex-twice text-white padding-sm margin-xs fs-26 radius-8">2</view>
+                        <view class="bg-fusion-blue-grey flex-four text-white padding-sm margin-xs fs-26 radius-8">4</view>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-green"></text>
+                        水平方向对齐
+                    </view>
+                    <view class="flex justify-start pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-start</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-start</view>
+                    </view>
+                    <view class="flex justify-end pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-end</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-end</view>
+                    </view>
+                    <view class="flex justify-center pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-center</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-center</view>
+                    </view>
+                    <view class="flex justify-between pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-between</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-between</view>
+                    </view>
+                    <view class="flex justify-around pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-around</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">justify-around</view>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-green"></text>
+                        垂直方向对齐
+                    </view>
+                    <view class="flex align-start  pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-lg margin-xs fs-26 radius-8">AnimaUI</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">align-start</view>
+                    </view>
+                    <view class="flex align-end pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-lg margin-xs fs-26 radius-8">AnimaUI</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">align-end</view>
+                    </view>
+                    <view class="flex align-center pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-lg margin-xs fs-26 radius-8">AnimaUI</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">align-center</view>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-green"></text>
+                        排列方向
+                    </view>
+                    <view class="flex flex-direction-row pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
+                    </view>
+                    <view class="flex flex-direction-row-reverse pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse/view>
+                    </view>
+                    <view class="flex flex-direction-column pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
+                    </view>
+                    <view class="flex flex-direction-column-reverse pl-30 pt-10 bg-white">
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
                     </view>
                 </view>
             </swiper-item>
