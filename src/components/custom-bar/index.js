@@ -1,3 +1,5 @@
+import { prefix } from '../config';
+
 const app = getApp();
 Component({
     /**
@@ -28,6 +30,7 @@ Component({
      * 组件的初始数据
      */
     data: {
+        prefix,
         statusBar: app.globalData.statusBar,
         customBar: app.globalData.customBar,
         custom: app.globalData.custom

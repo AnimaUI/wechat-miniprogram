@@ -7,7 +7,8 @@ Page({
         imgBaseUrl: app.imgBaseUrl,
         menuBar: app.globalData.menuBar,
         colour,
-        list: [{
+        list: [
+            {
                 icon: 'ani-icon-color',
                 en: 'color',
                 cn: '色彩',
@@ -17,7 +18,7 @@ Page({
                 icon: 'ani-icon-layout-fill',
                 en: 'layout',
                 cn: '布局',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/layout/index'
             },
             {
                 icon: 'ani-icon-icon',
@@ -88,9 +89,9 @@ Page({
         const url = e.currentTarget.dataset.url;
         wx.navigateTo({
             url,
-            success: function(res) {},
-            fail: function(res) {},
-            complete: function(res) {}
+            success: function (res) {},
+            fail: function (res) {},
+            complete: function (res) {}
         });
     }
 });

@@ -122,24 +122,24 @@
                         排列方向
                     </view>
                     <view class="flex flex-direction-row pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row: 1</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row: 2</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row: 3</view>
                     </view>
                     <view class="flex flex-direction-row-reverse pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse/view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse: 1</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse: 2</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">row-reverse: 3</view>
                     </view>
                     <view class="flex flex-direction-column pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column: 1</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column: 2</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column: 3</view>
                     </view>
                     <view class="flex flex-direction-column-reverse pl-30 pt-10 bg-white">
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
-                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse: 1</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse: 2</view>
+                        <view class="bg-fusion-blue-grey text-white padding-sm margin-xs fs-26 radius-8">column-reverse: 3</view>
                     </view>
                 </view>
             </swiper-item>

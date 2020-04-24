@@ -1,3 +1,5 @@
+import { prefix } from '../config';
+
 // const app = getApp();
 Component({
     options: {
@@ -46,7 +48,9 @@ Component({
             value: 'rgba(255, 236, 219, 1);' // 背景颜色的rgba形式，a的值为0，配合close使用
         }
     },
-    data: {},
+    data: {
+        prefix
+    },
     methods: {
         onDismissNotice: function onDismissNotice(event) {
             this.setData({

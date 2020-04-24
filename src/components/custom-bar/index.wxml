@@ -1,14 +1,14 @@
-<view class="ani-custom" style="height:{{customBar}}px">
+<view class="{{prefix}}-custom" style="height:{{customBar}}px">
     <view
-        class="ani-bar fixed {{className}}"
+        class="{{prefix}}-bar fixed {{className}}"
         style="height: {{customBar}}px; padding-top: {{statusBar}}px; {{bgImage?'background-image:url(' + bgImage+')':''}}">
         <view class="action" bindtap="backPage" wx:if="{{isBack}}">
-            <text class="ani-icon-back"></text>
+            <text class="{{prefix}}-icon-back"></text>
             <slot name="backText"></slot>
         </view>
         <view class="action border-custom" wx:if="{{isCustom}}" style="width:{{custom.width}}px;height:{{custom.height}}px;margin-left:calc(750rpx - {{custom.right}}px)">
-            <text class="ani-icon-back" bindtap="backPage"></text>
-            <text class="ani-icon-home" bindtap="toHome"></text>
+            <text class="{{prefix}}-icon-back" bindtap="backPage"></text>
+            <text class="{{prefix}}-icon-home" bindtap="toHome"></text>
         </view>
         <view class="content" style="top:{{statusBar}}px">
             <slot name="content"></slot>

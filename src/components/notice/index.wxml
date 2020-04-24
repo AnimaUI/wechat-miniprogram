@@ -1,16 +1,16 @@
-<view wx:if="{{isShow && notice}}" class="ani-notice" style="background-color: {{bgColor}};">
-    <text wx:if="{{showIcon}}" class="ani-notice-icon ani-icon-notification-fill" style="color: {{iconColor}}"></text>
-    <view class="ani-notice-text-wrap" style="color: {{color}};">
-        <view wx:if="{{scroll}}" class="ani-notice-text  ani-notice-text-animate">
-            <text class="ani-notice-text-span">{{notice}}</text>
-            <text class="ani-notice-text-span">{{notice}}</text></view>
+<view wx:if="{{isShow && notice}}" class="{{prefix}}-notice" style="background-color: {{bgColor}};">
+    <text wx:if="{{showIcon}}" class="{{prefix}}-notice-icon {{prefix}}-icon-notification-fill" style="color: {{iconColor}}"></text>
+    <view class="{{prefix}}-notice-text-wrap" style="color: {{color}};">
+        <view wx:if="{{scroll}}" class="{{prefix}}-notice-text  {{prefix}}-notice-text-animate">
+            <text class="{{prefix}}-notice-text-span">{{notice}}</text>
+            <text class="{{prefix}}-notice-text-span">{{notice}}</text></view>
         <view wx:else class="notice__text">
-            <text class="ani-notice-text-span">{{notice}}</text>
+            <text class="{{prefix}}-notice-text-span">{{notice}}</text>
         </view>
     </view>
     <block wx:if="{{close}}">
         <text
-            class="ani-notice-close  ani-notice-text-overlay ani-icon-close-fill"
+            class="{{prefix}}-notice-close  {{prefix}}-notice-text-overlay {{prefix}}-icon-close-fill"
             style="color: {{closeColor}};background: linear-gradient(to right, {{bgRgba}}, {{bgColor}});"
             bindtap="onDismissNotice"></text>
     </block>

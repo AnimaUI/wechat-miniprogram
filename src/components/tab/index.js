@@ -1,3 +1,4 @@
+import { prefix } from '../config';
 
 Component({
     options: {
@@ -20,6 +21,7 @@ Component({
         }
     },
     data: {
+        prefix,
         swiperHeight: 0,
         pixelRatio: 1,
         windowWidth: 0,

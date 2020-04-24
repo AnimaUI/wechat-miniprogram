@@ -1,17 +1,17 @@
 <wxs module="module">
     var getSelectedClass = function(index, currentTab, activeColorClass) {
-        if (+currentTab ===  +index) {
+        if (+currentTab === +index) {
             return activeColorClass;
         }
         return '';
     }
     module.exports = { getSelectedClass: getSelectedClass };
 </wxs>
-<view class="ani-tab">
+<view class="{{prefix}}-tab">
     <scroll-view
         scroll-x="true"
         scroll-with-animation="{{true}}"
-        class="ani-bar"
+        class="{{prefix}}-bar"
         scroll-left="{{(currentTab - 2) * singleNavWidth}}">
         <view
             class="item {{currentTab == index ? 'selected' : ''}} text-{{module.getSelectedClass(index, currentTab, activeColorClass)}}"
