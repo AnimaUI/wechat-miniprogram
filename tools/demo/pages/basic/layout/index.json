@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "Tab": "../../../animaUi/components/tab/index"
+        "Tab": "../../../animaUi/components/tab/index",
+        "Notice": "../../../animaUi/components/notice/index"
     },
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "white"

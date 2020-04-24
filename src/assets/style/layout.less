@@ -397,7 +397,7 @@
 
 /* padding-top */
 .radius(100);
-.radius(@rd, @i: 2) when (@i =< @rd) {
+.radius(@rd, @i: 0) when (@i =< @rd) {
     .radius-@{i} {
         border-radius: 0rpx + @i;
     }

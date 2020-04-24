@@ -223,32 +223,141 @@
                 </view>
             </swiper-item>
             <swiper-item class="ani-swiper-item">
-                <view class="left">
-                    <view class="left-top">
-                        <text class="rmb">¥</text>
-                        <text class="price">11111</text>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-cyan"></text>
+                        内外边距
                     </view>
-                    <view class="left-bottom">
-                        <text class="label">222222</text>
+                    <Notice
+                        class="notice"
+                        scroll="{{true}}"
+                        close="{{false}}"
+                        closeColor="#F24849"
+                        bgColor="#ffecbd"
+                        bgRgba="rgba(255, 236, 219, 1)"
+                        color="#f24849"
+                        show-icon="{{true}}"
+                        iconColor="#f24849"
+                        notice="{size}的值有: 0/xs/sm/sub/lg/xl"/>
+                    <view class="flex justify-around padding-sub solid-bottom grid-row-gap grid-column-gap">
+                        <view class="fs-26">
+                            外边距
+                            <view>.margin-{size}</view>
+                        </view>
+                        <view class="fs-26">
+                            内边距
+                            <view>.padding-{size}</view>
+                        </view>
                     </view>
-                </view>
-                <view class="right">
-                    <text class="item-1">22222</text>
-                    <text class="item-2">优惠券描述</text>
-                    <text class="item-3">dsafds</text>
-                    <text class="item-4">fsafsdf</text>
-                </view>
-                <view class="right">
-                    <text class="item-1">22222</text>
-                    <text class="item-2">优惠券描述</text>
-                    <text class="item-3">dsafds</text>
-                    <text class="item-4">fsafsdf</text>
-                </view>
-                <view class="right">
-                    <text class="item-1">22222</text>
-                    <text class="item-2">优惠券描述</text>
-                    <text class="item-3">dsafds</text>
-                    <text class="item-4">fsafsdf</text>
+                    <Notice
+                        class="notice"
+                        scroll="{{true}}"
+                        close="{{false}}"
+                        closeColor="#F24849"
+                        bgColor="#ffecbd"
+                        bgRgba="rgba(255, 236, 219, 1)"
+                        color="#f24849"
+                        show-icon="{{true}}"
+                        iconColor="#f24849"
+                        notice="{direction}的值有: t/r/b/l | {size}的值从0~100增加，步长为2rpx"/>
+                    <view class="flex justify-around padding-sub solid-bottom">
+                        <view class="fs-26">
+                            外边距
+                            <view>.m{direction}-{size}</view>
+                        </view>
+                        <view class="fs-26">
+                            内边距
+                            <view>.p{direction}-{size}</view>
+                        </view>
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-cyan"></text>
+                        定位
+                    </view>
+                    <view class="flex justify-around padding-sub solid-bottom">
+                        <view class="fs-26">
+                            .relative
+                        </view>
+                        <view class="fs-26">
+                            .absolute
+                        </view>
+                        <view class="fs-26">
+                            .fixed
+                        </view>
+                        <view class="fs-26">
+                            .static
+                        </view>
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-cyan"></text>
+                        边框
+                    </view>
+                    <view class="grid col-3 padding-sub solid-bottom">
+                        <view class="fs-26 padding-xs">
+                            .solid
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solid-top
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solid-right
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solid-bottom
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solid-left
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .dashed
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .dashed-top
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .dashed-right
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .dashed-bottom
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .dashed-left
+                        </view>
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-red"></text>
+                        其他
+                    </view>
+                    <Notice
+                        class="notice"
+                        scroll="{{true}}"
+                        close="{{false}}"
+                        closeColor="#F24849"
+                        bgColor="#ffecbd"
+                        bgRgba="rgba(255, 236, 219, 1)"
+                        color="#f24849"
+                        show-icon="{{true}}"
+                        iconColor="#f24849"
+                        notice="{size}的值从0~100增加，步长为2rpx"/>
+                    <view class="padding-sub solid-bottom grid-row-gap grid-column-gap">
+                        <view class="fs-26">
+                            .radius-{size}
+                        </view>
+                    </view>
+                    <view class="grid col-3 padding-sub solid-bottom grid-row-gap grid-column-gap">
+                        <view class="fs-26">
+                            .text-center
+                        </view>
+                        <view class="fs-26">
+                            .block
+                        </view>
+                        <view class="fs-26">
+                            .inline-block
+                        </view>
+                        <view class="fs-26">
+                            .none
+                        </view>
+                    </view>
                 </view>
             </swiper-item>
         </swiper>
