@@ -1,6 +1,6 @@
 <wxs module="module">
     var getIconText = function(str) {
-        return str.split('-')[2];
+        return str.split('ani-icon-')[1];
     }
     module.exports = { getIconText: getIconText };
 </wxs>
