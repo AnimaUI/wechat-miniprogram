@@ -129,3 +129,19 @@ npm run clean
 ```
 npm run clean-dev
 ```
+
+## 获取iconfont下的所有图标icon
+
+```javascript
+let li = document.getElementsByClassName('icon-code-show');
+let len = li.length;
+let iconArray = [];
+for(let i = 0; i < len; i++) {
+    iconArray.push(li[i].innerHTML);
+}
+```
+
+> 按字母排序
+```javascript
+array.sort(function(a,b){return a.localeCompare(b)})
+```

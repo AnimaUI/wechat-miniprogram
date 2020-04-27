@@ -1,0 +1,24 @@
+<wxs module="module">
+    var getIconText = function(str) {
+        return str.split('-')[2];
+    }
+    module.exports = { getIconText: getIconText };
+</wxs>
+<CustomBar className="bg-gradual-orange text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">icon</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page icon-box">
+    <Search bgColor="bg-white" bind:search="search" />
+    <view class="main grid col-3 bg-white">
+        <view
+            class="item text-center solid text-dark-gray"
+            wx:for="{{icon}}"
+            wx:key
+            data-text="{{item}}"
+            bindtap="copyText">
+            <tetx class="block fs-48 {{item}}"></tetx>
+            <tetx class="en mt-24 block">{{module.getIconText(item)}}</tetx>
+        </view>
+    </view>
+</scroll-view>
