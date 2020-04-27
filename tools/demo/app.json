@@ -1,9 +1,9 @@
 {
     "pages": [
-        "pages/basic/icon/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
+        "pages/basic/icon/index",
         "pages/component/index",
         "pages/solution/index",
         "pages/about/index"

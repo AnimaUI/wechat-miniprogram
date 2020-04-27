@@ -20,7 +20,7 @@
             wx:if="{{item.isShow}}"
             data-text="{{item.iconName}}"
             bindtap="copyText">
-            <tetx class="block fs-48 {{item.iconName}}"></tetx>
+            <tetx class="block fs-48 text-shadow-black {{item.iconName}}"></tetx>
             <tetx class="en mt-24 block">{{module.getIconText(item.iconName)}}</tetx>
         </view>
     </view>

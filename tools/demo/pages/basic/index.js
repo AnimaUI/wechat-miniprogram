@@ -24,7 +24,7 @@ Page({
                 icon: 'ani-icon-icon',
                 en: 'icon',
                 cn: '图标',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/icon/index'
             },
             {
                 icon: 'ani-icon-btn',
