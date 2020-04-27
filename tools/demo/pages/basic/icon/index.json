@@ -1,6 +1,6 @@
 {
     "usingComponents": {
-        "Notice": "../../../animaUi/components/search/index"
+        "Search": "../../../animaUi/components/search/index"
     },
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "white"

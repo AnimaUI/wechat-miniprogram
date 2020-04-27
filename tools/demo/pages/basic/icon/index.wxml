@@ -9,16 +9,17 @@
     <view slot="content" class="capitalize">icon</view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page icon-box">
-    <Search bgColor="bg-white" bind:search="search" />
+    <Search class="search-el bg-white" bgColor="bg-gray" bind:search="search" />
     <view class="main grid col-3 bg-white">
         <view
             class="item text-center solid text-dark-gray"
             wx:for="{{icon}}"
             wx:key
-            data-text="{{item}}"
+            wx:if="{{item.isShow}}"
+            data-text="{{item.iconName}}"
             bindtap="copyText">
-            <tetx class="block fs-48 {{item}}"></tetx>
-            <tetx class="en mt-24 block">{{module.getIconText(item)}}</tetx>
+            <tetx class="block fs-48 {{item.iconName}}"></tetx>
+            <tetx class="en mt-24 block">{{module.getIconText(item.iconName)}}</tetx>
         </view>
     </view>
 </scroll-view>

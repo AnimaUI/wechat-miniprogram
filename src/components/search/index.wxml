@@ -1,0 +1,12 @@
+<view class="search flex justify-start block-center {{bgColor}}">
+    <text class="{{prefix}}-icon-search fs-30"></text>
+    <input
+        type="text"
+        class="input"
+        confirm-type="search"
+        placeholder="{{placeholder}}"
+        bindinput="changeValue"
+        bindconfirm="bindSearch"
+        value="{{key}}" />
+    <text class="{{prefix}}-icon-close-fill icon-clear dark-gray fs-30" wx:if="{{key.length > 0}}" bind:tap="clear"></text>
+</view>

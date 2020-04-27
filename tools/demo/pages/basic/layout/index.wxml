@@ -356,6 +356,9 @@
                             .text-center
                         </view>
                         <view class="fs-26">
+                            .block-center
+                        </view>
+                        <view class="fs-26">
                             .block
                         </view>
                         <view class="fs-26">

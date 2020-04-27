@@ -1,6 +1,12 @@
 // 获取应用实例
 const app = getApp();
-const icon = require('./icon');
+let icon = require('./icon');
+icon = icon.map(item => {
+    return {
+        iconName: item,
+        isShow: true
+    }
+});
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
@@ -11,9 +17,18 @@ Page({
     onShareAppMessage() {},
     onShow() {},
     search(e) {
-        let key = e.detail;
+        const key = e.detail.toLowerCase();
+        let list = this.data.icon;
         this.setData({
             searchInfo: key
+        });
+        list = list.map(item => {
+            let iconName = item.iconName.toLowerCase();
+            item.isShow = iconName.search(key) != -1;
+            return item;
+        });
+        this.setData({
+            icon: list
         });
     },
     copyText(e) {
