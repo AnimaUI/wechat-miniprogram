@@ -9,7 +9,9 @@
     <view slot="content" class="capitalize">icon</view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page icon-box">
-    <Search class="search-el bg-white" bgColor="bg-gray" bind:search="search" />
+    <view class="search-box fixed bg-white">
+        <Search class="search-el" bgColor="bg-gray" bind:search="search" />
+    </view>
     <view class="main grid col-3 bg-white">
         <view
             class="item text-center solid text-dark-gray"
