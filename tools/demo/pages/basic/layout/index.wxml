@@ -149,17 +149,17 @@
                         <text class="dot inline-block bg-blue-green"></text>
                         等分
                     </view>
-                    <view class="grid col-1 pl-30 pr-30 pt-10 solid-bottom grid-row-gap grid-column-gap">
+                    <view class="grid col-1 pl-30 pr-30 pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap">
                         <view class="bg-blue-green text-white padding-sm fs-26">col-1</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-1</view>
                     </view>
-                    <view class="grid col-2 pl-30 pr-30 pt-10 solid-bottom grid-row-gap grid-column-gap">
+                    <view class="grid col-2 pl-30 pr-30 pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap">
                         <view class="bg-blue-green text-white padding-sm fs-26">col-2</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-2</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-2</view>
                         <view class="bg-blue-green text-white padding-sm fs-26">col-2</view>
                     </view>
-                    <view class="grid col-3 pl-30 pr-30 pt-10 solid-bottom grid-row-gap grid-column-gap">
+                    <view class="grid col-3 pl-30 pr-30 pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap">
                         <view class="bg-blue-green text-white padding-sm fs-26">col-3</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-3</view>
                         <view class="bg-blue-green text-white padding-sm fs-26">col-3</view>
@@ -167,7 +167,9 @@
                         <view class="bg-blue-green text-white padding-sm fs-26">col-3</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-3</view>
                     </view>
-                    <view class="grid col-4 pl-30 pr-30 pt-10 solid-bottom grid-row-gap grid-column-gap" style="--grid-row-gap: 6rpx;--grid-column-gap: 6rpx;">
+                    <view
+                        class="grid col-4 pl-30 pr-30 pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap"
+                        style="--grid-row-gap: 6rpx;--grid-column-gap: 6rpx;">
                         <view class="bg-blue-green text-white padding-sm fs-26">col-4</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-4</view>
                         <view class="bg-blue-green text-white padding-sm fs-26">col-4</view>
@@ -177,7 +179,9 @@
                         <view class="bg-blue-green text-white padding-sm fs-26">col-4</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-4</view>
                     </view>
-                    <view class="grid col-5 pl-30 pr-30 pt-10 grid-row-gap grid-column-gap" style="--grid-row-gap: 4rpx;--grid-column-gap: 4rpx;">
+                    <view
+                        class="grid col-5 pl-30 pr-30 pt-10 pb-10 grid-row-gap grid-column-gap"
+                        style="--grid-row-gap: 4rpx;--grid-column-gap: 4rpx;">
                         <view class="bg-blue-green text-white padding-sm fs-26">col-5</view>
                         <view class="bg-fusion-blue-green text-white padding-sm fs-26">col-5</view>
                         <view class="bg-blue-green text-white padding-sm fs-26">col-5</view>
