@@ -10,7 +10,7 @@
 </CustomBar>
 <scroll-view scroll-y class="scroll-page icon-box">
     <view class="search-box fixed bg-white">
-        <Search class="search-el" bgColor="bg-gray" bind:search="search" />
+        <Search class="search-el" bgColor="bg-gray" placeholder="共{{icon.length}}个图标" bind:search="search" />
     </view>
     <view class="main grid col-3 bg-white">
         <view
