@@ -1,0 +1,145 @@
+<wxs module="module">
+    var isFusion = function(str) {
+        return +str.indexOf('fusion') === 0;
+    }
+    var getBasicColor = function(arr) {
+        return arr.slice(0, 4);
+    }
+    module.exports = { isFusion: isFusion, getBasicColor: getBasicColor};
+</wxs>
+<CustomBar className="bg-gradual-green text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">button</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page button-box">
+    <view class="main bg-white">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                基础色
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:for="{{module.getBasicColor(basicColor)}}"
+                    wx:key
+                    class="ani-btn bg-{{item}} text-white">
+                    {{module.getBasicColor(basicColorText)[index]}}
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                彩色
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:if="{{!module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+            <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:if="{{module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                暗色
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:if="{{!module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-dark-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+            <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:if="{{module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-dark-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                禁用
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    disabled
+                    type=""
+                    wx:if="{{!module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-disabled-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+            <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    disabled
+                    type=""
+                    wx:if="{{module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-disabled-{{item}} text-white">
+                    {{colourText[index]}}
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                浅色
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:if="{{!module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-light-{{item}} text-{{item}}">
+                    {{colourText[index]}}
+                </button>
+            </view>
+            <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button 
+                    wx:if="{{module.isFusion(item)}}"
+                    wx:for="{{colour}}"
+                    wx:key
+                    class="ani-btn bg-light-{{item}} text-{{item}}">
+                    {{colourText[index]}}
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot inline-block bg-blue-green"></text>
+                渐变色
+            </view>
+            <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                <button
+                    wx:for="{{gradualColor}}"
+                    wx:key
+                    class="ani-btn bg-gradual-{{item}} text-white">
+                    {{gradualColorText[index]}}
+                </button>
+            </view>
+        </view>
+    </view>
+</scroll-view>
