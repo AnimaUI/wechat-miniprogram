@@ -59,12 +59,12 @@ page {
         // 判断是否是占位符
         .textType(@typeName) when not( @typeName = null) {
             .text-@{typeName}-@{name} {
-                color: var(~'--@{typeName}-@{name}');
+                color: var(~'--@{typeName}-@{name}')!important;
             }
         }
         .textType(@typeName) when ( @typeName = null) {
             .text-@{name} {
-                color: var(~'--@{name}');
+                color: var(~'--@{name}')!important;
             }
         }
         .color(@colors, (@j + 1));
@@ -109,19 +109,19 @@ page {
 
 /* 不正经黑色 */
 .text-black {
-    color: var(--black);
+    color: var(--black)!important;
 }
 /* 暗灰色 */
 .text-dark-gray {
-    color: var(--dark-gray);
-}
-/* 灰色 */
-.text-gray {
-    color: var(--gray);
+    color: var(--dark-gray)!important;
 }
 /* 烟灰色 */
 .text-grey {
-    color: var(--grey);
+    color: var(--grey)!important;
+}
+/* 灰色 */
+.text-gray {
+    color: var(--gray)!important;
 }
 /* 魂白 */
 .text-ghost-white {

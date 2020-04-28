@@ -69,7 +69,7 @@ module.exports = {
         'transparent'
     ],
     basicColorText: [
-        '不正经黑',
+        '黢黑',
         '暗灰',
         '烟灰',
         '灰色',

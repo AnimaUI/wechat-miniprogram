@@ -1,3 +1,6 @@
+.button-box .ani-tab {
+  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
+}
 .button-box .item .box-bar {
   height: 100rpx;
   line-height: 100rpx;

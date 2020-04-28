@@ -1,9 +1,9 @@
 @import './_prefix.less';
 button {
     line-height: 2;
-    font-size: 28rpx;
+    font-size: 24rpx;
 }
-.@{prefix}-btn {
+button.@{prefix}-btn {
     &.button-hover {
         transform: translate(1rpx, 1rpx);
     }
@@ -11,13 +11,33 @@ button {
         display: none;
     }
 }
-.@{prefix}-btn {
+button.@{prefix}-btn {
     position: relative;
-    border: 0;
+    border: none;
     padding: 0 30rpx;
-    font-size: 28rpx;
-    line-height: 2;
     text-align: center;
     text-decoration: none;
-    overflow: visible;
+}
+
+button.@{prefix}-btn[class*="line"] {
+    background-color: transparent;
+}
+button.@{prefix}-btn[class*="line"]::after {
+    content: ' ';
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1rpx solid currentColor;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 12rpx;
+    z-index: 1;
+    pointer-events: none;
+}
+button.icon-btn {
+    line-height: 2.5;
 }

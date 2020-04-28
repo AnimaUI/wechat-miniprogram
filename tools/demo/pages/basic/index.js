@@ -30,7 +30,7 @@ Page({
                 icon: 'ani-icon-btn',
                 en: 'button',
                 cn: '按钮',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/button/index'
             },
             {
                 icon: 'ani-icon-text',

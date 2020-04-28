@@ -14,8 +14,8 @@
         class="{{prefix}}-bar"
         scroll-left="{{(currentTab - 2) * singleNavWidth}}">
         <view
-            class="item {{currentTab == index ? 'selected' : ''}} text-{{module.getSelectedClass(index, currentTab, activeColorClass)}}"
-            style="--active-line: var(--{{module.getSelectedClass(index, currentTab, activeColorClass)}})"
+            class="item {{currentTab == index ? 'selected' : ''}}  {{module.getSelectedClass(index, currentTab, activeColorClass) != '' ? 'text-' + module.getSelectedClass(index, currentTab, activeColorClass) : ''}}"
+            style="{{module.getSelectedClass(index, currentTab, activeColorClass) != '' ? '--active-line: var(--' + module.getSelectedClass(index, currentTab, activeColorClass) + ')' : ''}}"
             wx:for="{{tabData}}"
             wx:key="name"
             data-current="{{index}}"
