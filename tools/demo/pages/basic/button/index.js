@@ -17,7 +17,7 @@ Page({
         gradualColor,
         gradualColorText,
         swiperHeight: 0,
-        currentTab: 0,
+        currentTab: 3,
         activeColorClass: 'cyan',
         tabData: [
             {
@@ -31,6 +31,10 @@ Page({
             {
                 name: '图标',
                 icon: 'icon'
+            },
+            {
+                name: '其他',
+                icon: 'other'
             }
         ]
     },

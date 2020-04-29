@@ -351,6 +351,114 @@
                     </view>
                 </view>
             </swiper-item>
+            <swiper-item class="ani-swiper-item">
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        加载
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button class="ani-btn mb-12 bg-red text-white">
+                            <text class="ani-icon-loading ani-spin fs-28"></text>
+                            加载中
+                        </button>
+                        <button class="ani-btn mb-12 bg-fusion-red text-white">
+                            <text class="ani-icon-loading1 ani-spin fs-28"></text>
+                            加载中
+                        </button>
+                        <button class="ani-btn mb-12 bg-olive text-white">
+                            <text class="ani-icon-loading2 ani-spin fs-28"></text>
+                            加载中
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(基础色)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:for="{{module.getBasicColor(basicColor)}}" wx:key="index" class="ani-btn mb-12 bg-{{item}} text-white">
+                            {{module.getBasicColor(basicColorText)[index]}}
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(彩色)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{!module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(暗色)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{!module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-dark-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-dark-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(禁用)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button disabled type="" wx:if="{{!module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-disabled-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button disabled type="" wx:if="{{module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-disabled-{{item}} text-white">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(浅色)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{!module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-light-{{item}} text-{{item}}">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:if="{{module.isFusion(item)}}" wx:for="{{colour}}" wx:key="index" class="ani-btn mb-12 bg-light-{{item}} text-{{item}}">
+                            {{colourText[index]}}
+                        </button>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
+                        百分百(渐变色)
+                    </view>
+                    <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                        <button wx:for="{{gradualColor}}" wx:key="index" class="ani-btn mb-12 bg-gradual-{{item}} text-white">
+                            {{gradualColorText[index]}}
+                        </button>
+                    </view>
+                </view>
+            </swiper-item>
         </swiper>
     </view>
 </scroll-view>
