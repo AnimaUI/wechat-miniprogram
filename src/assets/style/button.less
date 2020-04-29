@@ -141,3 +141,35 @@ button {
         }
     }
 }
+.buttons {
+    .or {
+        position: relative;
+        width: .3em;
+        height: 2.56em;
+        z-index: 3;
+        background-color: #fff;
+        &::before {
+            position: absolute;
+            text-align: center;
+            border-radius: 500rem;
+            content: 'or';
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            text-shadow: none;
+            margin-top: -.9em;
+            margin-left: -.9em;
+            width: 1.78em;
+            height: 1.78em;
+            line-height: 1.78em;
+            color: rgba(0, 0, 0, .4);
+            font-style: normal;
+            font-weight: 700;
+            -webkit-box-shadow: 0 0 0 2rpx transparent inset;
+            box-shadow: 0 0 0 2rpx transparent inset;
+        }
+        &[data-text]::before {
+            content: attr(data-text);
+        }
+    }
+}

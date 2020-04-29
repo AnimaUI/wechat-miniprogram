@@ -27,7 +27,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         基础色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -38,7 +38,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         彩色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -54,7 +54,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         暗色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -70,7 +70,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         禁用
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -86,7 +86,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         浅色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -102,7 +102,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         渐变色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -115,7 +115,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         基础色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -129,7 +129,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         彩色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -153,7 +153,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         暗色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -177,7 +177,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         禁用
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -215,7 +215,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         基础色
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -230,7 +230,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         彩色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -256,7 +256,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         暗色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -282,7 +282,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         禁用
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -311,7 +311,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         浅色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -337,7 +337,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         渐变色
                     </view>
                     <view class="grid col-4 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -354,7 +354,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         加载
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -374,7 +374,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         标签Button
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -436,7 +436,35 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
+                        条件Button
+                    </view>
+                    <view class="grid col-2 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                        <view class="buttons">
+                            <button class="ani-btn il-block bg-gray text-dark-gray fw-500">Cancel</button>
+                            <view class="or il-block" data-text="or"></view>
+                            <button class="ani-btn il-block bg-green text-white fw-500">Save</button>
+                        </view>
+                        <view class="buttons">
+                            <button class="ani-btn il-block bg-gray text-dark-gray fw-500">un</button>
+                            <view class="or il-block" data-text="ou"></view>
+                            <button class="ani-btn il-block bg-green text-white fw-500">deux</button>
+                        </view>
+                        <view class="buttons">
+                            <button class="ani-btn il-block bg-red text-white fw-500">取消</button>
+                            <view class="or il-block" data-text="or"></view>
+                            <button class="ani-btn il-block bg-green text-white fw-500">确认</button>
+                        </view>
+                        <view class="buttons">
+                            <button class="ani-btn il-block bg-sky-blue text-white fw-500">接收</button>
+                            <view class="or il-block" data-text="ou"></view>
+                            <button class="ani-btn il-block bg-green text-white fw-500">发送</button>
+                        </view>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(基础色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -447,7 +475,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(彩色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -463,7 +491,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(暗色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -479,7 +507,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(禁用)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -495,7 +523,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(浅色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
@@ -511,7 +539,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot inline-block bg-blue-green"></text>
+                        <text class="dot il-block bg-blue-green"></text>
                         百分百(渐变色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
