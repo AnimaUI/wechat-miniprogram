@@ -3,27 +3,26 @@ button {
     line-height: 3;
     font-size: 24rpx;
 }
-button.@{prefix}-btn {
-    border-radius: 8rpx;
-    &.button-hover {
-        transform: translate(1rpx, 1rpx);
-    }
+.button-hover {
+    transform: translate(1rpx, 1rpx);
+}
+.@{prefix}-btn {
+    border-radius: 6rpx;
     &::after {
         display: none;
     }
 }
-button.@{prefix}-btn {
+.@{prefix}-btn {
     position: relative;
-    // border: none;
     padding: 0 30rpx;
     text-align: center;
     text-decoration: none;
 }
 
-button.@{prefix}-btn[class*="line"] {
+.@{prefix}-btn[class*="line"] {
     background-color: transparent;
 }
-button.@{prefix}-btn[class*="line"]::after {
+.@{prefix}-btn[class*="line"]::after {
     content: ' ';
     display: block;
     width: 200%;
@@ -39,6 +38,55 @@ button.@{prefix}-btn[class*="line"]::after {
     z-index: 1;
     pointer-events: none;
 }
-button.icon-btn {
+.icon-btn {
     line-height: 2.5;
+}
+.tag-btn {
+    &.button-hover {
+        background: none;
+    }
+    &.left > .left {
+        border-radius: 6rpx 0 0 6rpx;
+    }
+    &.right > .left {
+        border-radius: 0 6rpx 6rpx 0;
+    }
+    &.left,
+    &.right {
+        & > .@{prefix}-btn {
+            padding: 16rpx 16rpx 16rpx 20rpx;
+            &::before {
+                position: absolute;
+                content: ' ';
+                background: #fff;
+                z-index: 2;
+                width: 12rpx;
+                height: 12rpx;
+                border-width: 0 0 1rpx 1rpx;
+                border-color: inherit;
+                transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                bottom: auto;
+                left: auto;
+                top: 50%;
+                right: -6rpx;
+                margin-top: -1rpx;
+            }
+        }
+    }
+    &.left > .@{prefix}-btn {
+        margin-left: -4rpx;
+        &::before {
+            border-width: 0 0 1rpx 1rpx;
+            right: auto;
+            left: 4rpx;
+        }
+    }
+    &.right > .@{prefix}-btn {
+        margin-right: -4rpx;
+        &::before {
+            border-width: 0 0 1rpx 1rpx;
+            left: auto;
+            right: -6rpx;
+        }
+    }
 }

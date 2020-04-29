@@ -375,6 +375,32 @@
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
                         <text class="dot inline-block bg-blue-green"></text>
+                        标签
+                    </view>
+                    <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
+                        <view class="flex justify-start tag-btn left" hover hover-class="button-hover">
+                            <view class="left bg-red text-white padding-18">
+                                <text class="ani-icon-link text-light-red"></text>
+                                Like
+                            </view>
+                            <view class="ani-btn line-red text-red fw-500 padding-14">
+                                2,048
+                            </view>
+                        </view>
+                        <view class="flex justify-start tag-btn right" hover hover-class="button-hover">
+                            <view class="ani-btn line-red text-red fw-500 padding-14">
+                                2,048
+                            </view>
+                            <view class="left bg-red text-white padding-18">
+                                <text class="ani-icon-link text-light-red"></text>
+                                Like
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item bg-white">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="dot inline-block bg-blue-green"></text>
                         百分百(基础色)
                     </view>
                     <view class="pl-30 pr-30 pt-20 pb-20 solid-bottom">
