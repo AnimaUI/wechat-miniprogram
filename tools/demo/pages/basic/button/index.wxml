@@ -384,7 +384,7 @@
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right basic" hover hover-class="button-hover">
@@ -393,7 +393,7 @@
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right basic" hover hover-class="button-hover">
@@ -401,7 +401,7 @@
                                 <text class="ani-icon-fork text-light-red"></text>
                             </view>
                             <view class="ani-btn line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                     </view>
@@ -412,7 +412,7 @@
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right line" hover hover-class="button-hover">
@@ -421,7 +421,7 @@
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right line" hover hover-class="button-hover">
@@ -429,7 +429,7 @@
                                 <text class="ani-icon-fork"></text>
                             </view>
                             <view class="ani-btn line-red text-red fw-500 padding-14">
-                                2,048
+                                1,024
                             </view>
                         </view>
                     </view>
