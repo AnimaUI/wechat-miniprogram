@@ -145,7 +145,7 @@ button {
     .or {
         position: relative;
         width: .3em;
-        height: 2.56em;
+        height: 72rpx;
         z-index: 3;
         background-color: #fff;
         &::before {
@@ -159,9 +159,9 @@ button {
             text-shadow: none;
             margin-top: -.9em;
             margin-left: -.9em;
-            width: 1.78em;
-            height: 1.78em;
-            line-height: 1.78em;
+            width: 1.8em;
+            height: 1.8em;
+            line-height: 1.8em;
             color: rgba(0, 0, 0, .4);
             font-style: normal;
             font-weight: 700;
@@ -170,6 +170,11 @@ button {
         }
         &[data-text]::before {
             content: attr(data-text);
+        }
+    }
+    &.max {
+        .@{prefix}-btn {
+            width: 48%
         }
     }
 }

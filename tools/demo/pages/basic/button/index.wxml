@@ -441,24 +441,46 @@
                     </view>
                     <view class="grid col-2 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
                         <view class="buttons">
-                            <button class="ani-btn il-block bg-gray text-dark-gray fw-500">Cancel</button>
-                            <view class="or il-block" data-text="or"></view>
-                            <button class="ani-btn il-block bg-green text-white fw-500">Save</button>
+                            <button class="ani-btn il-block vertical-middle bg-gray text-dark-gray fw-500">Cancel</button>
+                            <view class="or il-block vertical-middle" data-text="or"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">Save</button>
                         </view>
                         <view class="buttons">
-                            <button class="ani-btn il-block bg-gray text-dark-gray fw-500">un</button>
-                            <view class="or il-block" data-text="ou"></view>
-                            <button class="ani-btn il-block bg-green text-white fw-500">deux</button>
+                            <button class="ani-btn il-block vertical-middle bg-gray text-dark-gray fw-500">un</button>
+                            <view class="or il-block vertical-middle" data-text="ou"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">deux</button>
                         </view>
                         <view class="buttons">
-                            <button class="ani-btn il-block bg-red text-white fw-500">取消</button>
-                            <view class="or il-block" data-text="or"></view>
-                            <button class="ani-btn il-block bg-green text-white fw-500">确认</button>
+                            <button class="ani-btn il-block vertical-middle bg-red text-white fw-500">取消</button>
+                            <view class="or il-block vertical-middle" data-text="or"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">确认</button>
                         </view>
                         <view class="buttons">
-                            <button class="ani-btn il-block bg-sky-blue text-white fw-500">接收</button>
-                            <view class="or il-block" data-text="ou"></view>
-                            <button class="ani-btn il-block bg-green text-white fw-500">发送</button>
+                            <button class="ani-btn il-block vertical-middle bg-sky-blue text-white fw-500">接收</button>
+                            <view class="or il-block vertical-middle" data-text="ou"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">发送</button>
+                        </view>
+                    </view>
+                    <view class="pt-20 pb-20  solid-bottom grid-row-gap grid-column-gap">
+                        <view class="buttons max mb-20 text-center">
+                            <button class="ani-btn il-block vertical-middle bg-gray text-dark-gray fw-500">Cancel</button>
+                            <view class="or il-block vertical-middle" data-text="or"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">Save</button>
+                        </view>
+                        <view class="buttons max mb-20 text-center">
+                            <button class="ani-btn il-block vertical-middle bg-gray text-dark-gray fw-500">un</button>
+                            <view class="or il-block vertical-middle" data-text="ou"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">deux</button>
+                        </view>
+                        <view class="buttons max mb-20 text-center">
+                            <button class="ani-btn il-block vertical-middle bg-red text-white fw-500">取消</button>
+                            <view class="or il-block vertical-middle" data-text="or"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">确认</button>
+                        </view>
+                        <view class="buttons max mb-20 text-center">
+                            <button class="ani-btn il-block vertical-middle bg-sky-blue text-white fw-500">接收</button>
+                            <view class="or il-block vertical-middle" data-text="ou"></view>
+                            <button class="ani-btn il-block vertical-middle bg-green text-white fw-500">发送</button>
                         </view>
                     </view>
                 </view>
