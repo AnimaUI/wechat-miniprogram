@@ -16,7 +16,7 @@ const jsConfig = config.js || {};
 const wxssConfig = config.wxss || {};
 const srcPath = config.srcPath;
 const distPath = config.distPath;
-var cleanCss = require('gulp-clean-css'); // 加载clean模块  压缩css
+const cleanCss = require('gulp-clean-css'); // 加载clean模块  压缩css
 /**
  * 获取 wxss 流
  */
@@ -242,7 +242,6 @@ class BuildTask {
          */
         gulp.task(`${id}-component-wxss`, (done) => {
             const wxssFileList = this.componentListMap.wxssFileList;
-
             if (
                 wxssFileList &&
                 wxssFileList.length &&
@@ -253,7 +252,6 @@ class BuildTask {
             ) {
                 return wxss(wxssFileList, srcPath, distPath);
             }
-
             return done();
         });
 

@@ -48,10 +48,10 @@ module.exports = {
         },
         plugins: [
             new webpack.DefinePlugin({}),
-            new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
+            new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
         ],
         optimization: {
-            minimize: false
+            minimize: true
         },
         // devtool: 'nosources-source-map', // 生成 js sourcemap
         performance: {
