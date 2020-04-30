@@ -16,7 +16,7 @@ const jsConfig = config.js || {};
 const wxssConfig = config.wxss || {};
 const srcPath = config.srcPath;
 const distPath = config.distPath;
-const cssmin = require('gulp-minify-css');
+var cleanCss = require('gulp-clean-css'); // 加载clean模块  压缩css
 /**
  * 获取 wxss 流
  */
@@ -30,7 +30,7 @@ function wxss(wxssFileList) {
         )
         .pipe(gulpif(wxssConfig.less, less({ paths: [srcPath] })))
         .pipe(checkWxss.end()) // 结束处理 import
-        .pipe(cssmin())
+        .pipe(cleanCss())
         .pipe(rename({ extname: '.wxss' }))
         .pipe(
             gulpif(
