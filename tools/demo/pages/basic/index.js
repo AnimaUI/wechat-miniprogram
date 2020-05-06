@@ -42,13 +42,13 @@ Page({
                 icon: 'ani-icon-tag',
                 en: 'tag',
                 cn: '标签',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/tag/index'
             },
             {
                 icon: 'ani-icon-portrait',
                 en: 'avatar',
                 cn: '头像',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/avatar/index'
             },
             {
                 icon: 'ani-icon-progress',

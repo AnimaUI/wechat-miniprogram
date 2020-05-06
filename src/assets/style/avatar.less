@@ -1,0 +1,56 @@
+/*!
+ _________
+| avatar  |\
+| ~~~~~~~ |_\
+|   👩‍🚒    |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+.@{prefix}-avatar {
+    display: inline-flex;
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+    background-color: var(--grey);
+    color: var(--white);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    width: 64rpx;
+    height: 64rpx;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    font-size: 48rpx;
+    border-radius: 6rpx;
+    &.sm {
+        width: 48rpx;
+        height: 48rpx;
+        font-size: 36rpx;
+    }
+    &.xl {
+        width: 96rpx;
+        height: 96rpx;
+        font-size: 36rpx;
+    }
+    &.xxl {
+        width: 128rpx;
+        height: 128rpx;
+        font-size: 36rpx;
+    }
+}
+.@{prefix}-avatar-group {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    padding: 0 10rpx 0 60rpx;
+    display: inline-block;
+    .@{prefix}-avatar {
+        margin-left: -16rpx;
+        border: 4rpx solid var(--ghost-white);
+        vertical-align: middle;
+    }
+}

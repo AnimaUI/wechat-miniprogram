@@ -96,6 +96,8 @@
                     <button class="ani-btn fw-400 text-white swatch-color bg-{{colour[index]}}" role="button" aria-disabled="false">{{item.cn}}</button>
                 </view>
             </view>
+            <!-- 占位 -->
+            <view class="item"></view>
         </view>
     </view>
 </scroll-view>

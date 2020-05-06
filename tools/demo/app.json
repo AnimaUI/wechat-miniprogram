@@ -7,6 +7,7 @@
         "pages/basic/button/index",
         "pages/basic/text/index",
         "pages/basic/tag/index",
+        "pages/basic/avatar/index",
         "pages/component/index",
         "pages/solution/index",
         "pages/about/index"

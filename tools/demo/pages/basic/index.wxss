@@ -27,9 +27,14 @@ page {
   overflow: hidden;
   box-shadow: 5rpx 5rpx 16rpx 0 rgba(0, 0, 0, 0.1);
 }
-.main .box .item .item:nth-child(1),
-.main .box .item .item:nth-child(2) {
+.main .box .item:nth-child(1),
+.main .box .item:nth-child(2) {
   margin-top: 0;
+}
+.main .box .item:last-child {
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
 }
 .main .box .item .top {
   height: 160rpx;

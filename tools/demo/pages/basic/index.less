@@ -24,9 +24,14 @@ page {
             border-radius: 28rpx;
             overflow: hidden;
             box-shadow: 5rpx 5rpx 16rpx 0 rgba(0, 0, 0, 0.1);
-            .item:nth-child(1),
-            .item:nth-child(2) {
+            &:nth-child(1),
+            &:nth-child(2) {
                 margin-top: 0;
+            }
+            &:last-child {
+                box-shadow: none;
+                background: transparent;
+                border-radius: 0;
             }
             .top {
                 height: 160rpx;

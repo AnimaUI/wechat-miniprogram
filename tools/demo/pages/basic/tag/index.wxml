@@ -1,6 +1,6 @@
 <CustomBar className="bg-gradual-purple text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content" class="capitalize">text</view>
+    <view slot="content" class="capitalize">tag</view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
     <view class="main">

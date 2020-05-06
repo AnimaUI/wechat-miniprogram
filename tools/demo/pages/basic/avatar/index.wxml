@@ -1,0 +1,83 @@
+<CustomBar className="bg-gradual-light-purple text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">avatar</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                基础形状
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start">
+                <view class="ani-avatar ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
+                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                图标 | 文字
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start">
+                <view class="ani-avatar ml-40">
+                    <text class="ani-icon-portrait"></text>
+                </view>
+                <view class="ani-avatar ml-40">
+                    <text>牛</text>
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                基础颜色
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start flex-wrap">
+                <view class="ani-avatar xl circle ml-40 mb-24 bg-{{item}}" wx:for="{{colour}}">
+                    <text>牛</text>
+                </view>
+                <view class="ani-avatar xl circle ml-40 mb-24 bg-{{item}}" wx:for="{{basicColor}}">
+                    <text>牛</text>
+                </view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                渐变颜色
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start flex-wrap">
+                <view class="ani-avatar xl circle ml-40 mb-24 bg-{{item}}" wx:for="{{gradualColor}}">
+                    <text>牛</text>
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                组合
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="ani-avatar-group">
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-4.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-5.jpg)"></view>
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                尺寸
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="ani-avatar sm circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
+                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
+                <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-4.jpg)"></view>
+                <view class="ani-avatar xxl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-5.jpg)"></view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
