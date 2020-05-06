@@ -223,7 +223,7 @@
                             wx:for="{{module.getBasicColor(basicColor)}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{module.getBasicColor(basicColorText)[index]}}
                         </button>
                     </view>
@@ -239,7 +239,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -249,7 +249,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -264,7 +264,7 @@
                             wx:if="{{!module.isFusion(item)}}"
                             wx:for="{{colour}}"
                             wx:key="index"
-                            class="ani-btn bg-dark-{{item}} text-white icon-btn">
+                            class="ani-btn bg-dark-{{item}} text-white icon-btn vertical-middle">
                             <text class="ani-icon-btn text-white fs-24"></text>
                             {{colourText[index]}}
                         </button>
@@ -275,7 +275,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-dark-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -292,7 +292,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-disabled-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -304,7 +304,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-disabled-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -320,7 +320,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn icon-btn bg-light-{{item}} text-{{item}}">
-                            <text class="ani-icon-btn fs-24 text-{{item}}"></text>
+                            <text class="ani-icon-btn fs-24 text-{{item}} vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -330,7 +330,7 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn icon-btn bg-light-{{item}} text-{{item}}">
-                            <text class="ani-icon-btn fs-24 text-{{item}}"></text>
+                            <text class="ani-icon-btn fs-24 text-{{item}} vertical-middle"></text>
                             {{colourText[index]}}
                         </button>
                     </view>
@@ -345,7 +345,7 @@
                             wx:for="{{gradualColor}}"
                             wx:key="index"
                             class="ani-btn icon-btn bg-gradual-{{item}} text-white">
-                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text class="ani-icon-btn text-white fs-24 "></text>
                             {{gradualColorText[index]}}
                         </button>
                     </view>
@@ -380,7 +380,7 @@
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
                         <view class="flex justify-start tag-btn left basic" hover hover-class="button-hover">
                             <view class="left bg-red text-white padding-14">
-                                <text class="ani-icon-link text-light-red"></text>
+                                <text class="ani-icon-link text-light-red vertical-middle"></text>
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
@@ -389,7 +389,7 @@
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right basic" hover hover-class="button-hover">
                             <view class="left bg-red text-white padding-18">
-                                <text class="ani-icon-link text-light-red"></text>
+                                <text class="ani-icon-link text-light-red vertical-middle"></text>
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
@@ -398,7 +398,7 @@
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right basic" hover hover-class="button-hover">
                             <view class="left bg-red text-white padding-18">
-                                <text class="ani-icon-fork text-light-red"></text>
+                                <text class="ani-icon-fork text-light-red vertical-middle"></text>
                             </view>
                             <view class="ani-btn line-red text-red fw-500 padding-14">
                                 1,024
@@ -408,7 +408,7 @@
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
                         <view class="flex justify-start tag-btn left line" hover hover-class="button-hover">
                             <view class="left ani-btn line-red text-red padding-14">
-                                <text class="ani-icon-link"></text>
+                                <text class="ani-icon-link vertical-middle"></text>
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
@@ -417,7 +417,7 @@
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right line" hover hover-class="button-hover">
                             <view class="right ani-btn line-red text-red padding-18">
-                                <text class="ani-icon-link"></text>
+                                <text class="ani-icon-link vertical-middle"></text>
                                 Like
                             </view>
                             <view class="ani-btn arrow line-red text-red fw-500 padding-14">
@@ -426,7 +426,7 @@
                         </view>
                         <view class="flex justify-start flex-direction-row-reverse tag-btn right line" hover hover-class="button-hover">
                             <view class="right ani-btn line-red text-red padding-18">
-                                <text class="ani-icon-fork"></text>
+                                <text class="ani-icon-fork vertical-middle"></text>
                             </view>
                             <view class="ani-btn line-red text-red fw-500 padding-14">
                                 1,024

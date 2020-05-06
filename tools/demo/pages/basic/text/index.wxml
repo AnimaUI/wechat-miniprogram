@@ -1,0 +1,181 @@
+<wxs module="module">
+    var getLightColor = function(str) {
+        return str === 'gray' || str === 'white' || str === 'ghost-white'
+                    ? 'fusion-blue-grey' : 'white';
+    }
+    module.exports = { getLightColor: getLightColor};
+</wxs>
+<CustomBar className="bg-gradual-blue-green text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">text</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar fs-28 capitalize pl-30 solid-bottom">
+                <text class="dot il-block bg-blue-green"></text>
+                文本大小
+            </view>
+            <Notice
+                class="notice"
+                scroll="{{false}}"
+                close="{{false}}"
+                closeColor="#F24849"
+                bgColor="#ffecbd"
+                bgRgba="rgba(255, 236, 219, 1)"
+                color="#f24849"
+                show-icon="{{true}}"
+                iconColor="#f24849"
+                notice="{size}的值有: 20~100，步长为2rpx"/>
+            <view class="grid col-3 bg-white pl-30 pr-30 pt-30 solid-bottom">
+                <view class="fs-20 padding-xs text-grey">
+                    文本大小
+                    <text class="block">font-size: 20rpx</text>
+                </view>
+                <view class="fs-24 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 24rpx</text>
+                </view>
+                <view class="fs-28 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 28rpx</text>
+                </view>
+                <view class="fs-32 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 32rpx</text>
+                </view>
+                <view class="fs-36 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 36rpx</text>
+                </view>
+                <view class="fs-40 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 40rpx</text>
+                </view>
+                <view class="fs-44 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 44rpx</text>
+                </view>
+                <view class="fs-48 padding-xs">
+                    文本大小
+                    <text class="block">font-size: 48rpx</text>
+                </view>
+            </view>
+        </view>
+        <view class="item bg-white" wx:for="{{textColors}}" wx:key="index" wx:for-item="colors">
+            <view class="box-bar fs-28 capitalize pl-30 solid-bottom" wx:if="{{index === 0}}">
+                <text class="dot il-block bg-blue-green"></text>
+                primary
+            </view>
+            <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 1}}">
+                <text class="dot il-block bg-blue-green"></text>
+                dark
+            </view>
+            <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 2}}">
+                <text class="dot il-block bg-blue-green"></text>
+                disabled
+            </view>
+            <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 3}}">
+                <text class="dot il-block bg-blue-green"></text>
+                light
+            </view>
+            <view class="grid col-3 padding-sm solid-bottom">
+                <view class="fs-30 padding-xs {{color}}"
+                    wx:for="{{colors}}"
+                    wx:key="colorIndex"
+                    wx:for-index="colorIndex"
+                    wx:for-item="color">
+                    {{colourText[colorIndex]}}
+                </view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                basic
+            </view>
+            <view class="color-box flex flex-wrap justify-around padding-sm">
+                <view
+                    wx:for="{{basicColor}}"
+                    wx:for-item="color"
+                    wx:for-index="colorIndex"
+                    class="color-item flex align-center flex-wrap border padding-sm mt-20 bg-{{color}}">
+                    <text class="text-{{module.getLightColor(color)}}">{{color}}</text>
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="color-item"></view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                文字渐变
+            </view>
+            <view class="grid col-3 padding-sm solid-bottom">
+                <view
+                    wx:for="{{gradualColor}}"
+                    wx:for-item="color"
+                    wx:for-index="colorIndex"
+                    class="padding-sm text-white">
+                    <text class="text-transparent text-gradual bg-{{color}}">{{gradualColorText[colorIndex]}}</text>
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="bg-item"></view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                文字阴影
+            </view>
+            <view class="grid col-3 padding-sm solid-bottom">
+                <view
+                    wx:for="{{textColors[0]}}"
+                    wx:for-item="color"
+                    wx:for-index="colorIndex"
+                    class="color-item padding-sm text-white">
+                    <text class="shadow-{{color}} {{color}}">{{colourText[colorIndex]}}</text>
+                </view>
+                <view
+                    wx:for="{{basicColorShadow}}"
+                    wx:for-item="color"
+                    wx:for-index="colorIndex"
+                    class="color-item padding-sm">
+                    <text class="shadow-text-{{color}} text-{{color === 'white' ? 'black' : color}}">{{basicColorText[colorIndex]}}</text>
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="color-item"></view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                文字对齐
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="color-item padding-sm text-black text-left">
+                    我是左对齐啊，你看我左对齐了吗？
+                </view>
+                <view class="color-item padding-sm text-black text-center">
+                    我是中对齐啊，你看我中对齐了吗？
+                </view>
+                <view class="color-item padding-sm text-black text-right">
+                    我是右对齐啊，你看我右对齐了吗？
+                </view>
+                <!-- 留一个占位避免少一个 -->
+                <view class="color-item"></view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                文字截断
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="text-cut padding-sm text-black" style="width: 420rpx">
+                    我是文字截断，你看我截断了吗？
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

@@ -68,15 +68,7 @@ module.exports = {
         'ghost-white',
         'transparent'
     ],
-    basicColorText: [
-        '黢黑',
-        '暗灰',
-        '烟灰',
-        '灰色',
-        '雪白',
-        '魂白',
-        '透明'
-    ],
+    basicColorText: ['黢黑', '暗灰', '烟灰', '灰色', '雪白', '魂白', '透明'],
     gradualColor: [
         'red',
         'orange',

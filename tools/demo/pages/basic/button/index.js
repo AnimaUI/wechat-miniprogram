@@ -17,7 +17,7 @@ Page({
         gradualColor,
         gradualColorText,
         swiperHeight: 0,
-        currentTab: 3,
+        currentTab: 0,
         activeColorClass: 'cyan',
         tabData: [
             {

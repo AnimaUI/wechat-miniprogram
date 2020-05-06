@@ -5,6 +5,7 @@
         "pages/basic/layout/index",
         "pages/basic/icon/index",
         "pages/basic/button/index",
+        "pages/basic/text/index",
         "pages/component/index",
         "pages/solution/index",
         "pages/about/index"

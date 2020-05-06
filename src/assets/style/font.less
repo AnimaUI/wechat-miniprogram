@@ -18,7 +18,7 @@
 
 /* 字体大小 */
 .fontSize(100);
-.fontSize(@fs, @i: 24) when (@i =< @fs) {
+.fontSize(@fs, @i: 20) when (@i =< @fs) {
     .fs-@{i} {
         font-size: 0rpx + @i;
     }
@@ -38,4 +38,14 @@
 /* 全小写 */
 .lowercase {
     text-transform: lowercase;
+}
+
+.text-gradual {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.text-cut {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

@@ -14,6 +14,8 @@ const getEntry = () => {
     const pathDir = 'src(/|\\\\)(.*?)(/|\\\\)'; // 路径为src目录下的所有文件夹
     const files = glob.sync(globPath);
     const entries = [];
+    const _prefix_index_ = files.indexOf('src/assets/style/_prefix.less');
+    files.splice(_prefix_index_, _prefix_index_ + 1);
     const reg = new RegExp('^' + pathDir);
     for (let i = 0; i < files.length; i++) {
         entries.push(
