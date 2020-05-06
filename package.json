@@ -33,7 +33,7 @@
         "url": "https://github.com/huarxia/animaUI.git"
     },
     "author": "huaxia",
-    "license": "MIT",
+    "license": "GPL3",
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",
