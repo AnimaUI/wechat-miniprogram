@@ -36,13 +36,7 @@ Page({
                 icon: 'ani-icon-text',
                 en: 'text',
                 cn: '文本',
-                url: '/pages/basic/color/index'
-            },
-            {
-                icon: 'ani-icon-text-shadow',
-                en: 'textShadow',
-                cn: '文本阴影',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/text/index'
             },
             {
                 icon: 'ani-icon-tag',

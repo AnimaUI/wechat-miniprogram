@@ -1,0 +1,56 @@
+<CustomBar className="bg-gradual-purple text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">text</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-purple"></text>
+                基础形状
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start">
+                <view class="ani-tag">默认</view>
+                <view class="ani-tag radius ml-40">圆角</view>
+                <view class="ani-tag round ml-40">胶囊</view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-purple"></text>
+                尺大小
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start align-center">
+                <view class="ani-tag sm ml-40">小尺寸</view>
+                <view class="ani-tag ml-40">基础尺寸</view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-purple"></text>
+                基础颜色
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">
+                <view class="ani-tag ml-40 mt-12 text-white bg-{{item}}" wx:for="{{colour}}">{{colourText[index]}}</view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-purple"></text>
+                渐变色
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">
+                <view class="ani-tag ml-40 mt-12 text-white bg-{{item}}" wx:for="{{gradualColor}}">{{gradualColorText[index]}}</view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-purple"></text>
+                线框
+            </view>
+            <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">
+                <view class="ani-tag ml-40 mt-12 text-{{item}} line-{{item}}" wx:for="{{colour}}">{{colourText[index]}}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
