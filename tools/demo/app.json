@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/basic/progress/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",

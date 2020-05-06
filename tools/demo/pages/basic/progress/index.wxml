@@ -1,0 +1,53 @@
+<CustomBar className="bg-gradual-sky-blue text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">progress</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-sky-blue"></text>
+                基础形状
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="ani-progress">
+                    <view class="bg-fusion-green" style="width: 61.8%;">61.8%</view>
+                </view>
+                <view class="ani-progress radius mt-12">
+                    <view class="bg-fusion-green" style="width: 61.8%;">61.8%</view>
+                </view>
+                <view class="ani-progress round mt-12">
+                    <view class="bg-fusion-green" style="width: 61.8%;">61.8%</view>
+                </view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-sky-blue"></text>
+                尺寸
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="ani-progress round">
+                    <view class="bg-orange" style="width: 61.8%;"></view>
+                </view>
+                <view class="ani-progress round sm mt-12">
+                    <view class="bg-orange" style="width: 61.8%;"></view>
+                </view>
+                <view class="ani-progress round xs mt-12">
+                    <view class="bg-orange" style="width: 61.8%;"></view>
+                </view>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-sky-blue"></text>
+                斑马纹
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="ani-progress striped round mb-20 {{index % 2 === 0 ? 'animation' : ''}}" wx:for="{{colour}}">
+                    <view class="bg-{{item}}" style="width: {{index % 2 === 0 ? '61.8%;' : '38.2%;'}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

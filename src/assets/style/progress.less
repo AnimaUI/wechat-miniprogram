@@ -1,0 +1,56 @@
+/*!
+ _________
+| progress |\
+| ~~~~~~~ |_\
+|   👩‍🚒    |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+.@{prefix}-progress {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 30rpx;
+    overflow: hidden;
+    background-color: #dee3ee;
+    > view {
+        display: flex;
+        align-items: center;
+        justify-items: flex-end;
+        justify-content: space-around;
+        width: 0;
+        height: 100%;
+        color: var(--white);
+        font-size: 20rpx;
+        transition: width .618s ease;
+    }
+    &.sm {
+        height: 24rpx;
+    }
+    &.xs {
+        height: 10rpx;
+    }
+    &.striped {
+        > view {
+            background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+            background-size: 80rpx 80rpx;
+        }
+        &.animation {
+            > view {
+                border: none;
+                box-shadow: none;
+                animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
+            }
+        }
+        @keyframes progress-bar-stripes {
+            from  {
+                background-position: 80rpx 0;
+            }
+            to {
+                background-position: 0 0;
+            }
+        }
+    }
+}
