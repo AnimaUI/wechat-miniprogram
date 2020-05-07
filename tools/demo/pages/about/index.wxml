@@ -899,21 +899,21 @@
     </view>
 </view>
 <view class="github-box flex justify-between" style="{{weatherStyle}}">
-    <view class="item flex-sub align-center">
+    <view class="item flex-sub text-center">
         <view class="num text-orange fs-48 fw-500">{{watch}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-scan-eye"></text>
             <text class="capitalize">watch</text>
         </view>
     </view>
-    <view class="item flex-sub align-center">
+    <view class="item flex-sub text-center">
         <view class="num text-red fs-48 fw-500">{{star}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-star"></text>
             <text class="capitalize">star</text>
         </view>
     </view>
-    <view class="item flex-sub align-center">
+    <view class="item flex-sub text-center">
         <view class="num text-green fs-48 fw-500">{{fork}}</view>
         <view class="describe text-darkGray">
             <text class="ani-icon-fork"></text>
@@ -958,6 +958,9 @@
             </text>
             <text class="ani-icon-arrow-right"></text>
         </view>
+    </view>
+    <view class="text-wire mt-16" style="width: 70%">
+        <text>By: 花夏</text>
     </view>
 </view>
 <MenuBar

@@ -1,11 +1,11 @@
 {
     "pages": [
-        "pages/basic/text/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
         "pages/basic/icon/index",
         "pages/basic/button/index",
+        "pages/basic/text/index",
         "pages/basic/tag/index",
         "pages/basic/avatar/index",
         "pages/basic/progress/index",
