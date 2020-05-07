@@ -54,7 +54,7 @@ Page({
                 icon: 'ani-icon-progress',
                 en: 'progress',
                 cn: '进度条',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/progress/index'
             },
             {
                 icon: 'ani-icon-box-shadow',
