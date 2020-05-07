@@ -177,5 +177,27 @@
                 </view>
             </view>
         </view>
+         <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-green"></text>
+                辅助文字
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="text-wire">
+                    <text>Animaui</text>
+                </view>
+            </view>
+            <view class="padding-sm solid-bottom grid col-2">
+                <view class="capitalizee">
+                    <text>animaui (首字母大写)</text>
+                </view>
+                <view class="uppercase">
+                    <text>animaui (全大写)</text>
+                </view>
+                <view class="lowercase">
+                    <text>ANIMAUI (全小写)</text>
+                </view>
+            </view>
+        </view>
     </view>
 </scroll-view>
