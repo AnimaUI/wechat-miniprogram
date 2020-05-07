@@ -10,8 +10,8 @@
                 基础形状
             </view>
             <view class="padding-sm solid-bottom flex justify-start">
-                <view class="ani-avatar ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
-                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
+                <view class="ani-avatar ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-1.jpg)"></view>
+                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-3.jpg)"></view>
             </view>
         </view>
         <view class="item bg-white">
@@ -60,10 +60,10 @@
             </view>
             <view class="padding-sm solid-bottom">
                 <view class="ani-avatar-group">
-                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
-                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
-                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-4.jpg)"></view>
-                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-5.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-1.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-3.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-4.jpg)"></view>
+                    <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-5.jpg)"></view>
                 </view>
             </view>
         </view>
@@ -73,10 +73,10 @@
                 尺寸
             </view>
             <view class="padding-sm solid-bottom">
-                <view class="ani-avatar sm circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-1.jpg)"></view>
-                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-3.jpg)"></view>
-                <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-4.jpg)"></view>
-                <view class="ani-avatar xxl circle ml-40" style="background-image: url({{imgBaseUrl}}146-smallskin-5.jpg)"></view>
+                <view class="ani-avatar sm circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-1.jpg)"></view>
+                <view class="ani-avatar circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-3.jpg)"></view>
+                <view class="ani-avatar xl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-4.jpg)"></view>
+                <view class="ani-avatar xxl circle ml-40" style="background-image: url({{imgBaseUrl}}/146-smallskin-5.jpg)"></view>
             </view>
         </view>
     </view>

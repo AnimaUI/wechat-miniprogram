@@ -1,17 +1,10 @@
-<wxs module="module">
-    var getRandom = function (){
-        var iChoice = 10 - 100 + 1;
-        return Math.abs(Math.floor(Math.random() * iChoice)) + 10;
-    }
-    module.exports = { getRandom: getRandom};
-</wxs>
 <CustomBar className="bg-gradual-blue-grey text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
     <view slot="content" class="capitalize">box-shadow</view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
-        <view class="item bg-white">
+        <view class="item">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="dot il-block bg-blue-grey"></text>
                 彩色阴影
@@ -22,6 +15,25 @@
                     wx:for="{{shadowColor}}"
                     wx:key="index">
                     {{shadowColorText[index]}}
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-grey"></text>
+                其他阴影
+            </view>
+            <view class="padding-sm solid-bottom">
+                <view class="shadow-curve text-center margin-sm padding-sm">
+                    曲线阴影
+                </view>
+                <view class="shadow-warped-edge text-center margin-sm padding-sm">
+                    翘边阴影
+                </view>
+                <view
+                    class="shadow-img-blur text-center margin-sm padding-sm text-white"
+                    style="height: 200rpx; line-height: 200rpx; background-image: url({{imgBaseUrl}}/146-bigskin-4.jpg)">
+                    背景图片显示对应阴影
                 </view>
             </view>
         </view>

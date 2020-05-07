@@ -1,3 +1,3 @@
 module.exports = {
-    imgBaseUrl: 'http://oos.animaui.com/mini/wechat/images/'
+    imgBaseUrl: 'http://oos.animaui.com/mini/wechat/images'
 };

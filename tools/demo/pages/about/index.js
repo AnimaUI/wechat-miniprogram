@@ -163,7 +163,7 @@ Page({
         });
     },
     previewImage() {
-        let url = `${this.data.imgBaseUrl}/mini/wechat/images/appreciate.jpg`;
+        let url = `${this.data.imgBaseUrl}/appreciate.jpg`;
         console.log(url);
         wx.previewImage({
             urls: [url],
