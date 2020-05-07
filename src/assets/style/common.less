@@ -173,8 +173,7 @@ page {
 .shadow-curve {
     position: relative;
     background: #fff;
-    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3),
-        0 0 40rpx rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, .1);
     &:after {
         content: '';
         position: absolute;
@@ -192,27 +191,23 @@ page {
 .shadow-warped-edge {
     position: relative;
     background: #fff;
-    box-shadow: 0 0 8rpx rgba(0, 0, 0, .3), 0 0 40rpx rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, .1);
     &:before,
     &:after {
         content: '';
+        width: 50%;
         position: absolute;
         top: 20rpx;
-        bottom: 22prx;
-        background: transparent;
-        box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, .6);
+        bottom: 30rpx;
+        left: 20rpx;
         z-index: -1;
-        background: #fff;
-    }
-    &:before {
-        left: 22rpx;
-        right: 12rpx;
-        transform: skew(-12deg) rotate(-4deg);
+        box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, .2);
+        transform: rotate(-3deg);
     }
     &:after {
-        left: 12rpx;
-        right: 22rpx;
-        transform: skew(12deg) rotate(4deg);
+        right: 20rpx;
+        left: auto;
+        transform: rotate(3deg);
     }
 }
 .shadow-img-blur {
@@ -234,6 +229,23 @@ page {
         transform-origin: 0 0;
         border-radius: inherit;
         transform: scale(1, 1);
+    }
+}
+.shadow-perspective {
+    position: relative;
+    box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, .3), 0 0 40rpx rgba(0, 0, 0, .1) inset;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 80rpx;
+        bottom: 6rpx;
+        width: 50%;
+        height: 35%;
+        max-width: 200rpx;
+        box-shadow: -80rpx 0 8rpx rgba(0, 0, 0, .4);
+        transform: skew(50deg);
+        transform-origin: 0 100%;
     }
 }
 
