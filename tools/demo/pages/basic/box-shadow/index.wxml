@@ -1,0 +1,29 @@
+<wxs module="module">
+    var getRandom = function (){
+        var iChoice = 10 - 100 + 1;
+        return Math.abs(Math.floor(Math.random() * iChoice)) + 10;
+    }
+    module.exports = { getRandom: getRandom};
+</wxs>
+<CustomBar className="bg-gradual-blue-grey text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">box-shadow</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-blue-grey"></text>
+                彩色阴影
+            </view>
+            <view class="flex justify-around flex-wrap padding-sm solid-bottom">
+                <view
+                    class="box text-center margin-sm padding-sm text-{{item !== 'white' && item !== 'gray' ? 'white' : 'dark-gray'}} bg-{{item}} shadow-{{item}}"
+                    wx:for="{{shadowColor}}"
+                    wx:key="index">
+                    {{shadowColorText[index]}}
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

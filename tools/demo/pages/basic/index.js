@@ -60,7 +60,7 @@ Page({
                 icon: 'ani-icon-box-shadow',
                 en: 'boxShadow',
                 cn: '边框阴影',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/box-shadow/index'
             },
             {
                 icon: 'ani-icon-loading3',

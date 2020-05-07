@@ -1,0 +1,13 @@
+.main .item .box-bar {
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
+}
+.main .item .box-bar .dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+}
+.main .item .box {
+  width: 180rpx;
+}
