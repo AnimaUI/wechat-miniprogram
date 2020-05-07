@@ -24,26 +24,6 @@ page {
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
-@keyframes ani-spin {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
-}
-.ani-spin {
-    -webkit-animation: ani-spin 2s infinite linear;
-    animation: ani-spin 2s infinite linear;
-    display: inline-block;
-}
-.ani-pulse {
-    -webkit-animation: ani-spin 1s infinite steps(8);
-    animation: ani-spin 1s infinite steps(8);
-    display: inline-block;
-}
 /* bgColor && text-color */
 @colorType: null, dark, disabled, light;
 @colors: red, fusion-red, orange, fusion-orange, yellow, fusion-yellow, olive,

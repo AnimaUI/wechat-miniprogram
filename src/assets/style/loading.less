@@ -1,0 +1,455 @@
+/*!
+ _________
+|    🍿   |\
+| ~~~~~~~ |_\
+| loading |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+@keyframes ani-spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+@keyframes hourglass {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-180deg);
+    }
+}
+.@{prefix}-spin {
+    animation: ani-spin 2s infinite linear;
+    display: inline-block;
+}
+.@{prefix}-pulse {
+    animation: ani-spin 1s infinite steps(8);
+    display: inline-block;
+}
+.@{prefix}-hourglass {
+    display: block;
+    position: relative;
+    animation: hourglass 1s infinite ease;
+}
+.@{prefix}-timer {
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 auto;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 4rpx currentColor;
+    border-radius: 50%;
+    position: relative;
+    &::after,
+    &::before {
+        content: '';
+        height: 4rpx;
+        position: absolute;
+        top: 22rpx;
+        left: 22rpx;
+        background-color: currentColor;
+        transform-origin: 2rpx 2rpx;
+    }
+    &::before {
+        width: 16rpx;
+        animation: hrhand 8s linear infinite;
+    }
+    &::after {
+        width: 20rpx;
+        animation: minhand 2s linear infinite;
+    }
+    @keyframes hrhand {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    @keyframes minhand {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+}
+.@{prefix}-typing-loading {
+    width: 12rpx;
+    height: 12rpx;
+    line-height: 12rpx;
+    position: relative;
+    left: -24rpx;
+    border-radius: 50%;
+    animation: typing 1680ms linear infinite alternate;
+    margin: 0 auto;
+    text-align: center;
+    @keyframes typing {
+        0% {
+            background-color: currentColor;
+            box-shadow: 24rpx 0 0 0 rgba(255, 255, 255, .2), 48rpx 0 0 0 rgba(255, 255, 255, .2);
+        }
+
+        25% {
+            background-color: rgba(255, 255, 255, .4);
+            box-shadow: 24rpx 0 0 0 currentColor, 48rpx 0 0 0 rgba(255, 255, 255, .2);
+        }
+
+        75% {
+            background-color: rgba(255, 255, 255, .4);
+            box-shadow: 24rpx 0 0 0 rgba(255, 255, 255, .2), 48rpx 0 0 0 currentColor;
+        }
+    }
+}
+.@{prefix}-ocation-indicator {
+    position: relative;
+    left: -18rpx;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        width: 40rpx;
+        height: 40rpx;
+        border-radius: 100% 100% 100% 0;
+        box-shadow: 0 0 0 4rpx currentColor;
+        animation: mapping 1s linear infinite;
+        transform: rotate(-46deg);
+    }
+    &::after {
+        width: 60rpx;
+        height: 20rpx;
+        border-radius: 100%;
+        top: 48rpx;
+        left: 104rpx;
+        background-color: currentColor;
+        opacity: .2;
+    }
+    @keyframes mapping {
+        0% {
+            top: 0;
+        }
+
+        50% {
+            top: -10rpx;
+        }
+
+        100% {
+            top: 0;
+        }
+    }
+}
+.@{prefix}-dashboard-loading {
+    width: 64rpx;
+    height: 64rpx;
+    margin: 0 auto;
+    border: 4rpx currentColor solid;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        width: 64rpx;
+        height: 20rpx;
+        background-color: currentColor;
+        top: 40rpx;
+        left: -4rpx;
+    }
+    &::after {
+        width: 28rpx;
+        height: 4rpx;
+        top: 40rpx;
+        transform-origin: 2rpx 2rpx;
+        background-color: currentColor;
+        animation: dashboard-hand 2s linear infinite alternate;
+    }
+    @keyframes dashboard-hand {
+        0% {
+            transform: rotate(-160deg)
+        }
+
+        100% {
+            transform: rotate(-20deg)
+        }
+    }
+}
+.@{prefix}-battery-loading {
+    width: 56rpx;
+    height: 28rpx;
+    border: 2rpx solid currentColor;
+    border-radius: 4rpx;
+    position: relative;
+    animation: charge 5s linear infinite;
+    margin: 0 auto;
+    &::after {
+        content: '';
+        width: 4rpx;
+        height: 14rpx;
+        background-color: currentColor;
+        border-radius: 0 2rpx 2rpx 0;
+        position: absolute;
+        top: erpx;
+        right: -8rpx;
+    }
+    @keyframes charge {
+        0% {
+            box-shadow: inset 0 0 0 currentColor;
+        }
+
+        100% {
+            box-shadow: inset 60rpx 0 0 currentColor;
+        }
+    }
+}
+.@{prefix}-magnifier-loading {
+    width: 40rpx;
+    height: 40rpx;
+    box-shadow: 0 0 0 2rpx currentColor;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    animation: magnify 1s linear infinite alternate;
+    &::before,
+    &::after {
+        position: absolute;
+    }
+    &::before {
+        content: attr(data-text);
+        font-size: 18rpx;
+        left: 6rpx;
+        top: 8rpx;
+        text-align: center;
+    }
+    &::after {
+        content: '';
+        width: 4rpx;
+        height: 16rpx;
+        background-color: currentColor;
+        bottom: -12rpx;
+        left: 40rpx;
+        border-radius: 4rpx;
+        transform: rotate(-45deg);
+    }
+    @keyframes magnify {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.5);
+        }
+    }
+}
+.@{prefix}-help-loading {
+    width: 60rpx;
+    height: 60rpx;
+    border: 2rpx solid currentColor;
+    border-radius: 50%;
+    animation: rotation 1s ease-in-out infinite;
+    margin: 0 auto;
+    &::after {
+        content: '';
+        width: 10rpx;
+        height: 10rpx;
+        position: absolute;
+        background-color: currentColor;
+        border-radius: 100%;
+    }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+}
+.@{prefix}-cloud-loading {
+    margin: 0 70rpx;
+    width: 8rpx;
+    height: 20rpx;
+    opacity: .5;
+    position: relative;
+    box-shadow: 12rpx 0 0 0 currentColor, 24rpx 0 0 0 currentColor, 36rpx 0 0 0 currentColor, 248rpx 0 0 0 currentColor, 60rpx 0 0 0 currentColor, 72rpx 0 0 0 currentColor;
+    animation: rain 1s linear infinite alternate;
+    &::after {
+        content: '';
+        width: 80rpx;
+        height: 20rpx;
+        background-color: currentColor;
+        position: absolute;
+        top: 0;
+        opacity: 1;
+        -webkit-animation: line-flow 2s linear infinite reverse;
+        -moz-animation: line-flow 2s linear infinite reverse;
+        animation: line-flow 2s linear infinite reverse;
+    }
+    @keyframes rain {
+        0% {
+            box-shadow: 12rpx 0 0 0 currentColor, 24rpx 0 0 0 rgba(255, 255, 255, .9), 36rpx 0 0 0 rgba(255, 255, 255, .7), 48rpx 0 0 0 rgba(255, 255, 255, .6),60rpx 0 0 0 rgba(255, 255, 255, .3), 72rpx 0 0 0 rgba(255, 255, 255, .2);
+        }
+        100% {
+            box-shadow: 12rpx 0 0 0 rgba(255, 255, 255, .2), 24rpx 0 0 0 rgba(29, 19, 19, 0.3), 36rpx 0 0 0 rgba(255, 255, 255, .6), 48rpx 0 0 0 rgba(255, 255, 255, .7), 60rpx 0 0 0 rgba(255, 255, 255, .9), 72rpx 0 0 0 currentColor;
+            opacity: 1k
+        }
+    }
+    @keyframes line-flow {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 80rpx;
+        }
+    }
+}
+.@{prefix}-eye-loading {
+    width: 40rpx;
+    height: 40rpx;
+    background-color: rgba(255,255,255, .8);
+    border-radius: 50%;
+    box-shadow: 60rpx 0 0 0 rgba(255, 255, 255, .8);
+    position: relative;
+    margin: 0 70rpx;
+    &::after {
+        content: '';
+        background-color: currentColor;
+        width: 20rpx;
+        height: 20rpx;
+        box-shadow: 60rpx 0 0 0 currentColor;
+        border-radius: 50%;
+        position: absolute;
+        left: 18rpx;
+        top: 16rpx;
+        animation: eyeball 2s linear infinite alternate;
+    }
+    @keyframes eyeball {
+        0% {
+            left: 18rpx;
+        }
+
+        100% {
+            left: 2rpx;
+        }
+    }
+}
+.@{prefix}-coffeecup-loading {
+    width: 40rpx;
+    height: 48rpx;
+    border: 2rpx solid currentColor;
+    border-radius: 0 0 10rpx 10rpx;
+    position: relative;
+    margin: 0 auto;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        width: 2rpx;
+        height: 12rpx;
+        background-color: currentColor;
+        top: -20rpx;
+        left: 8px;
+        box-shadow: 10rpx 0 0 0 currentColor, 10rpx -10rpx 0 0 currentColor, 20rpx 0 0 0 currentColor;
+        animation: steam 1s linear infinite alternate;
+    }
+    &::after {
+        width: 10rpx;
+        height: 24rpx;
+        border: 2rp solid currentColor;
+        border-left: none;
+        border-radius: 0 40rpx 40rpx 0;
+        left: 40rpx;
+    }
+    @keyframes steam {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 12px;
+        }
+    }
+}
+.@{prefix}-square-loading {
+    width: 40rpx;
+    height: 40rpx;
+    border: 2rpx solid currentColor;
+    margin: 0 auto;
+    position: relative;
+    animation: fill-color 5s linear infinite;
+    &::after {
+        content: '';
+        width: 8rpx;
+        height: 8rpx;
+        background-color: currentColor;
+        position: absolute;
+        top: -16rpx;
+        left: 0;
+        animation: square-check 1s ease-in-out infinite;
+    }
+    @keyframes fill-color {
+        0% {
+            box-shadow: inset 0 0 0 0 rgba(255, 255, 255, .1);
+        }
+        100% {
+            box-shadow: inset 0 -40rpx 0 0 currentColor;
+        }
+    }
+    @keyframes square-check {
+        25% {
+            left: 44rpx;
+            top: -16rpx;
+        }
+        50% {
+            left: 44rpx;
+            top: 44rpx;
+        }
+        75% {
+            left: -18rpx;
+            top: 44rpx;
+        }
+        100% {
+            left: -18rpx;
+            top: -14rpx;
+        }
+    }
+}
+.@{prefix}-circle-loading {
+    margin: 0 auto;
+    width: 16rpx;
+    height: 16rpx;
+    position: relative;
+    background-color: currentColor;
+    box-shadow: -28rpx 0 0 currentColor;
+    opacity: .5;
+    border-radius: 50%;
+    animation: circle-classic 1s ease-in-out infinite alternate;
+    @keyframes circle-classic {
+        0% {
+            opacity: .1;
+            transform: rotate(0deg) scale(.5);
+        }
+        100% {
+            opacity: 1;
+            transform: rotate(360deg) scale(1.2);
+        }
+    }
+}

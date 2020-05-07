@@ -66,7 +66,7 @@ Page({
                 icon: 'ani-icon-loading3',
                 en: 'loading',
                 cn: '加载',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/loading/index'
             },
             {
                 icon: 'ani-icon-badge',

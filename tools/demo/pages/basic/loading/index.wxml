@@ -1,0 +1,87 @@
+<CustomBar className="bg-gradual-light-purple text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">
+        <text>loading</text>
+        <text class="ani-icon-loading ani-spin ml-12"></text>
+    </view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                基础Loading
+            </view>
+            <view class="box grid col-3 bg-white">
+                <view class="cell text-center solid">
+                    <text class="ani-icon-loading ani-spin ml-12"></text>
+                </view>
+                <view class="cell text-center solid">
+                    <text class="ani-icon-loading1 ani-spin ml-12"></text>
+                </view>
+                <view class="cell text-center solid">
+                    <text class="ani-icon-loading2 ani-spin ml-12"></text>
+                </view>
+                <view class="cell text-center solid">
+                    <text class="ani-icon-loading3 ani-hourglass ml-12"></text>
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="dot il-block bg-light-purple"></text>
+                其他Loading
+            </view>
+            <Notice
+                class="notice"
+                scroll="{{flase}}"
+                close="{{false}}"
+                closeColor="#F24849"
+                bgColor="#ffecbd"
+                bgRgba="rgba(255, 236, 219, 1)"
+                color="#f24849"
+                show-icon="{{true}}"
+                iconColor="#f24849"
+                notice="支持所有预设颜色或自己设置 eg: color: #9bcc66"/>
+            <view class="box flex flex-wrap align-center justify-between bg-white">
+                <view class="cell other text-center solid">
+                    <view class="ani-timer text-olive"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-typing-loading text-blue-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ocation-indicator text-sky-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-dashboard-loading text-cyan"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-battery-loading text-fusion-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-magnifier-loading text-red" data-text="AN"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-help-loading text-pink"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-cloud-loading text-fusion-cyan"></view>
+                </view>
+                <view class="cell other text-center solid bg-blue-grey">
+                    <view class="ani-eye-loading text-blue-grey"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-coffeecup-loading text-brown"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-square-loading text-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-circle-loading text-mauve"></view>
+                </view>
+                <view class="cell other"></view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
