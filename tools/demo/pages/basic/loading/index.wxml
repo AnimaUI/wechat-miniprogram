@@ -121,6 +121,45 @@
                 <view class="cell other text-center solid bg-blue-grey">
                     <view class="ani-eye-loading text-blue-grey"></view>
                 </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-double-circle-loading text-olive"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ball-turn-loading text-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-block-loading text-blue-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-double-bounce-loading text-fusion-blue-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-cubemove-loading text-cyan"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-bounce-dot-loading text-fusion-cyan"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-heartbeat-loading text-red"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-gauge-loading text-sky-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-wobblebar-loading text-fusion-sky-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-atebits-loading text-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-whirly-loading text-fusion-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-dots-loading text-purple"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-dcirclesots-loading text-fusion-purple"></view>
+                </view>
                 <view class="cell other clear"></view>
             </view>
         </view>
