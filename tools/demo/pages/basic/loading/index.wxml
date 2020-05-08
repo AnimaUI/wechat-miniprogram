@@ -43,7 +43,7 @@
                 show-icon="{{true}}"
                 iconColor="#f24849"
                 notice="支持所有预设颜色或自己设置 eg: color: #9bcc66"/>
-            <view class="box flex flex-wrap align-center justify-between bg-white">
+            <view class="box flex flex-wrap align-center justify-between pb-12 bg-white">
                 <view class="cell other text-center solid">
                     <view class="ani-timer text-olive"></view>
                 </view>
@@ -79,6 +79,18 @@
                 </view>
                 <view class="cell other text-center solid">
                     <view class="ani-circle-loading text-mauve"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-circle-side-loading text-green"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-square-jelly-loading text-fusion-sky-blue"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-cog-loading text-black"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-spinner-loading text-red"></view>
                 </view>
                 <view class="cell other"></view>
             </view>
