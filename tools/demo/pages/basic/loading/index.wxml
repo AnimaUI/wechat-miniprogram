@@ -10,7 +10,7 @@
         <view class="item">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="dot il-block bg-light-purple"></text>
-                基础Loading
+                基础icon Loading
             </view>
             <view class="box grid col-3 bg-white">
                 <view class="cell text-center solid">
@@ -30,11 +30,11 @@
         <view class="item">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="dot il-block bg-light-purple"></text>
-                其他Loading
+                css3 Loading
             </view>
             <Notice
                 class="notice"
-                scroll="{{flase}}"
+                scroll="{{true}}"
                 close="{{false}}"
                 closeColor="#F24849"
                 bgColor="#ffecbd"
@@ -42,7 +42,7 @@
                 color="#f24849"
                 show-icon="{{true}}"
                 iconColor="#f24849"
-                notice="支持所有预设颜色或自己设置 eg: color: #9bcc66"/>
+                notice="支持所有预设颜色(多色除外)或自己设置 eg: color: #9bcc66"/>
             <view class="box flex flex-wrap align-center justify-between pb-12 bg-white">
                 <view class="cell other text-center solid">
                     <view class="ani-timer text-olive"></view>
@@ -68,9 +68,6 @@
                 <view class="cell other text-center solid">
                     <view class="ani-cloud-loading text-fusion-cyan"></view>
                 </view>
-                <view class="cell other text-center solid bg-blue-grey">
-                    <view class="ani-eye-loading text-blue-grey"></view>
-                </view>
                 <view class="cell other text-center solid">
                     <view class="ani-coffeecup-loading text-brown"></view>
                 </view>
@@ -92,7 +89,39 @@
                 <view class="cell other text-center solid">
                     <view class="ani-spinner-loading text-red"></view>
                 </view>
-                <view class="cell other"></view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ball-scale-loading text-fusion-brown"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-rectangle-loading text-purple"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-heart-loading">
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                    </view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-red">
+                    <view class="ani-bar1-loading text-red bg-red" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-orange">
+                    <view class="ani-bar2-loading text-orange" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-yellow">
+                    <view class="ani-bar3-loading text-yellow" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-blue-grey">
+                    <view class="ani-eye-loading text-blue-grey"></view>
+                </view>
+                <view class="cell other clear"></view>
             </view>
         </view>
     </view>

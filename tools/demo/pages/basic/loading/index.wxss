@@ -14,6 +14,10 @@
 .main .item .box .cell text {
   font-size: 48rpx;
 }
+.main .item .box .cell.clear {
+  height: 0;
+  padding: 0;
+}
 .main .item .box .other {
   width: 33.33%;
   height: 140rpx;
