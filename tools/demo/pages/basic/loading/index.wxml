@@ -109,18 +109,6 @@
                         <text></text>
                     </view>
                 </view>
-                <view class="cell other text-center solid bg-fusion-red">
-                    <view class="ani-bar1-loading text-red bg-red" data-text="LOADING ..."></view>
-                </view>
-                <view class="cell other text-center solid bg-fusion-orange">
-                    <view class="ani-bar2-loading text-orange" data-text="LOADING ..."></view>
-                </view>
-                <view class="cell other text-center solid bg-fusion-yellow">
-                    <view class="ani-bar3-loading text-yellow" data-text="LOADING ..."></view>
-                </view>
-                <view class="cell other text-center solid bg-blue-grey">
-                    <view class="ani-eye-loading text-blue-grey"></view>
-                </view>
                 <view class="cell other text-center solid">
                     <view class="ani-double-circle-loading text-olive"></view>
                 </view>
@@ -174,6 +162,30 @@
                 </view>
                 <view class="cell other text-center solid">
                     <view class="ani-semi-circle-loading text-pink"></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-red">
+                    <view class="ani-bar1-loading text-red bg-red" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-orange">
+                    <view class="ani-bar2-loading text-orange" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-yellow">
+                    <view class="ani-bar3-loading text-yellow" data-text="LOADING ..."></view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-green">
+                    <view class="ani-bar4-loading text-white">
+                        <text></text>
+                        <text></text>
+                        <text></text>
+                    </view>
+                </view>
+                <view class="cell other text-center solid bg-fusion-blue-green">
+                    <view class="ani-eat-bean-loading text-white">
+                        <text class="dot text-white"></text>
+                    </view>
+                </view>
+                <view class="cell other text-center solid bg-blue-grey">
+                    <view class="ani-eye-loading text-blue-grey"></view>
                 </view>
                 <view class="cell other clear"></view>
             </view>
