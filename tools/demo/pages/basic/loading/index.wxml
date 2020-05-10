@@ -158,7 +158,16 @@
                     <view class="ani-dots-loading text-purple"></view>
                 </view>
                 <view class="cell other text-center solid">
-                    <view class="ani-dcirclesots-loading text-fusion-purple"></view>
+                    <view class="ani-dcirclesots-loading"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-plus-ball-loading"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ball-clip-rotate-loading text-fusion-purple"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ball-clip-rotate-pulse-loading text-mauve"></view>
                 </view>
                 <view class="cell other clear"></view>
             </view>

@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/basic/loading/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -10,7 +11,6 @@
         "pages/basic/avatar/index",
         "pages/basic/progress/index",
         "pages/basic/box-shadow/index",
-        "pages/basic/loading/index",
         "pages/component/index",
         "pages/solution/index",
         "pages/about/index"
