@@ -584,7 +584,7 @@
         }
     }
 }
-.@{prefix}-spinner-loading {
+.@{prefix}-square-circle-loading {
     position: relative;
     width: 32rpx;
     height: 32rpx;
@@ -600,20 +600,20 @@
         height: 64rpx;
         left: 0;
         background-color: currentColor;
-        animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+        animation: square-circle 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     }
     &::after {
         width: 300%;
         height: 0.3em;
-        left: -0.7em;
+        left: -0.6em;
         bottom: -1.8em;
         border-radius: 50%;
         background-color: #322b27;
         opacity: 0.6;
-        animation: spinner-shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite
+        animation: square-circle-shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite
             normal;
     }
-    @keyframes spinner {
+    @keyframes square-circle {
         50% {
             border-radius: 50%;
             transform: scale(0.5) rotate(360deg);
@@ -624,7 +624,7 @@
             background-color: currentColor;
         }
     }
-    @keyframes spinner-shadow {
+    @keyframes square-circle-shadow {
         50% {
             transform: scale(0.5);
             background-color: #322b27;

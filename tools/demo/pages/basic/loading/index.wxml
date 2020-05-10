@@ -84,10 +84,10 @@
                     <view class="ani-square-jelly-loading text-fusion-sky-blue"></view>
                 </view>
                 <view class="cell other text-center solid">
-                    <view class="ani-cog-loading text-black"></view>
+                    <view class="ani-square-circle-loading text-red"></view>
                 </view>
                 <view class="cell other text-center solid">
-                    <view class="ani-spinner-loading text-red"></view>
+                    <view class="ani-cog-loading text-black"></view>
                 </view>
                 <view class="cell other text-center solid">
                     <view class="ani-ball-scale-loading text-fusion-brown"></view>
