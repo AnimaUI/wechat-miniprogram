@@ -169,6 +169,12 @@
                 <view class="cell other text-center solid">
                     <view class="ani-ball-clip-rotate-pulse-loading text-mauve"></view>
                 </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-ball-clip-rotate-multiple-loading text-fusion-mauve"></view>
+                </view>
+                <view class="cell other text-center solid">
+                    <view class="ani-semi-circle-loading text-pink"></view>
+                </view>
                 <view class="cell other clear"></view>
             </view>
         </view>
