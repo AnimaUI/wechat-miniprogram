@@ -64,11 +64,11 @@ module.exports = {
         'dark-gray',
         'grey',
         'gray',
-        'white',
         'ghost-white',
+        'white',
         'transparent'
     ],
-    basicColorText: ['黢黑', '暗灰', '烟灰', '灰色', '雪白', '魂白', '透明'],
+    basicColorText: ['黢黑', '暗灰', '烟灰', '灰色', '魂白', '雪白', '透明'],
     gradualColor: [
         'red',
         'orange',

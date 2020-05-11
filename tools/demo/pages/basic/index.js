@@ -72,7 +72,7 @@ Page({
                 icon: 'ani-icon-badge',
                 en: 'badge',
                 cn: '徽标',
-                url: '/pages/basic/color/index'
+                url: '/pages/basic/badge/index'
             }
         ]
     },

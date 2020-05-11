@@ -1,0 +1,25 @@
+/*!
+ _________
+|   🚥   |\
+| ~~~~~~~ |_\
+|  badge |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+.@{prefix}-badge {
+    width: 12px;
+    height: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: currentColor;
+    position: relative;
+    &::before {
+        content: attr(data-text);
+        color: #fff;
+    }
+}
