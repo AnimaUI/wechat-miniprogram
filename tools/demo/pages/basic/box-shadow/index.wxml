@@ -31,12 +31,12 @@
                     翘边阴影
                 </view>
                 <view class="shadow-perspective bg-white text-center margin-sm padding-sm">
-                    透视阴影阴影
+                    透视阴影
                 </view>
                 <view
                     class="shadow-img-blur text-center margin-sm padding-sm text-white"
                     style="height: 200rpx; line-height: 200rpx; background-image: url({{imgBaseUrl}}/146-bigskin-4.jpg)">
-                    背景图片对应阴影
+                    背景图片阴影
                 </view>
             </view>
         </view>
