@@ -9,8 +9,8 @@
 */
 @import './_prefix.less';
 .@{prefix}-badge {
-    width: 12px;
-    height: 12px;
+    width: 20rpx;
+    height: 20rpx;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -21,5 +21,28 @@
     &::before {
         content: attr(data-text);
         color: #fff;
+    }
+    &.animation {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            border: 1rpx solid currentColor;
+            animation: badge-animation 1.2s infinite ease-in-out;
+        }
+        @keyframes badge-animation {
+            from {
+                transform: scale(.8);
+                opacity: 1
+            }
+            to {
+                transform: scale(2.4);
+                opacity: 0
+            }
+        }
     }
 }
