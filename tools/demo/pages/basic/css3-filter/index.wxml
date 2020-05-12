@@ -1,0 +1,58 @@
+<CustomBar className="bg-gradual-mauve text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">
+        <text>badge</text>
+    </view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-mauve"></text>
+                css3 filters
+            </view>
+            <view class="box grid col-2 bg-white">
+                <view class="cell text-center">
+                    <text>normal</text>
+                    <image class="ani-normal" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>grayscale</text>
+                    <image class="ani-grayscale" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>saturate</text>
+                    <image class="ani-saturate" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>sepia</text>
+                    <image class="ani-sepia" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>invert</text>
+                    <image class="ani-invert" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>opacity</text>
+                    <image class="ani-opacity" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>brightness</text>
+                    <image class="ani-brightness" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>contrast</text>
+                    <image class="ani-contrast" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>hue-rotate</text>
+                    <image class="ani-hue-rotate" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+                <view class="cell text-center">
+                    <text>blur</text>
+                    <image class="ani-blur pencil-effect" src="{{imgBaseUrl}}/bg.jpg"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

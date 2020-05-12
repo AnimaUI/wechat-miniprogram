@@ -73,6 +73,12 @@ Page({
                 en: 'badge',
                 cn: '徽标',
                 url: '/pages/basic/badge/index'
+            },
+            {
+                icon: 'ani-icon-css',
+                en: 'css3-filter',
+                cn: 'css3滤镜',
+                url: '/pages/basic/css3-filter/index'
             }
         ]
     },
