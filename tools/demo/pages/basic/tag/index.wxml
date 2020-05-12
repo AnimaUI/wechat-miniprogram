@@ -6,7 +6,7 @@
     <view class="main">
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-purple"></text>
+                <text class="ani-badge il-block bg-gradual-purple"></text>
                 基础形状
             </view>
             <view class="padding-sm solid-bottom flex justify-start">
@@ -17,7 +17,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-purple"></text>
+                <text class="ani-badge il-block bg-gradual-purple"></text>
                 尺大小
             </view>
             <view class="padding-sm solid-bottom flex justify-start align-center">
@@ -27,7 +27,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-purple"></text>
+                <text class="ani-badge il-block bg-gradual-purple"></text>
                 基础颜色
             </view>
             <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">
@@ -36,7 +36,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-purple"></text>
+                <text class="ani-badge il-block bg-gradual-purple"></text>
                 渐变色
             </view>
             <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">
@@ -45,7 +45,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-purple"></text>
+                <text class="ani-badge il-block bg-gradual-purple"></text>
                 线框
             </view>
             <view class="padding-sm solid-bottom flex justify-start flex-wrap align-center">

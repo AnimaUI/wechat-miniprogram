@@ -18,7 +18,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         固定布局
                     </view>
                     <view class="flex flex-wrap pl-30 pt-10 bg-white">
@@ -34,7 +34,7 @@
                 </view>
                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         比例布局
                     </view>
                     <view class="flex pl-30 pt-10 bg-white">
@@ -74,7 +74,7 @@
                 </view>
                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         水平方向对齐
                     </view>
                     <view class="flex justify-start pl-30 pt-10 bg-white">
@@ -100,7 +100,7 @@
                 </view>
                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         垂直方向对齐
                     </view>
                     <view class="flex align-start pl-30 pt-10 bg-white">
@@ -118,7 +118,7 @@
                 </view>
                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         排列方向
                     </view>
                     <view class="flex flex-direction-row pl-30 pt-10 bg-white">
@@ -146,7 +146,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-blue-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         等分
                     </view>
                     <view class="grid col-1 pl-30 pr-30 pt-10 pb-10 solid-bottom grid-row-gap grid-column-gap">
@@ -196,7 +196,7 @@
                 </view>
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-blue-green"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         展示顺序
                     </view>
                     <view
@@ -229,7 +229,7 @@
             <swiper-item class="ani-swiper-item">
                 <view class="item bg-white">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-cyan"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         内外边距
                     </view>
                     <Notice
@@ -275,7 +275,7 @@
                         </view>
                     </view>
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-cyan"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         定位
                     </view>
                     <view class="flex justify-around padding-sub solid-bottom">
@@ -293,7 +293,7 @@
                         </view>
                     </view>
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-cyan"></text>
+                        <text class="ani-badge il-block bg-gradual-olive"></text>
                         边框
                     </view>
                     <view class="grid col-3 padding-sub solid-bottom">
@@ -329,7 +329,7 @@
                         </view>
                     </view>
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
-                        <text class="dot il-block bg-red"></text>
+                        <text class="ani-badge il-block bg-red"></text>
                         其他
                     </view>
                     <Notice

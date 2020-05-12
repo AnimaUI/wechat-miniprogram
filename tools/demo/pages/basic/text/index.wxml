@@ -13,7 +13,7 @@
     <view class="main">
         <view class="item bg-white">
             <view class="box-bar fs-28 capitalize pl-30 solid-bottom">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文本大小
             </view>
             <Notice
@@ -64,19 +64,19 @@
         </view>
         <view class="item bg-white" wx:for="{{textColors}}" wx:key="index" wx:for-item="colors">
             <view class="box-bar fs-28 capitalize pl-30 solid-bottom" wx:if="{{index === 0}}">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 primary
             </view>
             <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 1}}">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 dark
             </view>
             <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 2}}">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 disabled
             </view>
             <view class="box-bar fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 3}}">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 light
             </view>
             <view class="grid col-3 padding-sm solid-bottom">
@@ -91,7 +91,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 basic
             </view>
             <view class="color-box flex flex-wrap justify-around padding-sm">
@@ -108,7 +108,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字渐变
             </view>
             <view class="grid col-3 padding-sm solid-bottom">
@@ -125,7 +125,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字阴影
             </view>
             <view class="grid col-3 padding-sm solid-bottom">
@@ -149,7 +149,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字对齐
             </view>
             <view class="padding-sm solid-bottom">
@@ -168,7 +168,7 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字截断
             </view>
             <view class="padding-sm solid-bottom">
@@ -179,7 +179,7 @@
         </view>
          <view class="item bg-white">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="dot il-block bg-blue-green"></text>
+                <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 辅助文字
             </view>
             <view class="padding-sm solid-bottom">

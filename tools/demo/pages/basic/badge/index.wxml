@@ -45,7 +45,7 @@
         <view class="item">
             <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-purple"></text>
-                基础icon badge
+                基础颜色icon badge
             </view>
             <view class="box grid col-3 bg-white">
                 <view class="cell text-center solid" wx:for="{{basicColor}}">
