@@ -21,6 +21,7 @@ App({
         });
     },
     globalData: {
+        home: '/pages/basic/index',
         menuBar: {
             // 当前索引
             current: 0,

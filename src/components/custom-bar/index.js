@@ -46,7 +46,7 @@ Component({
         },
         toHome() {
             wx.reLaunch({
-                url: '/pages/index/index'
+                url: app.globalData.home || '/pages/index/index'
             });
         }
     }
