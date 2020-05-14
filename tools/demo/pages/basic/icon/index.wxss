@@ -1,0 +1,19 @@
+page {
+  background: #fff;
+}
+.icon-box .search-box {
+  width: 100%;
+  top: 64px;
+  z-index: 999;
+}
+.icon-box .search-box .search-el {
+  display: block;
+  margin: 20rpx auto 20rpx;
+  padding: 0 26rpx;
+}
+.icon-box .main {
+  margin-top: 112rpx;
+}
+.icon-box .main .item {
+  padding: 40rpx 10rpx;
+}

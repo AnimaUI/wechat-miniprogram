@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/component/custom-bar/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",

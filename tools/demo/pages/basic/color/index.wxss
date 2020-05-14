@@ -1,0 +1,18 @@
+.bgColor .item .box-bar {
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
+}
+.bgColor .item .color-box .bg-item {
+  width: 46%;
+  line-height: 2;
+  border-radius: 6rpx;
+}
+.bgColor .item .color-box .bg-item:nth-of-type(1),
+.bgColor .item .color-box .bg-item:nth-of-type(2) {
+  margin-top: 0;
+}
+.bgColor .item .color-box .bg-item text {
+  display: block;
+  width: 100%;
+}
