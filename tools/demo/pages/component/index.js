@@ -7,79 +7,103 @@ Page({
         imgBaseUrl: app.imgBaseUrl,
         menuBar: app.globalData.menuBar,
         colour,
-        list: [{
+        list: [
+            {
                 icon: 'ani-icon-bar',
                 en: 'topBar',
-                cn: '顶部Bar'
+                cn: '顶部Bar',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-menu',
                 en: 'menuBar',
-                cn: '底部Bar'
+                cn: '底部Bar',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-tab',
                 en: 'tab',
-                cn: 'tab导航'
+                cn: 'tab导航',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-form',
                 en: 'form',
-                cn: '表 单'
+                cn: '表 单',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-carousel',
                 en: 'swiper',
-                cn: '轮 播'
+                cn: '轮 播',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-steps',
                 en: 'steps',
-                cn: '步骤条'
+                cn: '步骤条',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-card',
                 en: 'card',
-                cn: '卡 片'
+                cn: '卡 片',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-time-line',
                 en: 'timeLine',
-                cn: '时间轴'
+                cn: '时间轴',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-modal',
                 en: 'modal',
-                cn: '模态框'
+                cn: '模态框',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-list',
                 en: 'list',
-                cn: '列 表'
+                cn: '列 表',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-date',
                 en: 'date',
-                cn: '日 期'
+                cn: '日 期',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-time2',
                 en: 'time',
-                cn: '时 间'
+                cn: '时 间',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-slider',
                 en: 'slider',
-                cn: '滑 块'
+                cn: '滑 块',
+                url: '/pages/component/custom-bar/index'
             },
             {
                 icon: 'ani-icon-rate',
                 en: 'rate',
-                cn: '评 分'
+                cn: '评 分',
+                url: '/pages/component/custom-bar/index'
             }
         ]
     },
     onLoad() {},
     onShareAppMessage() {},
-    onShow() {}
+    onShow() {},
+    link(e) {
+        const url = e.currentTarget.dataset.url;
+        wx.navigateTo({
+            url,
+            success: function (res) {},
+            fail: function (res) {},
+            complete: function (res) {}
+        });
+    }
 });

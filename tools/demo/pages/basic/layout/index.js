@@ -5,7 +5,7 @@ Page({
         imgBaseUrl: app.imgBaseUrl,
         swiperHeight: 0,
         currentTab: 0,
-        activeColorClass: 'green',
+        activeColorClass: 'olive',
         tabData: [
             {
                 name: 'Flex布局',
