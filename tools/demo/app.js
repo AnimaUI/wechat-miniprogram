@@ -54,7 +54,13 @@ App({
                     text: '组件',
                     icon: 'ani-icon-component',
                     selectedColor: '#ff8800',
-                    className: 'menu-item'
+                    className: 'menu-item',
+                    badge: {
+                        show: true,
+                        num: 16,
+                        class:'bg-gradual-purple text-white',
+                        style: "width: 40rpx; height: 40rpx"
+                    }
                 },
                 {
                     pagePath: '/pages/solution/index',

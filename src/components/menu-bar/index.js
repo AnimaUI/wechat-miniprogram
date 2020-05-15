@@ -48,16 +48,6 @@ Component({
             type: Array,
             value: []
         },
-        // 角标字体颜色
-        badgeColor: {
-            type: String,
-            value: '#fff'
-        },
-        // 角标背景颜色
-        badgeBgColor: {
-            type: String,
-            value: '#f35352'
-        },
         // 去掉顶部细线
         unlined: {
             type: Boolean,

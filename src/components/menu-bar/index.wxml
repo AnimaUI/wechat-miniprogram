@@ -12,17 +12,17 @@
                 <text
                     style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
                     class="{{item.icon}}"></text>
-                <view
-                    class="{{item.isDot ? prefix + '-badge-dot' : prefix + '-badge'}}"
-                    style="color: {{badgeColor}}; background: {{badgeBgColor}}"
-                    wx:if="{{item.num > 0}}">
-                    {{item.isDot?"":item.num}}
-                </view>
             </view>
             <view
                 class="{{prefix}}-text-scale {{item.hump ? prefix + '-text-hump' : ''}}"
                 style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}">
                 {{item.text}}
+            </view>
+            <view
+                class="{{item.badge.show ? prefix + '-badge' : ''}} {{item.badge.class}}"
+                style="{{item.badge.style}}"
+                wx:if="{{item.badge.show}}">
+                {{item.badge.num || ''}}
             </view>
         </view>
     </block>
