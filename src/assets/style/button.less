@@ -12,20 +12,43 @@ button {
     line-height: 3;
     font-size: 24rpx;
 }
-.button-hover {
-    transform: translate(1rpx, 1rpx);
-}
-.@{prefix}-btn {
-    border-radius: 6rpx;
-    &::after {
-        display: none;
-    }
-}
 .@{prefix}-btn {
     position: relative;
     padding: 0 30rpx;
+    border-radius: 6rpx;
     text-align: center;
     text-decoration: none;
+    &::after {
+        display: none;
+    }
+    &.button-hover {
+        // transform: translate(1rpx, 1rpx);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            border-radius: 100%;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            opacity: .618;
+            transform: scale(.3);
+            width: 90%;
+            height: 100%;
+            animation: ripple .5s ease-out;
+            animation-fill-mode: forwards;
+            @keyframes ripple {
+                from {
+                    transform: scale(2.5);
+                    opacity: .3;
+                }
+                to {
+                    transform: scale(.1);
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
 
 .@{prefix}-btn[class*="line"] {
