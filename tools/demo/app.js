@@ -2,7 +2,7 @@
 const config = require('./utils/config');
 App({
     imgBaseUrl: config.imgBaseUrl,
-    onLaunch: function() {
+    onLaunch: function () {
         wx.cloud.init({
             traceUser: true
         });
@@ -28,53 +28,56 @@ App({
             // 字体颜色
             color: '#b4bbc8',
             // 字体选中颜色
-            selectedColor: '#ff8800',
+            selectedColor: '#0fb9b1',
             // 背景颜色
             backgroundColor: '#fff',
-            // 是否需要中间凸起按钮
-            hump: false,
             // 固定在底部
             isFixed: true,
             // 角标字体颜色
             badgeColor: '#fff',
             // 角标背景颜色
-            badgeBgColor: 'f35352',
+            badgeBgColor: '#0fb9b1',
             // 去掉顶部细线
             unlined: false,
             // tabbar列表
-            list: [{
+            list: [
+                {
                     pagePath: '/pages/basic/index',
                     text: '基础',
                     icon: 'ani-icon-basic',
                     className: 'menu-item',
-                    selectedColor: '#ff8800'
+                    selectedColor: '#0fb9b1',
+                    hump: false
                 },
                 {
                     pagePath: '/pages/component/index',
                     text: '组件',
                     icon: 'ani-icon-component',
-                    selectedColor: '#ff8800',
+                    selectedColor: '#0fb9b1',
                     className: 'menu-item',
+                    hump: false,
                     badge: {
-                        show: true,
+                        show: false,
                         num: 16,
-                        class:'bg-gradual-purple text-white',
-                        style: "width: 40rpx; height: 40rpx"
+                        class: 'bg-gradual-purple text-white',
+                        style: 'width: 32rpx; height: 32rpx'
                     }
                 },
                 {
                     pagePath: '/pages/solution/index',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
-                    selectedColor: '#ff8800',
-                    className: 'menu-item'
+                    selectedColor: '#0fb9b1',
+                    className: 'menu-item',
+                    hump: false
                 },
                 {
                     pagePath: '/pages/about/index',
                     text: '关于',
                     icon: 'ani-icon-person',
-                    selectedColor: '#ff8800',
-                    className: 'menu-item'
+                    selectedColor: '#0fb9b1',
+                    className: 'menu-item',
+                    hump: false
                 }
             ]
         },

@@ -11,10 +11,10 @@
             <view class="{{prefix}}-icon-box {{ item.hump ? prefix + '-tabbar-hump' : '' }}">
                 <text
                     style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
-                    class="{{item.icon}}"></text>
+                    class="shadow-text-black {{item.icon}}"></text>
             </view>
             <view
-                class="{{prefix}}-text-scale {{item.hump ? prefix + '-text-hump' : ''}}"
+                class="shadow-text-black {{prefix}}-text-scale {{item.hump ? prefix + '-text-hump' : ''}}"
                 style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}">
                 {{item.text}}
             </view>
@@ -26,7 +26,4 @@
             </view>
         </view>
     </block>
-    <view
-        class="{{ hump ? prefix + '-hump-box' : '' }}"
-        wx:if="{{ hump && !unlined }}"></view>
 </view>

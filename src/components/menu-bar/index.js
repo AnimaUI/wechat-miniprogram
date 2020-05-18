@@ -33,11 +33,6 @@ Component({
             type: String,
             value: '#fff'
         },
-        // 是否需要中间凸起按钮
-        hump: {
-            type: Boolean,
-            value: false
-        },
         // 固定在底部
         isFixed: {
             type: Boolean,
