@@ -43,6 +43,7 @@ App({
             list: [
                 {
                     pagePath: '/pages/basic/index',
+                    action: 'link',
                     text: '基础',
                     icon: 'ani-icon-basic',
                     className: 'menu-item',
@@ -51,6 +52,7 @@ App({
                 },
                 {
                     pagePath: '/pages/component/index',
+                    action: 'link',
                     text: '组件',
                     icon: 'ani-icon-component',
                     selectedColor: '#0fb9b1',
@@ -65,6 +67,7 @@ App({
                 },
                 {
                     pagePath: '/pages/solution/index',
+                    action: 'link',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
                     selectedColor: '#0fb9b1',
@@ -73,6 +76,7 @@ App({
                 },
                 {
                     pagePath: '/pages/about/index',
+                    action: 'link',
                     text: '关于',
                     icon: 'ani-icon-person',
                     selectedColor: '#0fb9b1',

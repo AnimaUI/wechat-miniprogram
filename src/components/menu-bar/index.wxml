@@ -5,16 +5,17 @@
         wx:for="{{list}}"
         wx:key="key">
         <view
-            class="{{prefix}}-tabbar-item {{item.className}} {{item.hump ? prefix + '-item-hump' : ''}}"
-            style="background: {{item.hump ? backgroundColor : 'none'}}"
-            bindtap="menuBarSwitch" data-index="{{index}}">
-            <view class="{{prefix}}-icon-box {{ item.hump ? prefix + '-tabbar-hump' : '' }}">
+            class="{{prefix}}-tabbar-item {{item.className}}"
+            bindtap="menuBarSwitch"
+            data-index="{{index}}"
+            data-action="{{item.action}}">
+            <view class="{{prefix}}-icon-box">
                 <text
                     style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
                     class="shadow-text-black {{item.icon}}"></text>
             </view>
             <view
-                class="shadow-text-black {{prefix}}-text-scale {{item.hump ? prefix + '-text-hump' : ''}}"
+                class="shadow-text-black {{prefix}}-text-scale"
                 style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}">
                 {{item.text}}
             </view>

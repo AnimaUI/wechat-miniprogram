@@ -78,16 +78,23 @@ Component({
         menuBarSwitch(e) {
             const DATASET = e.currentTarget.dataset;
             const INDEX = DATASET.index;
-            const menuBar = app.globalData.menuBar;
-            if (INDEX === menuBar.current) {
+            const ACTION = DATASET.action;
+            // const menuBar = app.globalData.menuBar;
+            if (INDEX === this.current) {
                 return;
             }
-            wx.redirectTo({
-                url: this.data.list[INDEX].pagePath
-            });
-            // this.triggerEvent('menuBarSwitch', {
-            //     index: INDEX
-            // });
+            if (ACTION === 'link') {
+                wx.redirectTo({
+                    url: this.data.list[INDEX].pagePath
+                });
+            } else if (ACTION === 'click') {
+                this.setData({
+                    current: INDEX
+                });
+                this.triggerEvent('menuBarSwitch', {
+                    index: INDEX
+                });
+            }
         },
         editMenuBar() {
             const curPageArr = getCurrentPages();

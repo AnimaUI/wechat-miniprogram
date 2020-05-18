@@ -14,11 +14,59 @@
             <view class="box bg-white">
                 <view class="cell text-center">
                     <MenuBar
-                        color="{{menuBar.color}}"
-                        selectedColor="{{menuBar.selectedColor}}"
-                        current="{{menuBar.current}}"
-                        backgroundColor="{{menuBar.backgroundColor}}"
-                        list="{{menuBar.list}}" />
+                        color="{{menuBar1.color}}"
+                        selectedColor="{{menuBar1.selectedColor}}"
+                        current="{{menuBar1.current}}"
+                        backgroundColor="{{menuBar1.backgroundColor}}"
+                        list="{{menuBar1.list}}" />
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                带徽标bar
+            </view>
+            <view class="box bg-white">
+                <view class="cell text-center">
+                    <MenuBar
+                        color="{{menuBar2.color}}"
+                        selectedColor="{{menuBar2.selectedColor}}"
+                        current="{{menuBar2.current}}"
+                        backgroundColor="{{menuBar2.backgroundColor}}"
+                        list="{{menuBar2.list}}" />
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                带小圆点bar
+            </view>
+            <view class="box bg-white">
+                <view class="cell text-center">
+                    <MenuBar
+                        color="{{menuBar3.color}}"
+                        selectedColor="{{menuBar3.selectedColor}}"
+                        current="{{menuBar3.current}}"
+                        backgroundColor="{{menuBar3.backgroundColor}}"
+                        list="{{menuBar3.list}}" />
+                </view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                链接bar
+            </view>
+            <view class="box bg-white">
+                <view class="cell text-center">
+                    <MenuBar
+                        color="{{menuBar4.color}}"
+                        selectedColor="{{menuBar4.selectedColor}}"
+                        current="{{menuBar4.current}}"
+                        backgroundColor="{{menuBar4.backgroundColor}}"
+                        list="{{menuBar4.list}}" />
                 </view>
             </view>
         </view>
