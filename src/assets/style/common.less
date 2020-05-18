@@ -18,7 +18,7 @@ page {
     color: var(--black);
 }
 [class*='ani-icon-'] {
-    font-family: 'ani-icon' !important;
+    font-family: 'ani-icon';
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,12 +55,12 @@ page {
         // 判断是否是占位符
         .textType(@typeName) when not( @typeName = null) {
             .text-@{typeName}-@{name} {
-                color: var(~'--@{typeName}-@{name}') !important;
+                color: var(~'--@{typeName}-@{name}');
             }
         }
         .textType(@typeName) when ( @typeName = null) {
             .text-@{name} {
-                color: var(~'--@{name}') !important;
+                color: var(~'--@{name}');
             }
         }
         .color(@colors, (@j + 1));
@@ -105,19 +105,19 @@ page {
 
 /* 不正经黑色 */
 .text-black {
-    color: var(--black) !important;
+    color: var(--black);
 }
 /* 暗灰色 */
 .text-dark-gray {
-    color: var(--dark-gray) !important;
+    color: var(--dark-gray);
 }
 /* 烟灰色 */
 .text-grey {
-    color: var(--grey) !important;
+    color: var(--grey);
 }
 /* 灰色 */
 .text-gray {
-    color: var(--gray) !important;
+    color: var(--gray);
 }
 /* 魂白 */
 .text-ghost-white {

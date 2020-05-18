@@ -18,13 +18,13 @@ Page({
                 icon: 'ani-icon-menu',
                 en: 'menuBar',
                 cn: '底部Bar',
-                url: '/pages/component/custom-bar/index'
+                url: '/pages/component/menu-bar/index'
             },
             {
                 icon: 'ani-icon-tab',
                 en: 'tab',
                 cn: 'tab导航',
-                url: '/pages/component/custom-bar/index'
+                url: '/pages/component/tab/index'
             },
             {
                 icon: 'ani-icon-form',

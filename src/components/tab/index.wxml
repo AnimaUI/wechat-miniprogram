@@ -11,16 +11,18 @@
     <scroll-view
         scroll-x="true"
         scroll-with-animation="{{true}}"
-        class="{{prefix}}-bar"
+        class="{{prefix}}-bar {{tabBackground.class && !tabBackground.style ? tabBackground.class : ''}}"
+        style="{{tabBackground.style ? tabBackground.style : ''}}"
         scroll-left="{{(currentTab - 2) * singleNavWidth}}">
         <view
-            class="item {{currentTab == index ? 'selected' : ''}}  {{module.getSelectedClass(index, currentTab, activeColorClass) != '' ? 'text-' + module.getSelectedClass(index, currentTab, activeColorClass) : ''}}"
-            style="{{module.getSelectedClass(index, currentTab, activeColorClass) != '' ? '--active-line: var(--' + module.getSelectedClass(index, currentTab, activeColorClass) + ')' : ''}}"
+            class="item {{currentTab == index ? 'selected' : ''}} {{!color && colorClass && currentTab != index ? 'text-' + colorClass : ''}} {{!activeColor && currentTab == index && module.getSelectedClass(index, currentTab, activeColorClass) != '' ? 'text-' + module.getSelectedClass(index, currentTab, activeColorClass) : ''}}"
+            style="{{module.getSelectedClass(index, currentTab, activeColorClass) != '' ? '--active-line: var(--' + module.getSelectedClass(index, currentTab, activeColorClass) + ');' : ''}} {{color && currentTab != index ? 'color: ' + color : ''}} {{currentTab == index && activeColor ? 'color:' + activeColor + '; --active-line: ' + activeColor : ''}}"
             wx:for="{{tabData}}"
             wx:key="name"
             data-current="{{index}}"
             catchtap="switchNav">
-            {{item.name}}
+            <text wx:if="{{item.icon}}" class="icon {{item.icon}}"></text>
+            <text>{{item.name}}</text>
         </view>
     </scroll-view>
 </view>

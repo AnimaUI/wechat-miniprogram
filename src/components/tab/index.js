@@ -11,9 +11,25 @@ Component({
             type: Number,
             value: 0
         },
+        color: {
+            type: String,
+            value: ''
+        },
+        activeColor: {
+            type: String,
+            value: ''
+        },
+        colorClass: {
+            type: String,
+            value: 'text-black'
+        },
         activeColorClass: {
             type: String,
-            value: 'sky-blue'
+            value: 'olive'
+        },
+        tabBackground: {
+            type: Object,
+            value: {}
         },
         tabData: {
             type: Array,
@@ -60,7 +76,7 @@ Component({
     methods: {
         // tab切换函数，让swiper当前滑块的current的index与tab头部index一一对应
         switchNav(e) {
-            const index = e.target.dataset.current;
+            const index = e.currentTarget.dataset.current;
             // 设置data属性中的navbarActiveIndex为当前点击的navbar
             if (+this.data.currentTab === index) {
                 return false;

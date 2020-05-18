@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/component/menu-bar/index",
+        "pages/component/tab/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -16,6 +16,7 @@
         "pages/basic/css3-filter/index",
         "pages/component/index",
         "pages/component/custom-bar/index",
+        "pages/component/menu-bar/index",
         "pages/solution/index",
         "pages/about/index"
     ],

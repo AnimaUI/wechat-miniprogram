@@ -6,12 +6,16 @@
     .item,
     .selected {
         display: inline-block;
-        margin: 0 10rpx;
-        padding: 0 20rpx;
-    }
-    .selected {
         height: 88rpx;
         line-height: 88rpx;
+        margin: 0 10rpx;
+        padding: 0 20rpx;
+        .icon {
+            margin-right: 12rpx;
+            font-size: 24rpx;
+        }
+    }
+    .selected {
         font-size: 28rpx;
         position: relative;
         &::after {
