@@ -448,6 +448,7 @@ page {
 }
 .main .box .item .left {
   margin-left: 12prx;
+  text-align: center;
 }
 .main .box .item .left text {
   display: block;

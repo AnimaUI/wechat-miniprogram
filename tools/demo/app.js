@@ -28,7 +28,7 @@ App({
             // 字体颜色
             color: '#b4bbc8',
             // 字体选中颜色
-            selectedColor: '#0fb9b1',
+            selectedColor: '#ce62d6',
             // 背景颜色
             backgroundColor: '#fff',
             // 固定在底部
@@ -36,7 +36,7 @@ App({
             // 角标字体颜色
             badgeColor: '#fff',
             // 角标背景颜色
-            badgeBgColor: '#0fb9b1',
+            badgeBgColor: '#ce62d6',
             // 去掉顶部细线
             unlined: false,
             // tabbar列表
@@ -47,7 +47,7 @@ App({
                     text: '基础',
                     icon: 'ani-icon-basic',
                     className: 'menu-item',
-                    selectedColor: '#0fb9b1',
+                    selectedColor: '#ce62d6',
                     hump: false
                 },
                 {
@@ -55,7 +55,7 @@ App({
                     action: 'link',
                     text: '组件',
                     icon: 'ani-icon-component',
-                    selectedColor: '#0fb9b1',
+                    selectedColor: '#ce62d6',
                     className: 'menu-item',
                     hump: false,
                     badge: {
@@ -70,7 +70,7 @@ App({
                     action: 'link',
                     text: '解决方案',
                     icon: 'ani-icon-solution',
-                    selectedColor: '#0fb9b1',
+                    selectedColor: '#ce62d6',
                     className: 'menu-item',
                     hump: false
                 },
@@ -79,7 +79,7 @@ App({
                     action: 'link',
                     text: '关于',
                     icon: 'ani-icon-person',
-                    selectedColor: '#0fb9b1',
+                    selectedColor: '#ce62d6',
                     className: 'menu-item',
                     hump: false
                 }
