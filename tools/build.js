@@ -30,7 +30,7 @@ function wxss(wxssFileList) {
         )
         .pipe(gulpif(wxssConfig.less, less({ paths: [srcPath] })))
         .pipe(checkWxss.end()) // 结束处理 import
-        .pipe(cleanCss())
+        .pipe(gulpif(!config.isWatch, cleanCss()))
         .pipe(rename({ extname: '.wxss' }))
         .pipe(
             gulpif(
