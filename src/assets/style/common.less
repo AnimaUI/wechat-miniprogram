@@ -261,3 +261,14 @@ button[disabled].@{prefix}-btn[class*="line"].text-gray {
     }
     .gradualColor(@gradualColors, (@i + 1));
 }
+.right-arrow {
+    position: relative;
+    &::after {
+        content: '\e740';
+        font-family: ani-icon;
+        position: absolute;
+        font-size: 28rpx;
+        right: 30rpx;
+        color: var(--fusion-blue-grey);
+    }
+}

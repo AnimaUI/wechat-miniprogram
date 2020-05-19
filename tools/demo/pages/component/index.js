@@ -30,7 +30,7 @@ Page({
                 icon: 'ani-icon-form',
                 en: 'form',
                 cn: '表 单',
-                url: '/pages/component/custom-bar/index'
+                url: '/pages/component/form/index'
             },
             {
                 icon: 'ani-icon-carousel',

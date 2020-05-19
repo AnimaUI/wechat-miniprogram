@@ -1,0 +1,50 @@
+/*!
+ _________
+|  form   |\
+| ~~~~~~~ |_\
+|   🐹    |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+.@{prefix}-form-group {
+    background-color: var(--white);
+    padding: 8rpx 50rpx 8rpx 30rpx;
+    display: flex;
+    align-items: center;
+    min-height: 96rpx;
+    justify-content: space-between;
+    & + & {
+        border-top: 1rpx solid var(--gray);
+    }
+    .title {
+        padding-right: 28rpx;
+    }
+    &.text-left {
+        .title {
+            min-width: ~'calc(4.2em + 28rpx)';
+        }
+    }
+    picker {
+        flex: 1;
+        position: relative;
+        padding-right: 30rpx;
+        line-height: 96rpx;
+        overflow: hidden;
+        .picker {
+            width: 100%;
+            line-height: 96rpx;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: right;
+        }
+    }
+    input {
+        flex: 1;
+        font-size: 28rpx;
+        color: var(--dark-gray);
+        padding-right: 36rpx;
+    }
+}

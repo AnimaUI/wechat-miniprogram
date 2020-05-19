@@ -1,0 +1,13 @@
+page {
+  background-color: var(--red);
+}
+.scroll-page {
+  background-color: var(--ghost-white);
+}
+.main .box {
+  margin-top: 20rpx;
+}
+.main .box .ani-form-group .tag-btn {
+  line-height: 20rpx;
+  font-size: 20rpx;
+}
