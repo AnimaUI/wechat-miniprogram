@@ -223,8 +223,8 @@
                             wx:for="{{module.getBasicColor(basicColor)}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{module.getBasicColor(basicColorText)[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{module.getBasicColor(basicColorText)[index]}}</text>
                         </button>
                     </view>
                 </view>
@@ -239,8 +239,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -249,8 +249,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                 </view>
@@ -264,9 +264,9 @@
                             wx:if="{{!module.isFusion(item)}}"
                             wx:for="{{colour}}"
                             wx:key="index"
-                            class="ani-btn bg-dark-{{item}} text-white icon-btn vertical-middle">
+                            class="ani-btn bg-dark-{{item}} text-white icon-btn">
                             <text class="ani-icon-btn text-white fs-24"></text>
-                            {{colourText[index]}}
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -275,8 +275,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-dark-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                 </view>
@@ -292,8 +292,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-disabled-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -304,8 +304,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn bg-disabled-{{item}} text-white icon-btn">
-                            <text class="ani-icon-btn text-white fs-24 vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn text-white fs-24"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                 </view>
@@ -320,8 +320,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn icon-btn bg-light-{{item}} text-{{item}}">
-                            <text class="ani-icon-btn fs-24 text-{{item}} vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn fs-24 text-{{item}}"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                     <view class="grid col-3 pl-30 pr-30 pt-20 pb-20 solid-bottom grid-row-gap grid-column-gap">
@@ -330,8 +330,8 @@
                             wx:for="{{colour}}"
                             wx:key="index"
                             class="ani-btn icon-btn bg-light-{{item}} text-{{item}}">
-                            <text class="ani-icon-btn fs-24 text-{{item}} vertical-middle"></text>
-                            {{colourText[index]}}
+                            <text class="ani-icon-btn fs-24 text-{{item}}"></text>
+                            <text>{{colourText[index]}}</text>
                         </button>
                     </view>
                 </view>
@@ -346,7 +346,7 @@
                             wx:key="index"
                             class="ani-btn icon-btn bg-gradual-{{item}} text-white">
                             <text class="ani-icon-btn text-white fs-24 "></text>
-                            {{gradualColorText[index]}}
+                            <text>{{gradualColorText[index]}}</text>
                         </button>
                     </view>
                 </view>
