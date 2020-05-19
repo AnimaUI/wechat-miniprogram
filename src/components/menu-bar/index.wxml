@@ -12,7 +12,7 @@
             <view class="{{prefix}}-icon-box">
                 <text
                     style="color: {{current == index ? (item.selectedColor || selectedColor) : color}}"
-                    class="shadow-text-black {{item.icon}}"></text>
+                    class="shadow-text-black fs-30 {{item.icon}}"></text>
             </view>
             <view
                 class="shadow-text-black {{prefix}}-text-scale"

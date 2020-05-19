@@ -1,11 +1,10 @@
+@import './_prefix.less';
 ::-webkit-scrollbar {
     display: none;
 }
-
 page {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
-
 view,
 scroll-view,
 swiper,
@@ -17,4 +16,11 @@ navigator,
 image {
     box-sizing: border-box;
 }
-
+[class*='@{prefix}-icon-'] {
+    font-family: '@{prefix}-icon'!important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 24rpx;
+}
