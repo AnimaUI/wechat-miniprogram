@@ -24,7 +24,7 @@ page {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
-    font-size: 36rpx;
+    font-size: 24rpx;
 }
 /* bgColor && text-color */
 @colorType: null, dark, disabled, light;
@@ -58,9 +58,15 @@ page {
             .text-@{typeName}-@{name} {
                 color: var(~'--@{typeName}-@{name}');
             }
+            button[disabled].@{prefix}-btn[class*="line"].text-@{typeName}-@{name} {
+                color: var(~'--@{typeName}-@{name}');
+            }
         }
         .textType(@typeName) when ( @typeName = null) {
             .text-@{name} {
+                color: var(~'--@{name}');
+            }
+            button[disabled].@{prefix}-btn[class*="line"].text-@{name} {
                 color: var(~'--@{name}');
             }
         }
@@ -108,16 +114,28 @@ page {
 .text-black {
     color: var(--black);
 }
+button[disabled].@{prefix}-btn[class*="line"].text-black {
+    color: var(--black);
+}
 /* 暗灰色 */
 .text-dark-gray {
+    color: var(--dark-gray);
+}
+button[disabled].@{prefix}-btn[class*="line"].text-dark-gray {
     color: var(--dark-gray);
 }
 /* 烟灰色 */
 .text-grey {
     color: var(--grey);
 }
+button[disabled].@{prefix}-btn[class*="line"].text-grey {
+    color: var(--grey);
+}
 /* 灰色 */
 .text-gray {
+    color: var(--gray);
+}
+button[disabled].@{prefix}-btn[class*="line"].text-gray {
     color: var(--gray);
 }
 /* 魂白 */

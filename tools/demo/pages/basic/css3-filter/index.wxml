@@ -1,7 +1,7 @@
 <CustomBar className="bg-gradual-mauve text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
     <view slot="content" class="capitalize">
-        <text>badge</text>
+        <text>css3 filters</text>
     </view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
