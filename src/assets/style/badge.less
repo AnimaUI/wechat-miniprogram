@@ -19,13 +19,23 @@
     background-color: currentColor;
     position: relative;
     font-size: 20rpx;
+    &.max {
+        width: 40rpx;
+        height: 40rpx;
+    }
     &.dot {
         width: 16rpx;
         height: 16rpx;
     }
-    &::before {
+    &:not([class*='@{prefix}-icon-'])::before {
         content: attr(data-text);
         color: #fff;
+    }
+    &[class*='@{prefix}-icon-'] {
+        background-color: transparent;
+        &::before {
+            color: currentColor;
+        }
     }
     &.animation {
         &::after {

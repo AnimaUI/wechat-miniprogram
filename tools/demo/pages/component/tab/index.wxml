@@ -141,5 +141,31 @@
                 </swiper-item>
             </swiper>
         </view>
+        <view class="item">
+            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-olive"></text>
+                徽标 tab
+            </view>
+            <Tab
+                class="text-center"
+                currentTab="{{currentTab}}"
+                tabData="{{tabData4}}"
+                bind:changeEvent="changeEvent"></Tab>
+            <swiper
+                class="ani-swiper"
+                current="{{currentTab}}"
+                style="height: {{swiperHeight ? swiperHeight + 'px' : 'auto'}}"
+                bindchange="switchTabContent">
+                <swiper-item class="ani-swiper-item">
+                    这里放置comic的内容
+                </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置menu的内容
+                </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置badge的内容
+                </swiper-item>
+            </swiper>
+        </view>
     </view>
 </scroll-view>

@@ -7,6 +7,7 @@
 | ~~~~~~~ |
 |_________|
 */
+@import './_prefix.less';
 page {
     /* 
      ______________
@@ -17,8 +18,8 @@ page {
     font-size: 28rpx;
     color: var(--black);
 }
-[class*='ani-icon-'] {
-    font-family: 'ani-icon';
+[class*='@{prefix}-icon-'] {
+    font-family: '@{prefix}-icon';
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

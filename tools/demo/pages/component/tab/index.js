@@ -46,6 +46,32 @@ Page({
                 name: 'badge',
                 icon: 'ani-icon-badge'
             }
+        ],
+        tabData4: [
+            {
+                name: 'comic',
+                icon: 'ani-icon-comic',
+                badge: {
+                    class: 'max',
+                    text: '29'
+                }
+            },
+            {
+                name: 'menu',
+                icon: 'ani-icon-menu',
+                badge: {
+                    class: '',
+                    text: ''
+                }
+            },
+            {
+                name: 'badge',
+                icon: 'ani-icon-badge',
+                badge: {
+                    class: 'ani-icon-time2',
+                    text: ''
+                }
+            }
         ]
     },
     onLoad() {},
