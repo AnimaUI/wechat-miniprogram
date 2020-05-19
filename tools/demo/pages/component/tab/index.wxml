@@ -28,6 +28,9 @@
                 <swiper-item class="ani-swiper-item">
                     这里放置tab3的内容
                 </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置tab4的内容
+                </swiper-item>
             </swiper>
         </view>
         <view class="item">
@@ -53,6 +56,9 @@
                 </swiper-item>
                 <swiper-item class="ani-swiper-item">
                     这里放置badge的内容
+                </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置portrait的内容
                 </swiper-item>
             </swiper>
         </view>
@@ -83,6 +89,9 @@
                 <swiper-item class="ani-swiper-item">
                     这里放置badge的内容
                 </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置portrait的内容
+                </swiper-item>
             </swiper>
         </view>
         <view class="item">
@@ -110,6 +119,9 @@
                 </swiper-item>
                 <swiper-item class="ani-swiper-item">
                     这里放置badge的内容
+                </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置portrait的内容
                 </swiper-item>
             </swiper>
         </view>
@@ -139,6 +151,9 @@
                 <swiper-item class="ani-swiper-item">
                     这里放置badge的内容
                 </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置portrait的内容
+                </swiper-item>
             </swiper>
         </view>
         <view class="item">
@@ -164,6 +179,9 @@
                 </swiper-item>
                 <swiper-item class="ani-swiper-item">
                     这里放置badge的内容
+                </swiper-item>
+                <swiper-item class="ani-swiper-item">
+                    这里放置portrait的内容
                 </swiper-item>
             </swiper>
         </view>

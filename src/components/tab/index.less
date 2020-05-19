@@ -10,9 +10,30 @@
         line-height: 88rpx;
         margin: 0 10rpx;
         padding: 0 20rpx;
+        position: relative;
         .icon {
             margin-right: 12rpx;
             font-size: 24rpx;
+        }
+    }
+    .item {
+        .@{prefix}-badge {
+            top: 14rpx;
+            right: -26rpx;
+            position: absolute;
+            &.dot {
+                top: 24rpx;
+                right: 0;
+            }
+            &[class*='@{prefix}-icon-'] {
+                font-size: 24rpx;
+                top: 24rpx;
+                right: -6rpx;
+            }
+            &.animation {
+                top: 22rpx;
+                right: 0;
+            }
         }
     }
     .selected {

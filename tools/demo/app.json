@@ -1,7 +1,5 @@
 {
     "pages": [
-        "pages/basic/badge/index",
-        "pages/component/tab/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -13,10 +11,12 @@
         "pages/basic/progress/index",
         "pages/basic/box-shadow/index",
         "pages/basic/loading/index",
+        "pages/basic/badge/index",
         "pages/basic/css3-filter/index",
         "pages/component/index",
         "pages/component/custom-bar/index",
         "pages/component/menu-bar/index",
+        "pages/component/tab/index",
         "pages/solution/index",
         "pages/about/index"
     ],

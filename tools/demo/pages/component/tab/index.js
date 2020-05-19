@@ -14,6 +14,9 @@ Page({
             },
             {
                 name: 'tab3'
+            },
+            {
+                name: 'tab4'
             }
         ],
         tabData2: [
@@ -28,6 +31,10 @@ Page({
             {
                 name: 'badge',
                 icon: 'ani-icon-badge'
+            },
+            {
+                name: 'portrait',
+                icon: 'ani-icon-portrait'
             }
         ],
         tabBackground3: {
@@ -45,6 +52,10 @@ Page({
             {
                 name: 'badge',
                 icon: 'ani-icon-badge'
+            },
+            {
+                name: 'portrait',
+                icon: 'ani-icon-portrait'
             }
         ],
         tabData4: [
@@ -52,6 +63,7 @@ Page({
                 name: 'comic',
                 icon: 'ani-icon-comic',
                 badge: {
+                    show: true,
                     class: 'max',
                     text: '29'
                 }
@@ -60,7 +72,8 @@ Page({
                 name: 'menu',
                 icon: 'ani-icon-menu',
                 badge: {
-                    class: '',
+                    show: true,
+                    class: 'dot bg-gradual-red',
                     text: ''
                 }
             },
@@ -68,7 +81,17 @@ Page({
                 name: 'badge',
                 icon: 'ani-icon-badge',
                 badge: {
-                    class: 'ani-icon-time2',
+                    show: true,
+                    class: 'ani-icon-time2 text-red',
+                    text: ''
+                }
+            },
+            {
+                name: 'portrait',
+                icon: 'ani-icon-portrait',
+                badge: {
+                    show: true,
+                    class: 'animation text-red',
                     text: ''
                 }
             }
