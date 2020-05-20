@@ -10,7 +10,8 @@ Page({
             ['打野', '法师'],
             ['荆轲', '兰陵王', '李白'],
             ['迷踪丽影', '节奏热浪', '致命风华', '爱心护理', '原皮']
-        ]
+        ],
+        time: '11:30'
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -126,6 +127,11 @@ Page({
         }
         this.setData({
             ...multiObj
+        });
+    },
+    timeChange(e) {
+        this.setData({
+            time: e.detail.value
         });
     }
 });
