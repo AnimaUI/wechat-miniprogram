@@ -80,7 +80,7 @@
                 </view>
                 <view class="ani-form-group text-left right-arrow">
                     <view class="title">日期选择</view>
-                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+                    <picker mode="date" value="{{date}}" start="2019-05-20" end="2021-05-21" bindchange="dateChange">
                         <view class="picker">{{date}}</view>
                     </picker>
                 </view>

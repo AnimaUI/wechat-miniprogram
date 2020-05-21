@@ -11,7 +11,8 @@ Page({
             ['荆轲', '兰陵王', '李白'],
             ['迷踪丽影', '节奏热浪', '致命风华', '爱心护理', '原皮']
         ],
-        time: '11:30'
+        time: '11:30',
+        date: '2020-05-19'
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -132,6 +133,11 @@ Page({
     timeChange(e) {
         this.setData({
             time: e.detail.value
+        });
+    },
+    dateChange(e) {
+        this.setData({
+            date: e.detail.value
         });
     }
 });
