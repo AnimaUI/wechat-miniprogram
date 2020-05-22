@@ -12,7 +12,8 @@ Page({
             ['迷踪丽影', '节奏热浪', '致命风华', '爱心护理', '原皮']
         ],
         time: '11:30',
-        date: '2020-05-19'
+        date: '2020-05-19',
+        region: ['四川省', '成都市', '成华区']
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -138,6 +139,12 @@ Page({
     dateChange(e) {
         this.setData({
             date: e.detail.value
+        });
+    },
+    regionChange(e) {
+        console.log(e.detail);
+        this.setData({
+            region: e.detail.value
         });
     }
 });
