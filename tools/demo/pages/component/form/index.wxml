@@ -19,9 +19,10 @@
                     <input placeholder="请输入......."></input>
                 </view>
                 <view class="ani-form-group text-left">
-                    <view class="title">输入框</view>
+                    <view class="title">支持平台</view>
                     <input placeholder="输入框带图标"></input>
                     <text class="ani-icon-android text-fusion-green fs-36"></text>
+                    <text class="ani-icon-apple text-grey fs-36"></text>
                 </view>
                 <view class="ani-form-group text-left">
                     <view class="title">验证码</view>
@@ -68,7 +69,7 @@
                     </picker>
                 </view>
                 <view class="ani-form-group text-left right-arrow">
-                    <view class="title">时间选择</view>
+                    <view class="title">时间(可选10:30至22:59)</view>
                     <picker
                         mode="time"
                         value="{{time}}"
@@ -79,34 +80,21 @@
                     </picker>
                 </view>
                 <view class="ani-form-group text-left right-arrow">
-                    <view class="title">日期选择</view>
+                    <view class="title">日期(可选2019-05-20至2021-05-21)</view>
                     <picker mode="date" value="{{date}}" start="2019-05-20" end="2021-05-21" bindchange="dateChange">
                         <view class="picker">{{date}}</view>
                     </picker>
                 </view>
                 <view class="ani-form-group text-left right-arrow">
                     <view class="title">地址选择</view>
-                    <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">
                         <view class="picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
                     </picker>
                 </view>
             </view>
             <view class="box">
-                <view class="ani-form-group text-left">
-                    <view class="title">开关选择</view>
-                    <switch></switch>
-                </view>
-                <view class="ani-form-group text-left">
-                    <view class="title">定义颜色</view>
-                    <switch class="red sm" checked></switch>
-                </view>
-                <view class="ani-form-group text-left">
-                    <switch class="switch-sex" checked></switch>
-                    <view class="title">定义图标</view>
-                </view>
-                <view class="ani-form-group text-left">
-                    <view class="title">方形开关</view>
-                    <switch class="orange radius sm" checked></switch>
+                <view class="ani-form-group text-left right-arrow" bindtap="link" data-url="/pages/component/form/switch/index">
+                    <view class="title">switch开关</view>
                 </view>
             </view>
             <view class="box">

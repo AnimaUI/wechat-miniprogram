@@ -1,0 +1,39 @@
+<CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">switch</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <Tab class="text-center" currentTab="{{currentTab}}" activeColorClass="{{activeColorClass}}" tabData="{{tabData}}" bind:changeEvent="changeEvent"></Tab>
+        <swiper class="ani-swiper" current="{{currentTab}}" style="height: {{swiperHeight ? swiperHeight + 'px' : 'auto'}}" bindchange="switchTabContent">
+            <swiper-item class="ani-swiper-item">
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        基础
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <switch></switch>
+                    </view>
+                </view>
+                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{index === 0}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        primary
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 1}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        dark
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 2}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        disabled
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <switch class="{{bgColor}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</scroll-view>

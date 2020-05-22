@@ -52,7 +52,7 @@ Component({
         prefix
     },
     methods: {
-        onDismissNotice: function onDismissNotice(event) {
+        onDismissNotice(event) {
             this.setData({
                 isShow: false
             });
