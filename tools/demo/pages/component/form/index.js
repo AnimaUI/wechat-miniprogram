@@ -146,6 +146,7 @@ Page({
         this.setData({
             region: e.detail.value
         });
+<<<<<<< HEAD
     },
     link(e) {
         const dataset = e.currentTarget.dataset;
@@ -156,5 +157,7 @@ Page({
             fail: function (res) {},
             complete: function (res) {}
         });
+=======
+>>>>>>> 02f56c1dddeb841c09356d5c18cd8dce8fc330e6
     }
 });
