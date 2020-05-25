@@ -1,3 +1,9 @@
+<wxs module="module">
+    var randomBool = function() {
+        return !!Math.floor(Math.random() + 0.5);
+    }
+    module.exports = { randomBool: randomBool };
+</wxs>
 <CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
     <view slot="content" class="capitalize">switch</view>
@@ -30,7 +36,7 @@
                         disabled
                     </view>
                     <view class="flex flex-wrap padding-30 bg-white">
-                        <switch class="{{bgColor}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                        <switch class="mt-12 {{bgColor}}" checked="{{module.randomBool()}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
                     </view>
                 </view>
             </swiper-item>

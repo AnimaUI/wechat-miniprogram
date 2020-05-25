@@ -7,7 +7,7 @@ let {
     gradualColorText
 } = require('../../../../utils/colour');
 let bgColors = ['', 'dark', 'disabled'].map((item) => {
-    let prefix = 'bg';
+    let prefix = 'switch';
     let prefix2 = '';
     if (item !== '') {
         prefix2 = '-';
@@ -17,7 +17,7 @@ let bgColors = ['', 'dark', 'disabled'].map((item) => {
         return `${prefix}-${color}`;
     });
 });
-let prefix = 'bg';
+let prefix = 'switch';
 gradualColor = gradualColor.map((item) => `${prefix}-gradual-${item}`);
 Page({
     data: {

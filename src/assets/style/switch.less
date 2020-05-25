@@ -27,13 +27,48 @@
     transform: scale(.9, .9);
     transition: all 0.1s ease-in-out 0s;
 }
-.wx-switch-input:not([class*="bg-"]) {
+.wx-switch-input:not([checked]) {
     background-color: var(--fusion-blue-grey) !important;
     opacity: .8;
 }
-switch.bg-green[checked] .wx-switch-input,
+/* switchColor */
 switch[checked] .wx-switch-input {
     background-color: var(--green) !important;
     color: var(--white) !important;
     border-color: var(--green) !important;
+}
+@switchType: null, dark, disabled;
+@switchs: red, fusion-red, orange, fusion-orange, yellow, fusion-yellow, olive,
+    fusion-olive, green, fusion-green, blue-green, fusion-blue-green, cyan,
+    fusion-cyan, sky-blue, fusion-sky-blue, blue, fusion-blue, purple,
+    fusion-purple, mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
+    blue-grey, fusion-blue-grey;
+
+.switchType(@switchType);
+.switchType(@switchType, @i: 1) when (length(@switchType) >= @i) {
+    @typeName: extract(@switchType, @i);
+    .switch(@switchs);
+    .switch(@switchs, @j: 1) when (length(@switchs) >= @j) {
+        @name: extract(@switchs, @j);
+        .swType(@typeName);
+        // 判断是否是占位符
+        .swType(@typeName) when not( @typeName = null) {
+            switch.switch-@{typeName}-@{name}[checked] .wx-switch-input,
+            switch[checked] .wx-switch-input {
+                background-color: var(~'--@{typeName}-@{name}')!important;
+                color: var(--white) !important;
+                border-color: var(~'--@{typeName}-@{name}') !important;
+            }
+        }
+        .swType(@typeName) when ( @typeName = null) {
+            switch.switch-@{name}[checked] .wx-switch-input,
+            switch[checked] .wx-switch-input {
+                background-color: var(~'--@{name}')!important;
+                color: var(--white) !important;
+                border-color: var(~'--@{name}') !important;
+            }
+        }
+        .switch(@switchs, (@j + 1));
+    }
+    .switchType(@switchType, (@i + 1));
 }
