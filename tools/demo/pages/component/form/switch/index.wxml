@@ -1,9 +1,3 @@
-<wxs module="module">
-    var randomBool = function() {
-        return !!Math.floor(Math.random() + 0.5);
-    }
-    module.exports = { randomBool: randomBool };
-</wxs>
 <CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
     <view slot="content" class="capitalize">switch</view>
@@ -22,21 +16,21 @@
                         <switch></switch>
                     </view>
                 </view>
-                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item">
-                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{index === 0}}">
+                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{i === 0}}">
                         <text class="ani-badge il-block bg-gradual-red"></text>
                         primary
                     </view>
-                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 1}}">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 1}}">
                         <text class="ani-badge il-block bg-gradual-red"></text>
                         dark
                     </view>
-                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{index === 2}}">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 2}}">
                         <text class="ani-badge il-block bg-gradual-red"></text>
                         disabled
                     </view>
                     <view class="flex flex-wrap padding-30 bg-white">
-                        <switch class="mt-12 {{bgColor}}" checked="{{module.randomBool()}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                        <switch class="mt-12 {{bgColor}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
                     </view>
                 </view>
             </swiper-item>

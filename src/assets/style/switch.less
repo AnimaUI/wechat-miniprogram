@@ -25,13 +25,13 @@
     bottom: 0;
     position: absolute;
     transform: scale(.9, .9);
-    transition: all 0.1s ease-in-out 0s;
-}
-.wx-switch-input:not([checked]) {
-    background-color: var(--fusion-blue-grey) !important;
-    opacity: .8;
+    transition: all .1s ease-in-out 0s;
 }
 /* switchColor */
+switch[aria-checked="false"] .wx-switch-input{
+    background-color: var(--fusion-blue-grey) !important;
+    opacity: .6;
+}
 switch[checked] .wx-switch-input {
     background-color: var(--green) !important;
     color: var(--white) !important;
@@ -53,16 +53,14 @@ switch[checked] .wx-switch-input {
         .swType(@typeName);
         // 判断是否是占位符
         .swType(@typeName) when not( @typeName = null) {
-            switch.switch-@{typeName}-@{name}[checked] .wx-switch-input,
-            switch[checked] .wx-switch-input {
+            switch.switch-@{typeName}-@{name}[checked] .wx-switch-input {
                 background-color: var(~'--@{typeName}-@{name}')!important;
                 color: var(--white) !important;
                 border-color: var(~'--@{typeName}-@{name}') !important;
             }
         }
         .swType(@typeName) when ( @typeName = null) {
-            switch.switch-@{name}[checked] .wx-switch-input,
-            switch[checked] .wx-switch-input {
+            switch.switch-@{name}[checked] .wx-switch-input {
                 background-color: var(~'--@{name}')!important;
                 color: var(--white) !important;
                 border-color: var(~'--@{name}') !important;
@@ -71,4 +69,46 @@ switch[checked] .wx-switch-input {
         .switch(@switchs, (@j + 1));
     }
     .switchType(@switchType, (@i + 1));
+}
+switch {
+    position: relative;
+}
+switch::before,
+switch::after{
+    font-family: '@{prefix}-icon';
+    content: '\e755';
+    position: absolute;
+    color: var(--white) !important;
+    top: 0%;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    font-size: 16rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    width: 50%;
+    text-align: center;
+    pointer-events: none;
+    transform: scale(0, 0);
+    transition: all .3s ease-in-out 0s;
+    z-index: 9;
+    margin: auto;
+}
+switch::before {
+    content: '\e756';
+    right: 12rpx;
+    transform: scale(1, 1);
+    left: auto;
+}
+switch::after{
+    content: '\e755';
+    transform: scale(1, 1);
+}
+switch[checked]::before,
+switch.checked::before {
+	transform: scale(0, 0);
+}
+
+switch[checked]::before {
+	transform: scale(0, 0);
 }
