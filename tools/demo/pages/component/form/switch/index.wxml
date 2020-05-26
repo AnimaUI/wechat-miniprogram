@@ -1,6 +1,9 @@
 <CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content" class="capitalize">switch</view>
+    <view slot="right" class="capitalize">
+        是否方形
+        <switch class="switch switch-fusion-yellow" checked="{{isRadius}}" bindchange="changeRadius"></switch>
+    </view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
@@ -13,7 +16,7 @@
                         基础
                     </view>
                     <view class="flex flex-wrap padding-30 bg-white">
-                        <switch></switch>
+                        <switch class="{{isRadius ? 'radius' : ''}}"></switch>
                     </view>
                 </view>
                  <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
@@ -30,7 +33,49 @@
                         disabled
                     </view>
                     <view class="flex flex-wrap padding-30 bg-white">
-                        <switch class="mt-12 {{bgColor}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                        <switch class="mt-12 {{bgColor}} {{isRadius ? 'radius' : ''}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item class="ani-swiper-item">
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        基础
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <switch class="switch {{isRadius ? 'radius' : ''}}"></switch>
+                    </view>
+                </view>
+                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{i === 0}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        primary
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 1}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        dark
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 2}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        disabled
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <switch class="mt-12 switch {{bgColor}} {{isRadius ? 'radius' : ''}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item class="ani-swiper-item">
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        自定义图标
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <switch class="switch switch-sex switch-mauve {{isRadius ? 'radius' : ''}}" checked="{{true}}"></switch>
+                        <switch class="switch switch-phone {{isRadius ? 'radius' : ''}}" checked="{{true}}"></switch>
+                        <switch class="switch switch-time switch-red {{isRadius ? 'radius' : ''}}" checked="{{true}}"></switch>
+                        <switch class="switch switch-on-off switch-blue {{isRadius ? 'radius' : ''}}" checked="{{true}}"></switch>
                     </view>
                 </view>
             </swiper-item>

@@ -26,6 +26,7 @@ Page({
         colourText,
         gradualColor,
         gradualColorText,
+        isRadius: true,
         swiperHeight: 0,
         currentTab: 0,
         activeColorClass: 'red',
@@ -34,7 +35,7 @@ Page({
                 name: '基础'
             },
             {
-                name: '方形'
+                name: '默认图标'
             },
             {
                 name: '其他'
@@ -83,6 +84,11 @@ Page({
             detail: {
                 current: detail
             }
+        });
+    },
+    changeRadius(e) {
+        this.setData({
+            isRadius: e.detail.value
         });
     }
 });

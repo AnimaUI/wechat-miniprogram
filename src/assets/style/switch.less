@@ -70,13 +70,13 @@ switch[checked] .wx-switch-input {
     }
     .switchType(@switchType, (@i + 1));
 }
-switch {
+.switch {
     position: relative;
 }
-switch::before,
-switch::after{
+.switch::before,
+.switch::after{
     font-family: '@{prefix}-icon';
-    content: '\e755';
+    content: '\e759';
     position: absolute;
     color: var(--white) !important;
     top: 0%;
@@ -94,15 +94,16 @@ switch::after{
     z-index: 9;
     margin: auto;
 }
-switch::before {
-    content: '\e756';
+.switch::before {
+    content: '\e75a';
     right: 12rpx;
     transform: scale(1, 1);
     left: auto;
 }
-switch::after{
-    content: '\e755';
+.switch::after{
+    content: '\e759';
     transform: scale(1, 1);
+    font-size: 18rpx;
 }
 switch[checked]::before,
 switch.checked::before {
@@ -111,4 +112,51 @@ switch.checked::before {
 
 switch[checked]::before {
 	transform: scale(0, 0);
+}
+switch.radius .wx-switch-input,
+switch.radius .wx-switch-input::before,
+switch.radius .wx-switch-input::after {
+	border-radius: 10rpx;
+}
+// 中间小圆球
+switch.radius .wx-switch-input::after {
+    width: 48rpx !important;
+    height: 48rpx !important;
+}
+/* 自定义 */
+.switch-sex {
+    &::before {
+        content: '\e75b';
+        font-size: 24rpx;
+    }
+    &::after {
+        content: '\e75c';
+        font-size: 24rpx;
+    }
+}
+.switch-time {
+    &::before {
+        content: 'AM';
+    }
+    &::after {
+        content: 'PM';
+    }
+}
+.switch-phone {
+    &::before {
+        content: '\e686';
+        font-size: 24rpx;
+    }
+    &::after {
+        content: '\e688';
+        font-size: 24rpx;
+    }
+}
+.switch-on-off {
+    &::before {
+        content: 'OFF';
+    }
+    &::after {
+        content: 'ON';
+    }
 }
