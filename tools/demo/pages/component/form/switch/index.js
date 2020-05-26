@@ -2,9 +2,6 @@
 const app = getApp();
 let {
     colour,
-    colourText,
-    gradualColor,
-    gradualColorText
 } = require('../../../../utils/colour');
 let bgColors = ['', 'dark', 'disabled'].map((item) => {
     let prefix = 'switch';
@@ -17,15 +14,10 @@ let bgColors = ['', 'dark', 'disabled'].map((item) => {
         return `${prefix}-${color}`;
     });
 });
-let prefix = 'switch';
-gradualColor = gradualColor.map((item) => `${prefix}-gradual-${item}`);
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         bgColors,
-        colourText,
-        gradualColor,
-        gradualColorText,
         isRadius: true,
         swiperHeight: 0,
         currentTab: 0,
@@ -36,9 +28,6 @@ Page({
             },
             {
                 name: '默认图标'
-            },
-            {
-                name: '其他'
             }
         ]
     },

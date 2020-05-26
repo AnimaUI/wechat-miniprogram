@@ -47,7 +47,7 @@
                         <switch class="switch {{isRadius ? 'radius' : ''}}"></switch>
                     </view>
                 </view>
-                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
+                <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{i === 0}}">
                         <text class="ani-badge il-block bg-gradual-red"></text>
                         primary
@@ -64,9 +64,7 @@
                         <switch class="mt-12 switch {{bgColor}} {{isRadius ? 'radius' : ''}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
                     </view>
                 </view>
-            </swiper-item>
-            <swiper-item class="ani-swiper-item">
-                <view class="item">
+                 <view class="item">
                     <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
                         <text class="ani-badge il-block bg-gradual-red"></text>
                         自定义图标
