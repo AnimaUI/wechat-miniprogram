@@ -1,1 +1,8 @@
-{}
+{
+    "description": "anima(灵动，animation简写，(灵动UI)主要包含各种动画效果，小程序插件解决方案)",
+    "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/huarxia/animaUI.git"
+    }
+}

@@ -111,16 +111,21 @@ function install() {
                 path.resolve(__dirname, '../package.json')
             );
             const dependencies = packageJson.dependencies || {};
-
+            const description = packageJson.description || '';
+            const license = packageJson.license || '';
+            const repository = packageJson.repository || {};
             await _.writeFile(
                 demoPackageJsonPath,
-                JSON.stringify({ dependencies }, null, '\t')
+                JSON.stringify(
+                    { dependencies, description, license, repository },
+                    null,
+                    '\t'
+                )
             ); // write dev demo's package.json
         },
         () => {
             const demoDist = config.demoDist;
             const demoPackageJsonPath = path.join(demoDist, 'package.json');
-
             return gulp
                 .src(demoPackageJsonPath)
                 .pipe(gulpInstall({ production: true }));
