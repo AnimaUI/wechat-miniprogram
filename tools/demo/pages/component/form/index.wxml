@@ -96,25 +96,9 @@
                 <view class="ani-form-group text-left right-arrow" bindtap="link" data-url="/pages/component/form/switch/index">
                     <view class="title">switch开关</view>
                 </view>
-            </view>
-            <view class="box">
-                <radio-group class="block">
-                    <view class="ani-form-group text-left">
-                        <view class="title">单选操作(radio)</view>
-                        <radio checked></radio>
-                    </view>
-                    <view class="ani-form-group text-left">
-                        <view class="title">定义样式</view>
-                        <radio class="radio"></radio>
-                    </view>
-                    <view class="ani-form-group text-left">
-                        <view class="title">定义颜色</view>
-                        <view>
-                            <radio class="blue radio"></radio>
-                            <radio class="red margin-left-sm"></radio>
-                        </view>
-                    </view>
-                </radio-group>
+                <view class="ani-form-group text-left right-arrow" bindtap="link" data-url="/pages/component/form/radio/index">
+                    <view class="title">radio单选</view>
+                </view>
             </view>
             <view class="box">
                 <view class="ani-form-group text-left">

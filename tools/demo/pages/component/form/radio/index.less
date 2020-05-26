@@ -1,0 +1,39 @@
+page {
+    background-color: var(--red);
+}
+.scroll-page {
+    background-color: var(--ghost-white);
+}
+.main {
+    .item {
+        .box-bar {
+            height: 100rpx;
+            line-height: 100rpx;
+            box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, .1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, .1);
+        }
+        .color-box {
+            .bg-item {
+                width: 46%;
+                line-height: 2;
+                border-radius: 6rpx;
+                &:nth-of-type(1),
+                &:nth-of-type(2) {
+                    margin-top: 0;
+                }
+                text {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .box {
+        margin-top: 20rpx;
+        .ani-form-group {
+            .tag-btn {
+                line-height: 20rpx;
+                font-size: 20rpx;
+            }
+        }
+    }
+}

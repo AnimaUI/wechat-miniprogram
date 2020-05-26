@@ -1,0 +1,73 @@
+<wxs module="module">
+    var randomBool = function() {
+        return !!Math.floor(Math.random() + 0.5);
+    }
+    module.exports = { randomBool: randomBool};
+</wxs>
+<CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">radio</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <Tab class="text-center" currentTab="{{currentTab}}" activeColorClass="{{activeColorClass}}" tabData="{{tabData}}" bind:changeEvent="changeEvent"></Tab>
+        <swiper class="ani-swiper" current="{{currentTab}}" style="height: {{swiperHeight ? swiperHeight + 'px' : 'auto'}}" bindchange="switchTabContent">
+            <swiper-item class="ani-swiper-item">
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        基础
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <radio></radio>
+                    </view>
+                </view>
+                 <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{i === 0}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        primary
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 1}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        dark
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 2}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        disabled
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <radio class="mt-12 {{bgColor}}" checked="{{module.randomBool()}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></radio>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item class="ani-swiper-item">
+                <view class="item">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        基础
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <radio class="radio {{isRadius ? 'radius' : ''}}"></radio>
+                    </view>
+                </view>
+                <view class="item" wx:for="{{bgColors}}" wx:for-item="item" wx:for-index="i">
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom" wx:if="{{i === 0}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        primary
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 1}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        dark
+                    </view>
+                    <view class="box-bar bg-white fs-28 capitalize pl-30 solid-bottom solid-top" wx:if="{{i === 2}}">
+                        <text class="ani-badge il-block bg-gradual-red"></text>
+                        disabled
+                    </view>
+                    <view class="flex flex-wrap padding-30 bg-white">
+                        <radio class="mt-12 radio {{bgColor}} {{isRadius ? 'radius' : ''}}" checked="{{module.randomBool()}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></radio>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</scroll-view>

@@ -4,7 +4,7 @@ let {
     colour
 } = require('../../../../utils/colour');
 let bgColors = ['', 'dark', 'disabled'].map((item) => {
-    let prefix = 'switch';
+    let prefix = 'radio';
     let prefix2 = '';
     if (item !== '') {
         prefix2 = '-';
@@ -18,7 +18,6 @@ Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         bgColors,
-        isRadius: true,
         swiperHeight: 0,
         currentTab: 0,
         activeColorClass: 'red',
@@ -27,7 +26,7 @@ Page({
                 name: '基础'
             },
             {
-                name: '默认图标'
+                name: '自定义形状'
             }
         ]
     },
