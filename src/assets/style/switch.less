@@ -8,6 +8,7 @@
 |_________|
 */
 @import './_prefix.less';
+@switch-fusion-blue-grey: #bdc7d2;
 .wx-switch-input {
     width: 96rpx !important;
     height: 52rpx !important;
@@ -28,9 +29,9 @@
     transition: all .1s ease-in-out 0s;
 }
 /* switchColor */
-switch[aria-checked="false"] .wx-switch-input{
-    background-color: var(--fusion-blue-grey) !important;
-    opacity: .6;
+switch[aria-checked="false"] .wx-switch-input {
+    background-color: @switch-fusion-blue-grey !important;
+    border-color: @switch-fusion-blue-grey !important;
 }
 switch[checked] .wx-switch-input {
     background-color: var(--green) !important;
@@ -105,18 +106,20 @@ switch[checked] .wx-switch-input {
     transform: scale(1, 1);
     font-size: 18rpx;
 }
+
 switch[checked]::before,
 switch.checked::before {
-	transform: scale(0, 0);
+    transform: scale(0, 0);
 }
 
-switch[checked]::before {
-	transform: scale(0, 0);
+switch[aria-checked="false"]::after {
+    opacity: 0;
 }
+
 switch.radius .wx-switch-input,
 switch.radius .wx-switch-input::before,
 switch.radius .wx-switch-input::after {
-	border-radius: 10rpx;
+    border-radius: 10rpx;
 }
 // 中间小圆球
 switch.radius .wx-switch-input::after {
