@@ -103,23 +103,19 @@
                     <view class="title">checkbox复选</view>
                 </view>
             </view>
-            <view class="box">
-                <view class="ani-bar bg-white">
-                    <view class="action">图片上传</view>
-                    <view class="action">{{imgList.length}}/4</view>
-                </view>
+            <view class="box padding-sub bg-white flex justify-between">
+                <view class="text-dark-gray">图片上传</view>
+                <view class="action">{{imgList.length}} / 4</view>
             </view>
-            <view class="box ani-form-group text-left">
-                <view class="grid col-4 grid-square flex-sub">
-                    <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
-                        <image src='{{imgList[index]}}' mode='aspectFill'></image>
-                        <view class="ani-tag bg-red" catchtap="DelImg" data-index="{{index}}">
-                            <text class="cuIcon-close"></text>
-                        </view>
+            <view class="bg-white padding-sub grid col-4 flex-once">
+                <view class="bg-img mr-20" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="viewImage" data-url="{{imgList[index]}}">
+                    <image src="{{imgList[index]}}" mode="aspectFill"></image>
+                    <view class="close-img bg-dark-gray" catchtap="delImg" data-index="{{index}}">
+                        <text class="ani-icon-close text-white"></text>
                     </view>
-                    <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
-                        <text class="cuIcon-cameraadd"></text>
-                    </view>
+                </view>
+                <view class="solids choose-img" bindtap="chooseImage" wx:if="{{imgList.length<4}}">
+                    <text class="ani-icon-camera-add fs-60 text-grey"></text>
                 </view>
             </view>
             <view class="box">

@@ -13,7 +13,8 @@ Page({
         ],
         time: '11:30',
         date: '2020-05-19',
-        region: ['四川省', '成都市', '成华区']
+        region: ['四川省', '成都市', '成华区'],
+        imgList: []
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -147,14 +148,54 @@ Page({
             region: e.detail.value
         });
     },
+    chooseImage() {
+        wx.chooseImage({
+            count: 4, // 默认9
+            sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album'], //从相册选择
+            success: (res) => {
+                if (this.data.imgList.length != 0) {
+                    this.setData({
+                        imgList: this.data.imgList.concat(res.tempFilePaths)
+                    });
+                } else {
+                    this.setData({
+                        imgList: res.tempFilePaths
+                    });
+                }
+            }
+        });
+    },
+    viewImage(e) {
+        wx.previewImage({
+            urls: this.data.imgList,
+            current: e.currentTarget.dataset.url
+        });
+    },
+    delImg(e) {
+        wx.showModal({
+            title: '大侠',
+            content: '确定要删除我们的合照？',
+            cancelText: '留恋💋',
+            confirmText: '滚粗😡',
+            success: res => {
+                if (res.confirm) {
+                    this.data.imgList.splice(e.currentTarget.dataset.index, 1);
+                    this.setData({
+                        imgList: this.data.imgList
+                    });
+                }
+            }
+        });
+    },
     link(e) {
         const dataset = e.currentTarget.dataset;
         const url = dataset.url;
         wx.navigateTo({
             url,
-            success: function (res) {},
-            fail: function (res) {},
-            complete: function (res) {}
+            success(res) {},
+            fail(res) {},
+            complete(res) {}
         });
     }
 });
