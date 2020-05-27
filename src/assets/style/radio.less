@@ -9,93 +9,63 @@
 */
 @import './_prefix.less';
 radio {
-	position: relative;
-}
-radio .wx-radio-input.wx-radio-input-checked::before {
-    content: ''; 
-}
-radio::before {
-    font-family: '@{prefix}-icon';
-    content: '\e759';
-    position: absolute;
-    color: var(--white) !important;
-    top: 0%;
-    right: auto;
-    bottom: 0;
-    left: 10rpx;
-    font-size: 16rpx;
-    height: 52rpx;
-    line-height: 52rpx;
-    width: 50%;
-    text-align: center;
-    pointer-events: none;
-    transform: scale(0, 0);
-    transition: all .3s ease-in-out 0s;
-    z-index: 9;
-    margin: auto;;
-}
-radio[checked]::before {
-    transform: scale(1, 1);
-    font-size: 20rpx;
-}
-radio[checked] .wx-radio-input {
-    animation: boom .2s ease-in;
-    animation-iteration-count: 1;
-    background-color: var(--green) !important;
-    color: var(--white) !important;
-    border-color: var(--green) !important;
-}
-radio.radio::before {
-    display: none;
-}
-radio.radio[checked]::after {
-    content: '';
-    background-color: transparent;
-    display: block;
-    position: absolute;
-    width: 16rpx;
-    height: 16rpx;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 12rpx;
-    bottom: 0;
-    margin: auto;
-    border-radius: 9999rpx;
-    border: 14rpx solid var(--white) !important;
-}
-@radioType: null, dark, disabled;
-@radios: red, fusion-red, orange, fusion-orange, yellow, fusion-yellow, olive,
-    fusion-olive, green, fusion-green, blue-green, fusion-blue-green, cyan,
-    fusion-cyan, sky-blue, fusion-sky-blue, blue, fusion-blue, purple,
-    fusion-purple, mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
-    blue-grey, fusion-blue-grey;
-
-.radioType(@radioType);
-.radioType(@radioType, @i: 1) when (length(@radioType) >= @i) {
-    @typeName: extract(@radioType, @i);
-    .radio(@radios);
-    .radio(@radios, @j: 1) when (length(@radios) >= @j) {
-        @name: extract(@radios, @j);
-        .rdType(@typeName);
-        // 判断是否是占位符
-        .rdType(@typeName) when not( @typeName = null) {
-            radio.radio-@{typeName}-@{name}[checked] .wx-radio-input {
-                background-color: var(~'--@{typeName}-@{name}')!important;
-                color: var(--white) !important;
-                border-color: var(~'--@{typeName}-@{name}') !important;
-            }
-        }
-        .rdType(@typeName) when ( @typeName = null) {
-            radio.radio-@{name}[checked] .wx-radio-input {
-                background-color: var(~'--@{name}')!important;
-                color: var(--white) !important;
-                border-color: var(~'--@{name}') !important;
-            }
-        }
-        .radio(@radios, (@j + 1));
+    position: relative;
+    color: var(--green);
+    &::before {
+        font-family: '@{prefix}-icon';
+        content: '\e759';
+        position: absolute;
+        color: var(--white) !important;
+        top: 0%;
+        right: auto;
+        bottom: 0;
+        left: 10rpx;
+        font-size: 16rpx;
+        height: 52rpx;
+        line-height: 52rpx;
+        width: 50%;
+        text-align: center;
+        pointer-events: none;
+        transform: scale(0, 0);
+        transition: all .3s ease-in-out 0s;
+        z-index: 9;
+        margin: auto;;
     }
-    .radioType(@radioType, (@i + 1));
+    .wx-radio-input.wx-radio-input-checked::before {
+        content: ''; 
+    }
+    &.radio::before {
+        display: none;
+    }
+    &.radio[checked]::after {
+        content: '';
+        background-color: transparent;
+        display: block;
+        position: absolute;
+        width: 16rpx;
+        height: 16rpx;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 12rpx;
+        bottom: 0;
+        margin: auto;
+        border-radius: 9999rpx;
+        border: 14rpx solid var(--white) !important;
+    }
+    &[checked] {
+        animation: boom .2s ease-in;
+        animation-iteration-count: 1;
+        .wx-radio-input {
+            color: inherit !important;
+            background-color: currentColor !important;
+            border-color: currentColor !important;
+        }
+        &::before {
+            transform: scale(1, 1);
+            font-size: 20rpx;
+        }
+    }
 }
 @keyframes boom {
     0% {

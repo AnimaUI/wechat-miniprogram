@@ -9,122 +9,97 @@
 */
 @import './_prefix.less';
 @switch-fusion-blue-grey: #bdc7d2;
-.wx-switch-input {
-    width: 96rpx !important;
-    height: 52rpx !important;
-}
-.wx-switch-input::before {
-    display: none;
-}
-// 中间小圆球
-.wx-switch-input::after {
-    margin: auto;
-    width: 52rpx !important;
-    height: 52rpx !important;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    transform: scale(.9, .9);
-    transition: all .1s ease-in-out 0s;
-}
 /* switchColor */
-switch[aria-checked="false"] .wx-switch-input {
-    background-color: @switch-fusion-blue-grey !important;
-    border-color: @switch-fusion-blue-grey !important;
-}
-switch[checked] .wx-switch-input {
-    background-color: var(--green) !important;
-    color: var(--white) !important;
-    border-color: var(--green) !important;
-}
-@switchType: null, dark, disabled;
-@switchs: red, fusion-red, orange, fusion-orange, yellow, fusion-yellow, olive,
-    fusion-olive, green, fusion-green, blue-green, fusion-blue-green, cyan,
-    fusion-cyan, sky-blue, fusion-sky-blue, blue, fusion-blue, purple,
-    fusion-purple, mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
-    blue-grey, fusion-blue-grey;
-
-.switchType(@switchType);
-.switchType(@switchType, @i: 1) when (length(@switchType) >= @i) {
-    @typeName: extract(@switchType, @i);
-    .switch(@switchs);
-    .switch(@switchs, @j: 1) when (length(@switchs) >= @j) {
-        @name: extract(@switchs, @j);
-        .swType(@typeName);
-        // 判断是否是占位符
-        .swType(@typeName) when not( @typeName = null) {
-            switch.switch-@{typeName}-@{name}[checked] .wx-switch-input {
-                background-color: var(~'--@{typeName}-@{name}')!important;
-                color: var(--white) !important;
-                border-color: var(~'--@{typeName}-@{name}') !important;
-            }
+switch {
+    color: var(--green);
+    &[aria-checked="false"] {
+        &::after {
+            opacity: 0;
         }
-        .swType(@typeName) when ( @typeName = null) {
-            switch.switch-@{name}[checked] .wx-switch-input {
-                background-color: var(~'--@{name}')!important;
-                color: var(--white) !important;
-                border-color: var(~'--@{name}') !important;
-            }
+        .wx-switch-input {
+            background-color: @switch-fusion-blue-grey !important;
+            border-color: @switch-fusion-blue-grey !important;
         }
-        .switch(@switchs, (@j + 1));
     }
-    .switchType(@switchType, (@i + 1));
+    &[checked] {
+        .wx-switch-input {
+            color: inherit !important;
+            background-color: currentColor !important;;
+            border-color: currentColor !important;;
+        }
+    }
+    &[checked]::before,
+    &.checked::before {
+        transform: scale(0, 0);
+    }
+    .wx-switch-input {
+        width: 96rpx !important;
+        height: 52rpx !important;
+        &::before {
+            display: none;
+        }
+        // 中间小圆球
+        &::after {
+            margin: auto;
+            width: 48rpx !important;
+            height: 48rpx !important;
+            left: 2rpx;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            transform: scale(.9, .9);
+            transition: all .1s ease-in-out 0s;
+        }
+    }
+    &.radius {
+        .wx-switch-input {
+            border-radius: 10rpx;
+            &::before,
+            &::after {
+                border-radius: 10rpx;
+            }
+            // 中间小圆球
+            &::after {
+                width: 48rpx !important;
+                height: 48rpx !important;
+            }
+        }
+    }
 }
 .switch {
     position: relative;
-}
-.switch::before,
-.switch::after{
-    font-family: '@{prefix}-icon';
-    content: '\e759';
-    position: absolute;
-    color: var(--white) !important;
-    top: 0%;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    font-size: 16rpx;
-    height: 52rpx;
-    line-height: 52rpx;
-    width: 50%;
-    text-align: center;
-    pointer-events: none;
-    transform: scale(0, 0);
-    transition: all .3s ease-in-out 0s;
-    z-index: 9;
-    margin: auto;
-}
-.switch::before {
-    content: '\e75a';
-    right: 12rpx;
-    transform: scale(1, 1);
-    left: auto;
-}
-.switch::after{
-    content: '\e759';
-    transform: scale(1, 1);
-    font-size: 18rpx;
-}
-
-switch[checked]::before,
-switch.checked::before {
-    transform: scale(0, 0);
-}
-
-switch[aria-checked="false"]::after {
-    opacity: 0;
-}
-
-switch.radius .wx-switch-input,
-switch.radius .wx-switch-input::before,
-switch.radius .wx-switch-input::after {
-    border-radius: 10rpx;
-}
-// 中间小圆球
-switch.radius .wx-switch-input::after {
-    width: 48rpx !important;
-    height: 48rpx !important;
+    &::before,
+    &::after{
+        font-family: '@{prefix}-icon';
+        content: '\e759';
+        position: absolute;
+        color: var(--white) !important;
+        top: 0%;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        font-size: 16rpx;
+        height: 52rpx;
+        line-height: 52rpx;
+        width: 50%;
+        text-align: center;
+        pointer-events: none;
+        transform: scale(0, 0);
+        transition: all .3s ease-in-out 0s;
+        z-index: 9;
+        margin: auto;
+    }
+    &::before {
+        content: '\e75a';
+        right: 12rpx;
+        transform: scale(1, 1);
+        left: auto;
+    }
+    &::after{
+        content: '\e759';
+        transform: scale(1, 1);
+        font-size: 18rpx;
+    }
 }
 /* 自定义 */
 .switch-sex {

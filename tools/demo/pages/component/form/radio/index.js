@@ -3,8 +3,8 @@ const app = getApp();
 let {
     colour
 } = require('../../../../utils/colour');
-let bgColors = ['', 'dark', 'disabled'].map((item) => {
-    let prefix = 'radio';
+let colors = ['', 'dark', 'disabled'].map((item) => {
+    let prefix = 'text';
     let prefix2 = '';
     if (item !== '') {
         prefix2 = '-';
@@ -17,7 +17,7 @@ let bgColors = ['', 'dark', 'disabled'].map((item) => {
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        bgColors,
+        colors,
         swiperHeight: 0,
         currentTab: 0,
         activeColorClass: 'red',
