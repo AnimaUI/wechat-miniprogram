@@ -1,0 +1,52 @@
+/*!
+ _________
+|    ⚽️   |\
+| ~~~~~~~ |_\
+| switch |
+| ~~~~~~~ |
+| ~~~~~~~ |
+|_________|
+*/
+@import './_prefix.less';
+@switch-fusion-blue-grey: #bdc7d2;
+/* switchColor */
+checkbox {
+    position: relative;
+    color: var(--green);
+    &.round .wx-checkbox-input {
+        border-radius: 9999rpx;
+    }
+    &::before {
+        font-family: '@{prefix}-icon';
+        content: '\e759';
+        position: absolute;
+        color: var(--white) !important;
+        top: 0%;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        font-size: 16rpx;
+        height: 52rpx;
+        line-height: 52rpx;
+        width: 50%;
+        text-align: center;
+        pointer-events: none;
+        transform: scale(0, 0);
+        transition: all .3s ease-in-out 0s;
+        z-index: 9;
+        margin: auto;
+    }
+    &[checked] {
+        &::before {
+            right: auto;
+            left: 10rpx;
+            font-size: 20rpx;
+            transform: scale(1, 1);
+        }
+        .wx-checkbox-input {
+            border-color: currentColor;
+            background-color: currentColor;
+	        color: inherit !important;
+        }
+    }
+}

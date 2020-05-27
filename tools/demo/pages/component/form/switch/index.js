@@ -18,7 +18,7 @@ Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         colors,
-        isRadius: true,
+        isRadius: false,
         swiperHeight: 0,
         currentTab: 0,
         activeColorClass: 'red',

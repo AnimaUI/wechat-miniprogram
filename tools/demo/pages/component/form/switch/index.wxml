@@ -33,7 +33,7 @@
                         disabled
                     </view>
                     <view class="flex flex-wrap padding-30 bg-white">
-                        <switch class="mt-12 {{bgColor}} {{isRadius ? 'radius' : ''}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="bgColor"></switch>
+                        <switch class="mt-12 {{color}} {{isRadius ? 'radius' : ''}}" checked="{{true}}" disabled="{{i === 2}}" wx:for="{{item}}" wx:for-item="color"></switch>
                     </view>
                 </view>
             </swiper-item>

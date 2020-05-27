@@ -99,6 +99,9 @@
                 <view class="ani-form-group text-left right-arrow" bindtap="link" data-url="/pages/component/form/radio/index">
                     <view class="title">radio单选</view>
                 </view>
+                <view class="ani-form-group text-left right-arrow" bindtap="link" data-url="/pages/component/form/checkbox/index">
+                    <view class="title">checkbox复选</view>
+                </view>
             </view>
             <view class="box">
                 <view class="ani-form-group text-left">
