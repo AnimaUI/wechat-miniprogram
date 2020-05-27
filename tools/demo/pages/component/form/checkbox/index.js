@@ -22,7 +22,12 @@ Page({
     },
     onLoad() {},
     onShareAppMessage() {},
-    onShow() {},
+    onShow() {
+        wx.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: 'rgba(0, 0, 0, 0)'
+        });
+    },
     changeRound(e) {
         this.setData({
             isRound: e.detail.value
