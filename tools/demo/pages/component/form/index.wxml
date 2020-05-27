@@ -104,18 +104,6 @@
                 </view>
             </view>
             <view class="box">
-                <view class="ani-form-group text-left">
-                    <view class="title">复选选操作(checkbox)</view>
-                    <checkbox></checkbox>
-                </view>
-                <view class="ani-form-group text-left">
-                    <view class="title">定义形状</view>
-                    <checkbox class="round" checked></checkbox>
-                </view>
-                <view class="ani-form-group text-left">
-                    <view class="title">定义颜色</view>
-                    <checkbox class="round blue" checked></checkbox>
-                </view>
                 <view class="ani-bar bg-white">
                     <view class="action">图片上传</view>
                     <view class="action">{{imgList.length}}/4</view>
@@ -135,10 +123,6 @@
                 </view>
             </view>
             <view class="box">
-                <view class="ani-form-group text-left">
-                    <view class="title">头像</view>
-                    <view class="ani-avatar radius bg-gray"></view>
-                </view>
                 <!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
                 <view class="ani-form-group text-left">
                     <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>

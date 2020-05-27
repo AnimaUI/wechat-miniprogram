@@ -14,48 +14,7 @@ page {
     |  基础色  |
     |_________|
     */
-    /* 胭脂红 */
-    --red: #eb3b5a;
-    --fusion-red: #fc5c65;
-    /* 热带橙 */
-    --orange: #fa8231;
-    --fusion-orange: #fd9644;
-    /* 寿橘黄 */
-    --yellow: #fca310;
-    --fusion-yellow: #fdc871;
-    /* 橄榄绿 */
-    --olive: #9bcc66;
-    --fusion-olive: #c3e999;
-    /* 常春绿 */
-    --green: #21ba45;
-    --fusion-green: #80d283;
-    /* 孔雀蓝 */
-    --blue-green: #0fb9b1;
-    --fusion-blue-green: #2bcbba;
-    /* 绿松青 */
-    --cyan: #69d4db;
-    --fusion-cyan: #97e9ed;
-    /* 牛仔蓝 */
-    --sky-blue: #2d98da;
-    --fusion-sky-blue: #45aaf2;
-    /* 钢青蓝 */
-    --blue: #2185d0;
-    --fusion-blue: #5c98d8;
-    /* 紫藤色 */
-    --purple: #8854d0;
-    --fusion-purple: #a55eea;
-    /* 中兰紫 */
-    --mauve: #ce62d6;
-    --fusion-mauve: #e38ee9;
-    /* 开心粉 */
-    --pink: #ff69b4;
-    --fusion-pink: #ff97cc;
-    /* 火砖红 */
-    --brown: #a52a2a;
-    --fusion-brown: #c54b4b;
-    /* 石岩灰 */
-    --blue-grey: #4b6584;
-    --fusion-blue-grey: #778ca3;
+
     // 不变基础色
     /* 黢黑 */
     --black: #333;
@@ -72,53 +31,89 @@ page {
     /* 透明 */
     --transparent: rgba(0, 0, 0, 0);
 
+    // less 变量
+    // 胭脂红
+    @red: #eb3b5a;
+    @fusion-red: #fc5c65;
+    // 热带橙
+    @orange: #fa8231;
+    @fusion-orange: #fd9644;
+    // 寿橘黄
+    @yellow: #fca310;
+    @fusion-yellow: #fdc871;
+    // 寿橘黄
+    @olive: #9bcc66;
+    @fusion-olive: #c3e999;
+    // 常春绿
+    @green: #21ba45;
+    @fusion-green: #80d283;
+    // 孔雀蓝
+    @blue-green: #0fb9b1;
+    @fusion-blue-green: #2bcbba;
+    // 绿松青
+    @cyan: #69d4db;
+    @fusion-cyan: #97e9ed;
+    // 牛仔蓝
+    @sky-blue: #2d98da;
+    @fusion-sky-blue: #45aaf2;
+    // 钢青蓝
+    @blue: #2185d0;
+    @fusion-blue: #5c98d8;
+    // 紫藤色
+    @purple: #8854d0;
+    @fusion-purple: #a55eea;
+    // 中兰紫
+    @mauve: #ce62d6;
+    @fusion-mauve: #e38ee9;
+    // 开心粉
+    @pink: #ff69b4;
+    @fusion-pink: #ff97cc;
+    // 火砖红
+    @brown: #a52a2a;
+    @fusion-brown: #c54b4b;
+    // 石岩灰
+    @blue-grey: #4b6584;
+    @fusion-blue-grey: #778ca3;
     /* 
      _________
-    |   暗色   |
+    |   色彩  |
     |_________|
     */
-    /* 胭脂红 */
-    --dark-red: #da4c65;
-    --dark-fusion-red: #e2767c;
-    /* 热带橙 */
-    --dark-orange: #da8851;
-    --dark-fusion-orange: #e09961;
-    /* 寿橘黄 */
-    --dark-yellow: #e7c387;
-    --dark-fusion-yellow: #fdc871;
-    /* 橄榄绿 */
-    --dark-olive: #9cdc56;
-    --dark-fusion-olive: #c3e49e;
-    /* 常春绿 */
-    --dark-green: #21ba6b;
-    --dark-fusion-green: #80d298;
-    /* 孔雀蓝 */
-    --dark-blue-green: #26a29c;
-    --dark-fusion-blue-green: #34c2b3;
-    /* 绿松青 */
-    --dark-cyan: #62dae2;
-    --dark-fusion-cyan: #9ce5e8;
-    /* 牛仔蓝 */
-    --dark-sky-blue: #19659d;
-    --dark-fusion-sky-blue: #5ca6db;
-    /* 钢青蓝 */
-    --dark-blue: #3867d6;
-    --dark-fusion-blue: #5c79d8;
-    /* 紫藤色 */
-    --dark-purple: #874cd8;
-    --dark-fusion-purple: #a565e3;
-    /* 中兰紫 */
-    --dark-mauve: #d55ade;
-    --dark-fusion-mauve: #e38ee9;
-    /* 开心粉 */
-    --dark-pink: #e880b4;
-    --dark-fusion-pink: #efa7cc;
-    /* 火砖红 */
-    --dark-brown: #a52a49;
-    --dark-fusion-brown: #c54b5f;
-    /* 石岩灰 */
-    --dark-blue-grey: #36485e;
-    --dark-fusion-blue-grey: #627891;
+    @colorType: null, dark, light;
+    @notescolorType: '/*!* 基础色 *!*/', '/*!* dark *!*/', '/*!*!* light *!*/';
+    @colors: red, fusion-red, orange, fusion-orange, yellow, fusion-yellow, olive,
+        fusion-olive, green, fusion-green, blue-green, fusion-blue-green, cyan,
+        fusion-cyan, sky-blue, fusion-sky-blue, blue, fusion-blue, purple,
+        fusion-purple, mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
+        blue-grey, fusion-blue-grey;
+    @colorText: '/*胭脂红*/', '/*融合胭脂红*/', '/*热带橙*/', '/*融合热带橙*/', '/*寿橘黄*/', '/*融合寿橘黄*/', '/*橄榄绿*/', '/*融合橄榄绿*/', '/*常春绿*/', '/*融合常春绿*/', '/*孔雀蓝*/', '/*融合孔雀蓝*/', '/*绿松青*/', '/*融合绿松青*/', '/*牛仔蓝*/', '/*融合牛仔蓝*/', '/*钢青蓝*/', '/*融合钢青蓝*/', '/*紫藤色*/', '/*融合紫藤色*/', '/*中兰紫*/', '/*融合中兰紫*/', '/*开心粉*/', '/*融合开心粉*/', '/*火砖红*/', '/*融合火砖红*/', '/*石岩灰*/', '/*融合石岩灰*/';
+    .colorType(@colorType);
+    .colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
+        @typeName: extract(@colorType, @i);
+        @notesType: extract(@notescolorType, @i);
+        e(@notesType);
+        .color(@colors);
+        .color(@colors, @j: 1) when (length(@colors) >= @j) {
+            @name: extract(@colors, @j);
+            @notes: extract(@colorText, @j);
+            .bgType(@typeName);
+            // 判断是否是占位符
+            .bgType(@typeName) when (@typeName = null) {
+                e(@notes);
+                --@{name}: @@name;
+            }
+            .bgType(@typeName) when (@typeName = dark) {
+                e(@notes);
+                --@{typeName}-@{name}: darken(@@name, 13%);
+            }
+            .bgType(@typeName) when (@typeName = light) {
+                e(@notes);
+                --@{typeName}-@{name}: lighten(@@name, 18%);
+            }
+            .color(@colors, (@j + 1));
+        }
+        .colorType(@colorType, (@i + 1));
+    }
 
     /* 
      _________
@@ -167,54 +162,6 @@ page {
     /* 石岩灰 */
     --disabled-blue-grey: #c7d2df;
     --disabled-fusion-blue-grey: #c9d1da;
-
-    /* 
-     _________
-    |   浅色   |
-    |_________|
-    */
-    /* 胭脂红 */
-    --light-red: #ffe1e1;
-    --light-fusion-red: #ffe5e4;
-    /* 热带橙 */
-    --light-orange: #ffeadc;
-    --light-fusion-orange: #ffeddf;
-    /* 寿橘黄 */
-    --light-yellow: #ffefda;
-    --light-fusion-yellow: #fff6e7;
-    /* 橄榄绿 */
-    --light-olive: #eff7e5;
-    --light-fusion-olive: #f6fbee;
-    /* 常春绿 */
-    --light-green: #e1f5e5;
-    --light-fusion-green: #e3fbea;
-    /* 孔雀蓝 */
-    --light-blue-green: #e1f4f2;
-    --light-fusion-blue-green: #e3f7f3;
-    /* 绿松青 */
-    --light-cyan: #e9f8f9;
-    --light-fusion-cyan: #effcfc;
-    /* 牛仔蓝 */
-    --light-sky-blue: #e3edf9;
-    --light-fusion-sky-blue: #e6f0fd;
-    /* 钢青蓝 */
-    --light-blue: #e3e4f9;
-    --light-fusion-blue: #e6e8fd;
-    /* 紫藤色 */
-    --light-purple: #ede2f8;
-    --light-fusion-purple: #f2e4fc;
-    /* 中兰紫 */
-    --light-mauve: #f9e6f9;
-    --light-fusion-mauve: #fbecfc;
-    /* 开心粉 */
-    --light-pink: #ffe8f2;
-    --light-fusion-pink: #ffeef6;
-    /* 火砖红 */
-    --light-brown: #f5dcd8;
-    --light-fusion-brown: #fae1df;
-    /* 石岩灰 */
-    --light-blue-grey: #e0e4ea;
-    --light-fusion-blue-grey: #e8ebef;
 
     /* 
      _________
