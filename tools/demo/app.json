@@ -1,6 +1,5 @@
 {
     "pages": [
-        "pages/component/form/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -18,6 +17,7 @@
         "pages/component/custom-bar/index",
         "pages/component/menu-bar/index",
         "pages/component/tab/index",
+        "pages/component/form/index",
         "pages/solution/index",
         "pages/about/index"
     ],

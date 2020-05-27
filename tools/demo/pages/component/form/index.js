@@ -14,7 +14,9 @@ Page({
         time: '11:30',
         date: '2020-05-19',
         region: ['四川省', '成都市', '成华区'],
-        imgList: []
+        imgList: [],
+        textareaValue1: '',
+        textareaValue2: ''
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -178,7 +180,7 @@ Page({
             content: '确定要删除我们的合照？',
             cancelText: '留恋💋',
             confirmText: '滚粗😡',
-            success: res => {
+            success: (res) => {
                 if (res.confirm) {
                     this.data.imgList.splice(e.currentTarget.dataset.index, 1);
                     this.setData({
@@ -186,6 +188,16 @@ Page({
                     });
                 }
             }
+        });
+    },
+    textareaInput1(e) {
+        this.setData({
+            textareaValue1: e.detail.value
+        });
+    },
+    textareaInput2(e) {
+        this.setData({
+            textareaValue2: e.detail.value
         });
     },
     link(e) {

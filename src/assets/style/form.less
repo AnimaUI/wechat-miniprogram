@@ -47,4 +47,47 @@
         color: var(--dark-gray);
         padding-right: 36rpx;
     }
+    .choose-img,
+    .bg-img {
+        height: 150rpx;
+        line-height: 150rpx;
+        text-align: center;
+        border-radius: 8rpx;
+        overflow: hidden;
+    }
+    .choose-img {
+        width: 150rpx;
+    }
+    .bg-img {
+        margin-right: 20rpx;
+        position: relative;
+        image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .close-img {
+            opacity: .6;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 3px;
+            padding: 8rpx;
+            height: 42rpx;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.calc-num {
+    position: relative;
+    &::before {
+        content: attr(data-num);
+        position: absolute;
+        bottom: 10rpx;
+        right: 10rpx;
+        color: var(--dark-gray);
+        font-size: 24rpx;
+    }
 }

@@ -103,11 +103,11 @@
                     <view class="title">checkbox复选</view>
                 </view>
             </view>
-            <view class="box padding-sub bg-white flex justify-between">
+            <view class="box ani-form-group padding-sub bg-white flex justify-between">
                 <view class="text-dark-gray">图片上传</view>
                 <view class="action">{{imgList.length}} / 4</view>
             </view>
-            <view class="bg-white padding-sub grid col-4 flex-once">
+            <view class="bg-white ani-form-group padding-sub grid col-4 flex-once">
                 <view class="bg-img mr-20" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="viewImage" data-url="{{imgList[index]}}">
                     <image src="{{imgList[index]}}" mode="aspectFill"></image>
                     <view class="close-img bg-dark-gray" catchtap="delImg" data-index="{{index}}">
@@ -119,13 +119,12 @@
                 </view>
             </view>
             <view class="box">
-                <!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
-                <view class="ani-form-group text-left">
-                    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+                <view class="ani-form-group padding-sub text-left calc-num" data-num="{{textareaValue1.length}} / 120">
+                    <textarea maxlength="120" bindinput="textareaInput1" placeholder="多行文本输入框"></textarea>
                 </view>
-                <view class="ani-form-group text-left align-start">
+                <view class="ani-form-group padding-sub text-left align-start calc-num" data-num="{{textareaValue2.length}} / 160">
                     <view class="title">文本框</view>
-                    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="多行文本输入框"></textarea>
+                    <textarea maxlength="160" bindinput="textareaInput2" placeholder="多行文本输入框"></textarea>
                 </view>
             </view>
         </form>
