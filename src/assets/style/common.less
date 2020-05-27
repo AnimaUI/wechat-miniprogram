@@ -45,19 +45,15 @@ page {
             }
         }
         .textType(@typeName);
-        // 判断是否是占位符
+       // 判断是否是占位符
         .textType(@typeName) when not( @typeName = null) {
-            .text-@{typeName}-@{name} {
-                color: var(~'--@{typeName}-@{name}');
-            }
+            .text-@{typeName}-@{name},
             button[disabled].@{prefix}-btn[class*="line"].text-@{typeName}-@{name} {
                 color: var(~'--@{typeName}-@{name}');
             }
         }
         .textType(@typeName) when ( @typeName = null) {
-            .text-@{name} {
-                color: var(~'--@{name}');
-            }
+            .text-@{name},
             button[disabled].@{prefix}-btn[class*="line"].text-@{name} {
                 color: var(~'--@{name}');
             }
