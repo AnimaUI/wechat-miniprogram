@@ -44,6 +44,10 @@ Component({
         dotStyle: {
             type: String,
             value: 'round'
+        },
+        indicatorActiveColor: {
+            type: String,
+            value: 'var(--white)'
         }
     },
     data: {},

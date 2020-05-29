@@ -7,3 +7,32 @@
     margin: 0;
     pointer-events: none;
 }
+swiper {
+    .wx-swiper-dot.wx-swiper-dot-active {
+        opacity: 1!important;
+    }
+    &.square {
+        .wx-swiper-dot {
+            background-color: var(--white);
+            opacity: 0.4;
+            width: 10rpx;
+            height: 10rpx;
+            border-radius: 50%;
+            margin: 0 8rpx !important;
+            &.wx-swiper-dot-active {
+                width: 30rpx;
+                border-radius: 24rpx!important;
+            }
+        }
+    }
+    &.round {
+        .wx-swiper-dot {
+            background-color: rgba(0, 0, 0, .6);
+            opacity: 0.4;
+            width: 10rpx;
+            height: 10rpx;
+            border-radius: 50%;
+            margin: 0 8rpx !important;
+        }
+    }
+}

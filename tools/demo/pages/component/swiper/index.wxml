@@ -9,7 +9,7 @@
                 <text class="ani-badge il-block bg-gradual-purple"></text>
                 百分百限高轮播图
             </view>
-            <Swiper swiperList="{{swiperList}}"/>
+            <Swiper swiperList="{{swiperList}}" indicatorActiveColor="var(--blue)" dotStyle="square"/>
         </view>
     </view>
 </scroll-view>
