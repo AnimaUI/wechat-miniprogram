@@ -9,9 +9,15 @@ let swiperList = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map((ite
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
+        isSquare: false,
         swiperList
     },
     onLoad() {},
     onShareAppMessage() {},
-    onShow() {}
+    onShow() {},
+    changeSquare(e) {
+        this.setData({
+            isSquare: e.detail.value
+        });
+    }
 });

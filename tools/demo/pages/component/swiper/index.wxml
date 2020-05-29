@@ -1,6 +1,9 @@
 <CustomBar className="bg-gradual-purple text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content" class="capitalize">轮播</view>
+    <view slot="right" class="capitalize">
+        是否方形
+        <switch class="switch text-purple" checked="{{isSquare}}" bindchange="changeSquare"></switch>
+    </view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
@@ -9,7 +12,7 @@
                 <text class="ani-badge il-block bg-gradual-purple"></text>
                 百分百限高轮播图
             </view>
-            <Swiper swiperList="{{swiperList}}" indicatorActiveColor="var(--blue)" dotStyle="square"/>
+            <Swiper swiperList="{{swiperList}}" indicatorActiveColor="var(--purple)" dotStyle="{{isSquare ? 'square' : 'round'}}"/>
         </view>
     </view>
 </scroll-view>
