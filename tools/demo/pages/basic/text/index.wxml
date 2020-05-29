@@ -90,7 +90,7 @@
             </view>
         </view>
         <view class="item bg-white">
-            <view class="box-bar color-primary fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 basic
             </view>
@@ -107,7 +107,7 @@
             </view>
         </view>
         <view class="item bg-white">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字渐变
             </view>
@@ -124,7 +124,7 @@
             </view>
         </view>
         <view class="item bg-white">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字阴影
             </view>
@@ -148,7 +148,7 @@
             </view>
         </view>
         <view class="item bg-white">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字对齐
             </view>
@@ -167,7 +167,7 @@
             </view>
         </view>
         <view class="item bg-white">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 文字截断
             </view>
@@ -178,7 +178,7 @@
             </view>
         </view>
          <view class="item bg-white">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-blue-green"></text>
                 辅助文字
             </view>

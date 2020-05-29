@@ -60,7 +60,7 @@
             </view>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-red"></text>
                 basic
             </view>
@@ -80,7 +80,7 @@
             </view>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-red"></text>
                 gradual
             </view>

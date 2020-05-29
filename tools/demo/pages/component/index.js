@@ -36,7 +36,7 @@ Page({
                 icon: 'ani-icon-carousel',
                 en: 'swiper',
                 cn: '轮 播',
-                url: '/pages/component/custom-bar/index'
+                url: '/pages/component/swiper/index'
             },
             {
                 icon: 'ani-icon-steps',

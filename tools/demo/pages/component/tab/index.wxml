@@ -5,7 +5,7 @@
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 基础tab
             </view>
@@ -34,7 +34,7 @@
             </swiper>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 带icon tab
             </view>
@@ -63,7 +63,7 @@
             </swiper>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 预设背景色tab
             </view>
@@ -95,7 +95,7 @@
             </swiper>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 预设color tab
             </view>
@@ -126,7 +126,7 @@
             </swiper>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 自定义color tab
             </view>
@@ -157,7 +157,7 @@
             </swiper>
         </view>
         <view class="item">
-            <view class="box-bar color-primary bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
                 <text class="ani-badge il-block bg-gradual-olive"></text>
                 徽标 tab
             </view>

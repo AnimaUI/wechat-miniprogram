@@ -1,0 +1,15 @@
+<CustomBar className="bg-gradual-purple text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">轮播</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                百分百限高轮播图
+            </view>
+            <Swiper swiperList="{{swiperList}}"/>
+        </view>
+    </view>
+</scroll-view>

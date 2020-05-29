@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "Swiper": "../../../animaUi/components/swiper/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}
