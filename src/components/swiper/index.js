@@ -11,6 +11,10 @@ Component({
             type: Array,
             value: []
         },
+        swiperType: {
+            type: String,
+            value: 'screen-swiper'
+        },
         // 当前所在滑块的 index
         current: {
             type: Number,

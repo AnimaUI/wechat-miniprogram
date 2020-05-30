@@ -36,61 +36,61 @@ Page({
                 icon: 'ani-icon-carousel',
                 en: 'swiper',
                 cn: '轮 播',
-                url: '/pages/component/swiper/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-steps',
                 en: 'steps',
                 cn: '步骤条',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-card',
                 en: 'card',
                 cn: '卡 片',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-time-line',
                 en: 'timeLine',
                 cn: '时间轴',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-modal',
                 en: 'modal',
                 cn: '模态框',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-list',
                 en: 'list',
                 cn: '列 表',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-date',
                 en: 'date',
                 cn: '日 期',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-time2',
                 en: 'time',
                 cn: '时 间',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-slider',
                 en: 'slider',
                 cn: '滑 块',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             },
             {
                 icon: 'ani-icon-rate',
                 en: 'rate',
                 cn: '评 分',
-                url: '/pages/component/custom-bar/index'
+                url: ''
             }
         ]
     },

@@ -937,7 +937,7 @@
             </text>
             <text class="ani-icon-arrow-right"></text>
         </view>
-        <view class="item text-darkGray" bindtap="previewImage">
+        <view class="item text-darkGray" bindtap="previewImage" data-url="appreciate.jpg">
             <text class="left">
                 <text class="ani-icon-appreciate text-red"></text>
                 <text class="capitalize">赞赏支持</text>
@@ -951,7 +951,7 @@
             </text>
             <text class="ani-icon-arrow-right"></text>
         </view>
-        <view class="item text-darkGray">
+        <view class="item text-darkGray" bindtap="previewImage" data-url="wx.jpg">
             <text class="left">
                 <text class="ani-icon-about text-cyan"></text>
                 <text class="capitalize">关于AnimaUI</text>

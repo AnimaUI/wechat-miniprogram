@@ -12,7 +12,23 @@
                 <text class="ani-badge il-block bg-gradual-purple"></text>
                 百分百限高轮播图
             </view>
-            <Swiper swiperList="{{swiperList}}" indicatorActiveColor="var(--purple)" dotStyle="{{isSquare ? 'square' : 'round'}}"/>
+            <Swiper
+                swiperList="{{swiperList}}"
+                swiperType="screen-swiper"
+                indicatorActiveColor="var(--purple)"
+                dotStyle="{{isSquare ? 'square' : 'round'}}"/>
+        </view>
+        <view class="item">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                卡片轮播图
+            </view>
+            <Swiper
+                swiperList="{{swiperList}}"
+                swiperType="card-swiper"
+                autoplay="{{fales}}"
+                indicatorActiveColor="var(--purple)"
+                dotStyle="{{isSquare ? 'square' : 'round'}}"/>
         </view>
     </view>
 </scroll-view>

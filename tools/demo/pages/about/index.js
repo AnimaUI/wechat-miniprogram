@@ -162,9 +162,8 @@ Page({
             }
         });
     },
-    previewImage() {
-        let url = `${this.data.imgBaseUrl}/appreciate.jpg`;
-        console.log(url);
+    previewImage(e) {
+        let url = `${this.data.imgBaseUrl}/${e.currentTarget.dataset.url}`;
         wx.previewImage({
             urls: [url],
             current: url

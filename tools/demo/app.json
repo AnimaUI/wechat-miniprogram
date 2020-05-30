@@ -1,6 +1,5 @@
 {
     "pages": [
-        "pages/component/swiper/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -19,6 +18,7 @@
         "pages/component/menu-bar/index",
         "pages/component/tab/index",
         "pages/component/form/index",
+        "pages/component/swiper/index",
         "pages/solution/index",
         "pages/about/index"
     ],

@@ -1,5 +1,5 @@
 <swiper
-    class="screen-swiper {{dotStyle}}"
+    class="{{swiperType}} {{dotStyle}}"
     indicator-dots="{{indicatorDots}}"
     circular="{{circular}}"
     autoplay="{{autoplay}}"
@@ -7,6 +7,9 @@
     duration="{{duration}}"
     indicator-active-color="{{indicatorActiveColor}}">
     <swiper-item wx:for="{{swiperList}}" wx:key>
-        <image src="{{item.url}}" mode="aspectFill"></image>
+        <image wx:if="{{swiperType == 'screen-swiper'}}" src="{{item.url}}" mode="aspectFill"></image>
+        <view wx:if="{{swiperType == 'card-swiper'}}" class="swiper-item">
+            <image src="{{item.url}}" mode="aspectFill"></image>
+        </view>
     </swiper-item>
 </swiper>
