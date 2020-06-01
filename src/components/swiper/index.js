@@ -68,7 +68,11 @@ Component({
         // 在组件实例被创建
         created() {},
         // 在组件实例进入页面节点树时执行
-        attached() {},
+        attached() {
+            if (this.data.swiperType === 'stack-swiper') {
+                this.stackrSwiper();
+            }
+        },
         // 在组件实例被移动到节点树另一个位置时执行
         moved() {},
         // 在组件实例被从页面节点树移除时执行
@@ -92,10 +96,77 @@ Component({
             const imgw = e.detail.width;
             // 等比设置swiper的高度。  即 屏幕宽度 / swiper高度 = 图片宽度 / 图片高度 ==> swiper高度 = 屏幕宽度 * 图片高度 / 图片宽度
             const swiperH = (winWid * imgh) / imgw + 'px';
-            console.log((winWid * imgh) / imgw);
             this.setData({
                 imgHeight: swiperH // 设置高度
             });
+        },
+        // 初始化stackSwiper
+        stackrSwiper() {
+            let list = this.data.swiperList;
+            // 如果小于4张，则需要手动复制
+            const len = list.length;
+            const temp = JSON.stringify(list[0]);
+            if (len === 1) {
+                list = new Array(4)
+                    .join()
+                    .split(',')
+                    .map(() => JSON.parse(temp));
+            }
+            for (let i = 0; i < list.length; i++) {
+                list[i].zIndex =
+                    parseInt(list.length / 2, 10) +
+                    1 -
+                    Math.abs(i - parseInt(list.length / 2, 10));
+                list[i].mLeft = i - parseInt(list.length / 2, 10);
+            }
+            this.setData({
+                swiperList: list
+            });
+        },
+        // stackSwiper触摸开始
+        stackStart(e) {
+            this.setData({
+                stackStart: e.touches[0].pageX
+            });
+        },
+        // stackSwiper计算方向
+        stackMove(e) {
+            this.setData({
+                direction:
+                    e.touches[0].pageX - this.data.stackStart > 0
+                        ? 'right'
+                        : 'left'
+            });
+        },
+        // stackSwiper计算滚动
+        stackEnd() {
+            const direction = this.data.direction;
+            const list = this.data.swiperList;
+            if (direction === 'right') {
+                const mLeft = list[0].mLeft;
+                const zIndex = list[0].zIndex;
+                for (let i = 1; i < list.length; i++) {
+                    list[i - 1].mLeft = list[i].mLeft;
+                    list[i - 1].zIndex = list[i].zIndex;
+                }
+                list[list.length - 1].mLeft = mLeft;
+                list[list.length - 1].zIndex = zIndex;
+                this.setData({
+                    swiperList: list
+                });
+            } else {
+                const mLeft = list[list.length - 1].mLeft;
+                const zIndex = list[list.length - 1].zIndex;
+                for (let i = list.length - 1; i > 0; i--) {
+                    list[i].mLeft = list[i - 1].mLeft;
+                    list[i].zIndex = list[i - 1].zIndex;
+                }
+                list[0].mLeft = mLeft;
+                list[0].zIndex = zIndex;
+                this.setData({
+                    swiperList: list
+                });
+            }
         }
     }
 });

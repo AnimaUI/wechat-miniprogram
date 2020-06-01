@@ -1,4 +1,5 @@
 <swiper
+    wx:if="{{swiperType != 'stack-swiper'}}"
     class="{{swiperType}} {{dotStyle}}"
     indicator-dots="{{indicatorDots}}"
     style="height: {{imgHeight}}"
@@ -7,7 +8,6 @@
     interval="{{interval}}"
     duration="{{duration}}"
     indicator-active-color="{{indicatorActiveColor}}"
-    autoHeight="{{true}}" observer="{{true}}" observeParents="{{true}}"
     bindchange="changeSwiper">
     <swiper-item class="{{current == index ? 'current' : ''}}" wx:for="{{swiperList}}" wx:key>
         <image wx:if="{{swiperType == 'screen-swiper'}}" src="{{item.url}}" mode="aspectFill"></image>
@@ -16,3 +16,20 @@
         </view>
     </swiper-item>
 </swiper>
+<view
+    class="stack-swiper"
+    style="height: {{imgHeight}};"
+    wx:if="{{swiperType == 'stack-swiper'}}"
+    bindtouchmove="stackMove"
+    bindtouchstart="stackStart"
+    bindtouchend="stackEnd">
+    <view
+        class="stack-item {{item.zIndex == 1 ? 'none' : ''}}"
+        wx:for="{{swiperList}}"
+        wx:key
+        style="--index: {{item.zIndex}}; --left: {{item.mLeft}}">
+        <view class="swiper-item">
+            <image src="{{item.url}}" mode="aspectFill" bindload="loadImgHheight"></image>
+        </view>
+    </view>
+</view>

@@ -31,5 +31,16 @@
                 indicatorActiveColor="var(--purple)"
                 dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
+        <view class="item">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                堆叠轮播图
+            </view>
+            <Swiper
+                swiperList="{{swiperList}}"
+                swiperType="stack-swiper"
+                autoplay="{{fales}}"
+                indicatorActiveColor="var(--purple)"/>
+        </view>
     </view>
 </scroll-view>
