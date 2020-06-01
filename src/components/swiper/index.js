@@ -15,6 +15,10 @@ Component({
             type: String,
             value: 'screen-swiper'
         },
+        height: {
+            type: String,
+            value: '320rpx'
+        },
         // 当前所在滑块的 index
         current: {
             type: Number,
@@ -47,14 +51,16 @@ Component({
         },
         dotStyle: {
             type: String,
-            value: 'round'
+            value: 'round-dot'
         },
         indicatorActiveColor: {
             type: String,
             value: 'var(--white)'
         }
     },
-    data: {},
+    data: {
+        imgHeight: ''
+    },
     /**
      * 声明周期函数
      */
@@ -72,5 +78,24 @@ Component({
         // 页面被展示
         show() {}
     },
-    methods: {}
+    methods: {
+        changeSwiper(e) {
+            this.setData({
+                current: e.detail.current
+            });
+        },
+        loadImgHheight(e) {
+            // 获取当前屏幕的宽度
+            const winWid = wx.getSystemInfoSync().windowWidth;
+            // 图片高度
+            const imgh = e.detail.height;
+            const imgw = e.detail.width;
+            // 等比设置swiper的高度。  即 屏幕宽度 / swiper高度 = 图片宽度 / 图片高度 ==> swiper高度 = 屏幕宽度 * 图片高度 / 图片宽度
+            const swiperH = (winWid * imgh) / imgw + 'px';
+            console.log((winWid * imgh) / imgw);
+            this.setData({
+                imgHeight: swiperH // 设置高度
+            });
+        }
+    }
 });

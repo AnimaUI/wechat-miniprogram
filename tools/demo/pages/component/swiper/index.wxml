@@ -16,7 +16,7 @@
                 swiperList="{{swiperList}}"
                 swiperType="screen-swiper"
                 indicatorActiveColor="var(--purple)"
-                dotStyle="{{isSquare ? 'square' : 'round'}}"/>
+                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
         <view class="item">
             <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
@@ -24,11 +24,12 @@
                 卡片轮播图
             </view>
             <Swiper
+                style="height: 420rpx"
                 swiperList="{{swiperList}}"
                 swiperType="card-swiper"
                 autoplay="{{fales}}"
                 indicatorActiveColor="var(--purple)"
-                dotStyle="{{isSquare ? 'square' : 'round'}}"/>
+                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
     </view>
 </scroll-view>
