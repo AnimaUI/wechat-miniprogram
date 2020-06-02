@@ -123,6 +123,11 @@ Component({
                     1 -
                     Math.abs(i - parseInt(list.length / 2, 10));
                 list[i].mLeft = i - parseInt(list.length / 2, 10);
+                if (list[i].mLeft === 0) {
+                    this.setData({
+                        current: i
+                    });
+                }
             }
             this.setData({
                 swiperList: list
@@ -172,6 +177,14 @@ Component({
                     swiperList: list
                 });
             }
+            // 设置选中点
+            list.forEach((item, index) => {
+                if (item.mLeft === 0) {
+                    this.setData({
+                        current: index
+                    });
+                }
+            });
         }
     }
 });

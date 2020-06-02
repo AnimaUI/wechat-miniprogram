@@ -17,7 +17,7 @@
     </swiper-item>
 </swiper>
 <view
-    class="stack-swiper"
+    class="stack-swiper {{dotStyle}}"
     style="height: {{imgHeight}};"
     wx:if="{{swiperType == 'stack-swiper'}}"
     bindtouchmove="stackMove"
@@ -31,5 +31,11 @@
         <view class="swiper-item">
             <image src="{{item.url}}" mode="aspectFill" bindload="loadImgHheight"></image>
         </view>
+    </view>
+    <view class="swiper-dot" wx:if="{{indicatorDots}}">
+        <text
+            wx:for="{{swiperList}}"
+            class="wx-swiper-dot ml-12 {{current == index ? 'wx-swiper-dot-active' : ''}}"
+            style="color: {{indicatorActiveColor}}"></text>
     </view>
 </view>

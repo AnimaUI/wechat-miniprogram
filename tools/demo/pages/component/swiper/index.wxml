@@ -15,7 +15,7 @@
             <Swiper
                 swiperList="{{swiperList}}"
                 swiperType="screen-swiper"
-                indicatorActiveColor="var(--purple)"
+                indicatorActiveColor="var(--red)"
                 dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
         <view class="item">
@@ -28,7 +28,7 @@
                 swiperList="{{swiperList}}"
                 swiperType="card-swiper"
                 autoplay="{{fales}}"
-                indicatorActiveColor="var(--purple)"
+                indicatorActiveColor="var(--red)"
                 dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
         <view class="item">
@@ -40,7 +40,8 @@
                 swiperList="{{swiperList}}"
                 swiperType="stack-swiper"
                 autoplay="{{fales}}"
-                indicatorActiveColor="var(--purple)"/>
+                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"
+                indicatorActiveColor="var(--red)"/>
         </view>
     </view>
 </scroll-view>
