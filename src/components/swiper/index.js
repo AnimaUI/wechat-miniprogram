@@ -105,12 +105,17 @@ Component({
             let list = this.data.swiperList;
             // 如果小于4张，则需要手动复制
             const len = list.length;
-            const temp = JSON.stringify(list[0]);
+            const temp1 = JSON.stringify(list[0]);
+            const temp2 = JSON.stringify(list[1]);
             if (len === 1) {
                 list = new Array(4)
                     .join()
                     .split(',')
-                    .map(() => JSON.parse(temp));
+                    .map(() => JSON.parse(temp1));
+            } else if (len === 2) {
+                list.push(JSON.parse(temp1), JSON.parse(temp2));
+            } else if (len === 3) {
+                list.push(JSON.parse(temp2));
             }
             for (let i = 0; i < list.length; i++) {
                 list[i].zIndex =
