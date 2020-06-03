@@ -52,8 +52,7 @@
                 style="height: auto"
                 swiperList="{{swiperList}}"
                 swiperType="cutting-swiper"
-                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"
-                indicatorActiveColor="var(--red)"/>
+                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"/>
         </view>
     </view>
 </scroll-view>
