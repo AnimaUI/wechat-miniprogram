@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/component/form/index",
+        "pages/component/swiper/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -18,10 +18,10 @@
         "pages/component/custom-bar/index",
         "pages/component/menu-bar/index",
         "pages/component/tab/index",
+        "pages/component/form/index",
         "pages/component/form/switch/index",
         "pages/component/form/radio/index",
         "pages/component/form/checkbox/index",
-        "pages/component/swiper/index",
         "pages/solution/index",
         "pages/about/index"
     ],
