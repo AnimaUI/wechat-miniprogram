@@ -18,6 +18,9 @@
         "pages/component/custom-bar/index",
         "pages/component/menu-bar/index",
         "pages/component/tab/index",
+        "pages/component/form/switch/index",
+        "pages/component/form/radio/index",
+        "pages/component/form/checkbox/index",
         "pages/component/swiper/index",
         "pages/solution/index",
         "pages/about/index"
