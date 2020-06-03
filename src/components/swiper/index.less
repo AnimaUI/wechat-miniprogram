@@ -150,5 +150,23 @@ swiper {
         transform: translate(~'calc(-50% - 12rpx)', 0);
     }
 }
-
-
+.cutting-swiper {
+    width: 100%;
+    margin: 20rpx auto;
+    position: relative;
+    .cutting-item {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        transition: all .618s;
+        /* 设置子元素在3D空间中呈现 */
+        transform-style: preserve-3d;
+        .img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 <swiper
-    wx:if="{{swiperType != 'stack-swiper'}}"
+    wx:if="{{swiperType == 'screen-swiper' || swiperType == 'card-swiper'}}"
     class="{{swiperType}} {{dotStyle}}"
     indicator-dots="{{indicatorDots}}"
-    style="height: {{imgHeight}}"
+    style="height: {{imgHeight}}px"
     circular="{{circular}}"
     autoplay="{{autoplay}}"
     interval="{{interval}}"
@@ -18,10 +18,10 @@
 </swiper>
 <view
     class="stack-swiper {{dotStyle}}"
-    style="height: {{imgHeight}};"
+    style="height: {{imgHeight}}px;"
     wx:if="{{swiperType == 'stack-swiper'}}"
-    bindtouchmove="stackMove"
     bindtouchstart="stackStart"
+    bindtouchmove="stackMove"
     bindtouchend="stackEnd">
     <view
         class="stack-item {{item.zIndex == 1 ? 'none' : ''}}"
@@ -37,5 +37,28 @@
             wx:for="{{swiperList}}"
             class="wx-swiper-dot ml-12 {{current == index ? 'wx-swiper-dot-active' : ''}}"
             style="color: {{indicatorActiveColor}}"></text>
+    </view>
+</view>
+<view
+    class="cutting-swiper"
+    style="height: {{imgHeight}}px;"
+    wx:if="{{swiperType == 'cutting-swiper'}}"
+    bindtouchstart="cuttingStart"
+    bindtouchmove="cuttingMove"
+    bindtouchend="cuttingEnd">
+    <image style="height: 0;display: none;" src="{{swiperList[0].url}}" bindload="loadImgHheight"></image>
+    <view
+        class="cutting-item"
+        wx:for="{{[0, 1, 2, 3, 4]}}"
+        wx:key
+        wx:for-index="index"
+        style="transition-delay: {{.3 * index}}s; left: {{20 * index}}%; transform: rotateX({{rotateX}})">
+        <view
+            class="img img-{{JItem.zIndex}}"
+            wx:for="{{swiperList}}"
+            wx:for-item="JItem"
+            wx:for-index="JIndex"
+            wx:key
+            style="background-image: url({{JItem.url}}); background-position: {{25 * index}}% center;transform: rotateX({{-JIndex * 90}}deg) translateZ({{imgHeight}}rpx)"></view>
     </view>
 </view>

@@ -59,7 +59,9 @@ Component({
         }
     },
     data: {
-        imgHeight: ''
+        imgHeight: '',
+        cuttingNum: 0,
+        rotateX: 0
     },
     /**
      * 声明周期函数
@@ -71,6 +73,8 @@ Component({
         attached() {
             if (this.data.swiperType === 'stack-swiper') {
                 this.stackrSwiper();
+            } else if (this.data.swiperType === 'cutting-swiper') {
+                this.cuttingSwiper();
             }
         },
         // 在组件实例被移动到节点树另一个位置时执行
@@ -95,7 +99,7 @@ Component({
             const imgh = e.detail.height;
             const imgw = e.detail.width;
             // 等比设置swiper的高度。  即 屏幕宽度 / swiper高度 = 图片宽度 / 图片高度 ==> swiper高度 = 屏幕宽度 * 图片高度 / 图片宽度
-            const swiperH = (winWid * imgh) / imgw + 'px';
+            const swiperH = (winWid * imgh) / imgw;
             this.setData({
                 imgHeight: swiperH // 设置高度
             });
@@ -142,7 +146,7 @@ Component({
         // stackSwiper计算方向
         stackMove(e) {
             this.setData({
-                direction:
+                stackDirection:
                     e.touches[0].pageX - this.data.stackStart > 0
                         ? 'right'
                         : 'left'
@@ -150,9 +154,9 @@ Component({
         },
         // stackSwiper计算滚动
         stackEnd() {
-            const direction = this.data.direction;
+            const stackDirection = this.data.stackDirection;
             const list = this.data.swiperList;
-            if (direction === 'right') {
+            if (stackDirection === 'right') {
                 const mLeft = list[0].mLeft;
                 const zIndex = list[0].zIndex;
                 for (let i = 1; i < list.length; i++) {
@@ -184,6 +188,49 @@ Component({
                         current: index
                     });
                 }
+            });
+        },
+        // 初始化cuttingSwiper
+        cuttingSwiper() {
+            const list = this.data.swiperList.slice(0, 4);
+            list.forEach((item, index) => {
+                item.zIndex = index + 1;
+            });
+            this.setData({
+                swiperList: list
+            });
+        },
+        // cuttingSwiper触摸开始
+        cuttingStart(e) {
+            this.setData({
+                cuttingStart: e.touches[0].pageX
+            });
+        },
+        // cuttingSwiper计算方向
+        cuttingMove(e) {
+            this.setData({
+                cuttingDirection:
+                    e.touches[0].pageX - this.data.cuttingStart > 0
+                        ? 'right'
+                        : 'left'
+            });
+        },
+        // cuttingSwiper计算滚动
+        cuttingEnd() {
+            const cuttingDirection = this.data.cuttingDirection;
+            if (cuttingDirection === 'right') {
+                this.setData({
+                    cuttingNum: this.data.cuttingNum - 1
+                });
+            } else if (cuttingDirection === 'left') {
+                this.setData({
+                    cuttingNum: this.data.cuttingNum + 1
+                });
+            }
+            const rotateX = this.data.cuttingNum * 90 + 'deg';
+            this.cuttingSwiper();
+            this.setData({
+                rotateX
             });
         }
     }

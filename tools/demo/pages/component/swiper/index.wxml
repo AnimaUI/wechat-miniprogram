@@ -37,9 +37,21 @@
                 堆叠轮播图
             </view>
             <Swiper
+                style="height: auto"
                 swiperList="{{swiperList}}"
                 swiperType="stack-swiper"
-                autoplay="{{fales}}"
+                dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"
+                indicatorActiveColor="var(--red)"/>
+        </view>
+        <view class="item">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-purple"></text>
+                3D切割轮播图(暂只支持4张图)
+            </view>
+            <Swiper
+                style="height: auto"
+                swiperList="{{swiperList}}"
+                swiperType="cutting-swiper"
                 dotStyle="{{isSquare ? 'square-dot' : 'round-dot'}}"
                 indicatorActiveColor="var(--red)"/>
         </view>

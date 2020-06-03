@@ -8,6 +8,7 @@ let swiperList = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map(
         };
     }
 );
+console.log(swiperList);
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
