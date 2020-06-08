@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/component/swiper/index",
+        "pages/component/steps/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -22,6 +22,7 @@
         "pages/component/form/switch/index",
         "pages/component/form/radio/index",
         "pages/component/form/checkbox/index",
+        "pages/component/swiper/index",
         "pages/solution/index",
         "pages/about/index"
     ],

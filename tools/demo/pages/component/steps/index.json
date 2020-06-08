@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "Steps": "../../../animaUi/components/steps/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}

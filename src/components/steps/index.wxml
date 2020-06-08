@@ -1,0 +1,6 @@
+<view class="flex {{prefix}}-steps">
+    <view class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}" style="color: {{ index > step ? '' : activeColor}}" wx:for="{{list}}" wx:key>
+        <text class="fs-40 block {{item.icon}}"></text>
+        {{item.name}}
+    </view>
+</view>

@@ -1,0 +1,18 @@
+<CustomBar className="bg-gradual-light-purple text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">步骤条</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-light-purple"></text>
+                <text>基础步骤条</text>
+                <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="next">下一步</button>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="{{type1}}"/>
+            </view>
+        </view>
+    </view>
+</scroll-view>

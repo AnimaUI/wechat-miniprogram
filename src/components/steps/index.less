@@ -1,0 +1,32 @@
+@import '../common.less';
+.@{prefix}-steps {
+    .@{prefix}-item {
+        position: relative;
+        color: var(--light-fusion-blue-grey);
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 0;
+            width: calc(100% - 100rpx);
+            border-bottom: 2rpx solid var(--light-fusion-blue-grey);
+            left: calc(0px - (100% - 100rpx) / 2);
+            top: 24rpx;
+            z-index: 0;
+        }
+        &::after {
+            border-bottom: 2rpx solid currentColor;
+            width: 0;
+            transition: all .3s ease-in-out 0s;
+        }
+        &.active::after {
+            width: calc(100% - 100rpx);
+            color: currentColor;
+        }
+        &:first-child::before,
+        &:first-child::after {
+            display: none;
+        }
+    }
+}
