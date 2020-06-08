@@ -1,6 +1,60 @@
-<view class="flex {{prefix}}-steps">
-    <view class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}" style="color: {{ index > step ? '' : activeColor}}" wx:for="{{list}}" wx:key>
-        <text class="fs-40 block {{item.icon}}"></text>
+<view class="flex {{prefix}}-steps" wx:if="{{mode == 'iconDefault' && type == 'line'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block {{ index > step ? prefix + '-icon-title fs-20' : item.icon + ' fs-40'}}"></text>
+        {{item.name}}
+    </view>
+</view>
+<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'iconDefault' && type == 'arrow'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block {{ index > step ? prefix + '-icon-title fs-20' : item.icon + ' fs-40'}}"></text>
+        {{item.name}}
+    </view>
+</view>
+<view class="flex {{prefix}}-steps" wx:if="{{mode == 'icon' && type == 'line'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block fs-40 {{item.icon}}"></text>
+        {{item.name}}
+    </view>
+</view>
+<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'icon' && type == 'arrow'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block fs-40 {{item.icon}}"></text>
+        {{item.name}}
+    </view>
+</view>
+<view class="flex {{prefix}}-steps" wx:if="{{mode == 'num' && type == 'line'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block {{ index > step ? 'num' : item.icon + ' fs-40'}}" data-index="{{index + 1}}"></text>
+        {{item.name}}
+    </view>
+</view>
+<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'num' && type == 'arrow'}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
+        style="color: {{ index > step ? '' : activeColor}}"
+        wx:for="{{list}}"
+        wx:key>
+        <text class="block {{ index > step ? 'num' : item.icon + ' fs-40'}}" data-index="{{index + 1}}"></text>
         {{item.name}}
     </view>
 </view>

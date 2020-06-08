@@ -9,7 +9,11 @@ Component({
     properties: {
         type: {
             type: String,
-            value: 'line-icon'
+            value: 'line'
+        },
+        mode: {
+            type: String,
+            value: 'iconDefault'
         },
         list: {
             type: Array,

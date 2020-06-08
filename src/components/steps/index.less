@@ -1,5 +1,6 @@
 @import '../common.less';
-.@{prefix}-steps {
+.@{prefix}-steps,
+.@{prefix}-steps.steps-arrow {
     .@{prefix}-item {
         position: relative;
         color: var(--light-fusion-blue-grey);
@@ -27,6 +28,60 @@
         &:first-child::before,
         &:first-child::after {
             display: none;
+        }
+        text {
+            line-height: 48rpx;
+        }
+        .num {
+            width: 38rpx;
+            height: 38rpx;
+            border-radius: 50%;
+            line-height: 38rpx;
+            text-align: center;
+            margin: 6rpx auto 0;
+            font-size: 24rpx;
+            border: 2rpx solid currentColor;
+            position: relative;
+            overflow: hidden;
+            &::before,
+            &::after {
+                content: attr(data-index);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                transition: all .3s ease-in-out 0s;
+                transform: translateY(0rpx);
+            }
+            &.active::before {
+                transform: translateY(-40rpx);
+                color: var(--white);
+            }
+            &.active::after {
+                transform: translateY(40rpx);
+                color: var(--white);
+                transition: all .3s ease-in-out 0s;
+            }
+        }
+    }
+}
+.@{prefix}-steps {
+    &.steps-arrow {
+        .@{prefix}-item {
+            &::before {
+                content: '\e744';
+                font-family: '@{prefix}-icon';
+                height: 30rpx;
+                border-bottom-width: 0;
+                line-height: 30rpx;
+                top: 28rpx;
+                color: currentColor;
+            }
+            &::after {
+                display: none;
+            }
         }
     }
 }

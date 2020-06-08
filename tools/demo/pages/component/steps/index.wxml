@@ -11,7 +11,32 @@
                 <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="next">下一步</button>
             </view>
             <view class="padding-sm">
-                <Steps list="{{list}}" step="{{step}}" type="{{type1}}"/>
+                <Steps list="{{list}}" step="{{step}}" type="line" mode="{{mode1}}" activeColor="{{activeColor1}}"/>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="arrow" mode="{{mode1}}" activeColor="{{activeColor2}}"/>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="line" mode="{{mode2}}" activeColor="{{activeColor3}}"/>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="arrow" mode="{{mode2}}" activeColor="{{activeColor4}}"/>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="line" mode="{{mode3}}" activeColor="{{activeColor5}}"/>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list}}" step="{{step}}" type="arrow" mode="{{mode3}}" activeColor="{{activeColor6}}"/>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block bg-gradual-light-purple"></text>
+                <text>无限步骤条</text>
+                <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="scrollSteps">下一步</button>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{list1}}" step="{{step}}" type="scroll-steps" activeColor="{{activeColor1}}"/>
             </view>
         </view>
     </view>
