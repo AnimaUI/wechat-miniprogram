@@ -3,10 +3,11 @@ const app = getApp();
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
+        type1: 'line',
+        type2: 'arrow',
         mode1: 'iconDefault',
         mode2: 'icon',
         mode3: 'num',
-        mode4: 'square-text',
         list: [
             {
                 icon: 'ani-icon-start',
@@ -30,8 +31,24 @@ Page({
         activeColor3: 'var(--yellow)',
         activeColor4: 'var(--green)',
         activeColor5: 'var(--cyan)',
-        activeColor6: 'var(--sky-blue)',
-        step: 0
+        activeColor6: 'var(--fusion-sky-blue)',
+        activeColor7: 'var(--purple)',
+        step: 0,
+        scrollList: [
+            'step1',
+            'step2',
+            'step3',
+            'step4',
+            'step5',
+            'step6',
+            'step7',
+            'step8',
+            'step9',
+            'step10',
+            'step11',
+            'step12'
+        ],
+        scrollStep: 0
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -42,6 +59,14 @@ Page({
                 this.data.step == this.data.list.length - 1
                     ? 0
                     : this.data.step + 1
+        });
+    },
+    scrollSteps() {
+        this.setData({
+            scrollStep:
+                this.data.scrollStep == this.data.scrollList.length
+                    ? 0
+                    : this.data.scrollStep + 1
         });
     }
 });

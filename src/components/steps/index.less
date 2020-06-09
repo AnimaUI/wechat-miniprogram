@@ -84,4 +84,14 @@
             }
         }
     }
+    &.scroll {
+        white-space: nowrap;
+        .@{prefix}-item {
+            display: inline-block;
+            &.active::before,
+            &.active::after {
+                color: currentColor;
+            }
+        }
+    }
 }

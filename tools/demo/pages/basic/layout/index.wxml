@@ -313,6 +313,21 @@
                             .solid-left
                         </view>
                         <view class="fs-26 padding-xs">
+                            .solids
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solids-top
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solids-right
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solids-bottom
+                        </view>
+                        <view class="fs-26 padding-xs">
+                            .solids-left
+                        </view>
+                        <view class="fs-26 padding-xs">
                             .dashed
                         </view>
                         <view class="fs-26 padding-xs">
@@ -366,6 +381,12 @@
                         </view>
                         <view class="fs-26">
                             .il-block
+                        </view>
+                        <view class="fs-26">
+                            .fl
+                        </view>
+                        <view class="fs-26">
+                            .fr
                         </view>
                         <view class="fs-26">
                             .none

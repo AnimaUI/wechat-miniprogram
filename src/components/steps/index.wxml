@@ -1,60 +1,38 @@
-<view class="flex {{prefix}}-steps" wx:if="{{mode == 'iconDefault' && type == 'line'}}">
+<wxs module="module">
+    var getClass = function(mode, item, index, step, prefix) {
+        if (mode == 'iconDefault') {
+            return index > step ? prefix + '-icon-title fs-20' : item.icon + ' fs-40';
+        } else if (mode == 'icon') {
+            return item.icon + ' fs-40';
+        } else if (mode == 'num') {
+            return index > step ? 'num' : item.icon + ' fs-40';
+        }
+    }
+    module.exports = { getClass: getClass};
+</wxs>
+<view class="flex {{prefix}}-steps {{type == 'arrow' ? 'steps-arrow' : ''}}" wx:if="{{mode != 'scroll'}}">
     <view
         class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
         style="color: {{ index > step ? '' : activeColor}}"
         wx:for="{{list}}"
         wx:key>
-        <text class="block {{ index > step ? prefix + '-icon-title fs-20' : item.icon + ' fs-40'}}"></text>
+        <text class="block {{module.getClass(mode, item, index, step, prefix)}}" data-index="{{index + 1}}"></text>
         {{item.name}}
     </view>
 </view>
-<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'iconDefault' && type == 'arrow'}}">
+<scroll-view
+    scroll-x
+    scroll-with-animation
+    wx:if="{{mode == 'scroll'}}"
+    class="bg-white padding flex {{prefix}}-steps scroll steps-bottom {{type == 'arrow' ? 'steps-arrow' : ''}}"
+    scroll-into-view="scroll-{{step}}">
     <view
-        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
-        style="color: {{ index > step ? '' : activeColor}}"
+        class="flex-once fs-30 text-center pl-48 pr-48 {{prefix}}-item {{index > step ? '' : 'active'}}"
         wx:for="{{list}}"
-        wx:key>
-        <text class="block {{ index > step ? prefix + '-icon-title fs-20' : item.icon + ' fs-40'}}"></text>
-        {{item.name}}
+        wx:key
+        id="scroll-{{index}}"
+        style="color: {{ index > step ? '' : activeColor}}">
+        <text class="block {{index > step ? prefix + '-icon-title fs-20' : prefix + '-icon-checked-fill fs-40'}}" data-index="{{index + 1}}"></text>
+        {{item}}
     </view>
-</view>
-<view class="flex {{prefix}}-steps" wx:if="{{mode == 'icon' && type == 'line'}}">
-    <view
-        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
-        style="color: {{ index > step ? '' : activeColor}}"
-        wx:for="{{list}}"
-        wx:key>
-        <text class="block fs-40 {{item.icon}}"></text>
-        {{item.name}}
-    </view>
-</view>
-<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'icon' && type == 'arrow'}}">
-    <view
-        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
-        style="color: {{ index > step ? '' : activeColor}}"
-        wx:for="{{list}}"
-        wx:key>
-        <text class="block fs-40 {{item.icon}}"></text>
-        {{item.name}}
-    </view>
-</view>
-<view class="flex {{prefix}}-steps" wx:if="{{mode == 'num' && type == 'line'}}">
-    <view
-        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
-        style="color: {{ index > step ? '' : activeColor}}"
-        wx:for="{{list}}"
-        wx:key>
-        <text class="block {{ index > step ? 'num' : item.icon + ' fs-40'}}" data-index="{{index + 1}}"></text>
-        {{item.name}}
-    </view>
-</view>
-<view class="flex {{prefix}}-steps steps-arrow" wx:if="{{mode == 'num' && type == 'arrow'}}">
-    <view
-        class="flex-once fs-30 text-center {{prefix}}-item {{ index > step ? '' : 'active'}}"
-        style="color: {{ index > step ? '' : activeColor}}"
-        wx:for="{{list}}"
-        wx:key>
-        <text class="block {{ index > step ? 'num' : item.icon + ' fs-40'}}" data-index="{{index + 1}}"></text>
-        {{item.name}}
-    </view>
-</view>
+</scroll-view>

@@ -36,7 +36,10 @@
                 <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="scrollSteps">下一步</button>
             </view>
             <view class="padding-sm">
-                <Steps list="{{list1}}" step="{{step}}" type="scroll-steps" activeColor="{{activeColor1}}"/>
+                <Steps list="{{scrollList}}" step="{{scrollStep}}" type="line" mode="scroll" activeColor="{{activeColor7}}"/>
+            </view>
+            <view class="padding-sm solids-top">
+                <Steps list="{{scrollList}}" step="{{scrollStep}}" type="arrow" mode="scroll" activeColor="{{activeColor7}}"/>
             </view>
         </view>
     </view>
