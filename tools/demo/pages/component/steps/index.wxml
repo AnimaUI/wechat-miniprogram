@@ -6,7 +6,7 @@
     <view class="main">
         <view class="item bg-white">
             <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="ani-badge il-block bg-gradual-light-purple"></text>
+                <text class="ani-badge il-block mr-12 bg-gradual-light-purple"></text>
                 <text>基础步骤条</text>
                 <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="next">下一步</button>
             </view>
@@ -31,7 +31,17 @@
         </view>
         <view class="item bg-white">
             <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
-                <text class="ani-badge il-block bg-gradual-light-purple"></text>
+                <text class="ani-badge il-block mr-12 bg-gradual-light-purple"></text>
+                <text>方块箭头步骤条</text>
+                <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="wizardSteps">下一步</button>
+            </view>
+            <view class="padding-sm">
+                <Steps list="{{scrollList}}" step="{{wizardStep}}" mode="wizard" activeColor="{{activeColor8}}"/>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block mr-12 bg-gradual-light-purple"></text>
                 <text>无限步骤条</text>
                 <button class="fr mt-20 mr-12 ani-btn bg-gradual-light-purple text-white" style="width: 140rpx" bindtap="scrollSteps">下一步</button>
             </view>

@@ -8,6 +8,7 @@ Page({
         mode1: 'iconDefault',
         mode2: 'icon',
         mode3: 'num',
+        mode4: 'wizard',
         list: [
             {
                 icon: 'ani-icon-start',
@@ -33,6 +34,7 @@ Page({
         activeColor5: 'var(--cyan)',
         activeColor6: 'var(--fusion-sky-blue)',
         activeColor7: 'var(--purple)',
+        activeColor8: 'var(--mauve)',
         step: 0,
         scrollList: [
             'step1',
@@ -48,7 +50,8 @@ Page({
             'step11',
             'step12'
         ],
-        scrollStep: 0
+        scrollStep: 0,
+        wizardStep: 0
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -64,9 +67,17 @@ Page({
     scrollSteps() {
         this.setData({
             scrollStep:
-                this.data.scrollStep == this.data.scrollList.length
+                this.data.scrollStep == this.data.scrollList.length - 1
                     ? 0
                     : this.data.scrollStep + 1
+        });
+    },
+    wizardSteps() {
+        this.setData({
+            wizardStep:
+                this.data.wizardStep == this.data.scrollList.length - 1
+                    ? 0
+                    : this.data.wizardStep + 1
         });
     }
 });

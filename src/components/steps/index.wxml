@@ -23,6 +23,22 @@
 <scroll-view
     scroll-x
     scroll-with-animation
+    class="flex {{prefix}}-wizard"
+    wx:if="{{mode == 'wizard'}}"
+    scroll-into-view="scroll-{{step}}">
+    <view
+        class="flex-once fs-30 text-center {{prefix}}-item {{ index == step ? 'active' : ''}}"
+        style="color: {{ index == step ? activeColor : '' }}"
+        wx:for="{{list}}"
+        wx:key
+        id="scroll-{{index}}">
+        <text class="label vertical-middle {{index == step ? 'text-white' : 'text-grey'}}">{{index + 1}}</text>
+        <text class="vertical-middle il-block {{index == step ? 'text-white' : ''}}">{{item}}</text>
+    </view>
+</scroll-view>
+<scroll-view
+    scroll-x
+    scroll-with-animation
     wx:if="{{mode == 'scroll'}}"
     class="bg-white padding flex {{prefix}}-steps scroll steps-bottom {{type == 'arrow' ? 'steps-arrow' : ''}}"
     scroll-into-view="scroll-{{step}}">
