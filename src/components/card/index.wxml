@@ -1,0 +1,13 @@
+<view class="{{prefix}}-card {{border ? 'solid' : ''}}">
+    <view class="{{prefix}}-card__head flex justify-between align-center" wx:if="{{!hideTitle}}">
+        <view class="title">
+            <slot name="title"></slot>
+        </view>
+        <view class="extra">
+            <slot name="extra"></slot>
+        </view>
+    </view>
+    <view class="content padding-48">
+        <slot name="content"></slot>
+    </view>
+</view>

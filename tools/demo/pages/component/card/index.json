@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "Card": "../../../animaUi/components/card/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}

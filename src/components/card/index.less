@@ -1,0 +1,34 @@
+@import '../common.less';
+.@{prefix}-card {
+    width: 99%;
+    margin: 0 auto;
+    border-radius: 8rpx;
+    &__head {
+        padding: 0 48rpx;
+        height: 96rpx;
+        line-height: 96rpx;
+        position: relative;
+        border-bottom: 2rpx solid rgba(0, 0, 0, .1);
+        &::before {
+            content: '';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            transform: scale(0.5);
+            transform-origin: 0 0;
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+        .title {
+            font-weight: 500;
+            color: var(--black);
+        }
+        .extra {
+            color: var(--sky-blue);
+            font-size: 24rpx;
+        }
+    }
+}

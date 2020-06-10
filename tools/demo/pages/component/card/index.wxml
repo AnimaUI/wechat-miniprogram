@@ -1,0 +1,73 @@
+<CustomBar className="bg-gradual-pink text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">card</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block mr-12 bg-gradual-pink"></text>
+                <text>基础card</text>
+            </view>
+            <Card
+                class="padding-sm"
+                border="{{true}}">
+                <view slot="title">Card Title</view>
+                <view slot="extra" bindtap="extra">Extra</view>
+                <view slot="content">
+                    Card Content
+                </view>
+            </Card>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block mr-12 bg-gradual-pink"></text>
+                <text>按钮card</text>
+            </view>
+            <Card
+                class="padding-sm"
+                border="{{true}}">
+                <view slot="title">Card Title</view>
+                <view slot="extra">
+                    <button class="ani-btn bg-gradual-pink text-white shadow-pink" bindtap="extra">Extra</button>
+                </view>
+                <view slot="content">
+                    Card Content
+                </view>
+            </Card>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block mr-12 bg-gradual-pink"></text>
+                <text>无外边框card</text>
+            </view>
+            <Card
+                class="padding-sm"
+                border="{{false}}">
+                <view slot="title">Card Title</view>
+                <view slot="extra">
+                    <button class="ani-btn bg-gradual-pink text-white shadow-pink" bindtap="extra">Extra</button>
+                </view>
+                <view slot="content">
+                    Card Content
+                </view>
+            </Card>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <text class="ani-badge il-block mr-12 bg-gradual-pink"></text>
+                <text>只包含内容区card</text>
+            </view>
+            <Card
+                class="padding-sm"
+                hideTitle="{{true}}">
+                <view slot="content">
+                    <image src="{{imgBaseUrl}}/catalogue-pana.png"></image>
+                    <view class="fs-36">
+                        <text>AnimaUI</text>
+                    </view>
+                </view>
+            </Card>
+        </view>
+    </view>
+</scroll-view>
