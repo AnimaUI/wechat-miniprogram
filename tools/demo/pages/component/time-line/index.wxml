@@ -1,0 +1,72 @@
+<CustomBar className="bg-gradual-brown text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">timeLine</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-brown"></view>
+                <text>基础time-line</text>
+            </view>
+            <TimeLine>
+                <TimeLineItem>
+                    <view class="time">痴迷阶段</view>
+                    <view class="content">玩家在这个阶段中是属于那种玩得停不下来的</view>
+                </TimeLineItem>
+                <TimeLineItem>
+                    <view class="time">正常阶段</view>
+                    <view class="content">只有晚上才有时间拿起游戏</view>
+                </TimeLineItem>
+                <TimeLineItem>
+                    <view class="time">敷衍阶段</view>
+                    <view class="content">基本不花时间，所以就是只为了做任务和玩游戏</view>
+                </TimeLineItem>
+                <TimeLineItem>
+                    <view class="time">遗忘阶段</view>
+                    <view class="content">一周之内登上游戏一两次就差不多了，不会在游戏花太多的时间的</view>
+                </TimeLineItem>
+                <TimeLineItem>
+                    <view class="time">退游阶段</view>
+                    <view class="content">从原先的痴迷到现在的退游，或许是因为经历了太多的失望了</view>
+                </TimeLineItem>
+            </TimeLine>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-brown"></view>
+                <text>自定义颜色time-line</text>
+            </view>
+            <TimeLine>
+                <TimeLineItem color="var(--green)">发布1.0版本</TimeLineItem>
+                <TimeLineItem color="var(--green)">发布2.0版本</TimeLineItem>
+                <TimeLineItem color="var(--red)">严重故障</TimeLineItem>
+                <TimeLineItem color="var(--blue)">发布3.0版本</TimeLineItem>
+            </TimeLine>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-brown"></view>
+                <text>自定义icon time-line</text>
+            </view>
+            <TimeLine>
+                <TimeLineItem color="var(--green)" custom="{{true}}">
+                    <text class="ani-icon-start fs-30" slot="dot"></text>
+                    <text>发布1.0版本</text>
+                </TimeLineItem>
+                <TimeLineItem color="var(--blue-green)" custom="{{true}}">
+                    <text class="ani-icon-wait fs-30" slot="dot"></text>
+                    <text>发布2.0版本</text>
+                </TimeLineItem>
+                <TimeLineItem color="var(--red)" custom="{{true}}">
+                    <text class="ani-icon-close-fill fs-30" slot="dot"></text>
+                    <text>严重故障</text>
+                </TimeLineItem>
+                <TimeLineItem custom="{{true}}">
+                    <text class="ani-icon-checked-fill fs-30" slot="dot"></text>
+                    <text>发布3.0版本</text>
+                </TimeLineItem>
+            </TimeLine>
+        </view>
+    </view>
+</scroll-view>

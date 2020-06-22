@@ -1,0 +1,11 @@
+<view class="{{prefix}}-timeline-item">
+    <view class="{{prefix}}-timeline-item-tail"></view>
+    <view
+        class="{{prefix}}-timeline-item-head {{custom ? 'custom' : ''}}"
+        style="color: {{color}}">
+        <slot name="dot"></slot>
+    </view>
+    <view class="{{prefix}}-timeline-item-content">
+        <slot></slot>
+    </view>
+</view>

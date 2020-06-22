@@ -1,0 +1,35 @@
+@import '../../common.less';
+timelineItem:last-child {
+    .@{prefix}-timeline-item-tail {
+        display: none;
+    }
+}
+.@{prefix}-timeline-item {
+    margin: 0;
+    padding: 0 0 24rpx;
+    position: relative;
+    .@{prefix}-timeline-item-tail {
+        height: 100%;
+        border-left: 1px solid var(--grey);
+        position: absolute;
+        left: 6px;
+        top: 0;
+    }
+    .@{prefix}-timeline-item-head {
+        width: 26rpx;
+        height: 26rpx;
+        background-color: var(--white);
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        position: absolute;
+        &.custom {
+            border: 0;
+        }
+    }
+    .@{prefix}-timeline-item-content {
+        padding: 2rpx 2rpx 20rpx 48rpx;
+        font-size: 28rpx;
+        position: relative;
+        top: -3px;
+    }
+}

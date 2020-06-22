@@ -42,19 +42,19 @@ Page({
                 icon: 'ani-icon-steps',
                 en: 'steps',
                 cn: '步骤条',
-                url: ''
+                url: '/pages/component/steps/index'
             },
             {
                 icon: 'ani-icon-card',
                 en: 'card',
                 cn: '卡 片',
-                url: ''
+                url: '/pages/component/card/index'
             },
             {
                 icon: 'ani-icon-time-line',
                 en: 'timeLine',
                 cn: '时间轴',
-                url: ''
+                url: '/pages/component/time-line/index'
             },
             {
                 icon: 'ani-icon-modal',

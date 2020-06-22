@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "TimeLine": "../../../animaUi/components/time-line/index",
+        "TimeLineItem": "../../../animaUi/components/time-line/time-line-item/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}

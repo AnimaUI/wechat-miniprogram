@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/component/card/index",
+        "pages/component/time-line/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -24,6 +24,7 @@
         "pages/component/form/checkbox/index",
         "pages/component/swiper/index",
         "pages/component/steps/index",
+        "pages/component/card/index",
         "pages/solution/index",
         "pages/about/index"
     ],
