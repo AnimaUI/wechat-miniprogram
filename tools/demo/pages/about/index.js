@@ -41,7 +41,6 @@ Page({
             if (currentTime < wx.getStorageSync('oldStorTime')) {
                 // console.log("缓存时间有效")
                 githubInfo = JSON.parse(githubInfo);
-                console.log(githubInfo);
                 this.setData({
                     watch: this.coutNum(githubInfo.watchers_count),
                     star: this.coutNum(githubInfo.stargazers_count),
