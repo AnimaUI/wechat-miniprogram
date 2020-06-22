@@ -2,7 +2,11 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-
+[![GitHub issues](https://img.shields.io/github/issues/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/issues)
+[![GitHub forks](https://img.shields.io/github/forks/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/network)
+[![GitHub forks](https://img.shields.io/github/forks/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/network)
+[![version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/AnimaUI/wechat-miniprogram)
+[!(node)(https://img.shields.io/badge/node-v8.12.0-green)](http://nodejs.cn/)
 小程序自定义组件开发模板：
 
 * 支持使用 less 语法编写 wxss 文件
