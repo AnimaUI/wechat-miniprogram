@@ -26,15 +26,7 @@ Component({
         // 在组件实例被创建
         created() {},
         // 在组件实例进入页面节点树时执行
-        attached() {
-            const query = wx.createSelectorQuery();
-            query
-                .select('slot')
-                .context(function (res) {
-                    console.log(res);
-                })
-                .exec();
-        },
+        attached() {},
         // 在组件实例被移动到节点树另一个位置时执行
         moved() {},
         // 在组件实例被从页面节点树移除时执行
