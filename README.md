@@ -1,7 +1,7 @@
 # animaUI(灵动UI)
 [![GitHub issues](https://img.shields.io/github/issues/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/issues)
 [![GitHub forks](https://img.shields.io/github/forks/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/network)
-[![GitHub forks](https://img.shields.io/github/forks/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/network)
+[![GitHub stars](https://img.shields.io/github/stars/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/stargazers)
 [![version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/AnimaUI/wechat-miniprogram)
 [![node](https://img.shields.io/badge/node-v8.12.0-green)](http://nodejs.cn/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
