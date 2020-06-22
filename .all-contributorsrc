@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "huarxia",
+      "name": " 花夏",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11221788?v=4",
+      "profile": "https://huarxia.github.io/blog/",
+      "contributions": [
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "wechat-miniprogram",
+  "projectOwner": "AnimaUI",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
