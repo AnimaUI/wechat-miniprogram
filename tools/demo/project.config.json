@@ -2,31 +2,31 @@
     "description": "项目配置文件",
     "packOptions": {
         "ignore": [{
-                "tyep": "file",
+                "type": "file",
                 "value": "pages/**/*.less"
             },
             {
-                "tyep": "file",
+                "type": "file",
                 "value": "compenents/**/*.less"
             },
             {
-                "tyep": "file",
+                "type": "file",
                 "value": ".gitignore"
             },
             {
-                "tyep": "file",
+                "type": "file",
                 "value": "package.json"
             },
             {
-                "tyep": "file",
+                "type": "file",
                 "value": "package-lock.json"
             },
             {
-                "tyep": "file",
+                "type": "file",
                 "value": "README.json"
             },
             {
-                "tyep": "folder",
+                "type": "folder",
                 "value": "node_modules"
             }
         ]
