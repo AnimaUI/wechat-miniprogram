@@ -35,7 +35,6 @@ page {
 #about .list {
   box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
   border-radius: 120rpx;
-  margin-top: 36rpx;
   position: relative;
 }
 #about .list:before {
@@ -62,6 +61,17 @@ page {
   background-color: var(--white);
   justify-content: space-between;
   align-items: center;
+}
+#about .list .item.contact,
+#about .list .item.feedback {
+  border: 0;
+}
+#about .list .item.contact::after,
+#about .list .item.feedback::after {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
 }
 #about .list .item:after {
   position: absolute;

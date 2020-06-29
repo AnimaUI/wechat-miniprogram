@@ -36,7 +36,6 @@ page {
     .list {
         box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, .1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, .1);
         border-radius: 120rpx;
-        margin-top: 36rpx;
         position: relative;
         &:before {
             position: absolute;
@@ -62,6 +61,16 @@ page {
             background-color: var(--white);
             justify-content: space-between;
             align-items: center;
+            &.contact,
+            &.feedback {
+                border: 0;
+                &::after {
+                    border-top: 0;
+                    border-right: 0;
+                    border-left: 0;
+                    border-radius: 0;
+                }
+            }
             &:after {
                 position: absolute;
                 top: 0;
