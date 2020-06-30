@@ -1,19 +1,28 @@
 <view class="{{prefix}}-modal bg-white text-black" wx:if="{{show}}" style="z-index: {{zIndex + 1}};">
     <view class="{{prefix}}-modal__title pt-48 text-center" wx:if="{{!!title}}">{{title}}</view>
     <view class="{{prefix}}-modal__content">
-        <view class="{{prefix}}-modal__message padding-48 fs-28 pt-24">{{message}}</view>
+        <view class="{{prefix}}-modal__message padding-48 fs-28 pt-24">
+            <view wx:if="{{!useSlot}}">{{message}}</view>
+            <slot wx:else name="content"></slot>
+        </view>
     </view>
     <view class="{{prefix}}-modal__footer {{prefix}}-modal__footer--buttons solid-top flex text-center">
         <view
-            class="{{prefix}}-modal-btn {{prefix}}-modal__cancel {{loading.cancel ? 'ani-circle-side-loading' : ''}} flex-twice fs-32"
+            class="{{prefix}}-modal-btn {{prefix}}-modal__cancel flex text-center align-center flex-twice fs-32"
             style="color: {{cancelButtonColor}}"
             wx:if="{{showCancelButton}}"
-            bindtap="onCancel">{{ loading.cancel ? '' : cancelButtonText}}</view>
+            bindtap="onCancel">
+            <view wx:if="{{loading.cancel}}" class="{{loading.cancel ? 'ani-circle-side-loading' : ''}} {{prefix}}-modal-btn__loading"></view>
+            <text class="block-center" wx:else>{{cancelButtonText}}</text>
+        </view>
         <view
-            class="{{prefix}}-modal-btn {{prefix}}-modal__confirm {{loading.confirm ? 'ani-circle-side-loading' : ''}} {{showCancelButton ? 'solid-left' : ''}} flex-twice fs-32"
+            class="{{prefix}}-modal-btn {{prefix}}-modal__confirm {{showCancelButton ? 'solid-left' : ''}} flex text-center align-center flex-twice fs-32"
             style="color: {{confirmButtonColor}}"
             wx:if="{{showConfirmButton}}"
-            bindtap="onConfirm">{{ loading.confirm ? '' : confirmButtonText}}</view>
+            bindtap="onConfirm">
+                <view wx:if="{{loading.confirm}}" class="{{loading.confirm ? 'ani-circle-side-loading' : ''}} {{prefix}}-modal-btn__loading"></view>
+                <text class="block-center" wx:else>{{confirmButtonText}}</text>
+            </view>
     </view>
 </view>
-<div wx:if="{{overlay}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>
+<div wx:if="{{overlay && show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>

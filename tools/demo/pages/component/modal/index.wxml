@@ -18,6 +18,41 @@
                 </button>
             </view>
         </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+                <text>确认modal</text>
+            </view>
+            <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                <button class="ani-btn bg-green text-white" bindtap="tap3">
+                    确认弹窗
+                </button>
+                <button class="ani-btn bg-green text-white" bindtap="tap4">
+                    异步关闭
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+                <text>slot modal</text>
+            </view>
+            <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                <button class="ani-btn bg-green text-white" bindtap="tap5">
+                    slot content
+                </button>
+            </view>
+        </view>
     </view>
 </scroll-view>
 <Modal id="ani-modal"/>
+<Modal
+    title="标题"
+    use-slot
+    overlay="{{show}}"
+    show="{{show}}"
+    bind:close="onClose">
+    <view slot="content" style="overflow: hidden;">
+        <image src="{{imgBaseUrl}}/2.jpg" mode="aspectFill" />
+    </view>
+</Modal>

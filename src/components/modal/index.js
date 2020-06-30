@@ -7,6 +7,7 @@ Component({
     },
     behaviors: [],
     properties: {
+        useSlot: Boolean,
         show: {
             type: Boolean,
             observer(show) {
