@@ -1,2 +1,49 @@
 @import '../common.less';
-.@{prefix}-timeline {}
+.@{prefix}-modal {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    width: 640rpx;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: var(--white);
+    border-radius: 6px;
+    transform: translate3d(-50%, -50%, 0);
+    backface-visibility: hidden;
+    transition: .3s;
+    transition-property: transform, opacity;
+    .@{prefix}-modal__title {
+        font-weight: 500;
+        line-height: 24px;
+    }
+    .@{prefix}-modal__content {
+        .@{prefix}-modal__message {
+            max-height: 60vh;
+            overflow-y: auto;
+            line-height: 20px;
+            white-space: pre-wrap;
+            text-align: center;
+            word-wrap: break-word;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+    .@{prefix}-modal__footer {
+        .@{prefix}-modal-btn {
+            line-height: 2.6;
+        }
+    }
+}
+.@{prefix}-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+@media (max-width: 321px) {
+    .@{prefix}-modal {
+        width: 90%;
+    }
+}

@@ -11,9 +11,24 @@ Page({
     tap1() {
         Modal.alert({
             title: '标题',
-            message: '弹窗内容'
+            message: '代码是写给人看的，不是写给人算的~~'
         }).then(() => {
             // on close
+            console.log('onClose');
+        }).catch(() => {
+            // on cancel
+            console.log('onCancel');
+        });
+    },
+    tap2() {
+        Modal.alert({
+            message: '代码是写给人看的，不是写给人算的~~'
+        }).then(() => {
+            // on close
+            console.log('onClose');
+        }).catch(() => {
+            // on cancel
+            console.log('onCancel');
         });
     }
 });

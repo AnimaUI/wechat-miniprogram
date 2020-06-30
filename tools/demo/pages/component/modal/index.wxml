@@ -13,7 +13,7 @@
                 <button class="ani-btn bg-green text-white" bindtap="tap1">
                     提示弹窗
                 </button>
-                <button class="ani-btn bg-green text-white">
+                <button class="ani-btn bg-green text-white" bindtap="tap2">
                     提示弹窗(无标题)
                 </button>
             </view>

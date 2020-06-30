@@ -25,6 +25,10 @@ Component({
             type: Number,
             value: 2000
         },
+        asyncClose: {
+            type: Boolean,
+            value: false
+        },
         confirmButtonText: {
             type: String,
             value: '确认'
@@ -51,11 +55,7 @@ Component({
         },
         overlay: {
             type: Boolean,
-            value: true
-        },
-        transition: {
-            type: String,
-            value: 'scale'
+            value: false
         }
     },
     data: {
@@ -95,14 +95,15 @@ Component({
         handleAction(action) {
             if (this.data.asyncClose) {
                 this.setData({
-                    [`loading.${action}`]: true,
+                    [`loading.${action}`]: true
                 });
             }
             this.onClose(action);
         },
         close() {
             this.setData({
-                show: false
+                show: false,
+                overlay: false
             });
         },
         stopLoading() {

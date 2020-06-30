@@ -1,20 +1,19 @@
-<view class="{{prefix}}-modal bg-white" wx:if="{{show}}">
-    <view class="{{prefix}}-modal__title">{{title}}</view>
+<view class="{{prefix}}-modal bg-white text-black" wx:if="{{show}}" style="z-index: {{zIndex + 1}};">
+    <view class="{{prefix}}-modal__title pt-48 text-center" wx:if="{{!!title}}">{{title}}</view>
     <view class="{{prefix}}-modal__content">
-        <view class="{{prefix}}-modal__message">
-            {{message}}
-        </view>
+        <view class="{{prefix}}-modal__message padding-48 fs-28 pt-24">{{message}}</view>
     </view>
-    <view class="{{prefix}}-modal__footer {{prefix}}-modal__footer--buttons">
+    <view class="{{prefix}}-modal__footer {{prefix}}-modal__footer--buttons solid-top flex text-center">
         <view
-            class="{{prefix}}-modal__cancel {{loading.cancel ? 'ani-circle-side-loading' : ''}}"
+            class="{{prefix}}-modal-btn {{prefix}}-modal__cancel {{loading.cancel ? 'ani-circle-side-loading' : ''}} flex-twice fs-32"
             style="color: {{cancelButtonColor}}"
             wx:if="{{showCancelButton}}"
             bindtap="onCancel">{{ loading.cancel ? '' : cancelButtonText}}</view>
         <view
-            class="{{prefix}}-modal__confirm {{loading.confirm ? 'ani-circle-side-loading' : ''}}"
+            class="{{prefix}}-modal-btn {{prefix}}-modal__confirm {{loading.confirm ? 'ani-circle-side-loading' : ''}} {{showCancelButton ? 'solid-left' : ''}} flex-twice fs-32"
             style="color: {{confirmButtonColor}}"
             wx:if="{{showConfirmButton}}"
             bindtap="onConfirm">{{ loading.confirm ? '' : confirmButtonText}}</view>
     </view>
 </view>
+<div wx:if="{{overlay}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>
