@@ -60,7 +60,7 @@ Page({
                 icon: 'ani-icon-modal',
                 en: 'modal',
                 cn: '模态框',
-                url: ''
+                url: '/pages/component/modal/index'
             },
             {
                 icon: 'ani-icon-list',

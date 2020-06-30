@@ -1,0 +1,23 @@
+<CustomBar className="bg-gradual-blue-grey text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">modal</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+                <text>提示modal</text>
+            </view>
+            <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                <button class="ani-btn bg-green text-white" bindtap="tap1">
+                    提示弹窗
+                </button>
+                <button class="ani-btn bg-green text-white">
+                    提示弹窗(无标题)
+                </button>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<Modal id="ani-modal"/>

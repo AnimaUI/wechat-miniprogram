@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "Modal": "../../../animaUi/components/modal/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}
