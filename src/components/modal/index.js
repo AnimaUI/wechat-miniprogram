@@ -1,13 +1,15 @@
 import { prefix } from '../config';
+import { openType } from '../../mixins/open-type';
 
 Component({
     options: {
         multipleSlots: true,
         styleIsolation: 'shared'
     },
-    behaviors: [],
+    behaviors: [openType],
     properties: {
         useSlot: Boolean,
+        useTitleSlot: Boolean,
         show: {
             type: Boolean,
             observer(show) {
@@ -27,6 +29,10 @@ Component({
             value: 2000
         },
         asyncClose: {
+            type: Boolean,
+            value: false
+        },
+        closeOnClickOverlay: {
             type: Boolean,
             value: false
         },
@@ -55,6 +61,43 @@ Component({
             value: false
         },
         overlay: {
+            type: Boolean,
+            value: false
+        },
+        confirmButtonOpenType: {
+            type: String,
+            observer(confirmButtonOpenType) {
+                let openType = 'contact';
+                if (confirmButtonOpenType === 'appParameter') {
+                    openType = 'launchApp';
+                } else if (confirmButtonOpenType === 'lang') {
+                    openType = 'getUserInfo';
+                }
+                this.setData({
+                    openType
+                });
+            }
+        },
+        appParameter: String,
+        lang: {
+            type: String,
+            value: 'en'
+        },
+        sessionFrom: String,
+        businessId: Number,
+        sendMessageTitle: {
+            type: String,
+            value: '当前标题'
+        },
+        sendMessagePath: {
+            type: String,
+            value: '当前分享路径'
+        },
+        sendMessageImg: {
+            type: String,
+            value: '截图'
+        },
+        showMessageCard: {
             type: Boolean,
             value: false
         }
@@ -91,7 +134,7 @@ Component({
             this.handleAction('cancel');
         },
         onClickOverlay() {
-            this.onClose('overlay');
+            this.data.closeOnClickOverlay && this.onClose('overlay');
         },
         handleAction(action) {
             if (this.data.asyncClose) {

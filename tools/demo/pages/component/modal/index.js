@@ -67,6 +67,25 @@ Page({
         });
     },
     tap5() {
-        this.setData({ show: true });
+        this.setData({ show5: true });
+    },
+    tap6() {
+        this.setData({ show6: true });
+    },
+    tap7() {
+        Modal.alert({
+            title: '确认按钮 OpenType',
+            message: '打开 APP 时，向 APP 传递的参数',
+            confirmButtonOpenType: 'appParameter',
+            appParameter: 'wechat',
+            asyncClose: true
+        }).then(() => {
+            // on close
+            console.log('onClose');
+        })
+        .catch(() => {
+            // on cancel
+            console.log('onCancel');
+        });
     }
 });

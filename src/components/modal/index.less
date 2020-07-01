@@ -31,6 +31,13 @@
         .@{prefix}-modal-btn {
             height: 82rpx;
             line-height: 2.6;
+            background: none;
+            &::after {
+                border-radius: 0;
+                border-top: 0;
+                border-right: 0;
+                border-bottom: 0;
+            }
             .@{prefix}-modal-btn__loading {
                 width: 42rpx;
                 height: 42rpx;

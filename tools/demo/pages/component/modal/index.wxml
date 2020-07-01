@@ -41,6 +41,23 @@
                 <button class="ani-btn bg-green text-white" bindtap="tap5">
                     slot content
                 </button>
+                <button class="ani-btn bg-green text-white" bindtap="tap6">
+                    slot titile
+                </button>
+            </view>
+        </view>
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+                <text>确认按钮 OpenType</text>
+            </view>
+            <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
+                <button class="ani-btn bg-green text-white" bindtap="tap7">
+                    appParameter
+                </button>
+                <button class="ani-btn bg-green text-white" bindtap="tap8">
+                    slot titile
+                </button>
             </view>
         </view>
     </view>
@@ -49,10 +66,24 @@
 <Modal
     title="标题"
     use-slot
-    overlay="{{show}}"
-    show="{{show}}"
+    overlay="{{show5}}"
+    show="{{show5}}"
     bind:close="onClose">
     <view slot="content" style="overflow: hidden;">
-        <image src="{{imgBaseUrl}}/2.jpg" mode="aspectFill" />
+        <image src="{{imgBaseUrl}}/catalogue-pana.png" mode="aspectFill" />
+    </view>
+</Modal>
+<Modal
+    title="标题"
+    use-title-slot
+    overlay="{{show6}}"
+    show="{{show6}}"
+    bind:close="onClose">
+    <view slot="title" class="pl-12 pr-12" style="overflow: hidden;">
+        <view class="ani-progress round bubble">
+            <view class="bar bg-gradual-red" style="width: 45%;">
+                <text></text>
+            </view>
+        </view>
     </view>
 </Modal>

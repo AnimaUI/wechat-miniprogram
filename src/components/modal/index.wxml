@@ -1,5 +1,8 @@
 <view class="{{prefix}}-modal bg-white text-black" wx:if="{{show}}" style="z-index: {{zIndex + 1}};">
-    <view class="{{prefix}}-modal__title pt-48 text-center" wx:if="{{!!title}}">{{title}}</view>
+    <view class="{{prefix}}-modal__title pt-24 pb-24 text-center solid-bottom" wx:if="{{!!title || useTitleSlot}}">
+        <view wx:if="{{!useTitleSlot && !!title}}">{{title}}</view>
+        <slot name="title"></slot>
+    </view>
     <view class="{{prefix}}-modal__content">
         <view class="{{prefix}}-modal__message padding-48 fs-28 pt-24">
             <view wx:if="{{!useSlot}}">{{message}}</view>
@@ -7,22 +10,37 @@
         </view>
     </view>
     <view class="{{prefix}}-modal__footer {{prefix}}-modal__footer--buttons solid-top flex text-center">
-        <view
+        <button
             class="{{prefix}}-modal-btn {{prefix}}-modal__cancel flex text-center align-center flex-twice fs-32"
             style="color: {{cancelButtonColor}}"
             wx:if="{{showCancelButton}}"
             bindtap="onCancel">
             <view wx:if="{{loading.cancel}}" class="{{loading.cancel ? 'ani-circle-side-loading' : ''}} {{prefix}}-modal-btn__loading"></view>
             <text class="block-center" wx:else>{{cancelButtonText}}</text>
-        </view>
-        <view
+        </button>
+        <button
             class="{{prefix}}-modal-btn {{prefix}}-modal__confirm {{showCancelButton ? 'solid-left' : ''}} flex text-center align-center flex-twice fs-32"
             style="color: {{confirmButtonColor}}"
             wx:if="{{showConfirmButton}}"
-            bindtap="onConfirm">
+            open-type="{{openType}}"
+            app-parameter="{{appParameter}}"
+            lang="{{lang}}"
+            session-from="{{sessionFrom}}"
+            business-id="{{businessId}}"
+            send-message-title="{{sendMessageTitle}}"
+            send-message-path="{{sendMessagePath}}"
+            send-message-img="{{sendMessageImg}}"
+            show-message-card="{{showMessageCard}}"
+            bindtap="onConfirm"
+            bindgetuserinfo="bindGetUserInfo"
+            bindcontact="bindContact"
+            bindgetphonenumber="bindGetPhoneNumber"
+            binderror="bindError"
+            bindlaunchapp="bindLaunchApp"
+            bindopensetting="bindOpenSetting">
                 <view wx:if="{{loading.confirm}}" class="{{loading.confirm ? 'ani-circle-side-loading' : ''}} {{prefix}}-modal-btn__loading"></view>
                 <text class="block-center" wx:else>{{confirmButtonText}}</text>
-            </view>
+        </button>
     </view>
 </view>
 <div wx:if="{{overlay && show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>

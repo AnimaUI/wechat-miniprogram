@@ -59,5 +59,5 @@ module.exports = {
             assetFilter: (assetFilename) => assetFilename.endsWith('.js')
         }
     },
-    copy: ['./assets/images', './utils.js', 'LICENSE'] // 将会复制到目标目录
+    copy: ['mixins', './assets/images', './utils.js', 'LICENSE'] // 将会复制到目标目录
 };
