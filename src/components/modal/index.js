@@ -128,10 +128,10 @@ Component({
     },
     methods: {
         onConfirm() {
-            this.handleAction('confirm');
+            !this.data.openType && this.handleAction('confirm');
         },
         onCancel() {
-            this.handleAction('cancel');
+            this.data.confirmButtonOpenType && this.handleAction('cancel');
         },
         onClickOverlay() {
             this.data.closeOnClickOverlay && this.onClose('overlay');

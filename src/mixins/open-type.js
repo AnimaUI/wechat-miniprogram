@@ -1,4 +1,4 @@
-export const openType = {
+export const openType = Behavior({
     properties: {
         openType: String
     },
@@ -16,10 +16,11 @@ export const openType = {
             this.triggerEvent('error', event.detail);
         },
         bindLaunchApp(event) {
+            console.log('launchapp', event);
             this.triggerEvent('launchapp', event.detail);
         },
         bindOpenSetting(event) {
             this.triggerEvent('opensetting', event.detail);
         }
     }
-};
+});

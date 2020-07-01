@@ -53,7 +53,7 @@
             </view>
             <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
                 <button class="ani-btn bg-green text-white" bindtap="tap7">
-                    appParameter
+                    launchapp
                 </button>
                 <button class="ani-btn bg-green text-white" bindtap="tap8">
                     slot titile
@@ -86,4 +86,14 @@
             </view>
         </view>
     </view>
+</Modal>
+<Modal
+    title="确认按钮 OpenType"
+    message="打开 APP 时，向 APP 传递的参数"
+    confirmButtonOpenType="lang"
+    lang="cn"
+    asyncClose="{{true}}"
+    overlay="{{show7}}"
+    show="{{show7}}"
+    bind:getuserinfo="launchapp">
 </Modal>
