@@ -46,9 +46,6 @@ Page({
         })
         .catch(() => {
             // on cancel
-            setTimeout(() => {
-                Modal.close();
-            }, 1000);
             console.log('onCancel');
         });
     },
