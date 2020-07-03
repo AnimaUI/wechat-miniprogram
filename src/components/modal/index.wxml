@@ -23,21 +23,11 @@
             style="color: {{confirmButtonColor}}"
             wx:if="{{showConfirmButton}}"
             open-type="{{openType}}"
-            app-parameter="{{appParameter}}"
             lang="{{lang}}"
-            session-from="{{sessionFrom}}"
             business-id="{{businessId}}"
-            send-message-title="{{sendMessageTitle}}"
-            send-message-path="{{sendMessagePath}}"
-            send-message-img="{{sendMessageImg}}"
-            show-message-card="{{showMessageCard}}"
             bindtap="onConfirm"
             bindgetuserinfo="bindGetUserInfo"
-            bindcontact="bindContact"
-            bindgetphonenumber="bindGetPhoneNumber"
-            binderror="bindError"
-            bindlaunchapp="bindLaunchApp"
-            bindopensetting="bindOpenSetting">
+            bindcontact="bindContact">
                 <view wx:if="{{loading.confirm}}" class="{{loading.confirm ? 'ani-circle-side-loading' : ''}} {{prefix}}-modal-btn__loading"></view>
                 <text class="block-center" wx:else>{{confirmButtonText}}</text>
         </button>

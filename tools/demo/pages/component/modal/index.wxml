@@ -53,10 +53,10 @@
             </view>
             <view class="flex justify-between pl-30 pr-30 pt-20 pb-20 solid-bottom">
                 <button class="ani-btn bg-green text-white" bindtap="tap7">
-                    launchapp
+                    打开客服消息
                 </button>
                 <button class="ani-btn bg-green text-white" bindtap="tap8">
-                    slot titile
+                    返回指定语言用户信息
                 </button>
             </view>
         </view>
@@ -89,11 +89,21 @@
 </Modal>
 <Modal
     title="确认按钮 OpenType"
-    message="打开 APP 时，向 APP 传递的参数"
-    confirmButtonOpenType="lang"
-    lang="cn"
+    message="打开客服消息子商户"
+    confirmButtonOpenType="businessId"
+    businessId="123"
     asyncClose="{{true}}"
     overlay="{{show7}}"
     show="{{show7}}"
-    bind:getuserinfo="launchapp">
+    bind:contact="contact">
+</Modal>
+<Modal
+    title="确认按钮 OpenType"
+    message="返回指定语言用户信息"
+    confirmButtonOpenType="lang"
+    lang="zh_CN"
+    asyncClose="{{true}}"
+    overlay="{{show8}}"
+    show="{{show8}}"
+    bind:getuserinfo="getuserinfo">
 </Modal>

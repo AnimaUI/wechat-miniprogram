@@ -75,8 +75,15 @@ Page({
     tap7() {
         this.setData({ show7: true });
     },
-    launchapp() {
+    tap8() {
+        this.setData({ show8: true });
+    },
+    contact(e) {
         this.setData({ show7: false });
-        console.log('launchapp');
+        console.log('contact', e.detail);
+    },
+    getuserinfo(e) {
+        this.setData({ show8: false });
+        console.log('getuserinfo', e.detail);
     }
 });

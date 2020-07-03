@@ -68,9 +68,7 @@ Component({
             type: String,
             observer(confirmButtonOpenType) {
                 let openType = 'contact';
-                if (confirmButtonOpenType === 'appParameter') {
-                    openType = 'launchApp';
-                } else if (confirmButtonOpenType === 'lang') {
+                if (confirmButtonOpenType === 'lang') {
                     openType = 'getUserInfo';
                 }
                 this.setData({
@@ -78,29 +76,11 @@ Component({
                 });
             }
         },
-        appParameter: String,
         lang: {
             type: String,
             value: 'en'
         },
-        sessionFrom: String,
-        businessId: Number,
-        sendMessageTitle: {
-            type: String,
-            value: '当前标题'
-        },
-        sendMessagePath: {
-            type: String,
-            value: '当前分享路径'
-        },
-        sendMessageImg: {
-            type: String,
-            value: '截图'
-        },
-        showMessageCard: {
-            type: Boolean,
-            value: false
-        }
+        businessId: Number
     },
     data: {
         prefix,

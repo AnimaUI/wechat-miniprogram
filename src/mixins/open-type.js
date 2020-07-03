@@ -8,19 +8,6 @@ export const openType = Behavior({
         },
         bindContact(event) {
             this.triggerEvent('contact', event.detail);
-        },
-        bindGetPhoneNumber(event) {
-            this.triggerEvent('getphonenumber', event.detail);
-        },
-        bindError(event) {
-            this.triggerEvent('error', event.detail);
-        },
-        bindLaunchApp(event) {
-            console.log('launchapp', event);
-            this.triggerEvent('launchapp', event.detail);
-        },
-        bindOpenSetting(event) {
-            this.triggerEvent('opensetting', event.detail);
         }
     }
 });
