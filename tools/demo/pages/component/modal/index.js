@@ -39,10 +39,16 @@ Page({
             message: '代码是写给人看的，不是写给人算的~~'
         }).then(() => {
             // on close
+            setTimeout(() => {
+                Modal.close();
+            }, 1000);
             console.log('onClose');
         })
         .catch(() => {
             // on cancel
+            setTimeout(() => {
+                Modal.close();
+            }, 1000);
             console.log('onCancel');
         });
     },

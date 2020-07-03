@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/component/grid/index",
+        "pages/component/modal/index",
         "pages/basic/index",
         "pages/basic/color/index",
         "pages/basic/layout/index",
@@ -26,7 +26,7 @@
         "pages/component/steps/index",
         "pages/component/card/index",
         "pages/component/time-line/index",
-        "pages/component/modal/index",
+        "pages/component/grid/index",
         "pages/solution/index",
         "pages/about/index"
     ],

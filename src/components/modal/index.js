@@ -111,7 +111,7 @@ Component({
             !this.data.openType && this.handleAction('confirm');
         },
         onCancel() {
-            this.data.confirmButtonOpenType && this.handleAction('cancel');
+            !this.data.confirmButtonOpenType && this.handleAction('cancel');
         },
         onClickOverlay() {
             this.data.closeOnClickOverlay && this.onClose('overlay');
