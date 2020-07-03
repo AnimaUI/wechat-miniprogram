@@ -86,7 +86,7 @@ Page({
                 icon: 'ani-icon-iqiyi',
                 color: 'green',
                 badge: 0,
-                name: 'iqiyi'
+                name: '爱奇艺'
             },
             {
                 icon: 'ani-icon-netease-fill-square',
@@ -94,9 +94,23 @@ Page({
                 badge: 0,
                 name: 'netease'
             }
-        ]
+        ],
+        gridCol: 3,
+        gridBorder: true
     },
     onLoad() {},
     onShareAppMessage() {},
-    onShow() {}
+    onShow() {},
+    radioChange(e) {
+        console.log('radio发生change事件，携带value值为：', e.detail.value);
+        this.setData({
+            gridCol: e.detail.value
+        });
+    },
+    switchChange(e) {
+        console.log('switch发生change事件，携带value值为：', e.detail.value);
+        this.setData({
+            gridBorder: e.detail.value
+        });
+    }
 });

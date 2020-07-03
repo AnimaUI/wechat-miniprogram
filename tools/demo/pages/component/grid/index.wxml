@@ -1,20 +1,49 @@
-<CustomBar className="bg-gradual-blue-grey text-white" isBack="{{true}}">
+<CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content" class="capitalize">modal</view>
+    <view slot="content" class="capitalize">grid</view>
 </CustomBar>
 <scroll-view scroll-y class="scroll-page">
     <view class="main">
         <view class="item bg-white">
-            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top mb-24">
-                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-red"></view>
                 <text>宫格</text>
             </view>
-            <Grid grid-col="{{5}}">
+            <view class="flex justify-around padding-30 bg-white">
+                <radio-group bindchange="radioChange" class="flex flex-hf justify-around">
+                    <label class="weui-cell weui-check__label flex align-center">
+                        <view class="weui-cell__hd">
+                            <radio class="text-fusion-red" checked="{{gridCol == 3}}" value="{{3}}"></radio>
+                        </view>
+                        <view class="weui-cell__bd">3列</view>
+                    </label>
+                    <label class="weui-cell weui-check__label flex align-center">
+                        <view class="weui-cell__hd">
+                            <radio class="text-fusion-red" checked="{{gridCol == 4}}" value="{{4}}"></radio>
+                        </view>
+                        <view class="weui-cell__bd">4列</view>
+                    </label>
+                    <label class="weui-cell weui-check__label flex align-center">
+                        <view class="weui-cell__hd">
+                            <radio class="text-fusion-red" checked="{{gridCol == 5}}" value="{{5}}"></radio>
+                        </view>
+                        <view class="weui-cell__bd">5列</view>
+                    </label>
+                </radio-group>
+                <view class="flex-hf flex align-center ml-24">
+                    <view class="weui-cell__hd">
+                        <switch class="switch text-red" checked="{{gridBorder}}" bindchange="switchChange"></switch>
+                    </view>
+                    <view class="weui-cell__bd">是否显示边框</view>
+                </view>
+            </view>
+            <Grid custom-class="grid" grid-border="{{gridBorder}}" grid-col="{{gridCol}}">
                 <GridItem custom-class="grid-item" wx:for="{{iconList}}" wx:key>
                     <view class="ani-icon {{item.icon}} text-{{item.color}} fs-48">
                         <text
                             wx:if="{{item.badge > 0}}"
                             class="ani-badge max block-center text-{{item}}" data-text="{{item.badge > 99 ? '99+' : item.badge}}"></text>
+                        <text class="fs-24 block">{{item.name}}</text>
                     </view>
                 </GridItem>
             </Grid>

@@ -16,6 +16,10 @@ Component({
             observer(col) {
                 return col > 5 ? 5 : col;
             }
+        },
+        customClass: {
+            type: String,
+            value: ''
         }
     },
     data: {

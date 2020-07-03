@@ -13,7 +13,12 @@
 .main .item .ani-icon .ani-badge {
   position: absolute;
   top: -14rpx;
-  right: 0;
+  right: auto;
+  left: 50%;
+  margin-left: 20rpx;
+}
+.main .item .grid {
+  padding: 0 0 20rpx 0;
 }
 .main .item .grid-item {
   padding: 40rpx 20rpx;
