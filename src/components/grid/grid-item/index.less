@@ -1,0 +1,24 @@
+@import '../../common.less';
+.@{prefix}-grid__item {
+    padding: 20rpx 10rpx;
+}
+.grid-border {
+    .@{prefix}-grid__item {
+        position: relative;
+        &::after {
+            content: '';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            border-right: 2rpx solid rgba(0, 0, 0, .1);
+            border-bottom: 2rpx solid rgba(0, 0, 0, .1);
+            transform: scale(.5);
+            transform-origin: 0 0;
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+    }
+}

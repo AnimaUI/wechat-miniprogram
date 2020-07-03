@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "Grid": "../../../animaUi/components/grid/index",
+        "GridItem": "../../../animaUi/components/grid/grid-item/index"
+    },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white"
+}

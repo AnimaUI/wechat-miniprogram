@@ -1,0 +1,23 @@
+<CustomBar className="bg-gradual-blue-grey text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">modal</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top mb-24">
+                <view class="ani-badge il-block mr-12 bg-gradual-blue-grey"></view>
+                <text>宫格</text>
+            </view>
+            <Grid grid-col="{{5}}">
+                <GridItem custom-class="grid-item" wx:for="{{iconList}}" wx:key>
+                    <view class="ani-icon {{item.icon}} text-{{item.color}} fs-48">
+                        <text
+                            wx:if="{{item.badge > 0}}"
+                            class="ani-badge max block-center text-{{item}}" data-text="{{item.badge > 99 ? '99+' : item.badge}}"></text>
+                    </view>
+                </GridItem>
+            </Grid>
+        </view>
+    </view>
+</scroll-view>

@@ -63,10 +63,10 @@ Page({
                 url: '/pages/component/modal/index'
             },
             {
-                icon: 'ani-icon-list',
-                en: 'list',
-                cn: '列 表',
-                url: ''
+                icon: 'ani-icon-grid',
+                en: 'grid',
+                cn: '宫格',
+                url: '/pages/component/grid/index'
             },
             {
                 icon: 'ani-icon-date',

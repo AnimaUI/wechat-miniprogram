@@ -1,0 +1,21 @@
+@import '../common.less';
+.@{prefix}-grid {
+    padding: 0 10rpx;
+    &.grid-border {
+        position: relative;
+        &::after {
+            content: '';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            border-top: 2rpx solid rgba(0, 0, 0, .1);
+            transform: scale(.5);
+            transform-origin: 0 0;
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+    }
+}
