@@ -12,7 +12,19 @@
     <view class="search-box fixed bg-white">
         <Search class="search-el" bgColor="bg-gray" placeholder="共{{icon.length}}个图标" bind:search="search" />
     </view>
-    <view class="main grid col-3 bg-white">
+    <Grid custom-class="main" grid-border="{{true}}" grid-col="3">
+        <GridItem
+            custom-class="item text-center text-dark-gray"
+            wx:for="{{icon}}"
+            wx:key
+            wx:if="{{item.isShow}}"
+            data-text="{{item.iconName}}"
+            bindtap="copyText">
+            <tetx class="block fs-48 text-shadow-black {{item.iconName}}"></tetx>
+            <tetx class="en mt-24 block">{{module.getIconText(item.iconName)}}</tetx>
+        </GridItem>
+    </Grid>
+    <!-- <view class="main grid col-3 bg-white">
         <view
             class="item text-center solid text-dark-gray"
             wx:for="{{icon}}"
@@ -23,5 +35,5 @@
             <tetx class="block fs-48 text-shadow-black {{item.iconName}}"></tetx>
             <tetx class="en mt-24 block">{{module.getIconText(item.iconName)}}</tetx>
         </view>
-    </view>
+    </view> -->
 </scroll-view>

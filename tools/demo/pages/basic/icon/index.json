@@ -1,6 +1,8 @@
 {
     "usingComponents": {
-        "Search": "../../../animaUi/components/search/index"
+        "Search": "../../../animaUi/components/search/index",
+        "Grid": "../../../animaUi/components/grid/index",
+        "GridItem": "../../../animaUi/components/grid/grid-item/index"
     },
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "white"

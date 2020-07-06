@@ -13,7 +13,10 @@ page {
 }
 .icon-box .main {
   margin-top: 112rpx;
+  padding: 0;
 }
 .icon-box .main .item {
   padding: 40rpx 10rpx;
+  max-height: 220rpx;
+  height: 220rpx;
 }
