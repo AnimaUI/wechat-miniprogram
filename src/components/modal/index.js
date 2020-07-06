@@ -26,7 +26,7 @@ Component({
         },
         zIndex: {
             type: Number,
-            value: 2000
+            value: 999
         },
         asyncClose: {
             type: Boolean,

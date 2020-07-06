@@ -1,0 +1,21 @@
+<CustomBar className="bg-gradual-red text-white" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content" class="capitalize">calendar</view>
+</CustomBar>
+<scroll-view scroll-y class="scroll-page">
+    <view class="main">
+        <view class="item bg-white">
+            <view class="box-bar bg-white fs-30 capitalize pl-30 solid-bottom solid-top">
+                <view class="ani-badge il-block mr-12 bg-gradual-red"></view>
+                <text>基础用法</text>
+            </view>
+            <view class="bg-white">
+                <view class="ani-form-group text-left right-arrow" bindtap="tap1">
+                    <view class="title">选择单个日期</view>
+                    <view class="picker"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<Calendar title="选择日期" show="{{show1}}"/>

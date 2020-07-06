@@ -1,0 +1,19 @@
+.scroll-page {
+  background-color: var(--ghost-white);
+  padding-bottom: 12rpx;
+}
+.main .item .box-bar {
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1), 0 -14rpx 14rpx -14rpx rgba(0, 0, 0, 0.1);
+}
+.main .item .ani-icon {
+  position: relative;
+}
+.main .item .ani-icon .ani-badge {
+  position: absolute;
+  top: -14rpx;
+  right: auto;
+  left: 50%;
+  margin-left: 20rpx;
+}

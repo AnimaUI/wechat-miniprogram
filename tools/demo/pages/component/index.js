@@ -70,9 +70,9 @@ Page({
             },
             {
                 icon: 'ani-icon-date',
-                en: 'date',
-                cn: '日 期',
-                url: ''
+                en: 'calendar',
+                cn: '日 历',
+                url: '/pages/component/calendar/index'
             },
             {
                 icon: 'ani-icon-time2',

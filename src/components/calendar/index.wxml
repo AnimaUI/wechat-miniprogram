@@ -1,0 +1,9 @@
+<view
+    class="{{prefix}}-calendar bg-white"
+    style="z-index: {{zIndex + 1}};"
+    wx:if="{{show}}">
+    <view class="{{prefix}}-calendar__header">
+        <view class="{{prefix}}-calendar__header-title">{{title}}</view>
+    </view>
+</view>
+<div wx:if="{{show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>
