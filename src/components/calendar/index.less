@@ -9,37 +9,46 @@
     overflow-y: auto;
     font-size: 28rpx;
     background-color: var(--white);
-    border-radius: 56rpx;
+    border-radius: 56rpx 56rpx 0 0;
     transition: transform .3s;
     -webkit-overflow-scrolling: touch;
-    .@{prefix}-calendar__header {
+    &__header {
         position: relative;
         box-shadow: 0 4rpx 12rpx rgba(51, 51, 51, .2);
-       .@{prefix}-calendar__header-title,
-       .@{prefix}-calendar__header-subdate {
+       &-title {
             text-align: center;
             height: 72rpx;
             line-height: 72rpx;
             font-weight: 500;
             color: var(--black);
        }
-       .@{prefix}-calendar__header-subdate {
-           font-size: 24rpx;
-           height: 48rpx;
-           line-height: 48rpx;
-       }
        .icon-close {
            position: absolute;
            top: 30rpx;
            right: 30rpx;
        }
-       .@{prefix}-calendar__weekdays {
-            .@{prefix}-calendar__weekday {
-                font-size: 24rpx;
-                text-align: center;
-                line-height:60rpx;
-            }
-       }
+    }
+    &__weekdays {
+        .@{prefix}-calendar__weekday {
+            font-size: 24rpx;
+            text-align: center;
+            line-height: 60rpx;
+        }
+    }
+    &__action {
+        padding: 0 0 30rpx;
+        .@{prefix}-calendar__header-subdate {
+            text-align: center;
+            font-size: 24rpx;
+            height: 48rpx;
+            line-height: 48rpx;
+            font-weight: 500;
+            margin: 0 30rpx;
+            color: var(--black);
+        }
+        &-icon {
+            margin: 0 10rpx;
+        }
     }
 }
 .@{prefix}-overlay {

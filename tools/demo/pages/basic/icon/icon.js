@@ -24,6 +24,7 @@ module.exports = [
     'ani-icon-appstore-fill-square',
     'ani-icon-appstore-square',
     'ani-icon-arrow-right',
+    'ani-icon-arrow-right-double',
     'ani-icon-back',
     'ani-icon-badge',
     'ani-icon-baidu',

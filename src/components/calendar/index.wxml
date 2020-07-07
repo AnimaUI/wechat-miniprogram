@@ -5,7 +5,21 @@
     <view class="{{prefix}}-calendar__header">
         <text class="ani-icon-close icon-close text-disabled-blue-grey" bindtap="close"></text>
         <view class="{{prefix}}-calendar__header-title">{{title}}</view>
-        <view class="{{prefix}}-calendar__header-subdate">{{subDateStr}}</view>
+        <view class="{{prefix}}-calendar__action flex flex-direction-row justify-center align-center text-center">
+            <view class="{{prefix}}-calendar__action-icon rotate-180">
+                <text v-if="changeYear" class="ani-icon-arrow-right-double" style="color: #777;" data-type="0" bindtap="changeYear"></text>
+            </view>
+            <view class="{{prefix}}-calendar__action-icon rotate-180">
+                <text v-if="changeMonth" class="ani-icon-arrow-right text-dark-gray" data-type="0" bindtap="changeMonth"></text>
+            </view>
+            <view class="{{prefix}}-calendar__header-subdate">{{subDateStr}}</view>
+            <view class="{{prefix}}-calendar__action-icon">
+                <text v-if="changeMonth" class="ani-icon-arrow-right text-dark-gray" data-type="1" bindtap="changeMonth"></text>
+            </view>
+            <view class="{{prefix}}-calendar__action-icon">
+                <text v-if="changeYear" class="ani-icon-arrow-right-double" style="color: #777;" data-type="1" bindtap="changeYear"></text>
+            </view>
+        </view>
         <view class="{{prefix}}-calendar__weekdays flex">
             <view wx:for="{{weekStartArr}}" wx:key="index" class="{{prefix}}-calendar__weekday flex-once">
                 {{item}}
