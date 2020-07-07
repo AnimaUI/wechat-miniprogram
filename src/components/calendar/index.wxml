@@ -3,7 +3,14 @@
     style="z-index: {{zIndex + 1}};"
     wx:if="{{show}}">
     <view class="{{prefix}}-calendar__header">
+        <text class="ani-icon-close icon-close text-disabled-blue-grey" bindtap="close"></text>
         <view class="{{prefix}}-calendar__header-title">{{title}}</view>
+        <view class="{{prefix}}-calendar__header-subdate">{{subDateStr}}</view>
+        <view class="{{prefix}}-calendar__weekdays flex">
+            <view wx:for="{{weekStartArr}}" wx:key="index" class="{{prefix}}-calendar__weekday flex-once">
+                {{item}}
+            </view>
+        </view>
     </view>
 </view>
-<div wx:if="{{show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></div>
+<view wx:if="{{show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></view>

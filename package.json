@@ -67,7 +67,9 @@
         "webpack-node-externals": "^1.7.2"
     },
     "dependencies": {
+        "dayjs": "^1.8.29",
         "gulp-htmlmin": "^5.0.1",
+        "miniprogram-computed": "^2.1.1",
         "wx-server-sdk": "^1.8.3"
     },
     "config": {

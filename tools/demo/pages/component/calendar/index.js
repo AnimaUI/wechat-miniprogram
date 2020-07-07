@@ -3,7 +3,7 @@ const app = getApp();
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        show1: false
+        show1: true
     },
     onLoad() {},
     onShareAppMessage() {},

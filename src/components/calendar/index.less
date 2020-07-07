@@ -7,11 +7,40 @@
     bottom: 0;
     left: 0;
     overflow-y: auto;
-    font-size: 16px;
+    font-size: 28rpx;
     background-color: var(--white);
     border-radius: 56rpx;
     transition: transform .3s;
     -webkit-overflow-scrolling: touch;
+    .@{prefix}-calendar__header {
+        position: relative;
+        box-shadow: 0 4rpx 12rpx rgba(51, 51, 51, .2);
+       .@{prefix}-calendar__header-title,
+       .@{prefix}-calendar__header-subdate {
+            text-align: center;
+            height: 72rpx;
+            line-height: 72rpx;
+            font-weight: 500;
+            color: var(--black);
+       }
+       .@{prefix}-calendar__header-subdate {
+           font-size: 24rpx;
+           height: 48rpx;
+           line-height: 48rpx;
+       }
+       .icon-close {
+           position: absolute;
+           top: 30rpx;
+           right: 30rpx;
+       }
+       .@{prefix}-calendar__weekdays {
+            .@{prefix}-calendar__weekday {
+                font-size: 24rpx;
+                text-align: center;
+                line-height:60rpx;
+            }
+       }
+    }
 }
 .@{prefix}-overlay {
     width: 100%;
