@@ -1,3 +1,5 @@
+const isDev = process.argv.indexOf('--develop') >= 0;
+const isWatch = process.argv.indexOf('--watch') >= 0;
 module.exports = {
     extends: ['airbnb-base', 'plugin:promise/recommended'],
     parserOptions: {
@@ -73,7 +75,9 @@ module.exports = {
         'object-shorthand': ['error', 'always'],
         'no-lonely-if': 'off',
         'consistent-return': 'off',
-        'no-unused-expressions': ['error', { allowShortCircuit: true }]
+        'no-unused-expressions': ['error', { allowShortCircuit: true }],
+        'max-len': ['error', { code: 300 }],
+        'no-debugger': isDev || isWatch ? 'off' : 'error'
     },
     globals: {
         window: true,

@@ -143,7 +143,7 @@ Component({
             const newSubDate = TYPE
                 ? new Date(SUBDATE).setFullYear(new Date(SUBDATE).getFullYear() + 1)
                 : new Date(SUBDATE).setFullYear(new Date(SUBDATE).getFullYear() - 1);
-            const YEAR = new Date(newSubDate).getFullYear();
+            const YEAR = $dayjs(newSubDate).year();
             if (!this.checkRange(YEAR)) {
                 this.setData({
                     subDate: newSubDate
@@ -151,7 +151,30 @@ Component({
             }
         },
         changeMonth(e) {
-            console.log(e);
+            const TYPE = +e.currentTarget.dataset.type;
+            const SUBDATE = this.data.subDate;
+            const YEAR = $dayjs(SUBDATE).year();
+            const MONTH = $dayjs(SUBDATE).month();
+            let month = MONTH;
+            let newSubDate;
+            let year = YEAR;
+            if (TYPE) {
+                month = MONTH + 1;
+                year = month > 12 ? YEAR + 1 : YEAR;
+                month = month > 12 ? 1 : month;
+            } else {
+                month = MONTH - 1;
+                year = month < 0 ? YEAR - 1 : YEAR;
+                month = month < 0 ? 11 : month;
+            }
+            if (!this.checkRange(year)) {
+                newSubDate = new Date(
+                    new Date(SUBDATE).setFullYear(year)
+                ).setMonth(month);
+            }
+            this.setData({
+                subDate: newSubDate
+            });
         }
     }
 });
