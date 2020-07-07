@@ -48,7 +48,11 @@ Component({
         },
         weekStartArr(data) {
             if (+data.weekStart === 1) {
-                return data.weekdays.push(data.weekdays.splice(0, 1));
+                const weekdaysTemp = data.weekdays;
+                const concatWeekdaysTemp = weekdaysTemp.__rawObject__.concat();
+                const ELE = concatWeekdaysTemp.splice(0, 1);
+                concatWeekdaysTemp.push(ELE[0]);
+                return concatWeekdaysTemp;
             } else {
                 return data.weekdays;
             }

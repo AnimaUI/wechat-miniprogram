@@ -18,4 +18,4 @@
         </view>
     </view>
 </scroll-view>
-<Calendar title="选择日期" show="{{show1}}" subDate="{{1594086311195}}"/>
+<Calendar title="选择日期" show="{{show1}}" weekStart="{{1}}"/>
