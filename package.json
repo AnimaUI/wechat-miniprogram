@@ -53,6 +53,7 @@
         "gulp": "^4.0.2",
         "gulp-clean": "^0.4.0",
         "gulp-clean-css": "^4.3.0",
+        "gulp-htmlmin": "^5.0.1",
         "gulp-if": "^2.0.2",
         "gulp-install": "^1.1.0",
         "gulp-less": "^4.0.1",
@@ -68,9 +69,7 @@
     },
     "dependencies": {
         "dayjs": "^1.8.29",
-        "gulp-htmlmin": "^5.0.1",
-        "miniprogram-computed": "^2.1.1",
-        "wx-server-sdk": "^1.8.3"
+        "miniprogram-computed": "^2.1.1"
     },
     "config": {
         "commitizen": {
