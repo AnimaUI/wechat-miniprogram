@@ -34,7 +34,20 @@ Component({
         },
         weekStart: {
             type: Number,
-            value: 0
+            value: 0,
+            observer(weekStart) {
+                return +weekStart === 0 ? 0 : 1;
+            }
+        },
+        // 选中|起始结束日期字体颜色
+        activeBgColor: {
+            type: String,
+            value: 'var(--red)'
+        },
+        // 范围内日期背景色
+        rangeBgColor: {
+            type: String,
+            default: 'var(--light-red)'
         },
         // 是否允许切换年份
         changeYear: {
@@ -78,7 +91,14 @@ Component({
     },
     data: {
         prefix,
-        weekdays: ['日', '一', '二', '三', '四', '五', '六']
+        weekdays: ['日', '一', '二', '三', '四', '五', '六'],
+        daysArr: [],
+        // 当前月有多少天
+        days: 0,
+        // 当月为星期几开始,值为0-6
+        weekday: 0,
+        // 选中日期
+        activeDate: ''
     },
     behaviors: [computedBehavior],
     computed: {
@@ -106,7 +126,9 @@ Component({
             this.$dayjs = $dayjs;
         },
         // 在组件实例进入页面节点树时执行
-        attached() {},
+        attached() {
+            this.changeDate();
+        },
         // 在组件实例被移动到节点树另一个位置时执行
         moved() {},
         // 在组件实例被从页面节点树移除时执行
@@ -148,6 +170,7 @@ Component({
                 this.setData({
                     subDate: newSubDate
                 });
+                this.changeDate();
             }
         },
         changeMonth(e) {
@@ -175,6 +198,50 @@ Component({
             this.setData({
                 subDate: newSubDate
             });
+            this.changeDate();
+        },
+        changeDate() {
+            const me = this;
+            const SUBDATE = this.data.subDate;
+            const YEAR = $dayjs(SUBDATE).year();
+            const MONTH = $dayjs(SUBDATE).month();
+            this.data.days = this.getMonthDay(YEAR, MONTH);
+            let daysArr = this.generateArray(1, this.data.days);
+            const weekday = this.getWeekday();
+            const activeDate = $dayjs(SUBDATE).format(this.data.subDateFormat);
+            daysArr = daysArr.map(function (item) {
+                return {
+                    day: item,
+                    active: me.getActive(item)
+                };
+            });
+            this.setData({
+                daysArr,
+                weekday,
+                activeDate
+            });
+        },
+        generateArray(start, end) {
+            return Array.from(new Array(end + 1).keys()).slice(start);
+        },
+        // 一个月有多少天
+        getMonthDay(year, month) {
+            return new Date(year, month, 0).getDate();
+        },
+        getWeekday() {
+            const SUBDATE = this.data.subdate;
+            return $dayjs(SUBDATE).day();
+        },
+        getActive(dayNum) {
+            const SUBDATE = this.data.subDate;
+            const YEAR = $dayjs(SUBDATE).year();
+            const MONTH = $dayjs(SUBDATE).month();
+            const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(dayNum + 1)}`;
+            const activeDate = $dayjs(SUBDATE).format('YYYY-MM-DD');
+            return activeDate === date;
+        },
+        formatNum(num) {
+            return num < 10 ? '0' + num : num + '';
         }
     }
 });
