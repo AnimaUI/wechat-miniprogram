@@ -127,15 +127,15 @@ Component({
     lifetimes: {
         // 在组件实例被创建
         created() {
-            this.$dayjs = $dayjs;
-        },
-        // 在组件实例进入页面节点树时执行
-        attached() {
             wx.loadFontFace({
                 family: 'Monoton',
                 source: 'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
                 success: () => {}
             });
+            this.$dayjs = $dayjs;
+        },
+        // 在组件实例进入页面节点树时执行
+        attached() {
             this.changeDate();
         },
         // 在组件实例被移动到节点树另一个位置时执行
@@ -209,11 +209,11 @@ Component({
                 newSubDate = new Date(
                     new Date(SUBDATE).setFullYear(year)
                 ).setMonth(month);
+                this.setData({
+                    subDate: newSubDate
+                });
+                this.changeDate();
             }
-            this.setData({
-                subDate: newSubDate
-            });
-            this.changeDate();
         },
         changeDate() {
             const me = this;
@@ -224,6 +224,7 @@ Component({
             this.data.days = this.getMonthDay(YEAR, MONTH + 1);
             let daysArr = this.generateArray(1, this.data.days);
             const weekday = this.getWeekday();
+            console.log(weekday);
             // const activeDate = $dayjs(ACTIVE_EDATE).format(this.data.subDateFormat);
             daysArr = daysArr.map(function (item) {
                 return {
@@ -244,7 +245,7 @@ Component({
             return new Date(year, month, 0).getDate();
         },
         getWeekday() {
-            const SUBDATE = this.data.subdate;
+            const SUBDATE = this.data.subDate;
             return $dayjs(SUBDATE).day();
         },
         getActive(dayNum) {
