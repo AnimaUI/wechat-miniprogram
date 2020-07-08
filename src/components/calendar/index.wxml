@@ -30,7 +30,7 @@
         <view class="{{prefix}}-calendar__body-month">
             <view class="{{prefix}}-calendar__days flex flex-wrap">
                 <view
-                    class="{{prefix}}-calendar__day flex justify-center align-center text-center {{item.active ? 'text-white' : ''}}"
+                    class="{{prefix}}-calendar__day flex justify-center align-center text-center {{item.active ? 'text-white active' : ''}}"
                     style="{{index == 0 ? 'margin-left: ' + (weekday + 1 - weekStart) * 14.285 + '%' : ''}} {{item.active ? 'background-color: ' +  activeBgColor : ''}}"
                     wx:for="{{daysArr}}"
                     wx:key="index">{{item.day}}</view>

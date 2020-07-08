@@ -98,7 +98,7 @@ Component({
         // 当月为星期几开始,值为0-6
         weekday: 0,
         // 选中日期
-        activeDate: ''
+        activeDate: +new Date()
     },
     behaviors: [computedBehavior],
     computed: {
@@ -202,13 +202,14 @@ Component({
         },
         changeDate() {
             const me = this;
+            // const ACTIVE_EDATE = this.data.activeDate;
             const SUBDATE = this.data.subDate;
             const YEAR = $dayjs(SUBDATE).year();
             const MONTH = $dayjs(SUBDATE).month();
             this.data.days = this.getMonthDay(YEAR, MONTH);
             let daysArr = this.generateArray(1, this.data.days);
             const weekday = this.getWeekday();
-            const activeDate = $dayjs(SUBDATE).format(this.data.subDateFormat);
+            // const activeDate = $dayjs(ACTIVE_EDATE).format(this.data.subDateFormat);
             daysArr = daysArr.map(function (item) {
                 return {
                     day: item,
@@ -217,8 +218,7 @@ Component({
             });
             this.setData({
                 daysArr,
-                weekday,
-                activeDate
+                weekday
             });
         },
         generateArray(start, end) {
@@ -233,11 +233,14 @@ Component({
             return $dayjs(SUBDATE).day();
         },
         getActive(dayNum) {
+            const ACTIVE_EDATE = this.data.activeDate;
             const SUBDATE = this.data.subDate;
             const YEAR = $dayjs(SUBDATE).year();
             const MONTH = $dayjs(SUBDATE).month();
-            const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(dayNum + 1)}`;
-            const activeDate = $dayjs(SUBDATE).format('YYYY-MM-DD');
+            const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(
+                dayNum
+            )}`;
+            const activeDate = $dayjs(ACTIVE_EDATE).format('YYYY-MM-DD');
             return activeDate === date;
         },
         formatNum(num) {
