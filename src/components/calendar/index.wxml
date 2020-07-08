@@ -34,6 +34,7 @@
                     style="{{index == 0 ? 'margin-left: ' + (weekday + 1 - weekStart) * 14.285 + '%' : ''}} {{item.active ? 'background-color: ' +  activeBgColor : ''}}"
                     wx:for="{{daysArr}}"
                     wx:key="index">{{item.day}}</view>
+                <view class="{{prefix}}-calendar__month-mark">{{curMonth}}</view>
             </view>
         </view>
     </view>

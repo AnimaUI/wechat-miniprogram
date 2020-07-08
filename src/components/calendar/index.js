@@ -93,6 +93,7 @@ Component({
         prefix,
         weekdays: ['日', '一', '二', '三', '四', '五', '六'],
         daysArr: [],
+        curMonth: '',
         // 当前月有多少天
         days: 0,
         // 当月为星期几开始,值为0-6
@@ -115,6 +116,9 @@ Component({
             } else {
                 return data.weekdays;
             }
+        },
+        curMonth(data) {
+            return $dayjs(data.subDate).month() + 1;
         }
     },
     /**
@@ -162,9 +166,15 @@ Component({
         changeYear(e) {
             const TYPE = +e.currentTarget.dataset.type;
             const SUBDATE = this.data.subDate;
+            /* eslint-disable */
             const newSubDate = TYPE
-                ? new Date(SUBDATE).setFullYear(new Date(SUBDATE).getFullYear() + 1)
-                : new Date(SUBDATE).setFullYear(new Date(SUBDATE).getFullYear() - 1);
+                ? new Date(SUBDATE).setFullYear(
+                      new Date(SUBDATE).getFullYear() + 1
+                  )
+                : new Date(SUBDATE).setFullYear(
+                      new Date(SUBDATE).getFullYear() - 1
+                  );
+            /* eslint-disable */
             const YEAR = $dayjs(newSubDate).year();
             if (!this.checkRange(YEAR)) {
                 this.setData({
@@ -206,7 +216,7 @@ Component({
             const SUBDATE = this.data.subDate;
             const YEAR = $dayjs(SUBDATE).year();
             const MONTH = $dayjs(SUBDATE).month();
-            this.data.days = this.getMonthDay(YEAR, MONTH);
+            this.data.days = this.getMonthDay(YEAR, MONTH + 1);
             let daysArr = this.generateArray(1, this.data.days);
             const weekday = this.getWeekday();
             // const activeDate = $dayjs(ACTIVE_EDATE).format(this.data.subDateFormat);

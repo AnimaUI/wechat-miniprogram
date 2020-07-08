@@ -53,14 +53,26 @@
     &__body {
         &-month {
             .@{prefix}-calendar__days {
+                position: relative;
                 .@{prefix}-calendar__day {
                     position: relative;
                     width: 14.285%;
                     height: 108rpx;
                     font-size: 32rpx;
+                    z-index: 10;
                     &.active {
                         border-radius: 8rpx;
                     }
+                }
+                .@{prefix}-calendar__month-mark {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 0;
+                    color: rgba(0, 0, 0, .08);
+                    font-size: 320rpx;
+                    transform: translate(-50%, -50%);
+                    pointer-events: none;
                 }
             }
         }
