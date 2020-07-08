@@ -131,6 +131,11 @@ Component({
         },
         // 在组件实例进入页面节点树时执行
         attached() {
+            wx.loadFontFace({
+                family: 'Monoton',
+                source: 'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
+                success: () => {}
+            });
             this.changeDate();
         },
         // 在组件实例被移动到节点树另一个位置时执行

@@ -1,7 +1,7 @@
 @import '../common.less';
 .@{prefix}-calendar {
     width: 100%;
-    height: 70%;
+    height: 60%;
     max-height: 100%;
     position: fixed;
     bottom: 0;
@@ -51,6 +51,7 @@
         }
     }
     &__body {
+        margin-top: 24rpx;
         &-month {
             .@{prefix}-calendar__days {
                 position: relative;
@@ -73,6 +74,7 @@
                     font-size: 320rpx;
                     transform: translate(-50%, -50%);
                     pointer-events: none;
+                    font-family: 'Monoton', cursive;
                 }
             }
         }
