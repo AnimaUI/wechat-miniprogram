@@ -31,9 +31,11 @@
             <view class="{{prefix}}-calendar__days flex flex-wrap">
                 <view
                     class="{{prefix}}-calendar__day flex justify-center align-center text-center {{item.active ? 'text-white active' : ''}}"
-                    style="{{index == 0 ? 'margin-left: ' + (weekday - weekStart) * 14.285 + '%' : ''}} {{item.active ? 'background-color: ' +  activeBgColor : ''}}"
+                    style="{{index == 0 ? 'margin-left: ' + (weekday - weekStart) * 14.285 + '%;' : ''}} {{item.active ? 'background-color: ' +  activeBgColor : ''}}"
                     wx:for="{{daysArr}}"
-                    wx:key="index">{{item.day}}</view>
+                    wx:key="index"
+                    data-day="{{item.day}}"
+                    bindtap="dateClick">{{item.day}}</view>
                 <view class="{{prefix}}-calendar__month-mark">{{curMonth}}</view>
             </view>
         </view>

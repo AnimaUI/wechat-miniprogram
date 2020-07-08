@@ -8,6 +8,11 @@ Component({
         styleIsolation: 'shared'
     },
     properties: {
+        // mode 选择日期的模式，date 为单个日期，range 为选择日期范围
+        mode: {
+            type: String,
+            value: 'date'
+        },
         zIndex: {
             type: Number,
             value: 999
@@ -58,11 +63,6 @@ Component({
         changeMonth: {
             type: Boolean,
             value: true
-        },
-        // date-单个日期选择，range-开始日期+结束日期选择
-        mode: {
-            type: String,
-            value: 'date'
         },
         // 可切换的最大年份
         maxYear: {
@@ -129,7 +129,8 @@ Component({
         created() {
             wx.loadFontFace({
                 family: 'Monoton',
-                source: 'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
+                source:
+                    'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
                 success: () => {}
             });
             this.$dayjs = $dayjs;
@@ -156,6 +157,10 @@ Component({
                 show: false
             });
         },
+        /**
+         * checkRange 检查是否超出预设年份
+         * @param {Number} year 传入年份
+         */
         checkRange(year) {
             let stepState = false;
             if (year < this.data.minYear || year > this.data.maxYear) {
@@ -168,6 +173,10 @@ Component({
             }
             return stepState;
         },
+        /**
+         * changeYear 点击左右按钮切换年份
+         * @param {Objetc} e 点击的当前对象
+         */
         changeYear(e) {
             const TYPE = +e.currentTarget.dataset.type;
             const SUBDATE = this.data.subDate;
@@ -188,6 +197,10 @@ Component({
                 this.changeDate();
             }
         },
+        /**
+         * changeMonth 点击左右按钮切换月份
+         * @param {Objetc} e 点击的当前对象
+         */
         changeMonth(e) {
             const TYPE = +e.currentTarget.dataset.type;
             const SUBDATE = this.data.subDate;
@@ -215,6 +228,9 @@ Component({
                 this.changeDate();
             }
         },
+        /**
+         * changeDate 改变日期
+         */
         changeDate() {
             const me = this;
             // const ACTIVE_EDATE = this.data.activeDate;
@@ -223,8 +239,7 @@ Component({
             const MONTH = $dayjs(SUBDATE).month();
             this.data.days = this.getMonthDay(YEAR, MONTH + 1);
             let daysArr = this.generateArray(1, this.data.days);
-            const weekday = this.getWeekday();
-            console.log(weekday);
+            const weekday = this.getWeekday(SUBDATE);
             // const activeDate = $dayjs(ACTIVE_EDATE).format(this.data.subDateFormat);
             daysArr = daysArr.map(function (item) {
                 return {
@@ -237,17 +252,33 @@ Component({
                 weekday
             });
         },
+        /**
+         * generateArray 根据传入参数获取指定数组
+         * @param {Number} start
+         * @param {Number} end
+         */
         generateArray(start, end) {
             return Array.from(new Array(end + 1).keys()).slice(start);
         },
-        // 一个月有多少天
+        /**
+         * 获取当年当月一个月有多少天
+         * @param {Number} year
+         * @param {Number} month
+         */
         getMonthDay(year, month) {
             return new Date(year, month, 0).getDate();
         },
-        getWeekday() {
-            const SUBDATE = this.data.subDate;
-            return $dayjs(SUBDATE).day();
+        /**
+         * getWeekday 根据时间戳获取星期几
+         * @param {Number} date
+         */
+        getWeekday(date) {
+            return $dayjs(date).day();
         },
+        /**
+         * getActive 根据传入参数判断是否是选择状态
+         * @param {Number} dayNum
+         */
         getActive(dayNum) {
             const ACTIVE_EDATE = this.data.activeDate;
             const SUBDATE = this.data.subDate;
@@ -259,8 +290,26 @@ Component({
             const activeDate = $dayjs(ACTIVE_EDATE).format('YYYY-MM-DD');
             return activeDate === date;
         },
+        /**
+         * formatNum 格式数据为01格式
+         * @param {Number} num
+         */
         formatNum(num) {
             return num < 10 ? '0' + num : num + '';
+        },
+        dateClick(e) {
+            const DAY = e.currentTarget.dataset.day;
+            const SUBDATE = this.data.subDate;
+            const YEAR = $dayjs(SUBDATE).year();
+            const MONTH = $dayjs(SUBDATE).month();
+            const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(
+                DAY
+            )} 00:00:00`;
+            const newSubDate = +new Date(date);
+            this.setData({
+                activeDate: newSubDate
+            });
+            this.changeDate();
         }
     }
 });
