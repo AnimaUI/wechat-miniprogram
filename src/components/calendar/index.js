@@ -360,11 +360,11 @@ Component({
             return new Date(year, month, 0).getDate();
         },
         /**
-         * getWeekday 根据时间戳获取星期几
+         * getWeekday 根据时间戳获取该月是星期几开始
          * @param {Number} date
          */
         getWeekday(date) {
-            return $dayjs(date).day();
+            return new Date(new Date(date).setDate(1)).getDay();
         },
         /**
          * getActive 根据传入参数判断是否是选择状态
