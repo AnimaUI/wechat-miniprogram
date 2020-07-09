@@ -33,9 +33,23 @@ Component({
             type: Number,
             value: +new Date()
         },
+        // 开始时间默认今天
+        startDate: {
+            type: [Number, String],
+            value: +new Date()
+        },
+        // 结束时间默认明天
+        endDate: {
+            type: [Number, String],
+            value: +new Date().setTime(+new Date() + 24 * 60 * 60 * 1000)
+        },
         subDateFormat: {
             type: String,
             value: 'YYYY年MM月'
+        },
+        dateFormat: {
+            type: String,
+            value: 'YYYY年MM月DD日'
         },
         weekStart: {
             type: Number,
@@ -81,12 +95,31 @@ Component({
         },
         /**
          * 最大可选日期
-         * 默认最大值为今天，之后的日期不可选
-         * 2030-12-31
+         * 2040-12-31
          * */
         maxDate: {
             type: [Number, String],
-            value: ''
+            value: '2040-12-31'
+        },
+        useConfirm: {
+            type: Boolean,
+            value: true
+        },
+        asyncClose: {
+            type: Boolean,
+            value: false
+        },
+        confirmBtnText: {
+            type: String,
+            value: '确定'
+        },
+        confirmBtnClass: {
+            type: String,
+            value: 'bg-red'
+        },
+        confirmBtnColor: {
+            type: String,
+            value: 'var(--red)'
         }
     },
     data: {
@@ -119,6 +152,9 @@ Component({
         },
         curMonth(data) {
             return $dayjs(data.subDate).month() + 1;
+        },
+        activeDateStr(data) {
+            return $dayjs(data.activeDate).format(data.dateFormat);
         }
     },
     /**
@@ -297,6 +333,10 @@ Component({
         formatNum(num) {
             return num < 10 ? '0' + num : num + '';
         },
+        /**
+         * dateClick 点击选中单个日历
+         * @param {Objetc} e 点击的当前对象
+         */
         dateClick(e) {
             const DAY = e.currentTarget.dataset.day;
             const SUBDATE = this.data.subDate;
@@ -310,6 +350,25 @@ Component({
                 activeDate: newSubDate
             });
             this.changeDate();
+        },
+        confirm() {
+            // 设置不适用确定按钮
+            if (!this.data.useConfirm) {
+                return;
+            }
+            if (this.data.asyncClose) {
+                this.triggerEvent('close', {
+                    calendar: this,
+                    date: this.data.activeDateStr,
+                    timeStamp: this.data.activeDate
+                });
+            } else {
+                this.triggerEvent('changeDate', {
+                    date: this.data.activeDateStr,
+                    timeStamp: this.data.activeDate
+                });
+                this.close();
+            }
         }
     }
 });

@@ -38,7 +38,7 @@ Modal.defaultOptions = {
     title: '',
     width: null,
     message: '',
-    zIndex: 100,
+    zIndex: 9999,
     overlay: true,
     selector: `#${prefix}-modal`,
     className: '',

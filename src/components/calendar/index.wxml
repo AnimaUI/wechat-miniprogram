@@ -20,13 +20,13 @@
                 <text v-if="changeYear" class="ani-icon-arrow-right-double" style="color: #777;" data-type="1" bindtap="changeYear"></text>
             </view>
         </view>
-        <view class="{{prefix}}-calendar__weekdays flex">
+        <view class="{{prefix}}-calendar__weekdays flex pl-10 pr-10">
             <view wx:for="{{weekStartArr}}" wx:key="index" class="{{prefix}}-calendar__weekday flex-once">
                 {{item}}
             </view>
         </view>
     </view>
-    <view class="{{prefix}}-calendar__body">
+    <view class="{{prefix}}-calendar__body pl-10 pr-10">
         <view class="{{prefix}}-calendar__body-month">
             <view class="{{prefix}}-calendar__days flex flex-wrap">
                 <view
@@ -39,6 +39,16 @@
                 <view class="{{prefix}}-calendar__month-mark">{{curMonth}}</view>
             </view>
         </view>
+    </view>
+    <view class="{{prefix}}-calendar__footer" wx:if="{{useConfirm}}">
+        <view class="{{prefix}}-calendar__footer-choose fs-24">
+            <text>{{mode == 'date' ? activeDateStr : startDate}}</text>
+            <text wx:if="{{mode == 'range' && endDate}}">至{{endDate}}</text>
+        </view>
+        <button
+            class="confirm-btn text-white fs-28 {{confirmBtnClass}}"
+            style="background-color: {{confirmBtnColor}}"
+            bindtap="confirm">{{confirmBtnText}}</button>
     </view>
 </view>
 <view wx:if="{{show}}" class="{{prefix}}-overlay" style="z-index: {{zIndex}};" bindtap="onClickOverlay"></view>

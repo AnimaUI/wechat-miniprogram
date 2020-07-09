@@ -18,4 +18,5 @@
         </view>
     </view>
 </scroll-view>
-<Calendar title="选择日期" show="{{show1}}"/>
+<Modal id="ani-modal" />
+<Calendar title="选择日期" show="{{show1}}" asyncClose="{{true}}" bind:changeDate="changeDate" bind:close="closeCalendar"/>

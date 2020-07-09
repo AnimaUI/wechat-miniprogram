@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "Calendar": "../../../animaUi/components/calendar/index"
+        "Calendar": "../../../animaUi/components/calendar/index",
+        "Modal": "../../../animaUi/components/modal/index"
     },
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "white"
