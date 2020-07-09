@@ -144,6 +144,7 @@ Component({
             type: [Number, String],
             value: '2040-12-31'
         },
+        // 是否使用确定按钮
         useConfirm: {
             type: Boolean,
             value: true
@@ -404,17 +405,23 @@ Component({
                 activeDate: newSubDate
             });
             this.changeDate();
-            this.triggerEvent('changeDate', {
-                date: this.data.activeDateStr,
-                timeStamp: this.data.activeDate
-            });
-            this.close();
+            this.confirm(0);
         },
-        confirm() {
-            // 设置不适用确定按钮
+        confirm(type) {
+            // 设置不使用确定按钮
             if (!this.data.useConfirm) {
+                this.triggerEvent('changeDate', {
+                    date: this.data.activeDateStr,
+                    timeStamp: this.data.activeDate
+                });
+                this.close();
                 return;
             }
+            // 如果是需要确定按钮且点击的日期则不作任何处理
+            if (type === 0) {
+                return;
+            }
+            // 如果使用确定按钮
             if (this.data.asyncClose) {
                 this.triggerEvent('close', {
                     calendar: this,

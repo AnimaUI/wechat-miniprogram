@@ -16,7 +16,6 @@ Page({
         });
     },
     changeDate(e) {
-        console.log(e.detail);
         Modal.alert({
             message: `选择时间: ${e.detail.date}\n时间戳: ${e.detail.timeStamp}\n点击确定2S后该弹窗关闭`,
             asyncClose: true
@@ -36,7 +35,6 @@ Page({
         });
     },
     closeCalendar(e) {
-        console.log(e);
         const CALENDAR = e.detail.calendar;
         Modal.alert({
             message: `选择时间: ${e.detail.date}\n时间戳: ${e.detail.timeStamp}\n点击确定2S后日历关闭`,
