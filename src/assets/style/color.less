@@ -32,9 +32,9 @@ page {
     --transparent: rgba(0, 0, 0, 0);
 
     // less 变量
-    // 胭脂红
-    @red: #eb3b5a;
-    @fusion-red: #fc5c65;
+    // 茜红
+    @red: #e32636;
+    @fusion-red: #ff454a;
     // 热带橙
     @orange: #fa8231;
     @fusion-orange: #fd9644;
@@ -86,7 +86,7 @@ page {
         fusion-cyan, sky-blue, fusion-sky-blue, blue, fusion-blue, purple,
         fusion-purple, mauve, fusion-mauve, pink, fusion-pink, brown, fusion-brown,
         blue-grey, fusion-blue-grey;
-    @colorText: '/*胭脂红*/', '/*融合胭脂红*/', '/*热带橙*/', '/*融合热带橙*/', '/*寿橘黄*/', '/*融合寿橘黄*/', '/*橄榄绿*/', '/*融合橄榄绿*/', '/*常春绿*/', '/*融合常春绿*/', '/*孔雀蓝*/', '/*融合孔雀蓝*/', '/*绿松青*/', '/*融合绿松青*/', '/*牛仔蓝*/', '/*融合牛仔蓝*/', '/*钢青蓝*/', '/*融合钢青蓝*/', '/*紫藤色*/', '/*融合紫藤色*/', '/*中兰紫*/', '/*融合中兰紫*/', '/*开心粉*/', '/*融合开心粉*/', '/*火砖红*/', '/*融合火砖红*/', '/*石岩灰*/', '/*融合石岩灰*/';
+    @colorText: '/*茜红*/', '/*融合茜红*/', '/*热带橙*/', '/*融合热带橙*/', '/*寿橘黄*/', '/*融合寿橘黄*/', '/*橄榄绿*/', '/*融合橄榄绿*/', '/*常春绿*/', '/*融合常春绿*/', '/*孔雀蓝*/', '/*融合孔雀蓝*/', '/*绿松青*/', '/*融合绿松青*/', '/*牛仔蓝*/', '/*融合牛仔蓝*/', '/*钢青蓝*/', '/*融合钢青蓝*/', '/*紫藤色*/', '/*融合紫藤色*/', '/*中兰紫*/', '/*融合中兰紫*/', '/*开心粉*/', '/*融合开心粉*/', '/*火砖红*/', '/*融合火砖红*/', '/*石岩灰*/', '/*融合石岩灰*/';
     .colorType(@colorType);
     .colorType(@colorType, @i: 1) when (length(@colorType) >= @i) {
         @typeName: extract(@colorType, @i);
@@ -120,7 +120,7 @@ page {
     | disabled|
     |_________|
     */
-    /* 胭脂红 */
+    /* 茜红 */
     --disabled-red: #d3636c;
     --disabled-fusion-red: #fda9ae;
     /* 热带橙 */
@@ -168,8 +168,8 @@ page {
     |  渐变色  |
     |_________|
     */
-    /* 渐变胭脂红 */
-    --gradual-red: linear-gradient(20deg, #eb483b, #e92758, #eb3b86);
+    /* 渐变茜红 */
+    --gradual-red: linear-gradient(20deg, #e32636, #e92758, #eb3b86);
     /* 渐变热带橙 */
     --gradual-orange: linear-gradient(20deg, #fa5031, #fa8231, #fab431);
     /* 渐变寿橘黄 */
@@ -205,7 +205,7 @@ page {
     |________|
     */
     --shadow-size: 6rpx 6rpx 8rpx;
-    /* 胭脂红 */
+    /* 茜红 */
     --shadow-red:rgba(235, 59, 90, .2);
     --shadow-fusion-red: rgba(252, 92, 101, .2);
     /* 热带橙 */

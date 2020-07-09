@@ -30,8 +30,8 @@ module.exports = {
         'fusion-blue-grey'
     ],
     colourText: [
-        '胭脂红',
-        '融合胭脂红',
+        '茜红',
+        '融合茜红',
         '热带橙',
         '融合热带橙',
         '寿橘黄',
@@ -94,7 +94,7 @@ module.exports = {
         'blue-grey'
     ],
     gradualColorText: [
-        '胭脂红',
+        '茜红',
         '热带橙',
         '寿橘黄',
         '橄榄绿',
@@ -145,8 +145,8 @@ module.exports = {
         'white'
     ],
     shadowColorText: [
-        '胭脂红',
-        '融合胭脂红',
+        '茜红',
+        '融合茜红',
         '热带橙',
         '融合热带橙',
         '寿橘黄',

@@ -19,4 +19,4 @@
     </view>
 </scroll-view>
 <Modal id="ani-modal" />
-<Calendar title="选择日期" show="{{show1}}" activeDate="{{1544175534256}}" useConfirm="{{false}}" asyncClose="{{true}}" bind:changeDate="changeDate" bind:close="closeCalendar"/>
+<Calendar title="选择日期" show="{{show1}}" activeDate="2020-07-07" asyncClose="{{true}}" bind:changeDate="changeDate" bind:close="closeCalendar"/>
