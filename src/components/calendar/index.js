@@ -17,9 +17,44 @@ Component({
             type: Number,
             value: 999
         },
+        timing: {
+            type: String,
+            value: 'linear',
+            observer(val) {
+                const timingArr = this.data.timingArr;
+                if (timingArr.indexOf(val) < 0) {
+                    return 'linear';
+                }
+            }
+        },
         show: {
             type: Boolean,
-            value: false
+            value: false,
+            observer(val) {
+                // 弹出动画
+                const timing = this.data.timing;
+                if (val) {
+                    const animation = wx.createAnimation({
+                        duration: 300,
+                        timingFunction: timing
+                    });
+                    setTimeout(() => {
+                        animation.bottom(0).step();
+                        this.setData({
+                            animation: animation.export()
+                        });
+                    }, 0);
+                } else {
+                    const animation = wx.createAnimation({
+                        duration: 300,
+                        timingFunction: timing
+                    });
+                    animation.bottom(-320).step();
+                    this.setData({
+                        animation: animation.export()
+                    });
+                }
+            }
         },
         title: {
             type: String,
@@ -132,7 +167,8 @@ Component({
         // 当月为星期几开始,值为0-6
         weekday: 0,
         // 选中日期
-        activeDate: +new Date()
+        activeDate: +new Date(),
+        timingArr: ['linear', 'ease', 'ease-out', 'ease-in-out']
     },
     behaviors: [computedBehavior],
     computed: {
@@ -189,9 +225,21 @@ Component({
             this.closeOnClickOverlay && this.close();
         },
         close() {
-            this.setData({
-                show: false
+            const timing = this.data.timing;
+            const animation = wx.createAnimation({
+                duration: 300,
+                timingFunction: timing
             });
+            animation.bottom(-320).step();
+            this.setData({
+                animation: animation.export()
+            });
+            setTimeout(() => {
+                this.setData({
+                    animation: animation.export(),
+                    show: false
+                });
+            }, 200);
         },
         /**
          * checkRange 检查是否超出预设年份
@@ -269,14 +317,12 @@ Component({
          */
         changeDate() {
             const me = this;
-            // const ACTIVE_EDATE = this.data.activeDate;
             const SUBDATE = this.data.subDate;
             const YEAR = $dayjs(SUBDATE).year();
             const MONTH = $dayjs(SUBDATE).month();
             this.data.days = this.getMonthDay(YEAR, MONTH + 1);
             let daysArr = this.generateArray(1, this.data.days);
             const weekday = this.getWeekday(SUBDATE);
-            // const activeDate = $dayjs(ACTIVE_EDATE).format(this.data.subDateFormat);
             daysArr = daysArr.map(function (item) {
                 return {
                     day: item,
@@ -350,6 +396,11 @@ Component({
                 activeDate: newSubDate
             });
             this.changeDate();
+            this.triggerEvent('changeDate', {
+                date: this.data.activeDateStr,
+                timeStamp: this.data.activeDate
+            });
+            this.close();
         },
         confirm() {
             // 设置不适用确定按钮

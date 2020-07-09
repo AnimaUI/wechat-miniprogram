@@ -1,7 +1,8 @@
 <view
     class="{{prefix}}-calendar bg-white"
     style="z-index: {{zIndex + 1}};"
-    wx:if="{{show}}">
+    wx:if="{{show}}"
+    animation="{{animation}}">
     <view class="{{prefix}}-calendar__header">
         <text class="ani-icon-close icon-close text-disabled-blue-grey" bindtap="close"></text>
         <view class="{{prefix}}-calendar__header-title">{{title}}</view>
