@@ -64,9 +64,17 @@ Component({
             type: Boolean,
             value: false
         },
-        subDate: {
-            type: Number,
-            value: +new Date()
+        // 选中日期
+        activeDate: {
+            type: [Number, String],
+            value: +new Date(),
+            observer(val) {
+                if (val) {
+                    this.setData({
+                        subDate: val
+                    });
+                }
+            }
         },
         // 开始时间默认今天
         startDate: {
@@ -161,19 +169,19 @@ Component({
         prefix,
         weekdays: ['日', '一', '二', '三', '四', '五', '六'],
         daysArr: [],
+        subDate: +new Date(),
         curMonth: '',
         // 当前月有多少天
         days: 0,
         // 当月为星期几开始,值为0-6
         weekday: 0,
-        // 选中日期
-        activeDate: +new Date(),
         timingArr: ['linear', 'ease', 'ease-out', 'ease-in-out']
     },
     behaviors: [computedBehavior],
     computed: {
         subDateStr(data) {
-            return $dayjs(data.subDate).format(data.subDateFormat);
+            const date = data.subDate;
+            return $dayjs(date).format(data.subDateFormat);
         },
         weekStartArr(data) {
             if (+data.weekStart === 1) {
