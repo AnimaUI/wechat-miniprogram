@@ -10,13 +10,13 @@
                 <text>基础用法</text>
             </view>
             <view class="bg-white">
-                <view class="ani-form-group text-left right-arrow" bindtap="tap1">
+                <view class="ani-form-group text-left right-arrow pr-90" bindtap="tap1">
                     <view class="title">选择单个日期</view>
-                    <view class="picker"></view>
+                    <view class="picker">{{date1}}</view>
                 </view>
             </view>
         </view>
     </view>
 </scroll-view>
 <Modal id="ani-modal" />
-<Calendar title="选择日期" show="{{show1}}" activeDate="2020-07-07" asyncClose="{{true}}" bind:changeDate="changeDate" bind:close="closeCalendar"/>
+<Calendar title="选择日期" show="{{show1}}" activeDate="{{date1}}" asyncClose="{{true}}" bind:changeDate="changeDate" bind:confirm="confirmCalendar"/>

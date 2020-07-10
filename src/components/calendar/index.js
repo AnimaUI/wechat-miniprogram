@@ -1,6 +1,9 @@
 import $dayjs from 'dayjs';
 import computedBehavior from 'miniprogram-computed';
 import { prefix } from '../config';
+import './locale/zh-cn'; // ES 2015
+
+$dayjs.locale('zh-cn');
 
 Component({
     options: {
@@ -23,7 +26,9 @@ Component({
             observer(val) {
                 const timingArr = this.data.timingArr;
                 if (timingArr.indexOf(val) < 0) {
-                    return 'linear';
+                    this.setData({
+                        timing: 'linear'
+                    });
                 }
             }
         },
@@ -69,9 +74,15 @@ Component({
             type: [Number, String],
             value: +new Date(),
             observer(val) {
+                if (/年|月|日/.test(val)) {
+                    val = $dayjs(
+                        val.replace(/年|月|日/g, '-')
+                    ).valueOf();
+                }
                 if (val) {
                     this.setData({
-                        subDate: val
+                        subDate: val,
+                        activeDate: val
                     });
                 }
             }
@@ -199,7 +210,13 @@ Component({
             return $dayjs(data.subDate).month() + 1;
         },
         activeDateStr(data) {
-            return $dayjs(data.activeDate).format(data.dateFormat);
+            let activeDate = data.activeDate;
+            if (/年|月|日/.test(activeDate)) {
+                activeDate = $dayjs(
+                    activeDate.replace(/年|月|日/g, '-')
+                ).valueOf();
+            }
+            return $dayjs(activeDate).format(data.dateFormat);
         }
     },
     /**
@@ -400,7 +417,8 @@ Component({
             const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(
                 DAY
             )} 00:00:00`;
-            const newSubDate = +new Date(date);
+            // 获取时间戳，不能使用 +new Date()形式, ios获为NaN
+            const newSubDate = $dayjs(date).valueOf();
             this.setData({
                 activeDate: newSubDate
             });
@@ -415,15 +433,14 @@ Component({
                     timeStamp: this.data.activeDate
                 });
                 this.close();
-                return;
             }
-            // 如果是需要确定按钮且点击的日期则不作任何处理
+            // 如果是使用确定按钮且单击日期则不作任何关闭操作
             if (type === 0) {
                 return;
             }
             // 如果使用确定按钮
             if (this.data.asyncClose) {
-                this.triggerEvent('close', {
+                this.triggerEvent('confirm', {
                     calendar: this,
                     date: this.data.activeDateStr,
                     timeStamp: this.data.activeDate

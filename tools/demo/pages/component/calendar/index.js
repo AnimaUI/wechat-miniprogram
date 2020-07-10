@@ -5,7 +5,8 @@ import Modal from '../../../animaUi/components/modal/modal';
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        show1: true
+        show1: true,
+        date1: '2020年07月07日'
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -17,8 +18,7 @@ Page({
     },
     changeDate(e) {
         Modal.alert({
-            message: `选择时间: ${e.detail.date}\n时间戳: ${e.detail.timeStamp}\n点击确定2S后该弹窗关闭`,
-            asyncClose: true
+            message: `选择时间: ${e.detail.date}\n时间戳: ${e.detail.timeStamp}\n点击确定2S后该弹窗关闭`
         }).then(() => {
             // on close
             Modal.close();
@@ -34,20 +34,22 @@ Page({
             }, 1000);
         });
     },
-    closeCalendar(e) {
-        const CALENDAR = e.detail.calendar;
+    confirmCalendar(e) {
+        const DETAIL = e.detail;
+        const CALENDAR = DETAIL.calendar;
         Modal.alert({
             message: `选择时间: ${e.detail.date}\n时间戳: ${e.detail.timeStamp}\n点击确定2S后日历关闭`,
             asyncClose: true
         }).then(() => {
-            // on close
             Modal.close();
+            this.setData({
+                date1: DETAIL.date
+            });
             setTimeout(() => {
                 CALENDAR.close();
             }, 1000);
         })
         .catch(() => {
-            // on cancel
             Modal.close();
             setTimeout(() => {
                 CALENDAR.close();
