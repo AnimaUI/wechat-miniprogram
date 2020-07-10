@@ -425,6 +425,10 @@ Component({
             this.changeDate();
             this.confirm(0);
         },
+        /**
+         * confirm 确认按钮点击事件
+         * @param {Number} type 点击非确定按钮判断
+         */
         confirm(type) {
             // 设置不使用确定按钮
             if (!this.data.useConfirm) {
