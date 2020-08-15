@@ -52,10 +52,10 @@ Component({
         created() {},
         // 在组件实例进入页面节点树时执行
         attached() {
-            const that = this;
+            const me = this;
             wx.getSystemInfo({
-                success: (res) => {
-                    that.setData({
+                success: res => {
+                    me.setData({
                         pixelRatio: res.pixelRatio,
                         windowHeight: res.windowHeight,
                         windowWidth: res.windowWidth,
@@ -79,14 +79,13 @@ Component({
             const index = e.currentTarget.dataset.current;
             // 设置data属性中的navbarActiveIndex为当前点击的navbar
             if (+this.data.currentTab === index) {
-                return false;
-            } else {
-                // 设置data属性中的currentTab为当前点击的navbar
-                this.setData({
-                    currentTab: index
-                });
-                this.triggerEvent('changeEvent', index);
+                return;
             }
+            // 设置data属性中的currentTab为当前点击的navbar
+            this.setData({
+                currentTab: index
+            });
+            this.triggerEvent('changeEvent', index);
         },
         getSelectedBg() {
             return 'red';

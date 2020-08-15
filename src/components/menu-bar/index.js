@@ -101,7 +101,7 @@ Component({
             const curPage = curPageArr[curPageArr.length - 1];
             let pagePath = curPage.route;
             if (pagePath.indexOf('/') !== 0) {
-                pagePath = '/' + pagePath;
+                pagePath = `/${pagePath}`;
             }
             const menuBar = app.globalData.menuBar;
             for (let i = 0; i < menuBar.list.length; i++) {

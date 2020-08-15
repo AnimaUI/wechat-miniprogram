@@ -15,15 +15,16 @@ function getContext() {
     return pages[pages.length - 1];
 }
 const Modal = options => {
-    options = Object.assign(Object.assign({}, Modal.currentOptions), options);
+    let optionsConfig = options;
+    optionsConfig = Object.assign(Object.assign({}, Modal.currentOptions), optionsConfig);
     return new Promise((resolve, reject) => {
-        const context = options.context || getContext();
-        const modal = context.selectComponent(options.selector);
-        delete options.context;
-        delete options.selector;
+        const context = optionsConfig.context || getContext();
+        const modal = context.selectComponent(optionsConfig.selector);
+        delete optionsConfig.context;
+        delete optionsConfig.selector;
         if (modal) {
             modal.setData(
-                Object.assign({ onCancel: reject, onConfirm: resolve }, options)
+                Object.assign({ onCancel: reject, onConfirm: resolve }, optionsConfig)
             );
             queue.push(modal);
         } else {

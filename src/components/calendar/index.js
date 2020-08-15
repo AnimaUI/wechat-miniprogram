@@ -74,15 +74,16 @@ Component({
             type: [Number, String],
             value: +new Date(),
             observer(val) {
-                if (/年|月|日/.test(val)) {
-                    val = $dayjs(
-                        val.replace(/年|月|日/g, '-')
+                let date = val;
+                if (/年|月|日/.test(date)) {
+                    date = $dayjs(
+                        date.replace(/年|月|日/g, '-')
                     ).valueOf();
                 }
-                if (val) {
+                if (date) {
                     this.setData({
-                        subDate: val,
-                        activeDate: val
+                        subDate: date,
+                        activeDate: date
                     });
                 }
             }
@@ -198,13 +199,13 @@ Component({
         weekStartArr(data) {
             if (+data.weekStart === 1) {
                 const weekdaysTemp = data.weekdays;
+                /* eslint-disable */
                 const concatWeekdaysTemp = weekdaysTemp.__rawObject__.concat();
                 const ELE = concatWeekdaysTemp.splice(0, 1);
                 concatWeekdaysTemp.push(ELE[0]);
                 return concatWeekdaysTemp;
-            } else {
-                return data.weekdays;
             }
+            return data.weekdays;
         },
         curMonth(data) {
             return $dayjs(data.subDate).month() + 1;

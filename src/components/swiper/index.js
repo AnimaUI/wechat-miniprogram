@@ -122,10 +122,9 @@ Component({
                 list.push(JSON.parse(temp2));
             }
             for (let i = 0; i < list.length; i++) {
-                list[i].zIndex =
-                    parseInt(list.length / 2, 10) +
-                    1 -
-                    Math.abs(i - parseInt(list.length / 2, 10));
+                list[i].zIndex = parseInt(list.length / 2, 10)
+                    + 1
+                    - Math.abs(i - parseInt(list.length / 2, 10));
                 list[i].mLeft = i - parseInt(list.length / 2, 10);
                 if (list[i].mLeft === 0) {
                     this.setData({
@@ -227,7 +226,7 @@ Component({
                     cuttingNum: this.data.cuttingNum + 1
                 });
             }
-            const rotateX = this.data.cuttingNum * 90 + 'deg';
+            const rotateX = `${this.data.cuttingNum * 90}deg`;
             this.cuttingSwiper();
             this.setData({
                 rotateX
