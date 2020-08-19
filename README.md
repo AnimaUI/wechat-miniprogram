@@ -1,5 +1,7 @@
 # animaUI(灵动UI)
+
 <img alt="赞赏码" align="left" width="209px" src="http://oos.animaui.com/mini/wechat/images/appreciate.jpg"/>
+----------
 
 [![GitHub issues](https://img.shields.io/github/issues/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/issues)
 [![GitHub forks](https://img.shields.io/github/forks/AnimaUI/wechat-miniprogram)](https://github.com/AnimaUI/wechat-miniprogram/network)
