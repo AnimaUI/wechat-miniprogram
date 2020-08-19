@@ -14,9 +14,11 @@
 
 <img alt="添加微信" align="left" width="124px" src="http://oos.animaui.com/mini/wechat/images/wx.jpg"/>
 
+<!-- 打赏二维码 -->
 > 您的打赏是我的动力
 
 <img alt="赞赏码" align="center" width="209px" src="http://oos.animaui.com/mini/wechat/images/appreciate.jpg"/>
+<!-- 打赏二维码 -->
 
 小程序自定义组件开发模板：
 
