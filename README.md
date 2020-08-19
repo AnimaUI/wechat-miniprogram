@@ -10,14 +10,15 @@
 
 > [微信小程序原生UI框架](https://github.com/AnimaUI/wechat-miniprogram) 扫描下方太阳码可预览
 
-<img alt="AnimaUI" align="left" width="124px" src="http://oos.animaui.com/mini/wechat/images/gh_eb31d483d6e0_258.jpg"/>
+<img alt="AnimaUI" width="124px" src="http://oos.animaui.com/mini/wechat/images/gh_eb31d483d6e0_258.jpg"/>
 
-<img alt="添加微信" align="left" width="124px" src="http://oos.animaui.com/mini/wechat/images/wx.jpg"/>
+<img alt="添加微信" width="124px" src="http://oos.animaui.com/mini/wechat/images/wx.jpg"/>
 
 -------------
 > 您的打赏是我的动力
 
 <img alt="赞赏码" align="center" width="209px" src="http://oos.animaui.com/mini/wechat/images/appreciate.jpg"/>
+
 -------------
 
 小程序自定义组件开发模板：
