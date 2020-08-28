@@ -4,7 +4,7 @@
     wx:if="{{show}}"
     animation="{{animation}}">
     <view class="{{prefix}}-calendar__header">
-        <text class="ani-icon-close icon-close text-disabled-blue-grey" bindtap="close"></text>
+        <text class="ani-icon-close icon-close text-disabled-blue-grey" bindtap="hide"></text>
         <view class="{{prefix}}-calendar__header-title">{{title}}</view>
         <view class="{{prefix}}-calendar__action flex flex-direction-row justify-center align-center text-center">
             <view class="{{prefix}}-calendar__action-icon rotate-180">
@@ -42,7 +42,7 @@
         </view>
     </view>
     <view class="{{prefix}}-calendar__footer" wx:if="{{useConfirm}}">
-        <view class="{{prefix}}-calendar__footer-choose fs-24">
+        <view wx:if="{{mode !== 'multiple'}}" class="{{prefix}}-calendar__footer-choose fs-24">
             <text>{{mode == 'date' ? activeDateStr : startDate}}</text>
             <text wx:if="{{mode == 'range' && endDate}}">至{{endDate}}</text>
         </view>

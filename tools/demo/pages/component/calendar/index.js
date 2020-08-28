@@ -5,8 +5,10 @@ import Modal from '../../../animaUi/components/modal/modal';
 Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
-        show1: true,
-        date1: '2020年07月07日'
+        show1: false,
+        // show2: true,
+        date1: '2020年07月07日',
+        // date2: '2020年07月07日'
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -14,6 +16,11 @@ Page({
     tap1() {
         this.setData({
             show1: true
+        });
+    },
+    tap2() {
+        this.setData({
+            show2: true
         });
     },
     changeDate(e) {

@@ -11,7 +11,7 @@ Component({
         styleIsolation: 'shared'
     },
     properties: {
-        // mode 选择日期的模式，date 为单个日期，range 为选择日期范围
+        // mode 选择日期的模式，date 为单个日期，multiple 为多个日期，range 为选择日期范围
         mode: {
             type: String,
             value: 'date'
@@ -82,9 +82,13 @@ Component({
                 }
                 if (date) {
                     this.setData({
-                        subDate: date,
                         activeDate: date
                     });
+                    if (this.data.mode !== 'multiple') {
+                        this.setData({
+                            subDate: date
+                        });
+                    }
                 }
             }
         },
@@ -228,8 +232,7 @@ Component({
         created() {
             wx.loadFontFace({
                 family: 'Monoton',
-                source:
-                    'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
+                source: 'url("http://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQka4BU4.woff2")',
                 success: () => {}
             });
             this.$dayjs = $dayjs;
@@ -250,6 +253,12 @@ Component({
     methods: {
         onClickOverlay() {
             this.closeOnClickOverlay && this.close();
+        },
+        hide() {
+            console.log(this.data.activeDate);
+            // this.setData({
+
+            // });
         },
         close() {
             const timing = this.data.timing;
@@ -389,15 +398,25 @@ Component({
          * @param {Number} dayNum
          */
         getActive(dayNum) {
-            const ACTIVE_EDATE = this.data.activeDate;
+            const ACTIVE_DATE = this.data.activeDate;
+            const MODE = this.data.mode;
             const SUBDATE = this.data.subDate;
             const YEAR = $dayjs(SUBDATE).year();
             const MONTH = $dayjs(SUBDATE).month();
             const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(
                 dayNum
             )}`;
-            const activeDate = $dayjs(ACTIVE_EDATE).format('YYYY-MM-DD');
-            return activeDate === date;
+            // 选择多个日期
+            if (MODE === 'multiple') {
+                let activeDate = [];
+                activeDate = Array.isArray(ACTIVE_DATE) ? ACTIVE_DATE : [ACTIVE_DATE];
+                const ACTIVE_DATE_ARR = activeDate.map(item => {
+                    return $dayjs(item).format('YYYY-MM-DD');
+                });
+                return ACTIVE_DATE_ARR.indexOf(date) > -1;
+            } else if (MODE === 'date') {
+                return $dayjs(ACTIVE_DATE).format('YYYY-MM-DD') === date;
+            }
         },
         /**
          * formatNum 格式数据为01格式
@@ -418,11 +437,24 @@ Component({
             const date = `${YEAR}-${this.formatNum(MONTH + 1)}-${this.formatNum(
                 DAY
             )} 00:00:00`;
-            // 获取时间戳，不能使用 +new Date()形式, ios获为NaN
+            // 获取时间戳，不能使用 +new Date()形式, ios获取为NaN
             const newSubDate = $dayjs(date).valueOf();
-            this.setData({
-                activeDate: newSubDate
-            });
+            const MODE = this.data.mode;
+            let ACTIVE_DATE = this.data.activeDate;
+            // 选择多个日期
+            if (MODE === 'multiple') {
+                if (!Array.isArray(ACTIVE_DATE)) {
+                    ACTIVE_DATE = [ACTIVE_DATE];
+                }
+                ACTIVE_DATE.push(newSubDate);
+                this.setData({
+                    activeDate: ACTIVE_DATE
+                });
+            } else if (MODE === 'date') {
+                this.setData({
+                    activeDate: newSubDate
+                });
+            }
             this.changeDate();
             this.confirm(0);
         },
