@@ -6,9 +6,9 @@ Page({
     data: {
         imgBaseUrl: app.imgBaseUrl,
         show1: false,
-        // show2: true,
+        show2: false,
         date1: '2020年07月07日',
-        // date2: '2020年07月07日'
+        date2: '2020年07月07日'
     },
     onLoad() {},
     onShareAppMessage() {},
@@ -62,5 +62,7 @@ Page({
                 CALENDAR.close();
             }, 1000);
         });
-    }
+    },
+    changeMultipleDate() {},
+    confirmMultipleCalendar() {}
 });

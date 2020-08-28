@@ -20,6 +20,7 @@ Component({
             type: Number,
             value: 999
         },
+        // 日历弹出动画，支持：['linear', 'ease', 'ease-out', 'ease-in-out']
         timing: {
             type: String,
             value: 'linear',
@@ -32,6 +33,7 @@ Component({
                 }
             }
         },
+        // 日历显示以及关闭
         show: {
             type: Boolean,
             value: false,
@@ -49,6 +51,7 @@ Component({
                             animation: animation.export()
                         });
                     }, 0);
+                    this.changeDate();
                 } else {
                     const animation = wx.createAnimation({
                         duration: 300,
@@ -61,10 +64,12 @@ Component({
                 }
             }
         },
+        // 顶部title
         title: {
             type: String,
             value: '日期选择'
         },
+        // 遮罩是否允许点击
         closeOnClickOverlay: {
             type: Boolean,
             value: false
@@ -102,14 +107,17 @@ Component({
             type: [Number, String],
             value: +new Date().setTime(+new Date() + 24 * 60 * 60 * 1000)
         },
+        // 顶部格式化
         subDateFormat: {
             type: String,
             value: 'YYYY年MM月'
         },
+        // 底部日期|放回日期格式化
         dateFormat: {
             type: String,
             value: 'YYYY年MM月DD日'
         },
+        // 周开始： 0->周日开始  1->周一开始
         weekStart: {
             type: Number,
             value: 0,
@@ -148,6 +156,7 @@ Component({
             value: 1970
         },
         // 最小可选日期(不在范围内日期禁用不可选)
+        // 1970-01-01
         minDate: {
             type: [Number, String],
             value: '1970-01-01'
@@ -155,7 +164,7 @@ Component({
         /**
          * 最大可选日期
          * 2040-12-31
-         * */
+         */
         maxDate: {
             type: [Number, String],
             value: '2040-12-31'
@@ -165,18 +174,22 @@ Component({
             type: Boolean,
             value: true
         },
+        // 是否异步延迟关闭
         asyncClose: {
             type: Boolean,
             value: false
         },
+        // 确认按钮文字
         confirmBtnText: {
             type: String,
             value: '确定'
         },
+        // 确认按钮calssName
         confirmBtnClass: {
             type: String,
             value: 'bg-red'
         },
+        // 确认按钮文字颜色支持：var() 16进制等颜色
         confirmBtnColor: {
             type: String,
             value: 'var(--red)'
@@ -225,7 +238,7 @@ Component({
         }
     },
     /**
-     * 声明周期函数
+     * 生命周期函数
      */
     lifetimes: {
         // 在组件实例被创建
@@ -239,7 +252,7 @@ Component({
         },
         // 在组件实例进入页面节点树时执行
         attached() {
-            this.changeDate();
+            // this.changeDate();
         },
         // 在组件实例被移动到节点树另一个位置时执行
         moved() {},
@@ -248,17 +261,18 @@ Component({
     },
     pageLifetimes: {
         // 页面被展示
-        show() {}
+        show() {},
+        hide() {},
     },
     methods: {
         onClickOverlay() {
             this.closeOnClickOverlay && this.close();
         },
         hide() {
-            console.log(this.data.activeDate);
-            // this.setData({
-
-            // });
+            this.setData({
+                subDate: this.data.activeDate
+            });
+            this.close();
         },
         close() {
             const timing = this.data.timing;

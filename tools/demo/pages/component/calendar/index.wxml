@@ -15,12 +15,12 @@
                     <view class="picker">{{date1}}</view>
                 </view>
             </view>
-            <!-- <view class="bg-white">
+            <view class="bg-white">
                 <view class="ani-form-group text-left right-arrow pr-90" bindtap="tap2">
                     <view class="title">选择单个日期</view>
                     <view class="picker">{{date2}}</view>
                 </view>
-            </view> -->
+            </view>
         </view>
     </view>
 </scroll-view>
@@ -32,11 +32,11 @@
     asyncClose="{{true}}"
     bind:changeDate="changeDate"
     bind:confirm="confirmCalendar"/>
-<!-- <Calendar
+<Calendar
     title="选择多个日期"
     show="{{show2}}"
     activeDate="{{date2}}"
     mode="multiple"
     asyncClose="{{true}}"
-    bind:changeDate="changeDate"
-    bind:confirm="confirmCalendar" /> -->
+    bind:changeDate="changeMultipleDate"
+    bind:confirm="confirmMultipleCalendar" />
